@@ -10,7 +10,7 @@ id_nut;cha_branch;chainage;nhanh_noi_vao
 9;3 Cui;7257.0;TC Nhan:DS:0|TC Nhan:US:2
 10;3 Cui;12000.0;Nang RenNho:DS:0|Nang RenNho:US:2
 11;3 Cui;14066.0;Dong Lon:DS:0
-12;30-4;0.0;Sau ThuocTN:DS:0|NNLon:US:0|PL12_13:US:0
+12;30-4;0.0;Sau ThuocTN:DS:0|PL12_13:US:0|NNLon:US:0
 13;3Thuoc;1518.0;9500:DS:0
 14;3Thuoc;2415.0;10500:US:0
 15;3Thuoc;3883.0;XaNo2:US:0
@@ -57,12 +57,12 @@ id_nut;cha_branch;chainage;nhanh_noi_vao
 56;An Phong MH1;24267.0;Thay Cay:US:0|Thay Cay:DS:1
 57;An Phong MH1;29573.0;Rach Sao:US:1|Rach Sao:DS:2
 58;An Phong MH1;34405.0;Duong Thet:US:1|Duong Thet:DS:2
-59;An Tap;8000.0;Ba Rinh Moi:DS:0|Ba Rinh CMP_Moi:US:1
+59;An Tap;8000.0;Ba Rinh CMP_Moi:US:1|Ba Rinh Moi:DS:0
 60;B02;1263.0;B01:DS:0
 61;B03;2314.0;B04:US:0
-62;B04;2301.0;B06:DS:0|B05:DS:0
-63;B04;4800.0;B08:DS:0|B07:DS:0
-64;B04;10975.0;B09:DS:0|B10:DS:0
+62;B04;2301.0;B05:DS:0|B06:DS:0
+63;B04;4800.0;B07:DS:0|B08:DS:0
+64;B04;10975.0;B10:DS:0|B09:DS:0
 65;B12;3966.0;B32:DS:0
 66;B12;15906.0;B22:US:0|B16:US:0
 67;B12;16600.0;B34:DS:0
@@ -120,13 +120,13 @@ id_nut;cha_branch;chainage;nhanh_noi_vao
 119;BASSAC;120739.0;Duong Hoa LT:DS:0|RachBaNhien_RachCat:DS:0
 120;BASSAC;125064.0;Hau_4:DS:0|Kenh_Bong_Sung:DS:0
 121;BASSAC;129555.0;O Mon:US:0|Muong Khai:DS:0|Rach_Chanh:US:0
-122;BASSAC;134633.0;Rach_Chanh:DS:0|Can Tho HH:DS:0
-123;BASSAC;136897.0;KH8:US:0|Rau Cau:DS:0
+122;BASSAC;134633.0;Can Tho HH:DS:0|Rach_Chanh:DS:0
+123;BASSAC;136897.0;Rau Cau:DS:0|KH8:US:0
 124;BASSAC;139820.0;Hau_5:US:0
 125;BASSAC;143982.0;Hau_5:DS:0
 126;BASSAC;146580.0;Nha Man TT:DS:0
-127;BASSAC;149107.0;Hau_6:US:0|Bao Ke DH:US:0
-128;BASSAC;153404.0;Hau_6:DS:0|APMYXEOLAXEOGIUA:DS:0
+127;BASSAC;149107.0;Bao Ke DH:US:0|Hau_6:US:0
+128;BASSAC;153404.0;APMYXEOLAXEOGIUA:DS:0|Hau_6:DS:0
 129;BASSAC;155039.0;Hau_7:US:0|Bong Binh:US:0
 130;BASSAC;156371.0;Ben Bao:US:0
 131;BASSAC;157876.0;Cai Cui:US:0
@@ -136,7 +136,7 @@ id_nut;cha_branch;chainage;nhanh_noi_vao
 135;BASSAC;167031.0;Hau_9:US:0
 136;BASSAC;168214.0;CMP_Muong Khai:US:0
 137;BASSAC;170486.0;Cai Cau:US:0
-138;BASSAC;174206.0;SHU_22_23:US:0|Hau_10:US:0
+138;BASSAC;174206.0;Hau_10:US:0|SHU_22_23:US:0
 139;BASSAC;177987.0;Song_Tap_Ren:US:0
 140;BASSAC;181155.0;CDXDong:US:1
 141;BASSAC;184060.0;Hau_11:US:0
@@ -153,9 +153,9 @@ id_nut;cha_branch;chainage;nhanh_noi_vao
 152;Ba Ai 1;2000.0;Ba Quy:US:0
 153;Ba Chieu;1421.0;TSH30:DS:0
 154;Ba Chieu;1875.0;KH1:US:0
-155;Ba Chieu;14000.0;KB:DS:0|KB:US:2|TSH111:DS:0
-156;Ba Chieu;17000.0;TSH114:DS:0|TSH117:US:0
-157;Ba Chieu;20000.0;TSH112:DS:0|TSH115:US:0
+155;Ba Chieu;14000.0;TSH111:DS:0|KB:DS:0|KB:US:2
+156;Ba Chieu;17000.0;TSH117:US:0|TSH114:DS:0
+157;Ba Chieu;20000.0;TSH115:US:0|TSH112:DS:0
 158;Ba Dot;2000.0;CSNTung:US:0
 159;Ba Hoi;1760.0;Cay Giua:US:0
 160;Ba Hon;3000.0;An Binh AG:US:1
@@ -166,11 +166,11 @@ id_nut;cha_branch;chainage;nhanh_noi_vao
 165;Ba Lai;17701.0;B18:US:0
 166;Ba Lai;20658.0;A08:DS:0
 167;Ba Lai;23011.0;A10:DS:0
-168;Ba Lai;24371.0;B18:DS:0|A11:DS:0
+168;Ba Lai;24371.0;A11:DS:0|B18:DS:0
 169;Ba Lai;24964.0;B19:US:0
-170;Ba Lai;27240.0;A12:DS:0|B20:US:0
+170;Ba Lai;27240.0;B20:US:0|A12:DS:0
 171;Ba Lai;28523.0;A13:DS:0
-172;Ba Lai;30428.0;A15:DS:0|B27:US:0
+172;Ba Lai;30428.0;B27:US:0|A15:DS:0
 173;Ba Lai;34976.0;A17:DS:0|B30:US:0
 174;Ba Lai;38563.0;A14:DS:0
 175;Ba Rinh CMP_Moi;17585.0;Tra Coi:DS:0
@@ -185,7 +185,7 @@ id_nut;cha_branch;chainage;nhanh_noi_vao
 184;BaVoi_2;1571.0;OngQuang:US:0
 185;Bac Chan;6500.0;Ca Gua:US:0|Ca Gua:DS:1
 186;Bac Chan;15100.0;Bay thuoc:DS:1|Bay Thuoc:US:1
-187;Bac Dong;16100.0;Lo Moi:US:0|Lo Moi:DS:1|An Phong MH:DS:0
+187;Bac Dong;16100.0;An Phong MH:DS:0|Lo Moi:US:0|Lo Moi:DS:1
 188;Bac Lieu;4868.0;HB Hnho:US:0
 189;Bac Lieu;9926.0;K.MaXaHai:DS:0
 190;Bac Lieu;13825.0;K. Xang:US:0
@@ -202,7 +202,7 @@ id_nut;cha_branch;chainage;nhanh_noi_vao
 201;Bach nguu;4690.0;K. Kiem Lam:US:0
 202;Bach nguu;10779.0;Chac Bang:US:0
 203;Bach nguu;12827.0;Lo Xe:US:0
-204;Bach nguu;15550.0;KVINHMYPHUOCLONG:DS:0|Tu Nhieu:US:0
+204;Bach nguu;15550.0;Tu Nhieu:US:0|KVINHMYPHUOCLONG:DS:0
 205;Bach nguu;16787.0;K. Vinh Loi 1:US:0
 206;Bach nguu;26924.0;NTL 14000:US:0
 207;Bach nguu;27612.0;KCANHDENPHOSINH:DS:1|KCANHDENPHOSINH:US:2
@@ -220,7 +220,7 @@ id_nut;cha_branch;chainage;nhanh_noi_vao
 219;Bach nguu;61006.0;Nang Muoi:US:0
 220;Bach nguu;62959.0;Ong Huong:DS:0
 221;BachNguu1;4486.0;K.OngTa1:US:0
-222;Ban;3598.0;CMP_Cai Bat:US:0|R. O Huong:DS:0
+222;Ban;3598.0;R. O Huong:DS:0|CMP_Cai Bat:US:0
 223;Ban;6966.0;TP-Bnhan:DS:0|TP-Bnhan:US:1
 224;Banghe_Ngaichanh;20480.0;Cau_Ke:US:0
 225;Bao Dinh;1558.0;GOCAT-HOCLUU:DS:0
@@ -236,8 +236,8 @@ id_nut;cha_branch;chainage;nhanh_noi_vao
 235;Bao Dinh;24347.0;K_Vanhdai:DS:0
 236;Bao Ke DH;3600.0;DongThang:US:0
 237;Bao Ke DH;4300.0;Xeo Mat CV:DS:0
-238;Bao Ke DH;11528.0;SocTro:US:0|kenhxang:US:0
-239;Bao Ke DH;14711.0;Song_Hoa_Thanh:US:0|rachcaingang:US:0
+238;Bao Ke DH;11528.0;kenhxang:US:0|SocTro:US:0
+239;Bao Ke DH;14711.0;rachcaingang:US:0|Song_Hoa_Thanh:US:0
 240;Bass_West;58398.0;SongBinhDi:DS:0
 241;Bassac4;3640.0;Can Thao:US:0
 242;Bassac4;8716.0;Dao:US:0
@@ -253,7 +253,7 @@ id_nut;cha_branch;chainage;nhanh_noi_vao
 252;Bay Hap;29102.0;CM59_60:DS:0
 253;Bay Hap;30345.0;K. Ong Don:US:0
 254;Bay Hap;32098.0;ZZZ_CM100:US:0
-255;Bay Hap;34150.0;GO_04_05:US:0|K. Lo Xe:US:0
+255;Bay Hap;34150.0;K. Lo Xe:US:0|GO_04_05:US:0
 256;Bay Hap;34903.0;KTHOMAIDONGCUNG:DS:0
 257;Bay Hap;41089.0;ZZZ_CM89:US:0
 258;Bay Hap;47047.0;KMoiCM:US:0
@@ -263,23 +263,23 @@ id_nut;cha_branch;chainage;nhanh_noi_vao
 262;Binh Chanh;5836.0;B12:US:0
 263;Binh Chanh;11115.0;B14:US:0
 264;Binh Chanh;20885.0;B13:US:0
-265;Binh Hung;3449.0;Lam Tra:US:0|XCutQLPH:US:0
+265;Binh Hung;3449.0;XCutQLPH:US:0|Lam Tra:US:0
 266;Binh Hung;3975.0;Co Thien:DS:0
 267;Binh Hung;5222.0;Ben Long:DS:0|Xom Tiem:US:0
 268;Binh Hung;6000.0;Bon Thuoc1:US:0
 269;Binh Thanh cau;500.0;Binh Thanh:US:2
-270;Bo Bo;5183.0;T1:DS:0|T2:US:0
+270;Bo Bo;5183.0;T2:US:0|T1:DS:0
 271;Bo Bo;10305.0;T3:DS:0|T4:US:0
 272;Bo Bo;14319.0;T5:DS:0|T6:US:0
-273;Bo Bo;19342.0;T8:US:0|Kenh5:US:0|T7:DS:0
+273;Bo Bo;19342.0;Kenh5:US:0|T7:DS:0|T8:US:0
 274;Bo Thao;8319.0;Sa Lon:DS:0
 275;Bo Thao;10734.0;Sa Lon1:DS:0
-276;Bo Thao;12443.0;Bung Coc:DS:0|MTaLiem:DS:0
+276;Bo Thao;12443.0;MTaLiem:DS:0|Bung Coc:DS:0
 277;Bo Thao;19364.0;K.19/5:DS:0
 278;BoDoi;4806.0;KenhRanh(4000)_2:DS:0|KenhRanh(4000)_3:US:0
 279;Bon Thuoc;2560.0;Bon Thuoc2:DS:0|Bon Thuoc2:US:1
 280;Bon Thuoc2;5305.0;RanhHat1:DS:0|RanhHat2:US:0
-281;Bon Tong;7022.0;KH12:US:0|TSH47:DS:0|KH1:DS:0
+281;Bon Tong;7022.0;TSH47:DS:0|KH1:DS:0|KH12:US:0
 282;Bon Tong;7900.0;TSH111:US:0
 283;Bon Tong;11000.0;Giua:US:0|Ba Chieu:DS:0
 284;Bong Binh;4000.0;Cai Da:DS:1
@@ -290,7 +290,7 @@ id_nut;cha_branch;chainage;nhanh_noi_vao
 289;Branch AA;9966.0;B06:US:0
 290;Branch AB;904.0;B03:US:0
 291;Branch AB;1909.0;B02:DS:0
-292;Branch AC;11490.0;B32:US:0|B33:US:0
+292;Branch AC;11490.0;B33:US:0|B32:US:0
 293;Branch1002;2338.0;Branch1000:DS:0
 294;Branch1002;3936.0;Branch1001:DS:0
 295;Branch1003;612.0;Branch1004:US:0
@@ -299,8 +299,8 @@ id_nut;cha_branch;chainage;nhanh_noi_vao
 298;Branch1016;3000.0;Branch1014:DS:0|Branch1015:US:0
 299;Branch1016;6000.0;Branch1025:DS:0
 300;Branch1016;7724.0;Branch1018:US:0|Branch1017:DS:0
-301;Branch1016;9232.0;Branch1024:DS:0|Branch1056:US:0
-302;Branch1016;11057.0;Branch1026:US:0|Branch1023:DS:0
+301;Branch1016;9232.0;Branch1056:US:0|Branch1024:DS:0
+302;Branch1016;11057.0;Branch1023:DS:0|Branch1026:US:0
 303;Branch1016;11769.0;Branch1020:US:0|Branch1019:DS:0
 304;Branch1016;14568.0;Branch1022:US:0|Branch1021:DS:0
 305;Branch1018;1067.0;Branch1056:DS:0|Branch1054:US:0
@@ -308,7 +308,7 @@ id_nut;cha_branch;chainage;nhanh_noi_vao
 307;Branch1027;914.0;Branch1028:US:0
 308;Branch1028;1793.0;Branch1030:US:0
 309;Branch1028;3560.0;Branch1031:US:0
-310;Branch1028;4750.0;Branch1034:DS:0|Branch1033:US:0
+310;Branch1028;4750.0;Branch1033:US:0|Branch1034:DS:0
 311;Branch1028;5636.0;Branch1032:US:0|Branch1035:DS:0
 312;Branch1029;3000.0;Branch1028:DS:0
 313;Branch1037;2705.0;Branch1039:DS:0
@@ -316,15 +316,15 @@ id_nut;cha_branch;chainage;nhanh_noi_vao
 315;Branch1043;1687.0;Branch1047:US:0
 316;Branch1043;2541.0;Branch1051:US:0|Branch1048:US:0
 317;Branch1043;4813.0;Branch1049:US:0
-318;Branch1043;6104.0;Branch1052:US:0|Branch1050:US:0
-319;Branch1044;1147.0;Branch1046:DS:0|Branch1047:DS:0
+318;Branch1043;6104.0;Branch1050:US:0|Branch1052:US:0
+319;Branch1044;1147.0;Branch1047:DS:0|Branch1046:DS:0
 320;Branch1044;2296.0;Branch1048:DS:0
 321;Branch1044;3682.0;Branch1049:DS:0
 322;Branch1044;5159.0;Branch1050:DS:0
 323;Branch1045;4210.0;Branch1051:DS:0
 324;Branch1045;7305.0;Branch1052:DS:0|Branch1053:US:0
 325;Branch1053;751.0;Branch1042:DS:0
-326;Branch1159;6049.0;Branch1171:US:0|Branch1161:US:0|Branch1160:DS:0
+326;Branch1159;6049.0;Branch1160:DS:0|Branch1161:US:0|Branch1171:US:0
 327;Branch972;2487.0;Branch976:DS:0|Branch985:US:0
 328;Branch972;2998.0;Branch978:US:0
 329;Branch973;2029.0;Branch975:US:0
@@ -348,7 +348,7 @@ id_nut;cha_branch;chainage;nhanh_noi_vao
 347;Branch994;5312.0;Branch995:DS:0
 348;Branch996;4201.0;Branch1003:US:0
 349;Branch996;6000.0;Branch1001:US:0
-350;Branch997;3609.0;Branch1012:US:0|Branch1003:DS:0
+350;Branch997;3609.0;Branch1003:DS:0|Branch1012:US:0
 351;Bung Coc;8000.0;Re:US:0
 352;Bung Tuc;0.0;Tra Canh:US:0
 353;Bung Tuc;8084.0;CDXDong:DS:0|CDXDong:US:2
@@ -360,7 +360,7 @@ id_nut;cha_branch;chainage;nhanh_noi_vao
 359;C04;4374.0;C03:DS:0
 360;C04;8300.0;C43:US:0
 361;C07;1600.0;C06:DS:0
-362;C07;3750.0;C43:DS:0|C08:US:0
+362;C07;3750.0;C08:US:0|C43:DS:0
 363;C07;4615.0;C09:US:0
 364;C08;3465.0;C40:US:0
 365;C08;4305.0;C09:DS:0
@@ -368,7 +368,7 @@ id_nut;cha_branch;chainage;nhanh_noi_vao
 367;C11;3770.0;C39:US:0
 368;C11;5301.0;C36:US:0
 369;C11;8479.0;C40:DS:0
-370;C11;12508.0;C35:US:0|C10:DS:0
+370;C11;12508.0;C10:DS:0|C35:US:0
 371;C12;8813.0;C14:US:0
 372;C12;10049.0;C36:DS:0
 373;C12;13343.0;C41:DS:0
@@ -376,7 +376,7 @@ id_nut;cha_branch;chainage;nhanh_noi_vao
 375;C14;5975.0;C15:US:0
 376;C16;4639.0;C18:DS:0
 377;C16;7449.0;C19:DS:0
-378;C17;8450.0;C22:DS:0|C16:DS:0
+378;C17;8450.0;C16:DS:0|C22:DS:0
 379;C17;15700.0;C23:DS:0
 380;C19;6080.0;C20:DS:0
 381;C21;3500.0;C22:US:0
@@ -426,13 +426,13 @@ id_nut;cha_branch;chainage;nhanh_noi_vao
 425;CG17_18;12783.0;cachuoi:DS:0
 426;CG17_18;14245.0;KenhN7:DS:0
 427;CG17_18;14785.0;rachhuu:US:0
-428;CG17_18;16213.0;kenhkn8:US:0|R.GoGua:DS:0
+428;CG17_18;16213.0;R.GoGua:DS:0|kenhkn8:US:0
 429;CHUVANG1;2215.0;LUNGROGHE3:DS:0|LUNGROGHE2:DS:0
 430;CHUVANG2;730.0;QuocPhong14:US:0|QuocPhong13:DS:0
 431;CM11;15904.0;CM16_17:DS:0
-432;CM11;20394.0;RACHRUONG1:US:0|KDOCLAP:DS:0
+432;CM11;20394.0;KDOCLAP:DS:0|RACHRUONG1:US:0
 433;CM11;22054.0;CM03_04:DS:0
-434;CM11;26120.0;K.Moi:US:0|KENHNOITVT4:US:0|KENHNOIMINHHA2:DS:0
+434;CM11;26120.0;KENHNOITVT4:US:0|K.Moi:US:0|KENHNOIMINHHA2:DS:0
 435;CM16_17;6140.0;UMH27:US:0
 436;CM16_17;11058.0;UMH26:DS:0
 437;CM20_21;4636.0;ZZZ_CM94:DS:0
@@ -440,17 +440,17 @@ id_nut;cha_branch;chainage;nhanh_noi_vao
 439;CM42_43;5441.0;CaiNuocRiver:DS:0
 440;CM42_43;9180.0;CM18_19:DS:0
 441;CM42_43;10128.0;CongNghiep:US:0
-442;CM42_43;11443.0;KMoiCM:DS:0|ZZZ_CM88:US:0
+442;CM42_43;11443.0;ZZZ_CM88:US:0|KMoiCM:DS:0
 443;CM42_43;14330.0;ZZZ_CM103:US:0
 444;CM59_60;4220.0;ZZZ_CM71:US:0
-445;CM59_60;8142.0;ZZZ_CM99:DS:0|ZZZ_CM98:US:0
+445;CM59_60;8142.0;ZZZ_CM98:US:0|ZZZ_CM99:DS:0
 446;CM59_60;14627.0;ZZZ_CM96:DS:0|ZZZ_CM97:US:0
 447;CM59_60;19207.0;ZZZ_CM101:US:0|ZZZ_CM102:DS:0
 448;CMP_Muong Khai;747.0;Muong Lo2:DS:0
 449;CMP_Nang Mau 2;34000.0;Long Dieu:DS:0|Long Dieu:US:1
 450;CMP_Nang Mau 2;40000.0;LTNang:US:0
 451;CMP_Nang Mau 2;43474.0;Cai Dia:US:0
-452;CMP_Nha Tho;0.0;Hhao Dao:DS:0|Costanen:US:0
+452;CMP_Nha Tho;0.0;Costanen:US:0|Hhao Dao:DS:0
 453;CMy_CN;7973.0;ZZZ_CM99:US:0
 454;CSNTung;3540.0;Tra Canh:DS:0
 455;Ca Gua;17000.0;Nha Tho:US:1|Nha Tho:DS:2
@@ -462,31 +462,31 @@ id_nut;cha_branch;chainage;nhanh_noi_vao
 461;Ca Mau BL;9095.0;Tam Thuoc:DS:0
 462;Ca Mau BL;11827.0;K. Chua Phat:US:0|K. Vinh Loc 2:DS:0
 463;Ca Mau BL;12864.0;Dia Chuoi:DS:0
-464;Ca Mau BL;16271.0;KVINHMYPHUOCLONG1:US:0|K. Vinh My ngoai:US:0
+464;Ca Mau BL;16271.0;K. Vinh My ngoai:US:0|KVINHMYPHUOCLONG1:US:0
 465;Ca Mau BL;17429.0;Khong ten:DS:0
 466;Ca Mau BL;20953.0;K. Vinh Loi 2:DS:0|K. Cai Cung:US:0
-467;Ca Mau BL;24632.0;U-QLPH1:US:0|Branch1016:US:0
+467;Ca Mau BL;24632.0;Branch1016:US:0|U-QLPH1:US:0
 468;Ca Mau BL;27986.0;K. Cay Bong:US:0
 469;Ca Mau BL;31810.0;KCANHDENPHOSINH:US:0
 470;Ca Mau BL;33075.0;Noc Nang:US:0
 471;Ca Mau BL;34396.0;Branch997:US:0
-472;Ca Mau BL;35728.0;KCHOHOIHUYENSU2:DS:0|K. Ho Phong:US:0|Branch996:US:0
+472;Ca Mau BL;35728.0;KCHOHOIHUYENSU2:DS:0|Branch996:US:0|K. Ho Phong:US:0
 473;Ca Mau BL;37095.0;Branch995:US:0
 474;Ca Mau BL;40029.0;Su Son:US:0
 475;Ca Mau BL;41306.0;Cay Gua:US:0
-476;Ca Mau BL;43944.0;Lau Bang:US:0|Branch993:US:0
+476;Ca Mau BL;43944.0;Branch993:US:0|Lau Bang:US:0
 477;Ca Mau BL;44771.0;HL-Cdao:US:0
 478;Ca Mau BL;45990.0;K. Cai Keo:US:0|K. Tan Phong:DS:1
 479;Ca Mau BL;47513.0;Branch981:US:0
 480;Ca Mau BL;49732.0;Nhan Dan:US:0
 481;Ca Mau BL;51003.0;K. Lang Tram:DS:1
 482;Ca Mau BL;51971.0;K. Tac Van:US:0
-483;Ca Mau BL;54056.0;K. TanThanh_TacVan:US:0|R.CaiSu:US:0
+483;Ca Mau BL;54056.0;R.CaiSu:US:0|K. TanThanh_TacVan:US:0
 484;Ca Mau BL;58816.0;K.HaiSuong:US:0
 485;Ca Mau BL;62849.0;R.TamTrieu_1:DS:0
 486;Ca Mau11;3000.0;Branch1024:US:0|Branch1005:DS:0
 487;Ca Mau11;4487.0;Branch1006:DS:0
-488;Ca Mau11;6000.0;Branch1019:US:0|Branch1007:DS:0
+488;Ca Mau11;6000.0;Branch1007:DS:0|Branch1019:US:0
 489;Ca Mau11;7826.0;Branch1021:US:0
 490;Ca Ro;0.0;Cam35:DS:0
 491;Cai Bat cau;500.0;Cai Bat:US:0
@@ -512,7 +512,7 @@ id_nut;cha_branch;chainage;nhanh_noi_vao
 511;Cai Be;62264.0;KH62:US:0
 512;Cai Be;67827.0;KH7:DS:0
 513;Cai Be;73426.0;TSH137:DS:0
-514;Cai Be;74582.0;O Mon:DS:0|TSH139:DS:0
+514;Cai Be;74582.0;TSH139:DS:0|O Mon:DS:0
 515;Cai Be;77355.0;KG03_04:DS:0
 516;Cai Be;78147.0;KH92:DS:0
 517;Cai Be;79182.0;TSH122:DS:0
@@ -528,7 +528,7 @@ id_nut;cha_branch;chainage;nhanh_noi_vao
 527;Cai Co LK;24500.0;Tan Thanh:US:1
 528;Cai Co LK;30451.0;Cai Cai:US:1
 529;Cai Co LK;35700.0;Cai Bat:US:1
-530;Cai Co LK;44200.0;Song Trang:US:1|Cam6:DS:0
+530;Cai Co LK;44200.0;Cam6:DS:0|Song Trang:US:1
 531;Cai Co LK;49300.0;K28:US:1
 532;Cai Co LK;54200.0;Hung Dien:US:1
 533;Cai Co LK;63300.0;Cam7:DS:0
@@ -539,13 +539,13 @@ id_nut;cha_branch;chainage;nhanh_noi_vao
 538;Cai Co LK;90335.0;K61:US:0|Cai co LK cau:US:0
 539;Cai Con;877.0;Cai Con Be:US:0
 540;Cai Con;15708.0;No 1:US:0
-541;Cai Con;16103.0;Lai Hieu:US:0|Xeo Chit:US:0|My Thuan:DS:0|Kenh_Xeo_Vuong:DS:0|Soc Trang:US:0|Kenh_Thay_Cai:DS:0
+541;Cai Con;16103.0;My Thuan:DS:0|Soc Trang:US:0|Kenh_Thay_Cai:DS:0|Kenh_Xeo_Vuong:DS:0|Xeo Chit:US:0|Lai Hieu:US:0
 542;Cai Con Be;1096.0;DongDaTN:DS:0
 543;Cai Con Be;9000.0;SHU_22_23:DS:0
 544;Cai Lon;2423.0;KENGCHONGMY:US:0|K. Hai Sen:US:0
 545;Cai Lon;2803.0;AMAB8:DS:0
 546;Cai Lon;4000.0;AMAB9:DS:0
-547;Cai Lon;5084.0;Kenh 20:US:0|AMAB10:DS:0
+547;Cai Lon;5084.0;AMAB10:DS:0|Kenh 20:US:0
 548;Cai Lon;5604.0;R. Nga Bat:US:0
 549;Cai Lon;7360.0;Can Gao:US:0|K.NoiCLCB:US:0
 550;Cai Lon;8867.0;Thay Cai 1:US:0
@@ -586,7 +586,7 @@ id_nut;cha_branch;chainage;nhanh_noi_vao
 585;Cai Lon;103439.0;Xeo Xu:DS:0
 586;Cai Lon;106588.0;Lai Hieu:DS:0
 587;Cai Nhum;3633.0;Xeo Choi:DS:0
-588;Cai Rung;0.0;Song Trang:DS:0|Hong Ngu:DS:0|Ca Mon:DS:0|Cai Sach:US:0
+588;Cai Rung;0.0;Hong Ngu:DS:0|Cai Sach:US:0|Ca Mon:DS:0|Song Trang:DS:0
 589;Cai Rung;7037.0;Ca Gua:US:1
 590;Cai Sach;6000.0;K79:US:1|K79:DS:2
 591;Cai San;3273.0;TSH30:US:0
@@ -650,11 +650,11 @@ id_nut;cha_branch;chainage;nhanh_noi_vao
 649;Cai Trau NG;8853.0;Tan Hoa:DS:0
 650;Cai Trau NG;9958.0;HTTNghia:DS:0
 651;Cai Trau NG;11488.0;Tra Cuong:DS:0
-652;Cai Xu;1281.0;Cau Lam:US:0|CMP_Ngang:DS:0
+652;Cai Xu;1281.0;CMP_Ngang:DS:0|Cau Lam:US:0
 653;CaiBe_TG;2411.0;Phuoc Xuyen:DS:0
 654;CaiBe_TG;5360.0;NamThon:US:0
 655;CaiBongR;3161.0;Branch1158:US:0
-656;CaiNho;1288.0;Cai Beo:DS:0|Rach_Ho:US:0
+656;CaiNho;1288.0;Rach_Ho:US:0|Cai Beo:DS:0
 657;CaiNho;7550.0;K307:DS:0
 658;CaiNho;9664.0;Hoi Dong Tuong:DS:0
 659;CaiNho;10249.0;Rach Ruong:DS:0
@@ -666,7 +666,7 @@ id_nut;cha_branch;chainage;nhanh_noi_vao
 665;Cam31;38600.0;Cam32:DS:0
 666;Cam34;17400.0;Cam35:US:0
 667;Cam34;19000.0;Cam38:DS:0
-668;Cam34;26000.0;Cam39:US:0|Cam37:DS:0
+668;Cam34;26000.0;Cam37:DS:0|Cam39:US:0
 669;Cam34;30786.0;Rach Coc:DS:0
 670;Cam34;39273.0;Rach Goc:DS:0
 671;Cam34;40833.0;Cam36:DS:0
@@ -684,24 +684,24 @@ id_nut;cha_branch;chainage;nhanh_noi_vao
 683;Cam8;66000.0;Cam7:US:0
 684;Cam8;80000.0;Cam33:DS:0
 685;Cam8;87458.0;Cam32:US:0
-686;Can Gao;4000.0;KG19_20:US:0|KENHTHAYCAI1:US:0|KENHTHAYCAI:DS:0|R. Thu Nhat:US:0
+686;Can Gao;4000.0;KG19_20:US:0|R. Thu Nhat:US:0|KENHTHAYCAI1:US:0|KENHTHAYCAI:DS:0
 687;Can Gao;5566.0;KENHTHUHAI3:DS:0
 688;Can Gao;7763.0;KENHTHUBA3:DS:0
 689;Can Gao;9000.0;KENHCAYKE:DS:0
 690;Can Gao;13115.0;KENHNOIAB3:US:0|AMAB16:US:0
 691;Can Gao;14500.0;AMAB13:DS:0|AMAB14:US:0
 692;Can Gao;17034.0;XEOQUAOR:DS:0
-693;Can Gao;18000.0;K. Xeo Nhao:US:0|K. Lang Thu 7:US:0
+693;Can Gao;18000.0;K. Lang Thu 7:US:0|K. Xeo Nhao:US:0
 694;Can Gao;19600.0;RACHTHUTAM2:DS:0
 695;Can Gao;21169.0;KENHPHANLINH2:DS:0
 696;Can Gao;22742.0;RACHTHUCHIN2:DS:0
 697;Can Gao;24825.0;AMAB2:DS:0
-698;Can Gao;26906.0;XEONHAO2:DS:0|XEONHAO1:US:0
+698;Can Gao;26906.0;XEONHAO1:US:0|XEONHAO2:DS:0
 699;Can Gao;28831.0;K. Xeo La:US:0
 700;Can Gao;30105.0;RoGhe:DS:0|AMAB6:DS:0
 701;Can Gao;32287.0;CHUVANG1:US:0
 702;Can Gao;33771.0;BaHien2:DS:0|AMAB5:DS:0
-703;Can Gao;35000.0;K. Hang:DS:0|K. Kim Quy:US:0
+703;Can Gao;35000.0;K. Kim Quy:US:0|K. Hang:DS:0
 704;Can Gao;40730.0;KENH5APTY:DS:0
 705;Can Gao;44000.0;KENHTUOITRE2:DS:0
 706;Can Gao;45392.0;ChemZ_334:DS:0|Ca Mau 4:DS:0
@@ -771,15 +771,15 @@ id_nut;cha_branch;chainage;nhanh_noi_vao
 770;Cay Cong;3931.0;Chom Tre:DS:0
 771;CayNhum;2445.0;ZZZ_KenhNoiChuBien:US:0
 772;CayNhum;5008.0;ZZZ_KenhNoiCayNhum:DS:0
-773;CayNhum;7050.0;ZZZ_KenhSauDong3:US:0|ZZZ_KenhSauDong4:DS:0
+773;CayNhum;7050.0;ZZZ_KenhSauDong4:DS:0|ZZZ_KenhSauDong3:US:0
 774;Cha Va;3000.0;Long An:US:0
 775;Chac Bang;5157.0;KENHDUONGSAN:DS:0
-776;Chac Bang;7807.0;KCANHDENPHOSINH:DS:2|K. Lang Thu 7:DS:0
+776;Chac Bang;7807.0;K. Lang Thu 7:DS:0|KCANHDENPHOSINH:DS:2
 777;Chac Bang;9124.0;ChemZ_344:DS:0
 778;Chac Bang;11242.0;ChemZ_345:DS:0
 779;Chac Bang;12079.0;K.OngCa:DS:0
 780;Chac Bang;12848.0;KENHBACM:US:0
-781;Chac Bang;14205.0;ChemZ_343:DS:0|K.1:US:0
+781;Chac Bang;14205.0;K.1:US:0|ChemZ_343:DS:0
 782;Chac Bang;15321.0;ChemZ_342:DS:0
 783;Chac Bang;16564.0;K. Phong Thanh Tay:US:0
 784;Chac Bang;18033.0;RanhHat1:US:0|ChemZ_341:DS:0
@@ -795,17 +795,17 @@ id_nut;cha_branch;chainage;nhanh_noi_vao
 794;ChemZ_283;810.0;ChemZ_288:US:0
 795;ChemZ_284;1006.0;ChemZ_283:DS:0
 796;ChemZ_284;2217.0;ChemZ_285:US:0
-797;ChemZ_285;1951.0;ChemZ_287:US:0|ChemZ_286:DS:0
-798;ChemZ_289;1020.0;ChemZ_299:US:0|ChemZ_298:DS:0
-799;ChemZ_289;2308.0;ChemZ_294:DS:0|ChemZ_295:US:0
+797;ChemZ_285;1951.0;ChemZ_286:DS:0|ChemZ_287:US:0
+798;ChemZ_289;1020.0;ChemZ_298:DS:0|ChemZ_299:US:0
+799;ChemZ_289;2308.0;ChemZ_295:US:0|ChemZ_294:DS:0
 800;ChemZ_289;4742.0;ChemZ_291:DS:0|ChemZ_292:US:0
 801;ChemZ_290;1455.0;ChemZ_297:US:0|ChemZ_299:DS:0
 802;ChemZ_290;2395.0;ChemZ_295:DS:0|ChemZ_296:US:0
-803;ChemZ_290;4575.0;ChemZ_292:DS:0|ChemZ_293:US:0
+803;ChemZ_290;4575.0;ChemZ_293:US:0|ChemZ_292:DS:0
 804;ChemZ_300;1040.0;ChemZ_301:US:0
 805;ChemZ_300;4017.0;ChemZ_304:US:0
 806;ChemZ_301;2444.0;ChemZ_302:US:0
-807;ChemZ_302;2483.0;ChemZ_304:DS:0|ChemZ_305:US:0
+807;ChemZ_302;2483.0;ChemZ_305:US:0|ChemZ_304:DS:0
 808;ChemZ_303;918.0;ChemZ_306:US:0
 809;ChemZ_307;674.0;ChemZ_329:US:0
 810;ChemZ_307;3241.0;ChemZ_331:US:0
@@ -817,18 +817,18 @@ id_nut;cha_branch;chainage;nhanh_noi_vao
 816;ChemZ_308;5791.0;ChemZ_311:US:0
 817;ChemZ_308;9612.0;ChemZ_313:US:0
 818;ChemZ_308;11919.0;ChemZ_320:US:0
-819;ChemZ_309;929.0;ChemZ_321:DS:0|ChemZ_322:US:0
+819;ChemZ_309;929.0;ChemZ_322:US:0|ChemZ_321:DS:0
 820;ChemZ_309;3245.0;ChemZ_313:DS:0|ChemZ_319:US:0
 821;ChemZ_309;6787.0;ChemZ_311:DS:0|ChemZ_323:US:0
-822;ChemZ_309;9837.0;ChemZ_312:DS:0|ChemZ_324:US:0
+822;ChemZ_309;9837.0;ChemZ_324:US:0|ChemZ_312:DS:0
 823;ChemZ_309;12866.0;ChemZ_314:DS:0|ChemZ_325:US:0
 824;ChemZ_310;636.0;ChemZ_307:DS:0
 825;ChemZ_310;1589.0;ChemZ_308:US:0
 826;ChemZ_310;5357.0;ChemZ_328:DS:0
 827;ChemZ_310;8193.0;ChemZ_309:DS:0|ChemZ_327:DS:0
-828;ChemZ_311;1543.0;ChemZ_317:US:0|ChemZ_316:DS:0
-829;ChemZ_312;1634.0;ChemZ_315:DS:0|ChemZ_316:US:0
-830;ChemZ_313;2053.0;ChemZ_317:DS:0|ChemZ_318:US:0
+828;ChemZ_311;1543.0;ChemZ_316:DS:0|ChemZ_317:US:0
+829;ChemZ_312;1634.0;ChemZ_316:US:0|ChemZ_315:DS:0
+830;ChemZ_313;2053.0;ChemZ_318:US:0|ChemZ_317:DS:0
 831;ChemZ_314;4116.0;ChemZ_315:US:0
 832;ChemZ_318;1876.0;ChemZ_320:DS:0|ChemZ_321:US:0
 833;ChemZ_327;2321.0;ChemZ_330:DS:0
@@ -848,7 +848,7 @@ id_nut;cha_branch;chainage;nhanh_noi_vao
 847;Cho Cu;342.0;Tram Bau:DS:0
 848;Cho Cu;1764.0;Xa Mau:US:0
 849;Cho Gao;1559.0;GO_06_12:US:0
-850;Cho Gao;3464.0;R_Soi:DS:0|rachhuu:DS:0|RachDon:DS:0
+850;Cho Gao;3464.0;rachhuu:DS:0|R_Soi:DS:0|RachDon:DS:0
 851;Cho Gao;4273.0;KenhT5:US:0
 852;Cho Gao;5187.0;tutrinh:DS:0
 853;Cho Gao;5825.0;K.TuTrinh1:DS:0
@@ -875,7 +875,7 @@ id_nut;cha_branch;chainage;nhanh_noi_vao
 874;CoChien;20977.0;C01:DS:0
 875;CoChien;26275.0;CoChien_2:US:0
 876;CoChien;27298.0;C04:DS:0
-877;CoChien;28053.0;CoChien_3:US:0|C07:DS:0
+877;CoChien;28053.0;C07:DS:0|CoChien_3:US:0
 878;CoChien;29680.0;CoChien_2:DS:0
 879;CoChien;34566.0;Kenh_16:US:0|Mang Thit:US:0
 880;CoChien;41322.0;VUNGLIEM_CRECK:US:0
@@ -909,7 +909,7 @@ id_nut;cha_branch;chainage;nhanh_noi_vao
 908;CuaCoChien;14503.0;C27:DS:0
 909;CuaCoChien;17533.0;C29:DS:0
 910;CuaCoChien;22962.0;C30:DS:0
-911;CuaCoChien;27310.0;C32:DS:0|C33:DS:0
+911;CuaCoChien;27310.0;C33:DS:0|C32:DS:0
 912;CuaCungHau;3038.0;TRAVINH:US:0
 913;CuaCungHau;11048.0;ngaihiep:US:0
 914;CuaCungHau;15966.0;VINHKIMCANAL:US:0
@@ -957,11 +957,11 @@ id_nut;cha_branch;chainage;nhanh_noi_vao
 956;CuaTranDe;28092.0;K. Cai Xe_Ngan Ro:DS:0
 957;CuaTranDe;31525.0;SHU_12_108_2005:DS:0
 958;CuaTranDe;34192.0;Tiep Nhat:DS:0
-959;Dai Ngai;1705.0;K. Ba Xam _Goi_1:US:0|Muong Dieu:US:0
+959;Dai Ngai;1705.0;Muong Dieu:US:0|K. Ba Xam _Goi_1:US:0
 960;Dai Ngai;2586.0;Thep:US:0
 961;Dai Ngai;4783.0;Goc:US:0
 962;Dai Ngai;9186.0;K. Bao Bien:US:0
-963;Dai Ngai;12002.0;GCCKet:US:0|A Cu:DS:0
+963;Dai Ngai;12002.0;A Cu:DS:0|GCCKet:US:0
 964;Dai Ngai;13355.0;ST29_ST56:DS:0
 965;Dai Ngai;15832.0;K. Cai Xe_Ngan Ro:US:0|Soc Trang:DS:0
 966;Dai Ngai;19879.0;PTTTran:US:0
@@ -969,9 +969,9 @@ id_nut;cha_branch;chainage;nhanh_noi_vao
 968;Dai Ngai;24839.0;K. An No:US:0
 969;Dai Ngai;25892.0;Cho Cu1:DS:0
 970;Dai Ngai;28415.0;Bung Coc:US:3
-971;DamThiTuong;3820.0;ZZZ_CM79:DS:0|ZZZ_CM85:DS:0
+971;DamThiTuong;3820.0;ZZZ_CM85:DS:0|ZZZ_CM79:DS:0
 972;DamThiTuong;6000.0;ZZZ_CM86:DS:0
-973;DamThiTuong;6597.0;ZZZ_CM87:DS:0|ZZZ_CM77:US:0
+973;DamThiTuong;6597.0;ZZZ_CM77:US:0|ZZZ_CM87:DS:0
 974;DamThiTuong;7211.0;ZZZ_CM91:US:0
 975;DamThiTuong;8524.0;ZZZ_CM75:US:0
 976;Dao;9000.0;K7 AG:US:5|K7 AG:DS:6
@@ -1008,15 +1008,15 @@ id_nut;cha_branch;chainage;nhanh_noi_vao
 1007;Dong Tien3;6280.0;Khang Chien:US:0|Khang Chien:DS:1
 1008;Dong Tien3;9390.0;Binh Thanh:DS:0
 1009;Dong Tien3;12646.0;Phu Thanh:US:0|Phu Thanh:DS:1
-1010;Dong Tien3;20477.0;Tan Cong Chi:US:0|Tan Cong Chi:DS:1|Hoa Binh:DS:0
+1010;Dong Tien3;20477.0;Hoa Binh:DS:0|Tan Cong Chi:US:0|Tan Cong Chi:DS:1
 1011;Dong Tien3;23166.0;Binh Thanh4:US:1
 1012;Dong Tien3;26433.0;Phu Duc:DS:0
 1013;Dong Tien3;29622.0;Thay Cay:US:1
-1014;Dong Tien3;35262.0;Duong Thet:DS:1|Tan Cong Sinh:DS:0|Rach Sao:US:2
+1014;Dong Tien3;35262.0;Rach Sao:US:2|Duong Thet:DS:1|Tan Cong Sinh:DS:0
 1015;DongDaTN;1886.0;CMP_Muong Khai:DS:0
 1016;Dua_do_Creck;6000.0;Kenh_118:US:0
 1017;Dung;5680.0;TSH118:DS:0
-1018;Duong Hoa LT;8270.0;Song_LaiVung_Rach_HoaLong:DS:0|Kenh_Bong_Sung:US:0
+1018;Duong Hoa LT;8270.0;Kenh_Bong_Sung:US:0|Song_LaiVung_Rach_HoaLong:DS:0
 1019;Duong Hoa LT;15057.0;Rach_Ho_Dia_Sanh:DS:0
 1020;Duong Mon;1000.0;Cai Tau:DS:0
 1021;Duong Mon;2693.0;Xom La:DS:0
@@ -1026,13 +1026,13 @@ id_nut;cha_branch;chainage;nhanh_noi_vao
 1025;GCCKet;3268.0;MTMHac:DS:0|Chong Chac:DS:0
 1026;GCCKet;7260.0;STDNgai:DS:0|STDNgai:US:1
 1027;GCCKet;13108.0;Phu No:US:0
-1028;GO134_140;675.0;K. Ong Don:DS:0|Branch1191:US:0
+1028;GO134_140;675.0;Branch1191:US:0|K. Ong Don:DS:0
 1029;GO134_140;2924.0;GO168_169:US:0
 1030;GO134_140;7237.0;Branch1170:DS:0
 1031;GO168_169;1456.0;GO73_75:US:0
 1032;GO28_38;1288.0;B02:US:0
 1033;GO28_38;5800.0;Branch AB:US:0
-1034;GO28_38;7942.0;A01:DS:0|B05:US:0
+1034;GO28_38;7942.0;B05:US:0|A01:DS:0
 1035;GO28_38;11800.0;B07:US:0
 1036;GO28_38;15000.0;B09:US:0|A02:DS:0
 1037;GO28_38;19608.0;B28:US:0
@@ -1063,9 +1063,9 @@ id_nut;cha_branch;chainage;nhanh_noi_vao
 1062;GO_06_12;24469.0;K.NamSon:US:0
 1063;GO_06_12;29524.0;LoCayBuoi:US:0|TT107:DS:0
 1064;GO_06_12;32450.0;K.BS-Thnhat4:DS:0|K.BS-Thnhat3:DS:0
-1065;GO_06_12;33484.0;K.HPhu-Hquoi:US:0|K.BS-thanhnhat1:DS:0
+1065;GO_06_12;33484.0;K.BS-thanhnhat1:DS:0|K.HPhu-Hquoi:US:0
 1066;GO_06_12;34119.0;K.LoMe:DS:0
-1067;GO_06_12;35659.0;K.BinhLong:US:0|K.LangTuong:DS:0
+1067;GO_06_12;35659.0;K.LangTuong:DS:0|K.BinhLong:US:0
 1068;GO_06_12;36504.0;K.NamLe:US:0
 1069;GO_06_12;38175.0;KenhHuyen:US:0
 1070;GO_06_12;39132.0;K.AnTho:US:0
@@ -1096,14 +1096,14 @@ id_nut;cha_branch;chainage;nhanh_noi_vao
 1095;Giao Hoa;7767.0;Binh Chanh:US:0
 1096;Giao Hoa;10672.0;B04:DS:0
 1097;Giao Hoa;12958.0;B28:DS:0
-1098;Giao Hoa;13214.0;GO28_38:DS:0|Ba Lai:US:0
+1098;Giao Hoa;13214.0;Ba Lai:US:0|GO28_38:DS:0
 1099;Giao Hoa;14459.0;A16:US:0
 1100;Giong Cam;4989.0;Long My 2:DS:0
 1101;Giong_trom1;6578.0;Kenh_16:DS:0
 1102;Giua;2000.0;TSH63:DS:0|TSH66:US:0
 1103;Giua;4000.0;KH:DS:2|KH:US:4
-1104;Giua;6000.0;TSH60:DS:0|TSH69:US:0
-1105;Giua;9000.0;KA:DS:2|Ranh Hat:US:0|TSH:DS:0
+1104;Giua;6000.0;TSH69:US:0|TSH60:DS:0
+1105;Giua;9000.0;KA:DS:2|TSH:DS:0|Ranh Hat:US:0
 1106;Giua;10000.0;Tan Hiep:DS:6
 1107;Giua;12000.0;TSH19:DS:0
 1108;Giua;14000.0;TSH20:DS:0
@@ -1142,16 +1142,16 @@ id_nut;cha_branch;chainage;nhanh_noi_vao
 1141;Ham Luong;22078.0;B10:US:0
 1142;Ham Luong;26952.0;Giao Hoa:US:0
 1143;Ham Luong;28908.0;HamLuong_4:US:0
-1144;Ham Luong;29647.0;HamLuong_3:US:0|Ham Luong1:DS:0
+1144;Ham Luong;29647.0;Ham Luong1:DS:0|HamLuong_3:US:0
 1145;Ham Luong;30714.0;Mo Cay:DS:0
 1146;Ham Luong;34333.0;HamLuong_3:DS:0
 1147;Ham Luong;40271.0;MCC01_19:US:0
 1148;Ham Luong;42173.0;HamLuong_4:DS:0
 1149;Ham Luong;46088.0;C23:US:0
 1150;Ham Luong;47856.0;HamLuong_5:DS:0|B12:DS:0
-1151;Ham Luong;54670.0;HamLuong_6:US:0|C28:US:0|C27:US:0
+1151;Ham Luong;54670.0;C28:US:0|HamLuong_6:US:0|C27:US:0
 1152;Ham Luong;61760.0;HamLuong_6:DS:0
-1153;Ham Luong;63737.0;B16:DS:0|B27:DS:0
+1153;Ham Luong;63737.0;B27:DS:0|B16:DS:0
 1154;Ham Luong;68193.0;C31:US:0|B30:DS:0
 1155;Ham Luong;71944.0;C28:DS:0
 1156;Ham Luong1;2517.0;C42:DS:0
@@ -1163,14 +1163,14 @@ id_nut;cha_branch;chainage;nhanh_noi_vao
 1162;HamLuong_4;10191.0;HamLuong_5:US:0
 1163;HamLuong_5;1277.0;B34:US:0
 1164;HamLuong_6;3224.0;B23:DS:0
-1165;HangXoai;2505.0;6500_2:DS:0|6500_3:US:0
+1165;HangXoai;2505.0;6500_3:US:0|6500_2:DS:0
 1166;Hanh Gon;0.0;Su Son:DS:0
 1167;Hau;1839.0;9 Thuoc:DS:0
 1168;Hau;6000.0;Doan ket:US:0
 1169;Hau BoiTN;0.0;GCCKet:DS:0|THGCat:US:0
 1170;Hau BoiTN;309.0;Ba Dot:US:0
-1171;Hau BoiTN;3707.0;TCMNeo:US:0|30-4:DS:0
-1172;Hau Giang 3;17000.0;Giai Phong1:US:0|LTruong2:DS:0
+1171;Hau BoiTN;3707.0;30-4:DS:0|TCMNeo:US:0
+1172;Hau Giang 3;17000.0;LTruong2:DS:0|Giai Phong1:US:0
 1173;Hau Giang 3;18000.0;Xeo Tram2:DS:0
 1174;Hau Giang 3;19000.0;Xeo Xu:US:0|Xeo Xu:DS:1
 1175;Hau Giang 3;23000.0;Thay Nam:US:0|Thay Nam:DS:1
@@ -1204,10 +1204,10 @@ id_nut;cha_branch;chainage;nhanh_noi_vao
 1203;Hong Ngu;8008.0;Binh Thanh:US:1|Binh Thanh:DS:2
 1204;Hong Ngu;10626.0;Phu Thanh:US:2|Thong Nhat:DS:0
 1205;Hong Ngu;14864.0;Tan Cong Chi:US:2|Tan Cong Chi:DS:3
-1206;Hong Ngu;19100.0;Sa Rai:DS:0|Phu Duc:US:2
+1206;Hong Ngu;19100.0;Phu Duc:US:2|Sa Rai:DS:0
 1207;Hong Ngu;22953.0;Tan Thanh:DS:0
 1208;Hong Ngu;23500.0;Tan Cong Sinh:US:2
-1209;Hong Ngu;28211.0;Phuoc Xuyen2:US:0|Cai Cai:DS:0
+1209;Hong Ngu;28211.0;Cai Cai:DS:0|Phuoc Xuyen2:US:0
 1210;Hong Ngu;35447.0;Cai Bat:DS:0|K79:US:2
 1211;Hong Ngu Cr;0.0;Song_So_Ha_2:US:0
 1212;Hong Ngu Cr;2109.0;Tan Thanh LG:US:0|Tu Thuong:DS:0
@@ -1226,39 +1226,39 @@ id_nut;cha_branch;chainage;nhanh_noi_vao
 1225;K. Bien Nhi;2810.0;K.30-4:US:0
 1226;K. Bien Nhi;9832.0;KENHNOIHMBN:US:0
 1227;K. Bien Nhi;11097.0;K.BaThuoc_1:US:0
-1228;K. Cai Cung;2000.0;Branch1027:US:0|Branch1015:DS:0
+1228;K. Cai Cung;2000.0;Branch1015:DS:0|Branch1027:US:0
 1229;K. Cai Cung;6000.0;Branch1018:DS:0
-1230;K. Cai Cung;8000.0;Branch1034:US:0|Branch1020:DS:0|Branch1026:DS:0|Branch1035:US:0
-1231;K. Cai Cung;10000.0;Branch1022:DS:0|Branch1029:US:0
+1230;K. Cai Cung;8000.0;Branch1020:DS:0|Branch1035:US:0|Branch1026:DS:0|Branch1034:US:0
+1231;K. Cai Cung;10000.0;Branch1029:US:0|Branch1022:DS:0
 1232;K. Cai Keo;2000.0;Branch973:DS:0|Branch987:US:0
 1233;K. Cai Keo;4000.0;Branch984:DS:0|Branch988:US:0
-1234;K. Cai Keo;5033.0;Branch983:DS:0|Branch989:US:0
+1234;K. Cai Keo;5033.0;Branch989:US:0|Branch983:DS:0
 1235;K. Cai Keo;6000.0;Branch982:DS:0
 1236;K. Cai Keo;10000.0;Branch979:DS:0
 1237;K. Cai Keo;11744.0;Branch972:DS:0|Branch992:US:0
 1238;K. Cai Xe_Ngan Ro;2378.0;CXNRo1:DS:0|CXNRo1:US:1
 1239;K. Cai Xe_Ngan Ro;8023.0;K 96LHung:US:0
 1240;K. Cai Xe_Ngan Ro;9420.0;Vien Binh:US:0
-1241;K. Cai Xe_Ngan Ro;13745.0;K. Ba Xam _Goi_4:US:0|K. Ba Xam _Goi_3:DS:0|K. Tong Cang_1:US:0
+1241;K. Cai Xe_Ngan Ro;13745.0;K. Ba Xam _Goi_3:DS:0|K. Ba Xam _Goi_4:US:0|K. Tong Cang_1:US:0
 1242;K. Cai Xe_Ngan Ro;17958.0;U-QLPH51:US:0
 1243;K. Cay Bong;1423.0;Branch1012:DS:0
-1244;K. Cay Bong;3972.0;Branch1014:US:0|Branch997:DS:0|Branch1025:US:0
-1245;K. Cay Bong;5471.0;Branch1002:DS:0|Branch1004:DS:0
-1246;K. Cay Bong;7847.0;Ca Mau11:US:0|Branch1017:US:0
+1244;K. Cay Bong;3972.0;Branch997:DS:0|Branch1014:US:0|Branch1025:US:0
+1245;K. Cay Bong;5471.0;Branch1004:DS:0|Branch1002:DS:0
+1246;K. Cay Bong;7847.0;Branch1017:US:0|Ca Mau11:US:0
 1247;K. Cay Bong;11061.0;Branch1005:US:0
 1248;K. Cay Bong;13376.0;Branch1002:US:0
 1249;K. Cay Bong;14000.0;Branch1013:DS:0
 1250;K. Cay Bong;16285.0;Branch1006:US:0
 1251;K. Cay Bong;17164.0;Branch1055:DS:0
 1252;K. Cay Bong;18107.0;Branch1008:DS:0
-1253;K. Cay Bong;19902.0;Branch1009:DS:0|Branch1007:US:0
+1253;K. Cay Bong;19902.0;Branch1007:US:0|Branch1009:DS:0
 1254;K. Cay Bong;21081.0;Branch1011:US:0|Branch1010:DS:0
 1255;K. Chua Phat;1815.0;Branch1042:US:0
 1256;K. Chua Phat;2923.0;Branch1038:DS:0
-1257;K. Chua Phat;4000.0;Branch1036:DS:0|Branch1045:US:0|Branch1043:US:0
+1257;K. Chua Phat;4000.0;Branch1045:US:0|Branch1043:US:0|Branch1036:DS:0
 1258;K. Chua Phat;6405.0;Branch1040:DS:0
-1259;K. Chua Phat;8501.0;Branch1044:US:0|Branch1041:DS:0
-1260;K. Dong Cung;0.0;R. Ba Keo:US:0|DamThiTuong:US:0
+1259;K. Chua Phat;8501.0;Branch1041:DS:0|Branch1044:US:0
+1260;K. Dong Cung;0.0;DamThiTuong:US:0|R. Ba Keo:US:0
 1261;K. Dong Cung;2053.0;KTHOMAIDONGCUNG:US:0
 1262;K. Dong Cung;4249.0;ZZZ_CM84:DS:0
 1263;K. Dong Cung;8246.0;ZZZ_CM82:DS:0
@@ -1280,21 +1280,21 @@ id_nut;cha_branch;chainage;nhanh_noi_vao
 1279;K. Ho Phong;14367.0;Branch1010:US:0
 1280;K. Ho Phong;15484.0;Branch992:DS:0
 1281;K. Hoa Phu;7125.0;Branch1044:DS:0
-1282;K. Kiem Lam;3227.0;KENHLOMOIKG3:DS:0|KENHLOMOIKG2:US:0
+1282;K. Kiem Lam;3227.0;KENHLOMOIKG2:US:0|KENHLOMOIKG3:DS:0
 1283;K. Kiem Lam;5996.0;KENHBAYQUYENKG:US:0
-1284;K. Kim Quy;1172.0;LUNGROGHE3:US:0|Kinh 5:DS:0
+1284;K. Kim Quy;1172.0;Kinh 5:DS:0|LUNGROGHE3:US:0
 1285;K. Kim Quy;5410.0;K. MuongDao:DS:0
-1286;K. Kim Quy;9000.0;KENHCHONGMY:DS:0|KENHCHONGMY1:US:0
-1287;K. Kim Quy;12024.0;QuocPhong15:DS:0|QuocPhong16:US:0
+1286;K. Kim Quy;9000.0;KENHCHONGMY1:US:0|KENHCHONGMY:DS:0
+1287;K. Kim Quy;12024.0;QuocPhong16:US:0|QuocPhong15:DS:0
 1288;K. LONG TAU;9198.0;K. Dong Tranh:US:0
 1289;K. Lam Khiet;861.0;XeoDuoc1:US:0
-1290;K. Lam Khiet;4950.0;RACHXEODUOC:DS:0|KENHMIEUONGTA:US:0
+1290;K. Lam Khiet;4950.0;KENHMIEUONGTA:US:0|RACHXEODUOC:DS:0
 1291;K. Lam Khiet;7620.0;KENHBONTHUOC:DS:0
 1292;K. Lam Khiet;11417.0;KENHBONMUOI:DS:0
 1293;K. Lam Khiet;11892.0;KENHONGDOC:US:0
-1294;K. Lam Khiet;13479.0;AMAB15:DS:0|AMAB17:DS:0
+1294;K. Lam Khiet;13479.0;AMAB17:DS:0|AMAB15:DS:0
 1295;K. Lang Thu 7;2050.0;KENHBANGANDAI:DS:0
-1296;K. Lang Thu 7;4705.0;K. Lam Khiet:DS:0|K. Ranh:US:0
+1296;K. Lang Thu 7;4705.0;K. Ranh:US:0|K. Lam Khiet:DS:0
 1297;K. Lang Thu 7;10340.0;KENHBONTHUOC:US:0
 1298;K. Lang Thu 7;15910.0;K. Xeo Can:US:0
 1299;K. Lang Thu 7;18984.0;K. Sau Sanh:DS:0
@@ -1310,14 +1310,14 @@ id_nut;cha_branch;chainage;nhanh_noi_vao
 1309;K. Lang Tram;22183.0;U-QLPH8:DS:1|U-QLPH8:US:3
 1310;K. Lang Tram;24010.0;U-QLPH7:DS:0|U-QLPH7:US:1
 1311;K. Lo Xe;6977.0;CM20_21:US:0
-1312;K. Lo Xe;8948.0;CaiNuoc2:US:0|ZZZ_CM95:DS:0
+1312;K. Lo Xe;8948.0;ZZZ_CM95:DS:0|CaiNuoc2:US:0
 1313;K. Lo Xe;11261.0;ZZZ_CM96:US:0
 1314;K. Lo Xe;13212.0;ZZZ_CM92:DS:0|CMy_CN:US:0
 1315;K. Lo Xe;15375.0;DamThiTuong:DS:0
-1316;K. Lo Xe;18515.0;RachRauDua:DS:0|Rach Ban:US:0|RauDuaR:US:0|ZZZ_CM75:DS:0|K. Lo Xe 1:DS:0
+1316;K. Lo Xe;18515.0;RachRauDua:DS:0|RauDuaR:US:0|ZZZ_CM75:DS:0|Rach Ban:US:0|K. Lo Xe 1:DS:0
 1317;K. Lo Xe 1;3104.0;LTTRAN2:DS:0|LTTRAN1:US:0
-1318;K. Lo Xe 1;5980.0;ZZZ_CM61:DS:0|ZZZ_CM67:DS:0
-1319;K. Lo Xe 1;8678.0;ZZZ_CM63:DS:0|ZZZ_CM68:DS:0
+1318;K. Lo Xe 1;5980.0;ZZZ_CM67:DS:0|ZZZ_CM61:DS:0
+1319;K. Lo Xe 1;8678.0;ZZZ_CM68:DS:0|ZZZ_CM63:DS:0
 1320;K. Lo Xe 1;10000.0;ZZZ_CM62:DS:0
 1321;K. Lo Xe 1;11722.0;ZZZ_CM65:DS:0|ZZZ_CM64:DS:0
 1322;K. Lo Xe 1;13491.0;CM59_60:US:0
@@ -1331,11 +1331,11 @@ id_nut;cha_branch;chainage;nhanh_noi_vao
 1330;K. Nang Ren;8718.0;Nang RenNho:US:0|Nang RenNho:DS:1
 1331;K. Nang Ren;11270.0;VL ThanhTan:US:0
 1332;K. Nang Ren;16512.0;3 Cui:DS:0|Nchang Re:DS:0
-1333;K. Nang Ren;24506.0;U-QLPH46:US:0|Xang:DS:0|XangQLPH:DS:0
+1333;K. Nang Ren;24506.0;Xang:DS:0|U-QLPH46:US:0|XangQLPH:DS:0
 1334;K. Nang Ren;25960.0;Soc Don:DS:0
 1335;K. Nang Ren;29041.0;Mac Day:US:1
 1336;K. Nang Ren;32227.0;Ca Vinh:US:1
-1337;K. Nang Ren;35026.0;Xang:US:0|U-QLPH47:US:0
+1337;K. Nang Ren;35026.0;U-QLPH47:US:0|Xang:US:0
 1338;K. Nang Ren;37954.0;Lo Ca Lam A:DS:1
 1339;K. Nang Ren;41725.0;Thach Mynho:DS:0
 1340;K. Nang Ren;42408.0;Giai Phong2:US:1
@@ -1347,31 +1347,31 @@ id_nut;cha_branch;chainage;nhanh_noi_vao
 1346;K. Ngan Dua - BL1;8973.0;U-QLPH34:DS:0
 1347;K. Ngan Dua - BL1;11057.0;U-QLPH20:DS:0
 1348;K. Ngan Dua - BL1;12268.0;Vam Dinh:US:0
-1349;K. Ngan Dua - BL1;13421.0;Co Tay:US:0|U-QLPH21:DS:0
-1350;K. Ngan Dua - BL1;15209.0;Mieu Hoi:US:0|U-QLPH33:DS:0
-1351;K. Ngan Dua - BL1;17280.0;U-QLPH32:DS:0|Nang RenNho:DS:2
+1349;K. Ngan Dua - BL1;13421.0;U-QLPH21:DS:0|Co Tay:US:0
+1350;K. Ngan Dua - BL1;15209.0;U-QLPH33:DS:0|Mieu Hoi:US:0
+1351;K. Ngan Dua - BL1;17280.0;Nang RenNho:DS:2|U-QLPH32:DS:0
 1352;K. Ngan Dua - BL1;19559.0;U-QLPH26:DS:0
 1353;K. Ngan Dua - BL1;21227.0;TC Nhan:DS:2|U-QLPH24:DS:0
 1354;K. Ngan Dua - BL1;23103.0;U-QLPH23:DS:0
 1355;K. Ngan Dua - BL1;24965.0;U-QLPH39:DS:0
 1356;K. Ngan Dua - BL1;27039.0;3 Cui:US:0|3 Cui:DS:1
-1357;K. Ngan Dua - BL2;770.0;Xeo Ro:US:0|No.3000:US:1
+1357;K. Ngan Dua - BL2;770.0;No.3000:US:1|Xeo Ro:US:0
 1358;K. Ngan Dua - BL2;2378.0;Le Le:US:1
 1359;K. Ngan Dua - BL2;3807.0;No.5000:US:1
-1360;K. Ngan Dua - BL2;5996.0;Vinh Phong:DS:0|BDSauHy:US:1
+1360;K. Ngan Dua - BL2;5996.0;BDSauHy:US:1|Vinh Phong:DS:0
 1361;K. Ngan Dua - BL2;6752.0;Tu Tam:US:0|K7000:DS:0
 1362;K. Ngan Dua - BL2;7905.0;K80001:DS:0|Rach Ca:US:0
 1363;K. Ngan Dua - BL2;8620.0;U-QLPH5:DS:0|U-QLPH50:DS:0
 1364;K. Ngan Dua - BL2;11112.0;U-QLPH3:DS:0|U-QLPH3:US:1
 1365;K. Ong Don;3195.0;Rach Cai Nhap:US:0
 1366;K. Ong Don;4523.0;Branch1201:US:0
-1367;K. Ong Don;7693.0;Branch1166:US:0|Branch1163:DS:0
+1367;K. Ong Don;7693.0;Branch1163:DS:0|Branch1166:US:0
 1368;K. Ong Don;12000.0;Branch1169:US:0|Branch1167:US:0
 1369;K. Ong Don;12953.0;GO_08:DS:0
 1370;K. Ong Don;16224.0;GO_01_02:US:0
 1371;K. Ong Don;19640.0;Branch1170:US:0|Branch1165:DS:0
 1372;K. Phong Thanh Tay;3437.0;Bon Thuoc2:DS:1
-1373;K. Phong Thanh Tay;5923.0;K.MieuOngTa_2:US:0|K.MieuOngTa_3:DS:0
+1373;K. Phong Thanh Tay;5923.0;K.MieuOngTa_3:DS:0|K.MieuOngTa_2:US:0
 1374;K. Phong Thanh Tay;10500.0;XM Kut:DS:0
 1375;K. Phong Thanh Tay;12604.0;BachNguu1:DS:0
 1376;K. Phong Thanh Tay;13009.0;K 8000:DS:0
@@ -1383,8 +1383,8 @@ id_nut;cha_branch;chainage;nhanh_noi_vao
 1382;K. Phong Thanh Tay;19189.0;No.3000:DS:0|No.3000:US:4
 1383;K. Phong Thanh Tay;20271.0;PTN 1000:DS:0|PTN 1000:US:2
 1384;K. Ranh;3630.0;KENHPHANLINH:DS:0|KENHPHANLINH2:US:0
-1385;K. Ranh;8642.0;KENHMUOIQUANG:DS:0|XEONHAO1:DS:0
-1386;K. Ranh;12732.0;BaHien1:DS:0|BaHien2:US:0|RoGhe:US:0
+1385;K. Ranh;8642.0;XEONHAO1:DS:0|KENHMUOIQUANG:DS:0
+1386;K. Ranh;12732.0;RoGhe:US:0|BaHien1:DS:0|BaHien2:US:0
 1387;K. Ranh;14485.0;KENHKIMQUYKG2:DS:0|K. Hang:US:0
 1388;K. Ranh;20049.0;KENH5APTY:US:0|Ca Mau 4:US:0
 1389;K. Ranh;22971.0;ChemZ_306:DS:0
@@ -1397,7 +1397,7 @@ id_nut;cha_branch;chainage;nhanh_noi_vao
 1396;K. Ranh;35362.0;ChemZ_293:DS:0
 1397;K. Ranh;36374.0;K. Tam Ngan:US:0|K. Tam Ngan:DS:1|ChongMy:DS:0
 1398;K. Ranh;42323.0;ChemZ_282:DS:0
-1399;K. Sau Sanh;551.0;BoiLoi:US:0|KENHTOICANH:US:0|KENHLOMOIKG1:DS:0
+1399;K. Sau Sanh;551.0;KENHLOMOIKG1:DS:0|KENHTOICANH:US:0|BoiLoi:US:0
 1400;K. Sau Sanh;2350.0;RACHTRAQUAN:DS:0
 1401;K. Sau Sanh;10300.0;RACHMONGHOA:DS:0
 1402;K. So Khong;2019.0;ChemZ_309:US:0
@@ -1408,7 +1408,7 @@ id_nut;cha_branch;chainage;nhanh_noi_vao
 1407;K. Tac Van;1250.0;Branch973:US:0
 1408;K. Tam Ngan;2359.0;ChemZ_344:US:0|ChemZ_346:DS:0
 1409;K. Tam Ngan;4953.0;ChemZ_347:DS:0|ChemZ_345:US:0
-1410;K. Tam Ngan;6279.0;ChemZ_349:DS:0|KENHBACM:DS:0
+1410;K. Tam Ngan;6279.0;KENHBACM:DS:0|ChemZ_349:DS:0
 1411;K. Tam Ngan;8440.0;ChemZ_343:US:0|ChemZ_348:DS:0
 1412;K. Tam Ngan;10296.0;ChemZ_342:US:0
 1413;K. Tam Ngan;12095.0;ChemZ_341:US:0
@@ -1418,7 +1418,7 @@ id_nut;cha_branch;chainage;nhanh_noi_vao
 1417;K. Tam Ngan;17913.0;ChemZ_280:US:0
 1418;K. Tam Ngan;18274.0;KENHKIEMKG1:DS:0
 1419;K. Tam Ngan;18918.0;ChemZ_290:DS:0
-1420;K. Tam Ngan;22996.0;ChemZ_283:US:0|ChemZ_289:DS:0
+1420;K. Tam Ngan;22996.0;ChemZ_289:DS:0|ChemZ_283:US:0
 1421;K. Tan Phong;2003.0;Cay Giua:DS:0|Cay Giua:US:1
 1422;K. Tan Phong;12400.0;K. CCC4:DS:0|K. CCC4:US:1
 1423;K. Tan Phong;22048.0;U-QLPH8:US:1|U-QLPH8:DS:2
@@ -1429,30 +1429,30 @@ id_nut;cha_branch;chainage;nhanh_noi_vao
 1428;K. TanThanh_TacVan;5724.0;U-QLPH8:DS:3
 1429;K. Thuyloi2;630.0;K. DuongRung1:DS:0
 1430;K. Truong Toa;4950.0;KENHLOMOIKG1:US:0|KENHLOMOIKG2:DS:0
-1431;K. Truong Toa;7620.0;KENHBAYQUYENKG:DS:0|KENHTOICANH:DS:0
+1431;K. Truong Toa;7620.0;KENHTOICANH:DS:0|KENHBAYQUYENKG:DS:0
 1432;K. Vinh Loc 1;2122.0;Chin Co:US:0
 1433;K. Vinh Loc 1;4699.0;Ba Quy:DS:0|Ba Quy:US:1
 1434;K. Vinh Loc 1;6879.0;U-QLPH3:DS:1|Ba Ai 1:DS:0
 1435;K. Vinh Loc 1;9238.0;K10000:DS:0
-1436;K. Vinh Loc 1;9691.0;No.10000:US:0|U-QLPH50:US:0
+1436;K. Vinh Loc 1;9691.0;U-QLPH50:US:0|No.10000:US:0
 1437;K. Vinh Loc 1;10162.0;K80001:US:0|VL 8000:DS:0
-1438;K. Vinh Loc 1;11295.0;VL 7000:DS:0|K7000:US:0
+1438;K. Vinh Loc 1;11295.0;K7000:US:0|VL 7000:DS:0
 1439;K. Vinh Loc 1;12295.0;Vinh Phong:US:0|Vinh Phong:DS:2
 1440;K. Vinh Loc 1;14306.0;No.5000:DS:1|No.5000:US:5
 1441;K. Vinh Loc 1;16386.0;No.3000:DS:1|No.3000:US:5
 1442;K. Vinh Loc 2;1011.0;U-QLPH19:DS:0|U-QLPH19:US:4
-1443;K. Vinh Loc 2;2155.0;U-QLPH40:DS:0|U-QLPH39:US:0
+1443;K. Vinh Loc 2;2155.0;U-QLPH39:US:0|U-QLPH40:DS:0
 1444;K. Vinh Loc 2;4311.0;U-QLPH23:US:0|U-QLPH37:DS:0
-1445;K. Vinh Loc 2;6007.0;U-QLPH38:DS:0|U-QLPH24:US:0
-1446;K. Vinh Loc 2;8369.0;U-QLPH26:US:0|U-QLPH25:DS:0
+1445;K. Vinh Loc 2;6007.0;U-QLPH24:US:0|U-QLPH38:DS:0
+1446;K. Vinh Loc 2;8369.0;U-QLPH25:DS:0|U-QLPH26:US:0
 1447;K. Vinh Loc 2;10334.0;U-QLPH32:US:0
 1448;K. Vinh Loc 2;11034.0;U-QLPH22:DS:0
 1449;K. Vinh Loc 2;13387.0;U-QLPH33:US:0|U-QLPH27:DS:0
 1450;K. Vinh Loc 2;14644.0;U-QLPH28:DS:0|U-QLPH21:US:0
-1451;K. Vinh Loc 2;16767.0;U-QLPH31:DS:0|U-QLPH20:US:0
+1451;K. Vinh Loc 2;16767.0;U-QLPH20:US:0|U-QLPH31:DS:0
 1452;K. Vinh Loc 2;19154.0;U-QLPH34:US:0|U-QLPH30:DS:0
 1453;K. Vinh Loc 2;20909.0;U-QLPH35:DS:0|U-QLPH29:US:0
-1454;K. Vinh Loc 2;23100.0;U-QLPH36:US:0|Dia Chuoi:US:0|Tam Thuoc:US:0
+1454;K. Vinh Loc 2;23100.0;Dia Chuoi:US:0|U-QLPH36:US:0|Tam Thuoc:US:0
 1455;K. Vinh Loi 1;3261.0;NTL 14000:DS:0
 1456;K. Vinh Loi 1;4724.0;NTL 13000:DS:0
 1457;K. Vinh Loi 1;5528.0;Dan Quan:DS:0
@@ -1476,25 +1476,25 @@ id_nut;cha_branch;chainage;nhanh_noi_vao
 1475;K. Vinh Loi 2;6556.0;VP8:DS:0|VP9:US:0
 1476;K. Vinh Loi 2;9050.0;VP10:US:0|U-QLPH16:DS:0
 1477;K. Vinh Loi 2;10639.0;VP10_1:DS:0|U-QLPH13:US:0
-1478;K. Vinh Loi 2;12494.0;VP12:US:0|VP15:DS:0
-1479;K. Vinh Loi 2;14242.0;VP14:US:0|U-QLPH1:DS:0|Dong Da:DS:0
-1480;K. Vinh My ngoai;770.0;Branch1027:DS:0|Branch1037:US:0
+1478;K. Vinh Loi 2;12494.0;VP15:DS:0|VP12:US:0
+1479;K. Vinh Loi 2;14242.0;U-QLPH1:DS:0|VP14:US:0|Dong Da:DS:0
+1480;K. Vinh My ngoai;770.0;Branch1037:US:0|Branch1027:DS:0
 1481;K. Vinh My ngoai;2211.0;Branch1039:US:0
 1482;K. Vinh My ngoai;4000.0;Branch1038:US:0|Branch1030:DS:0
-1483;K. Vinh My ngoai;6381.0;Branch1036:US:0|Branch1031:DS:0
-1484;K. Vinh My ngoai;7517.0;Branch1033:DS:0|Branch1032:DS:0|Branch1040:US:0
-1485;K. Vinh My ngoai;9600.0;Branch1029:DS:0|Branch1041:US:0
-1486;K. Xang;3000.0;Hoa Hung:US:0|Hphu Giua:DS:0
+1483;K. Vinh My ngoai;6381.0;Branch1031:DS:0|Branch1036:US:0
+1484;K. Vinh My ngoai;7517.0;Branch1033:DS:0|Branch1040:US:0|Branch1032:DS:0
+1485;K. Vinh My ngoai;9600.0;Branch1041:US:0|Branch1029:DS:0
+1486;K. Xang;3000.0;Hphu Giua:DS:0|Hoa Hung:US:0
 1487;K. Xeo Can;2350.0;KENHMOI:DS:0
 1488;K. Xeo Doi;563.0;K. Thuyloi2:US:0
 1489;K. Xeo Doi;5141.0;K. Thuyloi2:DS:0
-1490;K. Xeo La;10271.0;QuocPhong12_2:US:0|QuocPhong12_1:DS:0
+1490;K. Xeo La;10271.0;QuocPhong12_1:DS:0|QuocPhong12_2:US:0
 1491;K. Xeo Nhao;6580.0;KENHCHONGMY:US:0|KENHCHONGMY:DS:1
-1492;K. Xeo Nhao;12433.0;QuocPhong8:DS:0|QuocPhong9:US:0
+1492;K. Xeo Nhao;12433.0;QuocPhong9:US:0|QuocPhong8:DS:0
 1493;K.1;4550.0;K.MieuOngTa_2:DS:0|K.MieuOngTa_1:US:0
 1494;K.19/5;6511.0;Sa Lon:DS:1|Sa Lon:US:4
 1495;K.19/5;11055.0;Bung Coc:US:0|Bung Coc:DS:1
-1496;K.30-4;1180.0;K.1-5:US:0|K.ChetBuoi:DS:0
+1496;K.30-4;1180.0;K.ChetBuoi:DS:0|K.1-5:US:0
 1497;K.30-4;1941.0;R.LungNgang_2:US:0
 1498;K.AnHa;7827.0;KenhNgang1:DS:0
 1499;K.AnHa;8218.0;KenhNgang:US:0
@@ -1502,7 +1502,7 @@ id_nut;cha_branch;chainage;nhanh_noi_vao
 1501;K.AnThuy3;1662.0;K.BS-Thnhat3:US:0
 1502;K.AnThuy3;3062.0;K.BS-Thnhat4:US:0
 1503;K.BS-Thnhat3;1639.0;K.BS-Thnhat10:DS:0|K.BS-Thnhat11:US:0
-1504;K.BS-Thnhat4;1212.0;K.BS-Thnhat12:US:0|K.BS-Thnhat11:DS:0
+1504;K.BS-Thnhat4;1212.0;K.BS-Thnhat11:DS:0|K.BS-Thnhat12:US:0
 1505;K.BS-thanhnhat1;1453.0;K.BS-Thnhat6:DS:0
 1506;K.BS-thanhnhat1;1780.0;K.BS-Thnhat10:US:0
 1507;K.BaBeo;251.0;K.BaBeo2:DS:0
@@ -1516,7 +1516,7 @@ id_nut;cha_branch;chainage;nhanh_noi_vao
 1515;K.BinhLong;977.0;K.Kchien3:DS:0|K.Kchien4:US:0
 1516;K.ChetBuoi;0.0;K.Chua:US:0
 1517;K.CongDoan;249.0;K.DanQuan(MuiChui):DS:0
-1518;K.CongDoan;1655.0;R.Dinh:DS:0|K.BaThuoc_2:DS:0
+1518;K.CongDoan;1655.0;K.BaThuoc_2:DS:0|R.Dinh:DS:0
 1519;K.CongDoan;3057.0;K.R.Trai:DS:0|K.CongNghiep:US:0
 1520;K.CongXang2;1712.0;K.CongXang3:US:0
 1521;K.DanQuan(MuiChui);896.0;K.CongNghiep:DS:0
@@ -1524,24 +1524,24 @@ id_nut;cha_branch;chainage;nhanh_noi_vao
 1523;K.HPhu-Hquoi;500.0;K.Kchien5:US:0|K.Kchien4:DS:0
 1524;K.HaiSuong;1291.0;K.BongKien:US:0
 1525;K.HaiSuong;4913.0;K.XaDat_2:US:0
-1526;K.HaiSuong;5431.0;R.TamTrieu_2:DS:0|R.TamTrieu_1:US:0
+1526;K.HaiSuong;5431.0;R.TamTrieu_1:US:0|R.TamTrieu_2:DS:0
 1527;K.LangTuong;1372.0;K.nguyenLong:DS:0|K.NguyenLong1:US:0
 1528;K.LangTuong;2259.0;K.AnTho1:US:0|K.AnTho:DS:0
 1529;K.LienHong;3282.0;K.LangTuong:US:0
-1530;K.LoMe;449.0;K.LienHong:DS:0|K.AnThuy3:US:0
+1530;K.LoMe;449.0;K.AnThuy3:US:0|K.LienHong:DS:0
 1531;K.LoMe;2118.0;K.BS-Thnhat6:US:0|K.NguyenLong1:DS:0
 1532;K.LoMe;3311.0;K.AnTho1:DS:0
-1533;K.LuBu-BungTum;0.0;K.VinhChau:DS:0|K.VinhChau-CoCo:DS:0
+1533;K.LuBu-BungTum;0.0;K.VinhChau-CoCo:DS:0|K.VinhChau:DS:0
 1534;K.LuBu-BungTum;1322.0;K.Lo:DS:0
 1535;K.LuBu-BungTum;2148.0;K.SuonVinhHai:US:0
 1536;K.LuBu-BungTum;8215.0;K.GiayLang-BungTum:DS:0
 1537;K.MieuOngTa1;3377.0;K.MieuOngTa4:US:0
-1538;K.MieuOngTa1;3890.0;K.DuongXuong:US:0|K.MieuOngTa2:US:0
+1538;K.MieuOngTa1;3890.0;K.MieuOngTa2:US:0|K.DuongXuong:US:0
 1539;K.MieuOngTa3;2989.0;K.ThoiThuy2:DS:0
-1540;K.NamCan-LaiHoa;3356.0;K.BacLieuDiVinhChau:US:0|K.OngMan:DS:0
+1540;K.NamCan-LaiHoa;3356.0;K.OngMan:DS:0|K.BacLieuDiVinhChau:US:0
 1541;K.NamCan-LaiHoa;8858.0;K.2:US:0
 1542;K.NamLe;892.0;K.Kchien3:US:0|K.Kchien2:DS:0
-1543;K.OngCa;3532.0;K.MieuOngTa_1:DS:0|K.ThuyLoi:DS:0
+1543;K.OngCa;3532.0;K.ThuyLoi:DS:0|K.MieuOngTa_1:DS:0
 1544;K.OngTa2;3993.0;K.OngTa1:DS:0
 1545;K.SuonVinhHai;10550.0;K.13:DS:0
 1546;K.T1_TG;2552.0;Kenh_Cung:US:0
@@ -1552,7 +1552,7 @@ id_nut;cha_branch;chainage;nhanh_noi_vao
 1551;K.ThamLuong;7838.0;K.XangLVM:DS:0
 1552;K.ThamLuong;13559.0;Kenh19T5:DS:0
 1553;K.ThamLuong;17653.0;Kenh19T5:US:0
-1554;K.ThamLuong;25499.0;VamThuat:US:0|S.BenCat:US:0
+1554;K.ThamLuong;25499.0;S.BenCat:US:0|VamThuat:US:0
 1555;K.ThongNhat;5191.0;R.LungNgang_1:DS:0
 1556;K.Thu5_1;250.0;QuocPhong4_1:DS:0|QuocPhong4_2:US:0
 1557;K.VinhChau;0.0;K.BacLieuDiVinhChau:DS:0
@@ -1568,8 +1568,8 @@ id_nut;cha_branch;chainage;nhanh_noi_vao
 1567;K10;9600.0;K9:DS:0
 1568;K10;12293.0;Bang Day:DS:0
 1569;K12;2800.0;K79:US:0|K79:DS:1
-1570;K12;8000.0;K30-4:US:0|Bay Thuoc:DS:0
-1571;K12;13000.0;Dong Tien:US:0|Dong Tien:DS:1|Bac Dong:US:0
+1570;K12;8000.0;Bay Thuoc:DS:0|K30-4:US:0
+1571;K12;13000.0;Bac Dong:US:0|Dong Tien:US:0|Dong Tien:DS:1
 1572;K2-9 cau;500.0;K2-9:US:4
 1573;K28;15508.0;Bau Nau1:US:0|Bau Nau1:DS:1|Ca Mon:US:0
 1574;K28 cau;500.0;K28:US:0
@@ -1592,18 +1592,18 @@ id_nut;cha_branch;chainage;nhanh_noi_vao
 1591;K8000;3000.0;3Thuoc:US:0
 1592;K8000;5078.0;9 Thuoc:US:0|Ranh:DS:0
 1593;K8000;11700.0;CMP_Nang Mau 2:US:1
-1594;K8000;15726.0;LTNang:DS:0|Nha Nuoc:DS:0|Nha Nuoc:US:2
+1594;K8000;15726.0;Nha Nuoc:DS:0|Nha Nuoc:US:2|LTNang:DS:0
 1595;K8000;18832.0;Xeo Mon:DS:0|Xeo Mon:US:2
 1596;K8000;27000.0;Hau Giang 3:DS:0|Hau Giang 3:US:3
 1597;K8000;29000.0;LTruong2:US:0
 1598;KCANHDENPHOSINH;1130.0;VP18:DS:0|PS-CS 1:DS:0
 1599;KCANHDENPHOSINH;2598.0;VP16:US:0
 1600;KCANHDENPHOSINH;3041.0;U-QLPH9:DS:0
-1601;KCANHDENPHOSINH;5000.0;VP14:DS:0|U-QLPH10:US:1
+1601;KCANHDENPHOSINH;5000.0;U-QLPH10:US:1|VP14:DS:0
 1602;KCANHDENPHOSINH;5888.0;U-QLPH11:US:0
 1603;KCANHDENPHOSINH;6733.0;VP12:DS:0
 1604;KCANHDENPHOSINH;7959.0;VP10_1:US:0
-1605;KCANHDENPHOSINH;8973.0;U-QLPH14:US:0|VP10:DS:0
+1605;KCANHDENPHOSINH;8973.0;VP10:DS:0|U-QLPH14:US:0
 1606;KCANHDENPHOSINH;9757.0;VP8:US:0
 1607;KCANHDENPHOSINH;12475.0;VP6:DS:0|U-QLPH18:US:0
 1608;KCANHDENPHOSINH;13429.0;U-QLPH17:US:0|U-QLPH15:US:0
@@ -1614,7 +1614,7 @@ id_nut;cha_branch;chainage;nhanh_noi_vao
 1613;KCANHDENPHOSINH;19600.0;No.5000:US:0|No.5000:DS:3
 1614;KCANHDENPHOSINH;20495.0;PTN 5000:DS:1|NTL 5000:US:0
 1615;KCANHDENPHOSINH;21400.0;Vinh Phong:US:3|Vinh Phong:DS:4
-1616;KCANHDENPHOSINH;22302.0;NTL 7000:US:0|PTN 7000:DS:1
+1616;KCANHDENPHOSINH;22302.0;PTN 7000:DS:1|NTL 7000:US:0
 1617;KCANHDENPHOSINH;22984.0;NTL 8000:US:0
 1618;KCANHDENPHOSINH;24089.0;NTL 9000:US:0
 1619;KCANHDENPHOSINH;26118.0;K.OngTa2:US:0
@@ -1625,9 +1625,9 @@ id_nut;cha_branch;chainage;nhanh_noi_vao
 1624;KCANHDENPHOSINH;33082.0;K.ThuyLoi:US:0
 1625;KCHOGIUA;932.0;R-BPhuoc:DS:0
 1626;KCHOGIUA;5071.0;Lodua1:US:0
-1627;KCHOHOIHUYENSU;2003.0;Cay Giua:DS:1|Bon Thuoc2:US:0
+1627;KCHOHOIHUYENSU;2003.0;Bon Thuoc2:US:0|Cay Giua:DS:1
 1628;KCHOHOIHUYENSU;9975.0;XM Kut:US:0
-1629;KCHOHOIHUYENSU;12400.0;K 8000:US:0|K. CCC4:DS:1
+1629;KCHOHOIHUYENSU;12400.0;K. CCC4:DS:1|K 8000:US:0
 1630;KCHOHOIHUYENSU;13046.0;PTN 7000:US:0
 1631;KCHOHOIHUYENSU;14015.0;Vinh Phong:US:1
 1632;KCHOHOIHUYENSU;15300.0;PTN 5000:US:0
@@ -1635,8 +1635,8 @@ id_nut;cha_branch;chainage;nhanh_noi_vao
 1634;KCHOHOIHUYENSU;17326.0;PTN 3000:US:0
 1635;KCHOHOIHUYENSU;18153.0;No.3000:DS:4
 1636;KCHOHOIHUYENSU;18900.0;PTN 1000:US:0
-1637;KCHOHOIHUYENSU2;21421.0;CC4:DS:0|U-QLPH19:DS:3
-1638;KCHOHOIHUYENSU2;22546.0;U-QLPH17:DS:0|Khao Dien:DS:0|U-QLPH8:US:5
+1637;KCHOHOIHUYENSU2;21421.0;U-QLPH19:DS:3|CC4:DS:0
+1638;KCHOHOIHUYENSU2;22546.0;U-QLPH8:US:5|U-QLPH17:DS:0|Khao Dien:DS:0
 1639;KCHOHOIHUYENSU2;24000.0;U-QLPH18:DS:0
 1640;KCHOHOIHUYENSU2;25814.0;U-QLPH12:DS:0|U-QLPH6:US:1
 1641;KCHOHOIHUYENSU2;26333.0;Hanh Gon:DS:0|U-QLPH11:DS:0
@@ -1645,15 +1645,15 @@ id_nut;cha_branch;chainage;nhanh_noi_vao
 1644;KCHOHOIHUYENSU2;32221.0;PS-CS 1:US:1
 1645;KDOCLAP;3762.0;KENHCOINAM2:US:0
 1646;KENH3-2;6000.0;VAMBUON:US:0
-1647;KENH3-2;11006.0;TraCu:US:0|LONG_HIEPCR:DS:0
+1647;KENH3-2;11006.0;LONG_HIEPCR:DS:0|TraCu:US:0
 1648;KENH3-2;15000.0;HAMGIANG:DS:0
 1649;KENH3-2;16212.0;THAURAU-TANLAP:DS:0
 1650;KENH3-2;17000.0;SARAICANAL:US:0|Sarai1:US:0
 1651;KENH5APTY;1111.0;KENHTUOITRE2:US:0
-1652;KENHBANGANDAI;1613.0;KENHTHUBA4:DS:0|KENHTHUBA3:US:0
-1653;KENHBANGANDAI;3000.0;KENHONGDOC:DS:0|KENHCAYKE:US:0
-1654;KENHBANGANDAI;6000.0;AMAB16:DS:0|AMAB17:US:0
-1655;KENHBANGANDAI;6416.0;AMAB15:US:0|AMAB14:DS:0
+1652;KENHBANGANDAI;1613.0;KENHTHUBA3:US:0|KENHTHUBA4:DS:0
+1653;KENHBANGANDAI;3000.0;KENHCAYKE:US:0|KENHONGDOC:DS:0
+1654;KENHBANGANDAI;6000.0;AMAB17:US:0|AMAB16:DS:0
+1655;KENHBANGANDAI;6416.0;AMAB14:DS:0|AMAB15:US:0
 1656;KENHBOBAO;691.0;UMH16:DS:0
 1657;KENHBOBAO;3740.0;UMH25:DS:0
 1658;KENHBOBAO;6000.0;UMH17:US:0
@@ -1661,7 +1661,7 @@ id_nut;cha_branch;chainage;nhanh_noi_vao
 1660;KENHBOBAO;14000.0;KENHSOKHONG:US:0
 1661;KENHBOBAO;17011.0;T29:US:0
 1662;KENHBOBAO;18000.0;KENHSOKHONG2:US:0
-1663;KENHBOBAO;21820.0;T25:DS:0|UMH2:US:0
+1663;KENHBOBAO;21820.0;UMH2:US:0|T25:DS:0
 1664;KENHBOBAO;24755.0;R. Ba Tinh:DS:0
 1665;KENHBOBAO;26000.0;UMH1:US:0
 1666;KENHBONMUOI;5864.0;KENHTHUBA4:US:0|KENHTAYSON:DS:0
@@ -1670,22 +1670,22 @@ id_nut;cha_branch;chainage;nhanh_noi_vao
 1669;KENHCHONGMY;10330.0;KENHTHUBA2:US:0|KENHTHUBA1:DS:0
 1670;KENHCHONGMY;11905.0;KENHTHUTU1:DS:0|KENHTHUTU2:US:0
 1671;KENHCHONGMY;12972.0;K.Thu5_2:US:0|K.Thu5_1:DS:0
-1672;KENHCHONGMY;14393.0;KENHTHUNAM2:US:0|KENHTHUNAM1:DS:0
+1672;KENHCHONGMY;14393.0;KENHTHUNAM1:DS:0|KENHTHUNAM2:US:0
 1673;KENHCHONGMY;15000.0;K. XeoBa5 Nhu:DS:0
 1674;KENHCHONGMY;15615.0;KENHTHUSAU1:DS:0|KENHTHUSAU2:US:0
 1675;KENHCHONGMY;16109.0;K. Xeo Vet:DS:0
-1676;KENHCHONGMY;18622.0;RACHXEOVET:DS:0|KENHTHAYCAI1:DS:0
-1677;KENHCHONGMY;21810.0;K. Xeo Doi:DS:0|XEOQUAOR:US:0
+1676;KENHCHONGMY;18622.0;KENHTHAYCAI1:DS:0|RACHXEOVET:DS:0
+1677;KENHCHONGMY;21810.0;XEOQUAOR:US:0|K. Xeo Doi:DS:0
 1678;KENHCHONGMY;22460.0;K. 30XeoBanXeoQuao:DS:0|RXEOQUAO:DS:0
 1679;KENHCHONGMY;25000.0;K. 30Thu8XeoBan:DS:0|RACHTHUTAM2:US:0|RACHTHUTAM1:DS:0
 1680;KENHCHONGMY;27409.0;RACHTHUCHIN1:DS:0|RACHTHUCHIN2:US:0
-1681;KENHCHONGMY;28535.0;K. 30XeoNgatThu10:DS:0|R.Thu10_2:US:0|K. 30Thu9Thu10:DS:0|R.Thu10_1:DS:0
-1682;KENHCHONGMY;30000.0;AMAB1:DS:0|AMAB2:US:0|K. 30XeoNgat:DS:0
-1683;KENHCHONGMY;31275.0;XEONHAO2:US:0|XEONHAO3:DS:0
+1681;KENHCHONGMY;28535.0;R.Thu10_1:DS:0|K. 30Thu9Thu10:DS:0|K. 30XeoNgatThu10:DS:0|R.Thu10_2:US:0
+1682;KENHCHONGMY;30000.0;AMAB1:DS:0|K. 30XeoNgat:DS:0|AMAB2:US:0
+1683;KENHCHONGMY;31275.0;XEONHAO3:DS:0|XEONHAO2:US:0
 1684;KENHCHONGMY;34903.0;R. Thuong Luong1:DS:0
-1685;KENHCHONGMY;36785.0;LUNGROGHE1:DS:0|LUNGROGHE2:US:0
+1685;KENHCHONGMY;36785.0;LUNGROGHE2:US:0|LUNGROGHE1:DS:0
 1686;KENHCHONGMY;38190.0;R.XeoDoi2:US:0
-1687;KENHCHONGMY;40856.0;CHUVANG1:DS:0|CHUVANG2:DS:0
+1687;KENHCHONGMY;40856.0;CHUVANG2:DS:0|CHUVANG1:DS:0
 1688;KENHCHONGMY;43841.0;AMAB4:US:0|AMAB3:DS:0
 1689;KENHCHONGMY;45000.0;K. Muong Dao1:DS:0|K. MuongDao:US:0
 1690;KENHCHONGMY1;3636.0;R.CayGo:DS:0
@@ -1704,24 +1704,24 @@ id_nut;cha_branch;chainage;nhanh_noi_vao
 1703;KENHNOIMINHHA2;3942.0;KENHCOINAM2:DS:0
 1704;KENHSOKHONG;2895.0;UMH21:DS:0
 1705;KENHSOKHONG;5541.0;UMH18:DS:0|UMH19:US:0
-1706;KENHSOKHONG;9631.0;UMH24:US:0|UMH23:DS:0
-1707;KENHSOKHONG;13515.0;UMH16:US:0|UMH15:DS:0
+1706;KENHSOKHONG;9631.0;UMH23:DS:0|UMH24:US:0
+1707;KENHSOKHONG;13515.0;UMH15:DS:0|UMH16:US:0
 1708;KENHSOKHONG2;5841.0;UMH21:US:0|UMH9:DS:0
 1709;KENHSOKHONG2;9270.0;UMH6:US:0|UMH20:DS:0
-1710;KENHSOKHONG2;12000.0;UMH22:US:0|UMH7:US:0
+1710;KENHSOKHONG2;12000.0;UMH7:US:0|UMH22:US:0
 1711;KENHSOKHONG2;17420.0;UMH15:US:0|UMH14:DS:0
 1712;KENHSOMUOIMOT2;3182.0;ChemZ_290:US:0|ChemZ_302:DS:0
 1713;KENHSOMUOIMOT2;5719.0;ChemZ_289:US:0|ChemZ_300:DS:0
 1714;KENHTAYSON;6000.0;XeoDuoc2:DS:0|KENHTHUHAI3:US:0
 1715;KENHTG1;3533.0;KODCC_1:DS:0
 1716;KENHTG4;2846.0;R_CTTG3:DS:0
-1717;KENHTG5;5988.0;K_LoDa2:US:0|K_LoDa1:DS:0
+1717;KENHTG5;5988.0;K_LoDa1:DS:0|K_LoDa2:US:0
 1718;KENHTG5;11601.0;kenhTG452:DS:0
 1719;KENHTG5;12907.0;K.T2_TG:DS:0
 1720;KENHTG5;14233.0;K.T1_TG:DS:0
 1721;KENHTG5;15317.0;Kenh_30-4:DS:0
-1722;KENHTG6;3115.0;K.Ngang:DS:0|kenhTG243:US:0
-1723;KENHTHAYCAI;3000.0;Thay Cai 2:US:0|Thay Cai 1:DS:0
+1722;KENHTG6;3115.0;kenhTG243:US:0|K.Ngang:DS:0
+1723;KENHTHAYCAI;3000.0;Thay Cai 1:DS:0|Thay Cai 2:US:0
 1724;KENHTHAYCAI1;1136.0;KENHTHUHAI2:DS:0
 1725;KENHTHAYCAI1;3000.0;KENHTHUBA2:DS:0
 1726;KENHTHAYCAI1;4864.0;KENHTHUTU2:DS:0
@@ -1729,12 +1729,12 @@ id_nut;cha_branch;chainage;nhanh_noi_vao
 1728;KENHTHAYCAI1;7185.0;KENHNOIAB3:DS:0|KENHTHUNAM2:DS:0
 1729;KENHTHAYCAI1;9424.0;KENHTHUSAU2:DS:0
 1730;KENHTHAYCAI1;12995.0;AMAB13:US:0
-1731;KENHTHUBA1;453.0;QuocPhong3:DS:0|QuocPhong4_1:US:0
+1731;KENHTHUBA1;453.0;QuocPhong4_1:US:0|QuocPhong3:DS:0
 1732;KENHTHUHAI1;3160.0;QuocPhong2:DS:0|QuocPhong3:US:0
-1733;KENHTHUHAI3;3932.0;KENHTUDUONG1:DS:0|KENHBANGANDAI:US:0
+1733;KENHTHUHAI3;3932.0;KENHBANGANDAI:US:0|KENHTUDUONG1:DS:0
 1734;KENHTHUNAM1;0.0;QuocPhong5:US:0|QuocPhong4_2:DS:0
 1735;KENHTHUSAU1;900.0;QuocPhong6:US:0|QuocPhong5:DS:0
-1736;KENHUMINH;7683.0;KENHKIMQUYKG2:US:0|KENHKIMQUYUM:DS:0
+1736;KENHUMINH;7683.0;KENHKIMQUYUM:DS:0|KENHKIMQUYKG2:US:0
 1737;KENHUMINH;9269.0;KENHMUOIQUANG:US:0
 1738;KENHUMINH;14266.0;KENHPHANLINH:US:0
 1739;KENHUMINH;18315.0;KENHUMINH2:US:0
@@ -1756,7 +1756,7 @@ id_nut;cha_branch;chainage;nhanh_noi_vao
 1755;KG03_04;10888.0;NhaSi3:DS:0
 1756;KG19_20;1010.0;Thay Cai 2:DS:0
 1757;KG19_20;3168.0;AMAB11:US:0
-1758;KG19_20;5227.0;KENHTUDUONG1:US:0|KENHTAYSON:US:0|AMAB12:US:0
+1758;KG19_20;5227.0;AMAB12:US:0|KENHTAYSON:US:0|KENHTUDUONG1:US:0
 1759;KG19_20;8071.0;RACHXEODUOC:US:0
 1760;KH;18244.0;TSH48:US:0|TSH47:US:0
 1761;KH1;2939.0;TSH34:DS:0
@@ -1767,42 +1767,42 @@ id_nut;cha_branch;chainage;nhanh_noi_vao
 1766;KH1;13000.0;TSH43:DS:0
 1767;KH12;1404.0;TSH63:US:0
 1768;KH12;3730.0;KH:US:2|KH:DS:3
-1769;KH12;6081.0;TSH60:US:0|TSH55:DS:0
-1770;KH12;8058.0;TSH53:DS:0|TSH:US:0
-1771;KH12;9091.0;TSH58:US:0|TSH49:DS:0
+1769;KH12;6081.0;TSH55:DS:0|TSH60:US:0
+1770;KH12;8058.0;TSH:US:0|TSH53:DS:0
+1771;KH12;9091.0;TSH49:DS:0|TSH58:US:0
 1772;KH12;10326.0;KA:US:2|KA:DS:3
 1773;KH12;12649.0;Tan Hiep:US:6|Tan Hiep:DS:7
 1774;KH12;14701.0;TSH19:US:0|TSH18:DS:0
-1775;KH12;16483.0;TSH17:DS:0|TSH20:US:0
+1775;KH12;16483.0;TSH20:US:0|TSH17:DS:0
 1776;KH12;18184.0;Ba Ke:US:15|Ba Ke:DS:16
-1777;KH12;20574.0;TSH21:US:0|TSH16:DS:0
-1778;KH12;22414.0;TSH15:DS:0|TSH22:US:0
-1779;KH12;25002.0;TSH23:US:0|TSH14:DS:0
+1777;KH12;20574.0;TSH16:DS:0|TSH21:US:0
+1778;KH12;22414.0;TSH22:US:0|TSH15:DS:0
+1779;KH12;25002.0;TSH14:DS:0|TSH23:US:0
 1780;KH12;27112.0;TSH24:US:0|TSH13:DS:0
 1781;KH12;29338.0;TSH12:DS:0|TSH25:US:0
 1782;KH12;31538.0;TSH26:US:0
 1783;KH12;33491.0;TSH11:DS:0
 1784;KH12;34313.0;TSH10:DS:0
 1785;KH12;35451.0;TSH9:DS:0|Song_Giuc_Thuong:DS:0
-1786;KH12;40032.0;TSH5:DS:0|TSH6:US:0
+1786;KH12;40032.0;TSH6:US:0|TSH5:DS:0
 1787;KH3;1857.0;TSH66:DS:0
 1788;KH3;4000.0;KH:DS:4
 1789;KH3;4909.0;TSH71:DS:0|TSH72:US:0
 1790;KH3;6005.0;TSH73:US:0
 1791;KH3;7184.0;Ranh Hat:DS:0|Ranh Hat:US:7
-1792;KH3;14000.0;Ba Ke:DS:17|Ba ke:US:0
-1793;KH3;16000.0;TSH28:DS:0|TSH29:US:0
+1792;KH3;14000.0;Ba ke:US:0|Ba Ke:DS:17
+1793;KH3;16000.0;TSH29:US:0|TSH28:DS:0
 1794;KH3;22125.0;Rach_Thi_Doi:US:0
 1795;KH3;26924.0;TSH27:DS:0
-1796;KH51;3800.0;TSH118:US:0|TSH81:US:0
-1797;KH51;5143.0;TSH79:US:0|TSH76:DS:0
-1798;KH51;7285.0;TSH74:DS:0|TSH77:US:0
+1796;KH51;3800.0;TSH81:US:0|TSH118:US:0
+1797;KH51;5143.0;TSH76:DS:0|TSH79:US:0
+1798;KH51;7285.0;TSH77:US:0|TSH74:DS:0
 1799;KH51;10031.0;Ranh Hat:DS:1|Ranh Hat:US:2
 1800;KH51;16671.0;Thi Doi:DS:0|Thi Doi:US:1
-1801;KH51;21943.0;TSH131:US:0|TSH130:DS:0
+1801;KH51;21943.0;TSH130:DS:0|TSH131:US:0
 1802;KH51;26821.0;TSH134:US:0|TSH133:DS:0
 1803;KH52;3072.0;BaQuan1:DS:0|BaQuan2:US:0
-1804;KH52;7419.0;NhaSi2:US:0|NhaSi1:DS:0
+1804;KH52;7419.0;NhaSi1:DS:0|NhaSi2:US:0
 1805;KH52;16994.0;BanBe1:DS:0|BanBe2:US:0
 1806;KH6;10470.0;TSH99:US:0
 1807;KH6;13000.0;TSH87:DS:0|TSH101:US:0
@@ -1810,20 +1810,20 @@ id_nut;cha_branch;chainage;nhanh_noi_vao
 1809;KH6;16000.0;TSH104:US:0|TSH90:DS:0
 1810;KH6;18000.0;TSH106:US:0|TSH92:DS:0
 1811;KH6;19100.0;TSH107:US:0|TSH93:DS:0
-1812;KH6;21000.0;TSH98:US:0|TSH95:DS:0|TSH97:DS:0
+1812;KH6;21000.0;TSH97:DS:0|TSH98:US:0|TSH95:DS:0
 1813;KH6;22609.0;Dung:DS:0|Dung:US:1
 1814;KH6;25304.0;TSH84:US:0
-1815;KH6;27927.0;TSH83:US:0|TSH82:US:0|TSH81:DS:0
-1816;KH6;29319.0;TSH79:DS:0|TSH80:US:0
+1815;KH6;27927.0;TSH83:US:0|TSH81:DS:0|TSH82:US:0
+1816;KH6;29319.0;TSH80:US:0|TSH79:DS:0
 1817;KH6;31503.0;TSH77:DS:0
 1818;KH6;33000.0;Thi Doi:US:0|Thi Doi:DS:2|Ranh Hat:DS:2|Ranh Hat:US:3
 1819;KH6;37060.0;TSH123:US:0
 1820;KH6;39000.0;TSH124:US:0
 1821;KH6;41586.0;TSH132:US:0|TSH131:DS:0
 1822;KH6;48046.0;TSH134:DS:0|TSH135:US:0
-1823;KH62;4314.0;BaQuan2:DS:0|TSH137:US:0
+1823;KH62;4314.0;TSH137:US:0|BaQuan2:DS:0
 1824;KH62;7535.0;TSH138:US:0|NhaSi2:DS:0
-1825;KH62;16413.0;BanBe2:DS:0|KG03_04:US:0|BanBe3:US:0
+1825;KH62;16413.0;KG03_04:US:0|BanBe2:DS:0|BanBe3:US:0
 1826;KH7;1000.0;TSH125:DS:0|TSH126:US:0
 1827;KH7;2000.0;TSH127:US:0
 1828;KH7;4000.0;TSH128:US:0
@@ -1835,11 +1835,11 @@ id_nut;cha_branch;chainage;nhanh_noi_vao
 1834;KH7;21000.0;TSH136:US:0|TSH135:DS:0
 1835;KH8;11598.0;RachTra_1:DS:0|RachTra_2:DS:0
 1836;KH8;14363.0;VAMNHONTRAAN:DS:0
-1837;KH8;17013.0;RachOngDua_1:DS:0|RachOngDua_2:US:0
-1838;KH8;18496.0;CauNhiemriver_1:DS:0|CauNhiemriver_2:US:0
-1839;KH8;23281.0;MotNgan_1:US:0|OMonCanal:DS:0
+1837;KH8;17013.0;RachOngDua_2:US:0|RachOngDua_1:DS:0
+1838;KH8;18496.0;CauNhiemriver_2:US:0|CauNhiemriver_1:DS:0
+1839;KH8;23281.0;OMonCanal:DS:0|MotNgan_1:US:0
 1840;KH8;25000.0;ToMa:DS:0
-1841;KH8;28049.0;KenhRanh(4000)_3:DS:0|4000:DS:0
+1841;KH8;28049.0;4000:DS:0|KenhRanh(4000)_3:DS:0
 1842;KH8;30000.0;6500_1:US:0
 1843;KH8;31012.0;7000_1:DS:0|7000_2:US:0
 1844;KH8;31744.0;Ranh Hat:DS:4|Ranh Hat:US:5
@@ -1849,20 +1849,20 @@ id_nut;cha_branch;chainage;nhanh_noi_vao
 1848;KH9;16650.0;Rach_Tra_Nien_Lon:DS:0
 1849;KH92;1551.0;BongBongNho:US:0
 1850;KH92;3851.0;OngHao:US:0
-1851;KH92;8152.0;MotNgan_1:DS:0|MotNgan_2:US:0
+1851;KH92;8152.0;MotNgan_2:US:0|MotNgan_1:DS:0
 1852;KH92;13067.0;KenhRanh(4000)_1:DS:0|KenhRanh(4000)_2:US:0
-1853;KH92;15568.0;6500_2:US:0|6500_1:DS:0
+1853;KH92;15568.0;6500_1:DS:0|6500_2:US:0
 1854;KH92;16470.0;7000_3:US:0|7000_2:DS:0
 1855;KH92;16942.0;K8000:US:2|Ranh Hat:DS:5
 1856;KH92;19744.0;KenhRanhTinh:US:0
 1857;KH92;22023.0;KenhMuoiHai_2:DS:0
 1858;KH92;23308.0;14000Nho:US:0
-1859;KH92;26820.0;KenhGiua_1:DS:0|KenhGiua_2:US:0
+1859;KH92;26820.0;KenhGiua_2:US:0|KenhGiua_1:DS:0
 1860;KH92;28289.0;RanhTinh:DS:0
 1861;KH92;29137.0;NhaTho:US:0
 1862;KH92;31019.0;L612:US:0|L611:DS:0
 1863;KH92;34065.0;KenhTac:US:0
-1864;KH92;36000.0;MuoiThuoc:US:0|KenhMuoiThuoc:DS:0
+1864;KH92;36000.0;KenhMuoiThuoc:DS:0|MuoiThuoc:US:0
 1865;KMoiCM;3660.0;ZZZ_CM89:DS:0
 1866;KMoiCM;5091.0;ZZZ_CM90:DS:0
 1867;KONGRONGTUONG;3503.0;Rach_Tra_Nien_Lon:US:0
@@ -1870,7 +1870,7 @@ id_nut;cha_branch;chainage;nhanh_noi_vao
 1869;KQUANTHOTG;7125.0;R_CTTG2:DS:0
 1870;KQUANTHOTG;9154.0;Noi_OD_QT:US:0
 1871;KQUANTHOTG;10185.0;K195_6:US:0
-1872;KTAMVU;0.0;kenhTG452:US:0|kenhTG320:DS:0
+1872;KTAMVU;0.0;kenhTG320:DS:0|kenhTG452:US:0
 1873;KTAMVU;1751.0;KCHOGIUA:US:0
 1874;KTHOMAIDONGCUNG;1351.0;CM42_43:US:0
 1875;KTHOMAIDONGCUNG;4845.0;ZZZ_CM85:US:0
@@ -1884,28 +1884,28 @@ id_nut;cha_branch;chainage;nhanh_noi_vao
 1883;KVINHMYPHUOCLONG;25893.0;No.5000:US:2|No.5000:DS:5
 1884;KVINHMYPHUOCLONG;26820.0;NTL 5000:DS:1
 1885;KVINHMYPHUOCLONG;28069.0;Vinh Phong:US:2|Vinh Phong:DS:5
-1886;KVINHMYPHUOCLONG;28901.0;VL 7000:US:0|NTL 7000:DS:1
+1886;KVINHMYPHUOCLONG;28901.0;NTL 7000:DS:1|VL 7000:US:0
 1887;KVINHMYPHUOCLONG;29991.0;NTL 8000:DS:1|VL 8000:US:0
 1888;KVINHMYPHUOCLONG;30779.0;No.10000:DS:0
-1889;KVINHMYPHUOCLONG;31191.0;K10000:US:0|NTL 9000:DS:1
+1889;KVINHMYPHUOCLONG;31191.0;NTL 9000:DS:1|K10000:US:0
 1890;KVINHMYPHUOCLONG;32069.0;NTL 10000:DS:0
 1891;KVINHMYPHUOCLONG;34522.0;Ba Ai 1:US:0
 1892;KVINHMYPHUOCLONG;36000.0;CMP_Moi:DS:0|Tay Ki:US:0
 1893;KVINHMYPHUOCLONG;38245.0;Hai Phac:US:0
 1894;KVINHMYPHUOCLONG1;2635.0;U-QLPH29:DS:0
 1895;KVINHMYPHUOCLONG1;4609.0;U-QLPH30:US:0|Dong Da:US:0
-1896;KVINHMYPHUOCLONG1;6677.0;U-QLPH31:US:0|VP15:US:0
+1896;KVINHMYPHUOCLONG1;6677.0;VP15:US:0|U-QLPH31:US:0
 1897;KVINHMYPHUOCLONG1;8615.0;U-QLPH28:US:0
 1898;KVINHMYPHUOCLONG1;10573.0;U-QLPH27:US:0
 1899;KVINHMYPHUOCLONG1;12750.0;U-QLPH22:US:0|U-QLPH13:DS:0
-1900;KVINHMYPHUOCLONG1;14989.0;U-QLPH16:US:0|U-QLPH25:US:0
+1900;KVINHMYPHUOCLONG1;14989.0;U-QLPH25:US:0|U-QLPH16:US:0
 1901;KVINHMYPHUOCLONG1;16808.0;VP9:DS:0
 1902;KVINHMYPHUOCLONG1;17722.0;U-QLPH38:US:0
 1903;KVINHMYPHUOCLONG1;18947.0;U-QLPH37:US:0
 1904;KVINHMYPHUOCLONG1;19756.0;VP7:US:0
 1905;KVINHMYPHUOCLONG1;21180.0;U-QLPH40:US:0|U-QLPH15:DS:1
 1906;KVINHMYPHUOCLONG1;21631.0;U-QLPH19:US:1|U-QLPH19:DS:4
-1907;K_LoDa2;760.0;K_Mieudien:DS:0|K.T2_TG:US:0
+1907;K_LoDa2;760.0;K.T2_TG:US:0|K_Mieudien:DS:0
 1908;K_LoDa2;1031.0;K.T1_TG:US:0
 1909;K_LoDa2;2334.0;Nhocanal:DS:0
 1910;K_LoDa2;3156.0;K_Lotong:DS:0
@@ -1920,16 +1920,16 @@ id_nut;cha_branch;chainage;nhanh_noi_vao
 1919;Kenh20-7;1232.0;O_LH_TTB:US:0
 1920;Kenh20-7;3000.0;K.LoBac:US:0
 1921;KenhA;1200.0;K.CongXang1:DS:0|K.CongXang2:US:0
-1922;KenhB;1793.0;K.CongXang4:US:0|K.CongXang3:DS:0
+1922;KenhB;1793.0;K.CongXang3:DS:0|K.CongXang4:US:0
 1923;KenhC;396.0;K.CongXang4:DS:0
 1924;KenhHuyen;529.0;K.Kchien1:DS:0|K.Kchien2:US:0
 1925;KenhNgang1;4586.0;K.DamLay2_2:US:0
 1926;KenhNgang1;6173.0;Kenh3:US:0
 1927;KenhRanh(4000)_1;3148.0;KenhDay:DS:0|HangXoai:US:0
-1928;KenhTac;1772.0;NangChang_2:US:0|NangChang_1:DS:0
+1928;KenhTac;1772.0;NangChang_1:DS:0|NangChang_2:US:0
 1929;Kenh_30-4;2415.0;Song_Cui:DS:0
 1930;Kenh_30-4;3232.0;RachDon:US:0|Rach_Lon:DS:0
-1931;Kenh_30-4;5500.0;Lodua2:US:0|Lodua1:DS:0
+1931;Kenh_30-4;5500.0;Lodua1:DS:0|Lodua2:US:0
 1932;Kenh_Lo;2754.0;TSH109:DS:0
 1933;Kenh_Lo;3745.0;TSH98:DS:0
 1934;Kenh_Nga_Cay;6354.0;Cai Muon:DS:0
@@ -1981,11 +1981,11 @@ id_nut;cha_branch;chainage;nhanh_noi_vao
 1980;Lap Vo;15098.0;Muong Khai:US:0|Muong Khai:DS:1
 1981;Lap Vo;18166.0;Rach_Sanh_Nhien:DS:0
 1982;Lap Vo;21242.0;Duong Hoa LT:US:0
-1983;Lap Vo;27729.0;Thay Lam:DS:0|Rach_Nuoc_Xoay:US:0
+1983;Lap Vo;27729.0;Rach_Nuoc_Xoay:US:0|Thay Lam:DS:0
 1984;Lap Vo;31480.0;Ong Phu:US:0
 1985;Lap Vo;33990.0;Rach_Tan_Binh:DS:0
-1986;Lap Vo;44753.0;Rach_Tan_Binh:US:0|Cai Tau Thuong:DS:0
-1987;LauQuocGia;5370.0;Branch1171:DS:0|Branch1158:DS:0|Branch1192:DS:0
+1986;Lap Vo;44753.0;Cai Tau Thuong:DS:0|Rach_Tan_Binh:US:0
+1987;LauQuocGia;5370.0;Branch1158:DS:0|Branch1192:DS:0|Branch1171:DS:0
 1988;LauQuocGia;7437.0;Branch1157:DS:0
 1989;Lo Ca Lam A;1138.0;Thuy Loi:DS:0
 1990;Lo Ca Lam A;9200.0;Bau Mon:US:0
@@ -2002,7 +2002,7 @@ id_nut;cha_branch;chainage;nhanh_noi_vao
 2001;Lung Sen;3000.0;CMP_Nha Tho:DS:0
 2002;Lung Sen;3932.0;Nang RenNho:US:1
 2003;LungRanh;2819.0;K.CongDoan:US:0
-2004;MCC01_19;3054.0;C21:US:0|C20:US:0
+2004;MCC01_19;3054.0;C20:US:0|C21:US:0
 2005;MCC01_19;6135.0;C19:US:0
 2006;MCC01_19;8753.0;C18:US:0
 2007;MINHHA;6000.0;UMH14:US:0
@@ -2011,14 +2011,14 @@ id_nut;cha_branch;chainage;nhanh_noi_vao
 2010;MINHHA;19116.0;KDOCLAP:US:0
 2011;MINHHA;21666.0;UMH11:DS:0
 2012;MTT04;6815.0;kenhngan:DS:0
-2013;MTT04;10541.0;Sarai2:US:0|Sarai_Creck:DS:0
+2013;MTT04;10541.0;Sarai_Creck:DS:0|Sarai2:US:0
 2014;MTT37;6086.0;TraMem:DS:0
 2015;MTT37;6489.0;Tandinhriver:DS:0
 2016;MTaLiem;4598.0;Noi Tra Liem:US:0
 2017;MYVAN;1876.0;ThungThap:DS:0
 2018;MYVAN;5000.0;ChuSuc:DS:0
 2019;Mac Can Dung;8000.0;K7 AG:DS:0|Bon Tong:US:2
-2020;Mac Can Dung;26052.0;Muoi Chau Phu:DS:0|Tha La:DS:0|My Thai:US:0
+2020;Mac Can Dung;26052.0;Tha La:DS:0|Muoi Chau Phu:DS:0|My Thai:US:0
 2021;Mac Day;3000.0;Lo Chat Dot:DS:0|Lo Chat Dot:US:1
 2022;Mang Thit;7741.0;Giong_trom1:US:0
 2023;Mang Thit;8000.0;CaiNhum:DS:0
@@ -2034,1139 +2034,1134 @@ id_nut;cha_branch;chainage;nhanh_noi_vao
 2033;Mang Thit;46033.0;SocTro:DS:0
 2034;Mareng;1000.0;Rach Goc:US:1
 2035;Mareng;5905.0;Ba Kieng:US:4
-2036;MekongCam;124222.0;TonleTouch:US:0
-2037;Mk_E1;1035.0;TonleTouch:DS:0
-2038;Mk_E1;74471.0;BaBaongChannel:US:0
-2039;Mk_E1;82880.0;PrekBanam:US:0
-2040;Mk_E2;12573.0;East Vaico:US:0
-2041;Mk_E2;53458.0;Cam49:US:0
-2042;Mk_E2;60419.0;BaBaongChannel:DS:0
-2043;Mo Cay;1000.0;C17:US:0|C16:US:0
-2044;Mo Cay;6564.0;C15:DS:0
-2045;Mo Cay;9367.0;MCC01_19:DS:0
-2046;Mo Cay;13000.0;C14:DS:0
-2047;MocKeo;163.0;MocKeoLon:US:0
-2048;Moi;7186.0;Kenh T6 moi:DS:0|Kenh T6:US:0
-2049;MoiQLPH;1112.0;Lang:DS:1
-2050;Mot Ngan;2000.0;Ranh:US:0
-2051;MotNgan_1;2268.0;BoDoi:US:0
-2052;MotNgan_2;2121.0;OngHao:DS:0
-2053;MotNgan_2;3084.0;KenhDay:US:0
-2054;Muoi Chau Phu;5900.0;K7 AG:US:2|K7 AG:DS:3
-2055;Muoi Chau Phu;9100.0;K9 AG:US:1|K9 AG:DS:2
-2056;MuoiThuoc;795.0;BaVoi_1:DS:0|BaVoi_2:US:0
-2057;Muong Dieu;2000.0;STDNgai:US:0
-2058;Muong Khai;1500.0;Can Tho HH:US:0
-2059;Muong Lo2;5673.0;CDXDong:US:0|CDXDong:DS:1
-2060;Muong Lo2;15137.0;Cai Cau:DS:0|Cai Cau:US:1
-2061;MuongDaoR;2187.0;Branch1163:US:0|Branch1159:US:0
-2062;MuongDaoR;9952.0;Branch1160:US:0
-2063;MuongDaoR;10843.0;Branch1165:US:0
-2064;My Hung;5474.0;Cay Cong:DS:0
-2065;My Hung;5617.0;Ba Xa:US:0
-2066;My Long BK;1800.0;Cau Sao:US:0
-2067;My Long BK;16664.0;TT86_87_88:DS:0
-2068;My Thai;6100.0;K10 AG:US:2|K10 AG:DS:3
-2069;My Thai;12445.0;Ba The Moi:US:0|Ba The Moi:DS:1
-2070;My Thai;18600.0;Tan Hiep:US:4|Tan Hiep:DS:5
-2071;My Thai;25400.0;Ba Ke:US:4|Ba Ke:DS:5
-2072;My Thanh;3352.0;K.SuonVinhHai:DS:0
-2073;My Thanh;5964.0;K. Ba Xam _Goi_5:DS:0
-2074;My Thanh;12835.0;K. Tong Cang_2:DS:0
-2075;My Thanh;14413.0;Vien Binh:DS:0
-2076;My Thanh;16411.0;K.GiayLang-BungTum:US:0
-2077;My Thanh;17547.0;K. An No:DS:0
-2078;My Thuan;8644.0;Tam Thai:US:0|Lang Sen:DS:0
-2079;NDThongLuu;2201.0;Xeo Ro:DS:0|Xeo Ro:US:1
-2080;NDThongLuu;3726.0;Rach Ca:DS:0
-2081;NGAHAU;9893.0;ngaichanh_n3:DS:0|MIT13_14:DS:0
-2082;NGAHAU;12500.0;MAYTUC:US:0
-2083;NGAHAU;18000.0;ngaichanh_n1:DS:0
-2084;NGBXau;0.0;CMP_Moi2:DS:0
-2085;NGBXau;3052.0;Bung Coc:US:1|Bung Coc:DS:2
-2086;NGBXau;8119.0;Sa Lon:US:1|Sa Lon:DS:2
-2087;NTL 8000;821.0;Muoi Thuoc:US:1
-2088;NTL 9000;920.0;Muoi Thuoc:US:0|Muoi Thuoc:DS:1
-2089;NamThon;713.0;Ba Rai:DS:0
-2090;NamThon;10151.0;Thanh Nien:DS:0
-2091;Nang Mau;391.0;Nga Bat:US:0
-2092;Nang Mau;3579.0;Gia Hoang:DS:0
-2093;Nang Mau;4654.0;Mai Dam:US:0|Kenh_Thay_Cai:US:0
-2094;Nang Mau;9564.0;Dong Binh:DS:0|Dong Binh:US:1
-2095;Nang Mau;12412.0;Ba Ngan:DS:0|Cai Nhum:US:0
-2096;Nang Mau;14678.0;Kenh_Xeo_Vuong:US:0|Xang Lo:DS:0
-2097;Nang Mau;21819.0;Xeo Mon:DS:1|Xeo Mon:US:3
-2098;Nang Mau;24636.0;Saintenoy:US:0|Saintenoy:DS:1
-2099;Nang Mau;30052.0;Nha Nuoc:US:0|Nha Nuoc:DS:1
-2100;Nang Mau;31608.0;K8000:US:0|K8000:DS:1
-2101;Nang Mau;32909.0;CMP_Nang Mau 2:US:0|CMP_Nang Mau 2:DS:1
-2102;Nang Mau;38949.0;Long Dieu:DS:1
-2103;Nang Mau;42231.0;9 Thuoc2:US:0
-2104;Nang Mau;46185.0;Rach_Nuoc_Duc:DS:0|Hau:US:0
-2105;Nang Mau;48272.0;CMP_Ngang:US:0|Cai Dia:DS:0
-2106;Nang Mau 2;7342.0;Song_Cai_Rang:DS:0
-2107;Nang Mau 2;9414.0;CMP_Cai Tac:DS:0|Xang Lo:US:0
-2108;Nang Mau 2;11687.0;Trau Hoi:US:0|RachSung_RachSoDiaBo:DS:0
-2109;Nang Mau 2;17481.0;Saintenoy:US:1|Saintenoy:DS:2
-2110;Nang Mau 2;18047.0;Mot Ngan:DS:0|Nha Nuoc:US:1
-2111;Nang Muoi;2088.0;T Nhat QLPH:US:0
-2112;Nang Muoi;2771.0;Thay Pho1:US:0
-2113;Nang Muoi;4000.0;Thay Pho:DS:0|Thay Pho:US:2
-2114;Nang Muoi;5679.0;Bao Thui:US:0
-2115;NangChang_1;0.0;BaVoi_1:US:0
-2116;NangGu;2645.0;Kien Hao CNG:DS:0
-2117;Nchang Re;4659.0;Cho Cu:DS:0
-2118;Ngang;13500.0;Bay thuoc:US:1|Bay Thuoc:DS:2
-2119;Nguyen Van Tiep1;3006.0;Binh Thanh4:DS:0
-2120;Nguyen Van Tiep1;7140.0;Ca Duc:US:0|Ca Duc:DS:1
-2121;Nguyen Van Tiep1;10419.0;Can Lo:US:0|Thay Cay:DS:0
-2122;Nguyen Van Tiep1;13519.0;Rach Sao:US:0|Rach Sao:DS:1
-2123;Nguyen Van Tiep1;19366.0;Duong Thet:US:0|Duong Thet:US:2
-2124;Nguyen Van Tiep1;23424.0;Cai Beo:US:1
-2125;Nguyen Van Tiep1;30445.0;K307:US:1
-2126;Nguyen Van Tiep2;6985.0;Bui Moi:US:1|K5:DS:0
-2127;Nguyen Van Tiep2;10940.0;K6:US:2|Bang Lang:US:1
-2128;Nguyen Van Tiep2;12439.0;Rach Ruong:US:0
-2129;Nguyen Van Tiep2;13656.0;K7:DS:0|Phung Thot:DS:0
-2130;Nguyen Van Tiep2;17221.0;K9:US:0|Ca Nhip:DS:0
-2131;Nguyen Van Tiep2;18954.0;K10:DS:0
-2132;Nguyen Van Tiep2;24771.0;Bang Day:US:0
-2133;Nguyen Van Tiep2;27944.0;K12:DS:0|Ba Rai:US:0
-2134;Nguyen Van Tiep2;37258.0;Thanh Nien:US:0
-2135;Nguyen Van Tiep2;38008.0;My Long BK:US:0
-2136;Nguyen Van Tiep2;39075.0;Lo Moi:DS:0|Nguyen Tan Thanh:US:0
-2137;Nguyen Van Tiep2;44486.0;Sau Au:US:0
-2138;Nguyen Van Tiep2;50376.0;Cho Bung:US:0
-2139;Nguyen Van Tiep2;53562.0;KQUANTHOTG:DS:0
-2140;Nguyen Van Tiep2;58322.0;Cu Chi:US:0
-2141;Nha Man TT;5300.0;Rau Cau:US:0
-2142;Nha Tho;13500.0;Bay thuoc:US:0|Bay Thuoc:DS:1
-2143;Nhat Tao;4518.0;LongMy2:US:0|Long My 1:US:0
-2144;Nhi Tho;1000.0;Rung:DS:0
-2145;Nhi Tho;2218.0;Cay Gua1:DS:0
-2146;Nhi Tho;4681.0;Xeo Song:DS:0
-2147;Nhu_Gia;1880.0;Tra Cu Can:US:0|Binh Hung:US:0
-2148;Nhu_Gia;3877.0;XCutQLPH:DS:0
-2149;Nhu_Gia;5841.0;Duong Lang:DS:0
-2150;Nhu_Gia;7224.0;Giai Phong:US:0
-2151;Nhu_Gia;8527.0;Tam Thuoc1:DS:0|Co Thien:US:0
-2152;Nhu_Gia;10599.0;Cay Bang:US:0|Xom Tiem:DS:0
-2153;Nhu_Gia;16624.0;Saintenoy5:DS:0|U-QLPH60:DS:0
-2154;Nhu_Gia;17456.0;Bo Thao:US:0
-2155;Nhu_Gia;17782.0;Cai Trau NG:DS:0
-2156;Nhu_Gia;19827.0;K. 14-9:US:6
-2157;Nhu_Gia;22828.0;Re:DS:0
-2158;Nhu_Gia;23772.0;ST59_ST61:US:0
-2159;Nhu_Gia;24416.0;K.19/5:US:0
-2160;Nhu_Gia;25899.0;Sa Di:US:6
-2161;Nhu_Gia;27655.0;NGBXau:DS:0
-2162;Nhu_Gia;29066.0;PTTTran:DS:0|Thuy Loi:US:1
-2163;Nhu_Gia;30686.0;Cai Trau:DS:0
-2164;Nhu_Gia;33096.0;Rach Sen:DS:0
-2165;Nhu_Gia;35912.0;Dinh:US:0
-2166;Nhu_Gia;36892.0;Sa Lon:US:3
-2167;Nhu_Gia;41364.0;Rach Sen3:DS:0
-2168;Nhu_Gia;42574.0;Tra The:US:0
-2169;Nhu_Gia;45466.0;U-QLPH43:US:0
-2170;Nhu_Gia;46905.0;Dai Ngai:DS:0
-2171;Nhu_Gia;47438.0;Xa Mach:DS:0
-2172;Nhu_Gia;53998.0;U-QLPH41:US:0
-2173;Nhu_Gia;55470.0;U-QLPH42:US:0
-2174;Nhu_Gia;56498.0;Thach My:DS:0
-2175;Nhu_Gia;57425.0;K.VinhChau-CoCo:US:0|My Thanh:DS:0|Bac Lieu:US:0
-2176;Ninh Phuoc;4200.0;H7:US:0
-2177;Ninh Phuoc;12300.0;H9:US:0
-2178;No 1;6323.0;Hau BoiTN:DS:0|Cai Con Be:DS:0|Song_Tap_Ren:DS:0|Ba Rinh CMP_Moi:US:0
-2179;No 1;9590.0;TCMNeo:DS:0|TCMNeo:US:1
-2180;No 1;12470.0;Ba Dot:DS:0
-2181;No 1;16672.0;Bung Tuc:DS:0|Bung Tuc:US:1
-2182;No 1;18885.0;Muong Lo2:US:2|Phu No:DS:0
-2183;No 1;22572.0;PL12_13:DS:0
-2184;No 1;23929.0;Muong Dieu:DS:0
-2185;No 1;24394.0;My Hoi:DS:0
-2186;Noc Nang;1568.0;PS-CS 1:US:0|PS-CS 1:DS:1
-2187;Noc Nang;3806.0;U-QLPH9:US:0|U-QLPH9:DS:1
-2188;Noc Nang;5397.0;U-QLPH10:US:0|U-QLPH10:DS:1
-2189;Noi Tra Liem;6035.0;U-QLPH60:US:0
-2190;Nong Truong;12660.0;Ba Ke:US:13|Ba Ke:DS:14
-2191;Nuoc Man;813.0;Rach_Thi_Doi:DS:0
-2192;NuocTrong;9304.0;Giong Cam:US:0
-2193;NuocTrong;19441.0;Hau Giang 3:DS:1
-2194;O Mon;4685.0;Rach_Ba_Kich:US:0|Can_Tho:US:0
-2195;O Mon;6268.0;Kenh_Lo:US:0
-2196;O Mon;8167.0;RachTra_2:US:0
-2197;O Mon;10000.0;VAMNHONTRAAN:US:0
-2198;O Mon;11000.0;TSH110:DS:0
-2199;O Mon;13000.0;BaCon:US:0
-2200;O Mon;14000.0;TSH108:DS:0|XeoSao:US:0
-2201;O Mon;14500.0;Dung:DS:1|Thi Doi:US:2
-2202;O Mon;16752.0;TacOngDinh:US:0
-2203;O Mon;18564.0;DuongThet:US:0
-2204;O Mon;20000.0;TSH126:DS:0
-2205;O Mon;21000.0;TSH127:DS:0|BungLon:US:0
-2206;O Mon;22000.0;OMonCanal:US:0
-2207;O Mon;23000.0;TSH128:DS:0
-2208;O Mon;24000.0;ToMa:US:0
-2209;O Mon;25000.0;4000:US:0
-2210;O Mon;26000.0;TSH129:DS:0
-2211;O Mon;28000.0;7000_1:US:0
-2212;O Mon;29000.0;Ranh Hat:US:4|Ranh Hat:DS:6
-2213;O Mon;34000.0;TSH140:DS:0
-2214;O Mon;35551.0;KenhMuoiHai_1:US:0
-2215;O Mon;38228.0;KenhGiua_1:US:0
-2216;O Mon;39000.0;KH8:DS:1
-2217;O Mon;41000.0;TSH136:DS:0|L611:US:0
-2218;O Mon;46000.0;KenhMuoiThuoc:US:0
-2219;Ong Chuong;14424.0;Cha Va:DS:0
-2220;Ong Chuong;18000.0;Ca Mau:DS:0
-2221;Ong Doc;1693.0;CM11:US:0
-2222;Ong Doc;3074.0;LTTRAN2:US:0
-2223;Ong Doc;3832.0;UMH29:DS:0
-2224;Ong Doc;15412.0;UMH28:US:0|ZZZ_CM64:US:0
-2225;Ong Doc;16516.0;ZZZ_CM74:US:0
-2226;Ong Doc;17728.0;CM16_17:US:0
-2227;Ong Doc;20805.0;UMH26:US:0|ZZZ_CM76:US:0
-2228;Ong Doc;22829.0;Rach Ban:DS:0
-2229;Ong Doc;24018.0;RachRauDua:US:0
-2230;Ong Doc;25051.0;ZZZ_CM79:US:0|RACHRUONG1:DS:0
-2231;Ong Doc;27504.0;CM03_04:US:0
-2232;Ong Doc;29335.0;KENHNOITVT4:DS:0|R. Ba Keo:DS:0
-2233;Ong Doc;33027.0;ZZZ_CM81:US:0
-2234;Ong Doc;35884.0;ZZZ_CM82:US:0
-2235;Ong Doc;37587.0;ZZZ_CM83:US:0
-2236;Ong Hoach;0.0;Cai Nhum:DS:0|Cai Tat:US:0
-2237;Ong Huong;1623.0;TP-Bnhan:DS:1
-2238;Ong Phu;4448.0;Song_LaiVung_Rach_HoaLong:US:0
-2239;Ong Phu;10253.0;Rach_Ho_Dia_Sanh:US:0
-2240;Ong Ro;2810.0;Tap Doan III:US:0|Nang Muoi:DS:0
-2241;Ong Tuong;2467.0;U-QLPH8:US:0|U-QLPH8:DS:4
-2242;PTN 7000;7975.0;K.OngTa2:DS:0
-2243;PTTTran;1005.0;CMP_Moi2:US:0
-2244;PTTTran;3349.0;Cho Cu1:US:0
-2245;PTTTran;6000.0;Bung Coc:US:2|Bung Coc:DS:3
-2246;PTTTran;10000.0;Rach Sen3:US:0
-2247;PTTTran;12000.0;Sa Lon:US:2|Sa Lon:DS:3
-2248;PTTTran;15315.0;Rach Sen:US:0
-2249;Phu No;6000.0;CSNTung:DS:0
-2250;Phuoc Xuyen;59250.0;K6:US:0|K6:DS:1
-2251;Phuoc Xuyen;68400.0;K7:US:0|K7-2:DS:0
-2252;Phuoc Xuyen;70400.0;K8:US:0
-2253;Phuoc Xuyen;74100.0;K10:US:0
-2254;Phuoc Xuyen2;7769.0;An Binh:DS:0|Hoa Binh:US:0|Cai Sach:DS:0
-2255;Phuoc Xuyen2;22394.0;Bay Thuoc:US:2
-2256;Phuoc Xuyen2;27486.0;Ngang:DS:0|Dong Tien3:DS:0|Dong Tien:US:1
-2257;Phuoc Xuyen2;35266.0;An Phong MH1:DS:0|An Phong MH:US:0
-2258;Phuoc Xuyen2;43971.0;Nguyen Van Tiep1:DS:0|Nguyen Van Tiep2:US:0
-2259;PrekTrabaek;14828.0;Cam30:DS:0
-2260;Quan Lo PH;1085.0;Duong Lang:US:1
-2261;Quan Lo PH;3936.0;Nhu_Gia:US:0
-2262;Quan Lo PH;9438.0;Tra Cu:DS:0
-2263;Quan Lo PH;11001.0;Lam Tra:DS:0
-2264;Quan Lo PH;12562.0;Ben Long:US:0
-2265;Quan Lo PH;13563.0;Bon Thuoc1:DS:0
-2266;Quan Lo PH;14427.0;Cai Trau:US:0|Tra Ban:DS:0|Xeo ChitN:US:0
-2267;Quan Lo PH;15793.0;Cong Da:DS:0
-2268;Quan Lo PH;18772.0;MoiQLPH:US:0
-2269;Quan Lo PH;19993.0;Chien Luy:US:0|K. Nang Ren:US:0
-2270;Quan Lo PH;21012.0;Lang:US:0
-2271;Quan Lo PH;21224.0;U-QLPH45:US:0
-2272;Quan Lo PH;22029.0;R.CSauHy:DS:0
-2273;Quan Lo PH;23440.0;Duong Mon:DS:0
-2274;Quan Lo PH;24381.0;XeoChit_QuanLo:DS:0
-2275;Quan Lo PH;25680.0;Cai Tau:US:0|Lai Viet:US:0
-2276;Quan Lo PH;26982.0;K. Ngan Dua - BL1:DS:0|K. Ngan Dua - BL2:US:0
-2277;Quan Lo PH;27584.0;3 Cui:US:1
-2278;Quan Lo PH;29133.0;U-QLPH19:US:0
-2279;Quan Lo PH;31323.0;K. Vinh Loc 1:DS:0|K. Vinh Loc 2:US:0
-2280;Quan Lo PH;35094.0;KVINHMYPHUOCLONG:US:0|KVINHMYPHUOCLONG1:DS:0
-2281;Quan Lo PH;40170.0;K. Vinh Loi 1:DS:0|K. Vinh Loi 2:US:0
-2282;Quan Lo PH;45867.0;KCANHDENPHOSINH:DS:0|KCANHDENPHOSINH:US:1
-2283;Quan Lo PH;50969.0;K. Phong Thanh Tay:DS:1
-2284;Quan Lo PH;56620.0;KCHOHOIHUYENSU2:US:0|KCHOHOIHUYENSU:DS:1
-2285;Quan Lo PH;62589.0;CC4:US:0
-2286;Quan Lo PH;62993.0;K. Tan Phong:US:1|K. Tan Phong:DS:2
-2287;Quan Lo PH;66552.0;K. Lang Tram:US:1|K. Lang Tram:DS:2
-2288;Quan Lo PH;68102.0;Ba Tha:DS:0
-2289;Quan Lo PH;69142.0;K. TanThanh_TacVan:DS:0
-2290;Quan Lo PH;69539.0;K.1-6:DS:0
-2291;Quan Lo PH;72782.0;R.CaiNhum:US:0
-2292;Quan Lo PH;72958.0;Ong Ro:DS:0
-2293;Quan Lo PH;75583.0;Lung Quoc:DS:0
-2294;Quan Lo PH;76193.0;Nang Huy:DS:0
-2295;Quan Lo PH;77504.0;Song Cu:DS:0
-2296;Quan Lo PH;77743.0;K.BaBeo:US:0
-2297;Quan Lo PH;79234.0;LungBaoChua:DS:0
-2298;Quang Dai;1200.0;Ca Gua:DS:0
-2299;Quang Dai;9100.0;Bay thuoc:DS:0|Bay Thuoc:US:0
-2300;QuocPhong10;878.0;K. 30Thu8Thu9:US:0
-2301;QuocPhong11_1;844.0;K. 30Thu9Thu10:US:0
-2302;QuocPhong11_2;636.0;K. 30XeoNgatThu10:US:0
-2303;QuocPhong11_2;1292.0;AMAB1:US:0
-2304;QuocPhong11_2;2369.0;K. 30XeoNgat:US:0
-2305;QuocPhong12_2;1552.0;R. Thuong Luong:US:0|R. Thuong Luong1:US:0
-2306;QuocPhong13;1818.0;R.XeoDoi2:DS:0|R.XeoDoi1:US:0
-2307;QuocPhong15;1079.0;K. Muong Dao1:US:0
-2308;QuocPhong16;2494.0;R.CayGo:US:0
-2309;QuocPhong4_1;1508.0;KENHTHUTU1:US:0
-2310;QuocPhong5;486.0;K. XeoBa5 Nhu:US:0
-2311;QuocPhong6;1532.0;K. Xeo Vet:US:0|K. Xeo Vet1:DS:0
-2312;QuocPhong7;1096.0;K. Xeo Doi:US:0|K. Xeo Doi1:DS:0
-2313;QuocPhong7;1959.0;K. DuongRung:DS:0|K. DuongRung1:US:0
-2314;QuocPhong8;488.0;K.GIUAXEOQUAN_XEOQUAO:DS:0|K. 30XeoBanXeoQuao:US:0
-2315;QuocPhong9;1112.0;K. 30Thu8XeoBan:US:0
-2316;R. BEN NGHE;3565.0;K. SO 2:DS:0
-2317;R. BEN NGHE;4692.0;K. SO 1:DS:0
-2318;R. BEN NGHE;6931.0;KenhDoi:DS:0
-2319;R. BEN NGHE1;367.0;CAY KHO:US:0
-2320;R. BEN NGHE1;1648.0;STanRCaCam:DS:0
-2321;R. Ba Keo;2530.0;ZZZ_CM80:US:0
-2322;R. DIA;3944.0;ThuyTieu:US:0
-2323;R. DIA;4228.0;STanRCaCam:US:0
-2324;R. DIA;6673.0;R.BaQuan:US:0
-2325;R. GIONG;2025.0;MuongLon:DS:0
-2326;R. GIONG;2487.0;SongKinh1:US:0
-2327;R. Ky Hon;1356.0;binhphan:US:0
-2328;R. Ky Hon;2000.0;K.LienHong:US:0
-2329;R. Ky Hon;2592.0;K.nguyenLong:US:0
-2330;R. Thu Nhat;1872.0;R. Nga Bat:DS:0
-2331;R. Thu Nhat;3874.0;AMAB10:US:0
-2332;R. Thu Nhat;3944.0;Kenh 20:DS:0
-2333;R. Thu Nhat;4638.0;AMAB9:US:0
-2334;R. Thu Nhat;6188.0;AMAB8:US:0|K. Hai Sen:DS:0
-2335;R. Thu Nhat;7817.0;KENGCHONGMY:DS:0|AMAB7:DS:0|KENHCHONGMY:US:1
-2336;R. Thu Nhat;10900.0;QuocPhong2:US:0|QuocPhong1:DS:0
-2337;R.BaGoc;0.0;R.Ngua:US:0
-2338;R.BaGoc;3843.0;R.HungNhon:DS:0
-2339;R.CaiSu;6884.0;R.TamTrieu_2:US:0
-2340;R.CaiSu;8850.0;K.TThon:US:0
-2341;R.CayT;585.0;K.TThon:DS:0
-2342;R.LungNgang_1;6217.0;K.RanhKh-Kt:DS:0
-2343;R.NhanhCanGiuoc5;3956.0;R.NhanhCanGiuoc5_3:US:0
-2344;R.NhanhCanGiuoc5;4472.0;R.NhanhCanGiuoc5_3:DS:0
-2345;R.NhanhCanGiuoc5;4649.0;R.NhanhCanGiuoc5_2:US:0
-2346;R.NhanhCanGiuoc5;5185.0;R.NhanhCanGiuoc5_2:DS:0
-2347;R.NhanhCanGiuoc5;5706.0;R.NhanhCanGiuoc5_1:US:0
-2348;R.NhanhCanGiuoc5;6134.0;R.NhanhCanGiuoc5_1:DS:0
-2349;R.NhanhCanGiuoc5;12342.0;R.NhanhCanGiuoc2:US:0
-2350;R.PHUOC KIENG;5691.0;R. TOM 2:DS:0
-2351;R.PHUOC KIENG;6309.0;R.BaQuan:DS:0
-2352;R.TamTrieu_1;1119.0;K.XaDat_1:DS:0
-2353;R.TamTrieu_1;3416.0;R.CayT:DS:0
-2354;R.TamTrieu_1;4047.0;K.XaDat_2:DS:0
-2355;R.TamTrieu_1;4338.0;K.HoaThanh:DS:0
-2356;R.TamTrieu_2;3940.0;K.BongKien:DS:0
-2357;R.Thu10_1;540.0;QuocPhong11_2:US:0|QuocPhong11_1:DS:0
-2358;RACHMONGHOA;1030.0;RACHTRAQUAN:US:0
-2359;RACHTHUCHIN1;895.0;QuocPhong10:DS:0|QuocPhong11_1:US:0
-2360;RACHTHUCHIN2;4942.0;R.Thu10_2:DS:0
-2361;RACHTHUTAM1;1410.0;QuocPhong9:DS:0|QuocPhong10:US:0
-2362;RACHTHUTAM1;6618.0;K. 30Thu8Thu9:DS:0
-2363;RACHXEODUOC;2815.0;XeoDuoc2:US:0|XeoDuoc1:DS:0
-2364;RACHXEODUOC;3807.0;KENHBONMUOI:US:0
-2365;RACHXEOVET;1600.0;QuocPhong7:US:0|QuocPhong6:DS:0
-2366;RXEOQUAO;2392.0;QuocPhong8:US:0|QuocPhong7:DS:0
-2367;Rach Cai Nhap;3300.0;Branch1201:DS:0
-2368;Rach Choc;2216.0;K. 14-9:DS:3|K. 14-9:US:7
-2369;Rach Gia HT;2090.0;R. Ta Nien1:US:0|R. Ta Nien:DS:0
-2370;Rach Gia HT;4971.0;Cai San:DS:0|Cai San:US:1
-2371;Rach Gia HT;8768.0;Tron:DS:0
-2372;Rach Gia HT;13137.0;Rach Gia LX:DS:0
-2373;Rach Gia HT;17228.0;Cau So 2:US:0
-2374;Rach Gia HT;20000.0;Thay Xep:US:0
-2375;Rach Gia HT;22396.0;Cau So 3:US:0|Kien Hao CNG:US:0
-2376;Rach Gia HT;25000.0;Ta Manh:US:0
-2377;Rach Gia HT;27000.0;Ta Hem:US:0
-2378;Rach Gia HT;27637.0;Ta Lua:US:0|Ba The:DS:0
-2379;Rach Gia HT;30722.0;Vam Rang:US:0
-2380;Rach Gia HT;33675.0;My Thai:DS:0|Kien Binh:US:0
-2381;Rach Gia HT;36424.0;Cau So 9:US:0
-2382;Rach Gia HT;40072.0;Tri Ton:DS:0|Hon Soc:US:0
-2383;Rach Gia HT;43477.0;Luynh Huynh:US:0
-2384;Rach Gia HT;43983.0;H9:DS:0
-2385;Rach Gia HT;46607.0;K286:US:0
-2386;Rach Gia HT;49648.0;K285:US:0
-2387;Rach Gia HT;51567.0;H7:DS:0
-2388;Rach Gia HT;54487.0;Vam Ray:US:0
-2389;Rach Gia HT;55651.0;Tam Ngan:US:0
-2390;Rach Gia HT;59530.0;Kenh T6 ND:US:0|Kenh T6:DS:0
-2391;Rach Gia HT;63338.0;Kenh T5:DS:0|Tuan Thong:US:0
-2392;Rach Gia HT;67707.0;Lung Lon:US:0|Kenh T4:DS:0
-2393;Rach Gia HT;73186.0;Cau Tre:US:0
-2394;Rach Gia HT;74020.0;Kenh T3:DS:0|Ba Hon:US:0
-2395;Rach Gia HT;85096.0;Nong Truong:DS:0
-2396;Rach Gia HT;90101.0;Ha Giang:DS:0
-2397;Rach Gia LX;19094.0;Bon Tong:US:1
-2398;Rach Gia LX;19751.0;Chac Ca Dao:DS:0|Bon Tong:DS:2
-2399;Rach Gia LX;20297.0;K10 AG:DS:0
-2400;Rach Gia LX;26665.0;KH:US:1
-2401;Rach Gia LX;32511.0;KF:US:1|Ba The Moi:US:3
-2402;Rach Gia LX;39506.0;KA:US:1
-2403;Rach Gia LX;43918.0;Tan Hiep:US:1|Tan Hiep:DS:2
-2404;Rach Gia LX;49299.0;Ba Ke:US:1|Ba Ke:DS:2
-2405;Rach Ruong;2500.0;K6:US:1|K6:DS:2
-2406;Rach Ruong;8746.0;Phuoc Xuyen2:DS:0|Phuoc Xuyen:US:0|K5:US:0|K5:DS:1
-2407;Rach Ruong;15400.0;So 1:DS:0|So 1_2:US:0
-2408;Rach Tram MB;8000.0;Cam38:US:0
-2409;Rach Tram MB;11000.0;Ba Vom:DS:0|Cam37:US:0
-2410;Rach Tram MB;16000.0;Rach Coc:US:0|Rach Coc:DS:1
-2411;Rach Tram MB;21300.0;Rach Goc:US:0|Rach Goc:DS:1
-2412;Rach Tram MB;26050.0;Mareng:US:1|Mareng:DS:2
-2413;RachDon;151.0;R_Tram:DS:0
-2414;RachDon;5450.0;SongCui1:DS:0
-2415;RachDon;6732.0;R_Soi:US:0
-2416;RachLa;7459.0;TayDen:DS:0
-2417;RachLa;9455.0;TacOngNghia:US:0
-2418;RachNhum;2081.0;RachNhop:DS:0
-2419;RachOngDua_2;2701.0;BaCon:DS:0
-2420;RachRauDua;899.0;ZZZ_CM78:DS:0
-2421;RachRauDua;2208.0;ZZZ_CM77:DS:0
-2422;Rach_Bang_Tang;4501.0;Rach_Ba_Kich:DS:0
-2423;Rach_Cai_Dau;0.0;Kenh_Nga_Cay:US:0
-2424;Rach_Cai_Dau;921.0;Co Ba:DS:0
-2425;Rach_Cai_Dau;2576.0;Cai Cui:DS:0|Gia Hoang:US:0
-2426;Rach_Duong_Keo2;15737.0;Rach_Ba_Thanh:US:0
-2427;Rach_Duong_Keo2;25397.0;GO29_30:DS:0
-2428;Rachchiem;3960.0;Tandinhriver:US:0
-2429;Rachchiem;5271.0;LaGhi:DS:0|trangoa_n1:US:0
-2430;Ranh Hat;1270.0;TSH71:US:0
-2431;Ranh Hat;15000.0;TSH125:US:0
-2432;RanhHat2;3676.0;K.MieuOngTa_3:US:0
-2433;RanhTinh;1098.0;16000:DS:0
-2434;RanhTinh;2548.0;SauKim:US:0
-2435;RanhTinh;4079.0;OngHai:US:0|KenhGiua_2:DS:0
-2436;Rau Cau;652.0;Kenh_Rao_Can:US:0
-2437;RauDuaR;871.0;ZZZ_CM98:DS:0
-2438;Ray;4968.0;ST Thoa:DS:0
-2439;Ray;6000.0;Sa Di:US:0|Sa Di:DS:2
-2440;Re;3530.0;Sa Lon:DS:4|Sa Lon:US:5
-2441;Re;9631.0;Sa Lon1:US:0
-2442;S. BL K DOI;2351.0;kenhLA579:US:0
-2443;S. BL K DOI;4403.0;S.NhanhBenLuc1:DS:0
-2444;S. BL K DOI;7028.0;S.NhanhChoDem:DS:0
-2445;S. BL K DOI;7800.0;K.NamDong:DS:0
-2446;S. BL K DOI;10008.0;K.Baty:DS:0
-2447;S. BL K DOI;11905.0;kenhLA579:DS:0
-2448;S. BL K DOI;14529.0;K.XangBinhChanh:DS:0
-2449;S. BL K DOI;18128.0;K.ThamLuong:US:0
-2450;S. BL K DOI;19315.0;Can Giuoc:US:0
-2451;S. BL K DOI;20001.0;R. BEN NGHE:US:0
-2452;S. BL K DOI;23451.0;K. SO 2:US:0
-2453;S. BL K DOI;24571.0;K. SO 1:US:0
-2454;S. BL K DOI;25518.0;KenhDoi:US:0
-2455;S. BL K DOI;28490.0;R. BEN NGHE:DS:0|R. BEN NGHE1:US:0
-2456;S. Cua Lon-Bo De;3047.0;GO14_15:DS:0
-2457;S. Cua Lon-Bo De;4221.0;Rach_Duong_Keo2:US:0
-2458;S. Cua Lon-Bo De;7773.0;GO134_140:DS:0|GO_01_02:DS:0
-2459;S. Cua Lon-Bo De;8507.0;Branch1169:DS:0
-2460;S. Cua Lon-Bo De;18492.0;Branch1167:DS:0
-2461;S. Cua Lon-Bo De;21655.0;Branch1166:DS:0
-2462;S. Cua Lon-Bo De;23513.0;Rach Cai Nhap:DS:0
-2463;S. Cua Lon-Bo De;27445.0;Rach_Ba_Thanh:DS:0
-2464;S. Cua Lon-Bo De;32405.0;GO29_30:US:0
-2465;S. Cua Lon-Bo De;33791.0;GO_04_05:DS:0
-2466;S. Cua Lon-Bo De;38951.0;GO12_170:US:0
-2467;S. Cua Lon-Bo De;43438.0;GO27_28:US:0|GO69_70:US:0
-2468;S. Cua Lon-Bo De;44948.0;GO13_33:US:0
-2469;S. Cua Lon-Bo De;49829.0;GO162_163:US:0
-2470;S. DM BKY;20004.0;SONGTHI VAI:DS:0
-2471;S. Dam Doi;8186.0;ZZZ_RachDamDoi:US:0
-2472;S. Dam Doi;10837.0;ZZZ_RachGiongNhum:US:0
-2473;S. Dam Doi;11830.0;CaiBongR:DS:0|Branch1157:US:0
-2474;S. Dam Doi;18600.0;LauQuocGia:DS:0
-2475;S. Dam Doi;22758.0;Branch1159:DS:0
-2476;S. Dam Doi;23699.0;Branch1162:DS:0
-2477;S. Dam Doi;24430.0;GO_08:US:0
-2478;S. Dam Doi;28160.0;MuongDaoR:DS:0
-2479;S. Dam Doi;29247.0;ZZZ_KenhOngDienCM:US:0
-2480;S. Dam Doi;33563.0;GO134_140:US:0
-2481;S.NGA BAY;0.0;K. LONG TAU:DS:0
-2482;S.NGA BAY;501.0;R. DONG TRANH 1:US:0
-2483;S.NGA BAY;9839.0;S.Dua 2:US:0
-2484;S.NGA BAY;21755.0;SONGTHI VAI:US:0
-2485;S.NhanhCanGiuoc1;10886.0;kenhLA580:DS:0
-2486;S.NhanhCanGiuoc1;18519.0;R.CauGia:DS:0
-2487;SHU_22_23;1664.0;Muong Lo2:US:0|Muong Lo2:DS:1
-2488;SHU_22_23;6799.0;Cai Cau:DS:1
-2489;SONGTHI VAI;5431.0;R. DONG TRANH 1:DS:0
-2490;ST Thoa;3228.0;Sa Mop:US:0
-2491;ST Thoa;3731.0;Sa Di:US:2|Sa Di:DS:5
-2492;ST29_ST56;2407.0;U-QLPH51:DS:0
-2493;ST29_ST56;3721.0;K. Ba Xam _Goi_3:US:0
-2494;ST29_ST56;4850.0;K. Ba Xam _Goi_2:DS:0
-2495;ST29_ST56;11821.0;CXNRo1:US:0
-2496;ST59_ST61;8507.0;HTTNghia:US:0|HTTNghia:DS:1
-2497;ST59_ST61;10055.0;Tan Hoa:US:0
-2498;ST59_ST61;10789.0;Sa Mop1:DS:0
-2499;ST59_ST61;11875.0;K. 14-91:DS:0
-2500;ST59_ST61;12460.0;Rach Choc:DS:0
-2501;ST59_ST61;13325.0;ST Thoa:US:0
-2502;ST59_ST61;14841.0;U-QLPH49:DS:0
-2503;ST59_ST61;16042.0;Ta Lon:DS:0|Ray:DS:0
-2504;STDNgai;2931.0;Thep:DS:0
-2505;STDNgai;12401.0;Sau ThuocTN:US:0|Chong Chac:US:0
-2506;Sa Lon1;7000.0;Sa Lon:US:0|Sa Lon:DS:5
-2507;Sa Mop;420.0;Sa Di:DS:3|Sa Di:US:5
-2508;Sa Mop;988.0;Sa Mop1:US:0
-2509;Sa Mop1;2088.0;Sa Di:US:3|Sa Di:DS:4
-2510;Sa Rai cau;500.0;Sa Rai:US:0
-2511;Sai Gon;72850.0;LangThe:US:0
-2512;Sai Gon;94398.0;ThayCaiRachTra:DS:0
-2513;Sai Gon;111103.0;S.BenCat:DS:0
-2514;Sai Gon;113399.0;KTHDA:US:0
-2515;Sai Gon;124968.0;KTHDA:DS:0
-2516;Sai Gon;130495.0;S. BL K DOI:DS:0
-2517;Sai Gon;132626.0;R. BEN NGHE1:DS:0
-2518;Saintenoy;9425.0;CMP_Cai Tac:US:0
-2519;Saintenoy;13895.0;My Thuan:US:0|Xeo Mon:US:1|Xeo Mon:DS:2
-2520;Saintenoy;22506.0;Hau Giang 3:US:0|Hau Giang 3:DS:2
-2521;Saintenoy5;9254.0;Tra Cu Can:DS:0|Tra Coi:US:0
-2522;Saintenoy5;12921.0;Xeo Gua:DS:0|Cay Cong:US:0
-2523;Saintenoy5;16224.0;My Hung:US:0
-2524;Sarai_Creck;8373.0;kenhngan:US:0
-2525;Sarai_Creck;9521.0;tuongtho:DS:0
-2526;So 1;7900.0;Cai Beo:US:0|Cai Beo:DS:1
-2527;So 1;8530.0;Kenh_Pham_Hung:US:0|Hoi Dong Tuong:US:1
-2528;So 1;15500.0;K307:US:0|K307:DS:1
-2529;So 1_2;16176.0;K5:US:1
-2530;Soc Don;1377.0;Thong Luu:DS:0
-2531;Soc Trang;5202.0;Ba Rinh Moi:US:0|Ba Rinh CMP_Moi:DS:0
-2532;Soc Trang;13922.0;THGCat:DS:0|TH Giong Cat:US:0
-2533;Soc Trang;26281.0;An Tap:DS:0
-2534;Soc Trang;27344.0;Bo Thao:DS:0
-2535;Soc Trang;28382.0;NNLon:DS:0
-2536;Soc Trang;29117.0;STDNgai:DS:1
-2537;Soc Trang;31723.0;K.2-9:US:0
-2538;SocTro;6000.0;binhphu_bapho:US:0
-2539;Song Cu;2609.0;Thay Pho:DS:1
-2540;Song Kinh;6589.0;SongKinh1:DS:0
-2541;Song Trang;19000.0;Bau Nau1:US:1
-2542;Song Trang cau;500.0;Song Trang:US:0
-2543;SongBinhDi;7087.0;Bung_Binh_Thien_Lon:DS:0
-2544;Song_Cai_Rang;1270.0;APMYXEOLAXEOGIUA:US:0
-2545;Song_Cai_Rang;8200.0;Kenh_Nga_Cay:DS:0
-2546;Song_Cai_Rang;9422.0;Ong Hoach:DS:0
-2547;Song_Cai_Rang;10033.0;Cai Tat:DS:0
-2548;Song_Cui;1705.0;SongCui1:US:0
-2549;Song_Giuc_Thuong;2116.0;TSH7:DS:0
-2550;Song_Giuc_Thuong;5160.0;TSH8:DS:0
-2551;Song_Tap_Ren;2874.0;Muong Lo2:US:1|Muong Lo2:DS:2
-2552;Song_Tap_Ren;4582.0;Bung Tuc:DS:1
-2553;Song_Tap_Ren;7880.0;TCMNeo:DS:1
-2554;StungSlout;40549.0;Cam42:DS:0
-2555;StungSlout;48248.0;Tra Du:US:1
-2556;T4;5900.0;Ba Kieng:US:0|Ba Kieng:DS:1
-2557;T6;6600.0;Ba Kieng:US:1|Ba Kieng:DS:2
-2558;T8;6800.0;Ba Kieng:US:2|Ba Kieng:DS:3
-2559;TC Nhan;8068.0;Lung Sen:DS:0
-2560;TCMNeo;5646.0;CDXDong:DS:2
-2561;TH Giong Cat;4514.0;BRTaLiem:DS:0|BRTaLiem:US:1|An Tap:US:0|An Tap:DS:1
-2562;TH Giong Cat;6000.0;Ba Rinh CMP_Moi:DS:1|Ba Rinh CMP_Moi:US:2
-2563;THAURAU-TANLAP;6000.0;SARAICANAL:DS:0
-2564;THAURAU-TANLAP;8122.0;VINHBINH:US:0
-2565;THAURAU-TANLAP;8834.0;VINHKIMCANAL:DS:0
-2566;THGCat;1492.0;30-4:US:0|30-4:DS:1
-2567;THONGNHAT_CANAL;932.0;Ongxayriver:DS:0
-2568;THONGNHAT_CANAL;4699.0;tapsonriver:US:0
-2569;THONGNHAT_CANAL;6144.0;Tapngairiver:DS:0
-2570;THONGNHAT_CANAL;10349.0;KENH3-2:US:0
-2571;THONGNHAT_CANAL;11406.0;BASI_CR:DS:0
-2572;THONGNHAT_CANAL;12508.0;K.BacPhen:DS:0
-2573;THONGNHAT_CANAL;16507.0;Thanhnguyenriver:DS:0
-2574;THONGNHAT_CANAL;18441.0;TRAVINH:DS:0
-2575;THONGNHAT_CANAL;24457.0;LONG_HIEPCR:US:0
-2576;TRAVINH;9599.0;tamphuong:US:0
-2577;TRAVINH;10736.0;ngaihiep:DS:0
-2578;TRAVINH;13524.0;nhatho_vannhat:DS:0
-2579;TRAVINH;15431.0;K.TraCuong:DS:0
-2580;TRA_NGOA;722.0;Rachchiem:US:0
-2581;TRA_NGOA;5145.0;trangoa_n1:DS:0
-2582;TRA_NGOA;7573.0;tuongtho:US:0
-2583;TRA_NGOA;8705.0;BONGLOT_CR:US:0
-2584;TRA_NGOA;11752.0;MTT04:DS:0
-2585;TRA_NGOA;12837.0;BUNGTRUONG:DS:0
-2586;TRA_NGOA;14602.0;Banghe_Ngaichanh:US:0
-2587;TRA_NGOA;18325.0;NGAHAU:DS:0
-2588;TRA_NGOA;21875.0;Tongton_Rumsoc:US:0
-2589;TRA_NGOA;23174.0;CAIHOP:DS:0
-2590;TRA_NGOA;23797.0;Tra_ech:US:0
-2591;TRA_NGOA;28472.0;MYVAN:US:0|15_9 canal:DS:0
-2592;TRA_NGOA;33479.0;2-9_DOWN:US:0
-2593;TRA_NGOA;39725.0;CANCHONG:DS:0|THONGNHAT_CANAL:US:0
-2594;TSH;2300.0;TSH58:DS:0
-2595;TSH1;3651.0;TSH2:DS:0|K.ThoiThuy1:DS:0
-2596;TSH1;4840.0;DuongXuong2:DS:0|TSH3:DS:0
-2597;TSH1;11617.0;DuongXuong2:US:0
-2598;TSH1;12059.0;DuongXuong1:DS:0
-2599;TSH108;3736.0;TSH109:US:0
-2600;TSH109;5029.0;TSH110:US:0
-2601;TSH111;1684.0;TSH112:US:0
-2602;TSH111;4046.0;TSH114:US:0
-2603;TSH119;543.0;TSH120:US:0
-2604;TSH119;4689.0;LoXeMoi:DS:0
-2605;TSH119;5860.0;TSH121:US:0
-2606;TSH119;10974.0;TSH122:US:0
-2607;TSH124;3158.0;TSH132:DS:0
-2608;TSH139;2471.0;TSH138:DS:0|NhaSi3:US:0
-2609;TSH2;4385.0;K.MieuOngTa4:DS:0|K.MieuOngTa5:US:0
-2610;TSH2;7326.0;K.MieuOngTa3:DS:0|K.MieuOngTa2:DS:0
-2611;TSH2;8521.0;K.ThoiThuy2:US:0
-2612;TSH3;3229.0;BanBe1:US:0
-2613;TSH3;3961.0;K.ThoiThuy1:US:0
-2614;TSH47;2148.0;TSH44:DS:0
-2615;TSH48;1769.0;TSH55:US:0
-2616;TSH48;3650.0;TSH51:DS:0
-2617;TSH48;4323.0;TSH53:US:0
-2618;TSH49;3567.0;TSH48:DS:0
-2619;TSH5;4038.0;R. Ta Nien1:DS:0
-2620;TSH6;2657.0;TSH8:US:0|KaDam1:US:0
-2621;TSH6;4804.0;TSH7:US:0
-2622;TSH7;2375.0;KhoenAXay:US:0
-2623;TSH71;877.0;TSH69:DS:0
-2624;TSH82;1297.0;TSH86:US:0|TSH85:US:0
-2625;TSH84;2515.0;TSH83:DS:0
-2626;TSH84;4836.0;TSH85:DS:0
-2627;TSH84;6324.0;TSH86:DS:0
-2628;TSH98;3050.0;TSH108:US:0|TSH107:DS:0
-2629;TSH98;4219.0;TSH106:DS:0
-2630;TSH98;6317.0;TSH104:DS:0
-2631;TSH98;7265.0;TSH103:DS:0
-2632;TSH98;9245.0;TSH101:DS:0
-2633;TSH98;11292.0;TSH99:DS:0
-2634;TT103;2082.0;tranvdong:US:0|kenh142:US:0
-2635;TT103;5593.0;R.Gia:DS:0|K.PVChop:US:0
-2636;TT103;6617.0;champeaix:DS:0
-2637;TT107;519.0;kenh141:US:0
-2638;TT107;3094.0;K.Kchien5:DS:0
-2639;TV08_54;9763.0;TV09_TV33:US:0
-2640;TV08_54;15054.0;TV13_14:DS:0
-2641;TV08_54;18251.0;TV09_TV33:DS:0|TV_28_32_2006:DS:0
-2642;TV_10_15_2006;2549.0;TV_16_30_2006:US:0
-2643;TV_10_15_2006;9683.0;TV_16_30_2006:DS:0
-2644;Ta Lon;2718.0;K. 14-9:US:0|K. 14-9:DS:4
-2645;Tac Thu;1726.0;Ban:DS:0
-2646;Tac Thu;3754.0;Bach nguu:DS:0
-2647;Tac Thu;6486.0;T Nhat QLPH:DS:0
-2648;Tac Thu;8719.0;Song Cu:US:0
-2649;Tac Thu;9170.0;Quan Lo PH:DS:0
-2650;Tac Thu;9800.0;Ca Mau BL:DS:0|Ganh Hao:US:0|K. Lo Xe 1:US:0
-2651;Takaev-Channel;11195.0;Vinh Te:US:0
-2652;Tam Ngam;0.0;CMP_Tam Ngan:US:0
-2653;Tam Ngan;9850.0;Ba Ke:US:8|Ba Ke:DS:9
-2654;Tam Ngan;14865.0;Ninh Phuoc:US:0
-2655;Tam Ngan;19452.0;Moi:DS:0
-2656;Tam Thuoc1;5314.0;My Hung:DS:1
-2657;Tan Cong Chi cau;500.0;Tan Cong Chi:US:3
-2658;Tan Hoa;1627.0;K. 14-9:US:2|K. 14-9:DS:5
-2659;Tan Thanh LG;1900.0;Hong Ngu R:US:0|Cai Co LK:US:0
-2660;Tan Thanh LG;3000.0;Khang Chien cau:US:0
-2661;Tan Thanh LG;4714.0;Binh Thanh cau:US:0
-2662;Tan Thanh LG;6894.0;Thong Nhat:DS:1|Thong Nhat cau:US:0
-2663;Tan Thanh LG;9968.0;Tan Cong Chi cau:US:0|Tan Cong Chi:DS:4
-2664;Tan Thanh LG;13975.0;Sa Rai cau:US:0|Sa Rai:DS:1
-2665;Tan Thanh LG;19543.0;Tan Thanh cau:US:0|Tan Thanh:DS:1
-2666;Tan Thanh LG;21386.0;Cai Cai cau:US:0|Cai Cai:DS:1
-2667;Tan Thanh LG;28964.0;Cai Bat:DS:1|Cai Bat cau:US:0
-2668;Tan Thanh LG;37388.0;Song Trang:DS:1|Song Trang cau:US:0
-2669;Tan Thanh LG;42225.0;K28 cau:US:0|K28:DS:1
-2670;Tan Thanh LG;46600.0;Hung Dien cau:US:0|Hung Dien:DS:1
-2671;Tan Thanh cau;500.0;Tan Thanh:US:0
-2672;Tap Doan III;2830.0;Ba Tha:US:0
-2673;TayDen;2401.0;MocKeo:US:0
-2674;Thach My;4562.0;Bau Mon:DS:0
-2675;Thach My;6496.0;Lo Ca Lam A:US:1|Lo Ca Lam A:DS:2
-2676;Thach My;9000.0;Thach Mynho:US:0|Thach Mynho:DS:1
-2677;Thach My;10167.0;Giai Phong2:US:0|Giai Phong2:DS:1
-2678;Thach My;11634.0;Vinh B:US:0|Vinh B:DS:1
-2679;Thach My;14430.0;K. Xang:DS:0
-2680;Thach My;16210.0;Cay Gua1:US:0
-2681;Thach My;18253.0;Dinh:DS:0
-2682;Thach My;23354.0;Hphu Giua:US:0|U-QLPH41:DS:0
-2683;Than Nong;5277.0;Muong_So_5:DS:0
-2684;Thanh Binh;0.0;Sa Mop:DS:0
-2685;Thay Lam;6700.0;Rach_Nuoc_Xoay:DS:0
-2686;Thay Pho1;2000.0;Thay Pho:US:1|Thay Pho:DS:2
-2687;Thay Pho1;2440.0;Nang Huy:US:0
-2688;ThayCaiRachTra;30078.0;KenhNgang:DS:0
-2689;ThayCaiRachTra;36498.0;Cau An Ha:US:0
-2690;ThayCaiRachTra;39272.0;LangThe:DS:0
-2691;ThayCaiRachTra;46750.0;VamThuat:DS:0
-2692;Thep;731.0;MTMHac:US:0
-2693;Thi Doi;1500.0;TSH84:DS:0
-2694;Thi Doi;5508.0;KH7:US:0
-2695;Thi Doi;10005.0;TSH82:DS:0
-2696;Thi Doi;11073.0;TSH80:DS:0
-2697;Thom Rom;4000.0;Rach_Bang_Tang:US:0
-2698;Thom Rom;5435.0;Kenh_Lo:DS:0
-2699;Thom Rom;8000.0;TSH87:US:0|KH6:US:0
-2700;Thom Rom;10000.0;TSH89:US:0
-2701;Thom Rom;11000.0;TSH90:US:0
-2702;Thom Rom;13000.0;TSH92:US:0
-2703;Thom Rom;14000.0;KB:DS:1|TSH93:US:0
-2704;Thom Rom;17000.0;TSH95:US:0
-2705;Thom Rom;20000.0;TSH97:US:0
-2706;Thong Luu;7214.0;Nuoc Nan:US:0
-2707;Thong Luu;9774.0;Ca Vinh:US:0|Ca Vinh:DS:1
-2708;Thong Nhat cau;500.0;Thong Nhat:US:0
-2709;Thot Not;17210.0;KB:US:1|KB:DS:2
-2710;Thot Not;20829.0;TSH117:DS:0
-2711;Thot Not;23427.0;TSH115:DS:0
-2712;Thot Not;26000.0;Dung:US:0|KH51:US:0|Thom Rom:DS:0|Bon Tong:DS:3|KH3:US:0
-2713;Thot Not;27000.0;TSH76:US:0
-2714;Thot Not;29000.0;TSH74:US:0
-2715;Thot Not;30000.0;TSH72:DS:0
-2716;Thot Not;31000.0;TSH73:DS:0
-2717;Thot Not;32542.0;Ranh Hat:US:1|Ranh Hat:DS:7
-2718;Thot Not;40000.0;Ba ke:DS:0
-2719;Thot Not;41000.0;TSH29:DS:0
-2720;Thot Not;46260.0;Thi Doi:DS:1
-2721;Thot Not;49575.0;TSH133:US:0|TSH130:US:0
-2722;Thot Not;50329.0;Nuoc Man:US:0
-2723;Thu Thua;3320.0;kenhLA287:US:0
-2724;Thu Thua;5000.0;Bo Bo:US:0
-2725;Thu Thua;6543.0;kenhLA509:US:0
-2726;ThungThap;3423.0;rachrum_ext:DS:0
-2727;Tien;365.0;Cam42:US:0
-2728;Tien;1478.0;Tien_1:US:0
-2729;Tien;5262.0;Tu Thuong:US:0
-2730;Tien;10061.0;Tien_1:DS:0
-2731;Tien;12704.0;ChauDoc-Channel:US:0
-2732;Tien;14576.0;Vinh An:US:0
-2733;Tien;16880.0;Tien_3:US:0|Tien_2:US:0
-2734;Tien;26016.0;Tien_3:DS:0
-2735;Tien;30368.0;An Binh:US:0
-2736;Tien;32675.0;VamNao:US:0
-2737;Tien;35770.0;Dong Tien3:US:0
-2738;Tien;45673.0;An Phong MH1:US:0
-2739;Tien;54502.0;VamNao2:DS:0
-2740;Tien;58729.0;K2-9:DS:0|Tien_4:US:0
-2741;Tien;63975.0;Tan Cong Chi4:DS:0
-2742;Tien;67541.0;Nguyen Van Tiep1:US:0
-2743;Tien;71991.0;Cao Lanh:US:0
-2744;Tien;75315.0;Tien_5:US:0
-2745;Tien;77168.0;Tien_6:US:0
-2746;Tien;80617.0;Tien_5:DS:0
-2747;Tien;82881.0;Thay Lam:US:0
-2748;Tien;83801.0;Tien_6:DS:0
-2749;Tien;90354.0;Cao Lanh:DS:0
-2750;Tien;92485.0;Rach_Sanh_Nhien:US:0
-2751;Tien;93864.0;Song_Tien106_107:US:0
-2752;Tien;99036.0;Song_Tien106_107:DS:0|CaiNho:US:0
-2753;Tien;105422.0;Muong Khai:US:1
-2754;Tien;114903.0;CaiNho:DS:0
-2755;Tien;121127.0;Lap Vo:US:0
-2756;Tien;124961.0;CoChien:US:0
-2757;Tien;132207.0;So 1_2:DS:0
-2758;Tien;135143.0;K7-2:US:0
-2759;Tien;137113.0;CaiBe_TG:US:0
-2760;Tien;139487.0;C01:US:0
-2761;Tien;147966.0;C05:US:0
-2762;Tien;149417.0;CaiBe_TG:DS:0
-2763;Tien;151392.0;C04:US:0
-2764;Tien;152856.0;Ham Luong:US:0
-2765;Tien;153989.0;B01:US:0
-2766;Tien;158079.0;GO28_38:US:0
-2767;Tien;160793.0;My Long BK:DS:0|NamThon:DS:0
-2768;Tien;165158.0;Cau Sao:DS:0
-2769;Tien;170109.0;Tien_9:US:0|Nguyen Tan Thanh:DS:0
-2770;Tien;172538.0;Sau Au:DS:0
-2771;Tien;177828.0;Tien_7:US:0
-2772;Tien;179903.0;Tien_9:DS:0|Tien_8:DS:0
-2773;Tien;181868.0;Tien_7:DS:0
-2774;Tien;182885.0;GO_06_12:DS:0|Cho Gao:DS:0
-2775;Tien;186742.0;A03:US:0
-2776;Tien;189512.0;CuaTieu:US:0|Giao Hoa:DS:0|CuaDai:US:0
-2777;Tien_2;4482.0;Muong_So_5:US:0
-2778;Tien_3;3246.0;Nam Hang:DS:0
-2779;Tien_3;5640.0;Tra Du:DS:0
-2780;Tien_3;8834.0;Hong Ngu:US:0|Hong Ngu Cr:DS:0
-2781;Tien_4;2500.0;Cha Va:US:0
-2782;Tien_4;13755.0;Cai Tau Thuong:US:0
-2783;Tien_5;2101.0;Tien_4:DS:0
-2784;Tien_7;1646.0;Bao Dinh:US:0
-2785;Tien_9;1994.0;A01:US:0
-2786;Tien_9;4735.0;A02:US:0
-2787;Tien_9;6191.0;Tien_8:US:0
-2788;Tiep Nhat;912.0;CXNRo1:DS:1
-2789;Tiep Nhat;7935.0;K 96-Long Hung:US:0|K 96LHung:DS:0
-2790;Tiep Nhat;15405.0;K. Tong Cang_1:DS:0|K. Tong Cang_2:US:0
-2791;Tiep Nhat;20000.0;K. Ba Xam _Goi_4:DS:0|K. Ba Xam _Goi_5:US:0
-2792;Tieu Dua;419.0;QuocPhong16:DS:0
-2793;Tieu Dua;2080.0;K.ThongNhat:US:0|KENHCHONGMY1:DS:0
-2794;Tieu Dua;3000.0;K.PhanKhoanh:US:0
-2795;Tieu Dua;6147.0;Kinh 5:US:0
-2796;Tieu Dua;13000.0;K.PhanKhoanh:DS:0
-2797;Tieu Dua;15253.0;HANGMAI:DS:0
-2798;Tieu Dua;18434.0;K.1-5:DS:0
-2799;Tieu Dua;20000.0;ChemZ_310:US:0|K. Bien Nhi:US:0
-2800;Tieu Dua;21781.0;KENHBOBAO:US:0
-2801;Tieu Dua;28635.0;KENHSOKHONG:DS:0
-2802;Tieu Dua;32118.0;K. So Khong:DS:0|KENHSOKHONG2:DS:0
-2803;Tieu Dua;42300.0;Can Gao:DS:0
-2804;Tieu Dua;47000.0;MINHHA:US:0|Tac Thu:US:0|Ong Doc:US:0
-2805;Tong Hung LH;3303.0;CaiNhum:US:0
-2806;Tong Hung LH;8382.0;LongHo:DS:0|SAOPHONG:US:0
-2807;Tong Hung LH;20647.0;Caisao_cr:US:0
-2808;Tong Hung LH;25744.0;rachcaingang:DS:0
-2809;Tong Hung LH;29654.0;kenhxang:DS:0|kenhxang:US:1
-2810;Tong Hung LH;30637.0;binhphu_bapho:DS:0
-2811;Tongton_Rumsoc;1845.0;ThungThap:US:0
-2812;Tongton_Rumsoc;7000.0;ChuSuc:US:0
-2813;Tongton_Rumsoc;10000.0;Cau_Ke:DS:0
-2814;Tra Ban;2499.0;LongMy2:DS:0
-2815;Tra Ban;3246.0;Hau Giang 3:US:1|Hau Giang 3:DS:3
-2816;Tra Ban;5293.0;Xeo Tram:DS:0|Long My 2:US:0
-2817;Tra Ban;6980.0;De Nman:US:0|De Nman:DS:1
-2818;Tra Coi;761.0;TH Giong Cat:DS:0
-2819;Tra Cu Can;3074.0;Duong Lang:US:0|Duong Lang:DS:1
-2820;Tra Cu Can;5035.0;Giai Phong:DS:0|Giai Phong:US:1
-2821;Tra Cu Can;7460.0;Tam Thuoc1:US:0|Tam Thuoc1:DS:1
-2822;Tra Cu Can;8745.0;BBCBang:US:0|Cay Bang:DS:0
-2823;Tra Cu Can;11305.0;Hau Boi:US:0|Ba Xa:DS:0
-2824;Tra Cu Can;12592.0;Dap Da:US:0|Chom Tre:US:0
-2825;Tra Cu Can;14000.0;Tam Ngam:DS:0
-2826;Tra Cu Thuong;4000.0;Ba Kieng:US:3|Ba Kieng:DS:4
-2827;Tra Cu Thuong;11500.0;Bo Bo:DS:0|Rach Tram MB:DS:0|K61:DS:0
-2828;Tra Cu Thuong;15876.0;Kenh6:US:0
-2829;Tra Cuong;6601.0;Thuy Loi:US:0|Thuy Loi:DS:1
-2830;Tra Cuong;8000.0;Lo Ca Lam A:US:0
-2831;Tra Cuong;13039.0;Sa Di:US:1|Sa Di:DS:6
-2832;Tra Cuong;17214.0;K. 14-9:US:1|K. 14-9:DS:6
-2833;Tra Kha;315.0;Tra Khue:US:0
-2834;Tra Su;6649.0;Dao:DS:0
-2835;Tra Su;16500.0;Can Thao:DS:0
-2836;TraCu;9502.0;Tramen2:DS:0
-2837;Tra_ech;34198.0;15_9 canal:US:0
-2838;Trau Hoi;1774.0;So Dua Lon:DS:0
-2839;Tri Ton;7000.0;K7 AG:US:3|K7 AG:DS:4
-2840;Tri Ton;9988.0;K9 AG:US:2|K9 AG:DS:3
-2841;Tri Ton;19000.0;Tha La:US:0|Tha La:DS:1
-2842;Tri Ton;26400.0;Tam Ngan:DS:0|Tra Su:DS:0|Mac Can Dung:DS:0
-2843;Tri Ton;32000.0;K10 AG:US:3
-2844;Tri Ton;36000.0;Ba The Moi:DS:0
-2845;Tri Ton;38477.0;Ninh Phuoc:DS:0
-2846;Tri Ton;41500.0;Tan Hiep:US:5
-2847;Tri Ton;47950.0;Ba Ke:US:5|Ba Ke:DS:6
-2848;Tron;15800.0;Bon Tong:US:0|Bon Tong:DS:1
-2849;Tron;22104.0;KH:US:0|KH:DS:1
-2850;Tron;25100.0;KF:US:0|KF:DS:1
-2851;Tron;30019.0;KA:US:0|KA:DS:1
-2852;Tron;34267.0;Tan Hiep:US:0|Tan Hiep:DS:1
-2853;Tron;40000.0;Ba Ke:US:0|Ba Ke:DS:1
-2854;Tu;2400.0;U-QLPH8:US:4|U-QLPH8:DS:5
-2855;Tu Thuong;6000.0;Nam Hang:US:0|Nam Hang:DS:1
-2856;Tu Thuong;13200.0;Tra Du:US:0|Tra Du:DS:1
-2857;U-QLPH1;2000.0;VP18:US:0
-2858;U-QLPH1;4500.0;VP16:DS:0
-2859;U-QLPH11;2211.0;Noc Nang:DS:0
-2860;U-QLPH12;0.0;U-QLPH14:DS:0
-2861;U-QLPH3;2025.0;NDThongLuu:DS:0
-2862;U-QLPH4;0.0;U-QLPH5:US:0
-2863;U-QLPH41;1190.0;U-QLPH43:DS:0
-2864;U-QLPH41;1546.0;U-QLPH42:DS:0
-2865;U-QLPH41;2200.0;Tra The:DS:0
-2866;U-QLPH46;1000.0;Tra Kha:DS:0
-2867;U-QLPH46;3000.0;Tra Khue:DS:0
-2868;U-QLPH46;10101.0;Vam Dinh:DS:0
-2869;U-QLPH46;12000.0;Co Tay:DS:0
-2870;U-QLPH47;1164.0;Lo Chat Dot:DS:1
-2871;U-QLPH48;2654.0;HTTNghia:US:1
-2872;U-QLPH49;2074.0;K. 14-9:US:4|K. 14-9:DS:7
-2873;U-QLPH5;1439.0;NDThongLuu:US:0|NDThongLuu:DS:1
-2874;U-QLPH6;3491.0;Tu:US:0
-2875;U-QLPH6;4576.0;Ong Tuong:US:0
-2876;U-QLPH6;4785.0;HL-Cdao:DS:0
-2877;U-QLPH6;5758.0;Cong Doi:US:0|Cong Dien Tren:DS:0
-2878;U-QLPH60;400.0;Ta An:DS:0
-2879;UMH1;3000.0;UMH10:DS:0
-2880;UMH1;3150.0;UMH11:US:0
-2881;UMH1;9000.0;UMH6:DS:0
-2882;UMH1;12000.0;UMH12:DS:0|UMH8:DS:0
-2883;UMH1;15942.0;UMH13:DS:0
-2884;UMH14;3000.0;UMH1:DS:0
-2885;UMH14;6918.0;UMH3:DS:0
-2886;UMH15;1964.0;UMH5:DS:0
-2887;UMH16;2454.0;UMH4:DS:0
-2888;UMH2;2930.0;UMH9:US:0|UMH10:US:0
-2889;UMH21;1676.0;UMH5:US:0
-2890;UMH28;5335.0;UMH27:DS:0
-2891;UMH29;0.0;UMH28:DS:0
-2892;UMH3;3000.0;UMH7:DS:0|UMH8:US:0
-2893;UMH4;3000.0;UMH18:US:0|UMH17:DS:0
-2894;UMH4;6000.0;UMH25:US:0|UMH24:DS:0
-2895;UMH5;3000.0;UMH19:DS:0|UMH20:US:0
-2896;UMH5;6000.0;UMH22:DS:0|UMH23:US:0
-2897;UMH6;3000.0;UMH2:DS:0|UMH3:US:0
-2898;VAMBUON;4787.0;Tramen1:DS:0|Tramen2:US:0
-2899;VINHKIMCANAL;1839.0;nhatho_vannhat:US:0
-2900;VINHKIMCANAL;3508.0;K.TraCuong:US:0
-2901;VINHKIMCANAL;9198.0;THONGNHAT_CANAL:DS:0
-2902;VL ThanhTan;340.0;Lung Sen:US:0
-2903;VP7;1565.0;Xa Ta:US:0
-2904;VP9;866.0;Xa Ta:DS:0
-2905;VUNGLIEM_CRECK;2599.0;K.DaiTruong:US:0
-2906;VUNGLIEM_CRECK;4291.0;NGAHAU:US:0
-2907;VUNGLIEM_CRECK;10000.0;Caitongphi_Cr:US:0|Giong_trom1:DS:0
-2908;VUNGLIEM_CRECK;10785.0;BUNGTRUONG:US:0
-2909;Vam Co;8166.0;Cho Gao:US:0
-2910;Vam Co;14259.0;rachbang:DS:0
-2911;Vam Co;18000.0;Nuoc Mang:DS:0
-2912;Vam Co;25994.0;CG11_16:US:0
-2913;Vam Co;27767.0;K.BChau:DS:0
-2914;Vam Co;29595.0;xomgiong:DS:0
-2915;Vam Co;43474.0;CanLoc:DS:0
-2916;Vam Co;46111.0;K. Dong Tranh:DS:0|tranvdong:DS:0|champeaix:US:0
-2917;Vam Co Dong;0.0;East Vaico:DS:0
-2918;Vam Co Dong;17000.0;Cam33:US:0
-2919;Vam Co Dong;64333.0;Cam31:US:0
-2920;Vam Co Dong;94306.0;ThayCaiRachTra:US:0
-2921;Vam Co Dong;103124.0;Ba Vom:US:0|Rach Tram MB:US:0
-2922;Vam Co Dong;110838.0;Rach Coc:US:1
-2923;Vam Co Dong;114325.0;Mareng:US:2
-2924;Vam Co Dong;124700.0;Tra Cu Thuong:US:0
-2925;Vam Co Dong;134100.0;T8:DS:0
-2926;Vam Co Dong;139635.0;K.AnHa:US:0
-2927;Vam Co Dong;142600.0;T6:DS:0
-2928;Vam Co Dong;146995.0;KenhNgang1:US:0|T4:DS:0
-2929;Vam Co Dong;149167.0;Cau An Ha:DS:0
-2930;Vam Co Dong;151639.0;Ba Kieng:DS:0
-2931;Vam Co Dong;154516.0;T2:DS:0
-2932;Vam Co Dong;162638.0;Thu Thua:DS:0
-2933;Vam Co Dong;166558.0;S. BL K DOI:US:0
-2934;Vam Co Dong;167295.0;kenhLA289:DS:0
-2935;Vam Co Dong;168590.0;kenhLA285:US:0
-2936;Vam Co Dong;170597.0;S.NhanhCanGiuoc1:US:0
-2937;Vam Co Dong;176623.0;R.NhanhCanGiuoc2:DS:0
-2938;Vam Co Dong;178616.0;kenhLA285:DS:0
-2939;Vam Co Dong;184640.0;R.NhanhCanGiuoc5:DS:0
-2940;Vam Co Dong;188790.0;Vam Co:US:0|Vam Co Tay:DS:0
-2941;Vam Co Tay;0.0;Cai Rung:DS:0|K28:DS:0|Cai co LK cau:DS:0
-2942;Vam Co Tay;12371.0;Bac Chan:US:1
-2943;Vam Co Tay;15322.0;Ca Ro:DS:0|Nha Tho:US:2
-2944;Vam Co Tay;17843.0;Cay Kho Nho:DS:0
-2945;Vam Co Tay;20251.0;Cay Kho Lon:DS:0
-2946;Vam Co Tay;23378.0;Quang Dai:US:1|Binh Trung:DS:0
-2947;Vam Co Tay;26830.0;K12:US:1
-2948;Vam Co Tay;29774.0;Ca Dua:DS:0
-2949;Vam Co Tay;34662.0;Ba Hong Minh:DS:0
-2950;Vam Co Tay;38500.0;Truc Chinh:DS:0
-2951;Vam Co Tay;42908.0;K79:DS:0
-2952;Vam Co Tay;47993.0;Mareng:DS:0
-2953;Vam Co Tay;52000.0;K30-4:DS:0
-2954;Vam Co Tay;58176.0;Dong Tien:DS:0|Tra Cu Thuong:DS:0
-2955;Vam Co Tay;60116.0;Lo Moi:US:1
-2956;Vam Co Tay;60757.0;Thuy Tan:US:0
-2957;Vam Co Tay;65834.0;Kenh6:DS:0
-2958;Vam Co Tay;68318.0;T7:US:0
-2959;Vam Co Tay;70000.0;Kenh5:DS:0
-2960;Vam Co Tay;73157.0;T5:US:0
-2961;Vam Co Tay;78518.0;T3:US:0
-2962;Vam Co Tay;80474.0;Thuy Tan:DS:0
-2963;Vam Co Tay;88000.0;T1:US:0
-2964;Vam Co Tay;93244.0;Bac Dong:DS:0
-2965;Vam Co Tay;97050.0;Thu Thua:US:0
-2966;Vam Co Tay;98631.0;R.ThonThanhLA:US:0
-2967;Vam Co Tay;101293.0;Nguyen Van Tiep2:DS:0
-2968;Vam Co Tay;103231.0;KENHTG1:DS:0
-2969;Vam Co Tay;108340.0;Bao Dinh:DS:0
-2970;Vam Co Tay;109943.0;kenhLA288:US:0|K_Vanhdai:US:0
-2971;Vam Co Tay;113178.0;KBINHTAM:DS:0
-2972;Vam Co Tay;114678.0;kenhLA479:DS:0
-2973;Vam Co Tay;116267.0;kenhTG450:DS:0|kenhLA508:US:0
-2974;Vam Co Tay;118072.0;KKYSON:DS:0
-2975;Vam Co Tay;123201.0;KTAMVU:DS:0
-2976;Vam Co Tay;126427.0;kenhLA286:DS:0|R-BPhuoc:US:0
-2977;Vam Co Tay;128454.0;KCHOGIUA:DS:0
-2978;Vam Co Tay;129508.0;Rach_Lon:US:0
-2979;Vam Co Tay;131694.0;Kenh_30-4:US:0
-2980;Vam Co Tay;136898.0;Song_Cui:US:0
-2981;Vam Rang;3808.0;Ta Lua:DS:0
-2982;VamNao;1335.0;Tien_2:DS:0
-2983;VamNao;14671.0;Cai Tac:DS:0
-2984;VamNao;18377.0;VamNao2:US:0
-2985;VamNao;20186.0;Ca Mau:US:0
-2986;VamNao2;5343.0;Ong Chuong:US:0
-2987;Vinh An;5769.0;Than Nong:US:0
-2988;Vinh B;540.0;Nhi Tho:DS:0
-2989;Vinh Te;6882.0;K7 AG:US:6
-2990;Vinh Te;9475.0;K9 AG:US:5
-2991;Vinh Te;11251.0;Dap Tha La:US:0
-2992;Vinh Te;13286.0;Dap Tra Su:US:0
-2993;Vinh Te;32067.0;Kenh T6 moi:US:0
-2994;Vinh Te;36095.0;Kenh T5:US:0|Moi:US:0
-2995;Vinh Te;42983.0;Kenh T4:US:0
-2996;Vinh Te;48753.0;Kenh T3:US:0
-2997;Vinh Te;56673.0;Nong Truong:US:0
-2998;Vinh Te;61124.0;Ha Giang:US:0
-2999;Vinh Te;64487.0;Giang Thanh:US:0
-3000;XEONHAO3;800.0;QuocPhong11_2:DS:0|QuocPhong12_1:US:0
-3001;XM Kut;2808.0;Bon Thuoc:US:1|Bon Thuoc:DS:2
-3002;Xa No;2000.0;So Dua Lon:US:0
-3003;Xa No;5000.0;Trau Hoi:DS:0
-3004;Xa No;8000.0;Saintenoy:US:2
-3005;Xa No;9000.0;MotNgan_2:DS:0|Mot Ngan:US:0
-3006;Xa No;13000.0;KenhRanh(4000)_1:US:0
-3007;Xa No;16000.0;7000_3:DS:0|Nang Mau 2:DS:0|6500_3:DS:0
-3008;Xa No;17000.0;K8000:US:1|K8000:DS:2
-3009;Xa No;19000.0;9500:US:0
-3010;Xa No;20000.0;10500:DS:0
-3011;Xa No;21000.0;XaNo2:DS:0
-3012;Xa No;22000.0;13000:DS:0
-3013;Xa No;23000.0;XaNo1:DS:0
-3014;Xa No;24000.0;14000Nho:DS:0
-3015;Xa No;25000.0;16000:US:0
-3016;Xa No;26000.0;SauKim:DS:0
-3017;Xa No;28000.0;OngHai:DS:0
-3018;Xa No;29000.0;9 Thuoc2:DS:1
-3019;Xa No;31000.0;NhaTho:DS:0
-3020;Xa No;33000.0;NangChang_2:DS:0|L612:DS:0|Hau:DS:0
-3021;Xa No;34538.0;KenhTac:DS:0
-3022;Xa No;36659.0;MuoiThuoc:DS:0
-3023;Xa No;38000.0;Cau Lam:DS:0|OngQuang:DS:0
-3024;Xa No;39743.0;BaVoi_2:DS:0
-3025;Xa No;40170.0;CMP_Moi1:DS:0
-3026;Xang;3000.0;Mac Day:US:0|Mac Day:DS:1
-3027;Xang;6530.0;Cong Dien:DS:0
-3028;Xang Lo;3785.0;Xeo Mon:DS:3
-3029;Xeo Chit;11736.0;Saintenoy5:US:0|An Tap:US:1|Saintenoy:DS:3
-3030;Xeo Chit;12889.0;CMP_Tam Ngan:DS:0
-3031;Xeo Chit;14597.0;Dap Da:DS:0|K8000:DS:3
-3032;Xeo Chit;15598.0;Hau Boi:DS:0
-3033;Xeo Chit;17235.0;BBCBang:DS:0
-3034;Xeo Chit;18607.0;Tam Thuoc1:US:1
-3035;Xeo Chit;22627.0;Quan Lo PH:US:0|Giai Phong:DS:1
-3036;Xeo Chit;23547.0;Xeo Xu:US:1
-3037;Xeo Chit;31313.0;Tra Cu:US:0
-3038;Xeo Chit;36837.0;Tra Ban:DS:1
-3039;Xeo Chit;37616.0;Tra Ban:US:0
-3040;Xeo Chit;44720.0;Xeo ChitN:DS:0
-3041;Xeo Chit;47003.0;Chien Luy:DS:0
-3042;Xeo Chit;47576.0;XeoChit_QuanLo:US:0
-3043;Xeo Chit;50189.0;PL16_Pl30:DS:0
-3044;Xeo Chit;53191.0;Lai Viet:DS:0
-3045;Xeo Chit;54741.0;Cay Me:DS:4
-3046;Xeo Chit;56708.0;Xeo Ro:DS:1
-3047;Xeo Chit;62387.0;U-QLPH4:DS:0
-3048;Xeo Chit;62686.0;NuocTrong:DS:0
-3049;Xeo Chit;63742.0;U-QLPH3:US:0
-3050;Xeo Chit;69098.0;K. Ngan Dua - BL2:DS:0
-3051;Xeo Chit;71061.0;Ba Quy:DS:1
-3052;Xeo Chit;75989.0;K. Vinh Loc 1:US:0
-3053;Xeo Chit;77594.0;De Nman:DS:0
-3054;Xeo Chit;78897.0;Tay Ki:DS:0
-3055;Xeo Chit;80437.0;Lo Xe:DS:0|LoXe3:DS:0
-3056;Xeo Chit;82093.0;Vinh Cuu:DS:0
-3057;Xeo Chit;87677.0;Khong ten1:US:0
-3058;Xeo Chit;93683.0;Bach nguu:US:0
-3059;Xeo Chit;93857.0;K. Truong Toa:US:0
-3060;Xeo Chit;94838.0;Xang Cut:DS:0
-3061;Xeo Chit;105392.0;K. Sau Sanh:US:0
-3062;Xeo ChitN;4874.0;MoiQLPH:DS:0
-3063;Xeo Choi;0.0;Mai Dam:DS:0|Cai Muon:US:0|Dong Binh:DS:1
-3064;Xeo Gua;0.0;BRTaLiem:DS:1|Ba Rinh CMP_Moi:DS:2
-3065;Xeo Gua;2027.0;Ta An:US:0
-3066;Xeo Mat CV;1729.0;Song_Hoa_Thanh:DS:0
-3067;Xeo Mat CV;3400.0;Ba Cang:US:0
-3068;Xeo Mat CV;22100.0;Ba Cang:DS:0
-3069;Xeo Mon;3849.0;Nha Nuoc:DS:2
-3070;Xeo Ro;1401.0;Le Le:US:0|Le Le:DS:1
-3071;Xeo Ro;3752.0;BDSauHy:US:0|BDSauHy:DS:1
-3072;Xeo Ro;5797.0;Tu Tam:DS:0
-3073;Xeo Tram;5081.0;Thay Nam:US:1|Thay Nam:DS:2
-3074;Xeo Xu;612.0;De Nman:US:1
-3075;Xeo Xu;4705.0;Xeo Tram:US:0
-3076;XeoChit_QuanLo;4990.0;Soc So:US:0
-3077;XeoChit_QuanLo;7144.0;R.CSauHy:US:0|BDSauHy:DS:2
-3078;XeoChit_QuanLo;9185.0;Le Le:DS:2
-3079;Xom La;1233.0;Tuan Bay:DS:0
-3080;Xom La;1522.0;Tram Tre:US:0
-3081;Xom La;2000.0;U-QLPH45:DS:0
-3082;ZZZ_CM100;3000.0;ZZZ_CM102:US:0
-3083;ZZZ_CM103;2640.0;ZZZ_CM90:US:0
-3084;ZZZ_CM59;2056.0;ZZZ_CM60:DS:0
-3085;ZZZ_CM59;3000.0;ZZZ_CM61:US:0|ZZZ_CM62:US:0
-3086;ZZZ_CM61;1629.0;ZZZ_CM63:US:0
-3087;ZZZ_CM64;644.0;ZZZ_CM73:US:0
-3088;ZZZ_CM64;4883.0;ZZZ_CM59:DS:0
-3089;ZZZ_CM65;890.0;ZZZ_CM66:US:0
-3090;ZZZ_CM65;3000.0;ZZZ_CM67:US:0
-3091;ZZZ_CM65;5953.0;ZZZ_CM68:US:0
-3092;ZZZ_CM65;8772.0;ZZZ_CM71:DS:0
-3093;ZZZ_CM67;4324.0;ZZZ_CM66:DS:0
-3094;ZZZ_CM71;3761.0;ZZZ_CM70:DS:0
-3095;ZZZ_CM79;2230.0;ZZZ_CM78:US:0|ZZZ_CM80:DS:0
-3096;ZZZ_CM81;4097.0;ZZZ_CM84:US:0
-3097;ZZZ_CM82;4179.0;ZZZ_CM81:DS:0
-3098;ZZZ_CM91;1981.0;ZZZ_CM92:US:0
-3099;ZZZ_CM91;4229.0;ZZZ_CM94:US:0
-3100;ZZZ_CM92;2452.0;ZZZ_CM93:DS:0
-3101;ZZZ_CM94;3404.0;ZZZ_CM95:US:0
-3102;ZZZ_CM95;2191.0;ZZZ_CM93:US:0
-3103;ZZZ_KenhNoiDamChim;1492.0;ZZZ_KenhNoiSauDong:DS:0
-3104;ZZZ_KenhSauDong1;0.0;ZZZ_KenhMieuThiet:US:0|ZZZ_KenhSauDong2:DS:0
-3105;ZZZ_KenhSauDong1;1820.0;ZZZ_KenhAoBong:DS:0
-3106;ZZZ_KenhSauDong2;1741.0;ZZZ_KenhNoiSauDong:US:0
-3107;ZZZ_KenhSauDong3;3880.0;ZZZ_KenhSauDong2:US:0
-3108;ZZZ_RachGiongNhum;3000.0;ZZZ_KenhSauDong4:US:0
-3109;ZZZ_RachGiongNhum;6065.0;ZZZ_KenhNoiCayNhum:US:0
-3110;ZZZ_RachGiongNhum;7135.0;ZZZ_RachDamDoi:DS:0
-3111;binhphan;560.0;CG17_18:US:0
-3112;bosau_baisay;811.0;K.Hoai-Belan:US:0
-3113;cachuoi;2500.0;kenh141:DS:0|kenh142:DS:0
-3114;cachuoi;6154.0;K.BS-Thnhat12:DS:0
-3115;cachuoi;6772.0;K.AnThuy3:DS:0
-3116;champeaix;1259.0;K.Hoai-Belan:DS:0
-3117;champeaix;2746.0;bosau_baisay:DS:0
-3118;champeaix;4681.0;champeaus:DS:0|K.Lienxa:DS:0
-3119;champeaix;6775.0;K.NamTinh:US:0
-3120;champeaix;7651.0;K.HaiVe:DS:0
-3121;hieuthanh;3174.0;ngaichanh_n2:DS:0
-3122;kenh141;2500.0;LoCayBuoi:DS:0
-3123;kenh142;1462.0;K.TuMinh:DS:0
-3124;kenh142;4202.0;K.So3:DS:0
-3125;kenh142;6307.0;K.Cung:DS:0|klonguong1:DS:0
-3126;kenh142;7082.0;K.LHai:US:0|K.So2:DS:0
-3127;kenh142;8375.0;K.TienAp:DS:0
-3128;kenh142;10078.0;K.BoDay:US:0
-3129;kenh142;11694.0;K.Vach:US:0|K.Rachlon-2:DS:0
-3130;kenh142;12255.0;K.NamSon:DS:0
-3131;kenhLA285;3477.0;kenhLA678:DS:0
-3132;kenhLA285;7763.0;kenhLA287:DS:0
-3133;kenhLA285;13145.0;kenhLA286:US:0
-3134;kenhLA286;215.0;kenhLA508:DS:0
-3135;kenhLA287;544.0;R.ThonThanhLA:DS:0
-3136;kenhLA287;4556.0;kenhLA289:US:0
-3137;kenhLA287;5475.0;kenhLA288:DS:0
-3138;kenhLA287;6213.0;kenhLA479:US:0
-3139;kenhLA289;3906.0;kenhLA509:DS:0|kenhLA678:US:0
-3140;kenhLA579;5228.0;kenhLA580:US:0
-3141;kenhTG243;1606.0;O_LH_TTB:DS:0
-3142;kenhTG316;3195.0;kenhTG334:US:0
-3143;kenhTG320;0.0;kenhTG316:DS:0
-3144;kenhTG320;751.0;kenhTG450:US:0
-3145;kenhTG320;2285.0;KKYSON:US:0
-3146;kenhTG320;4402.0;K_LoDa1:US:0
-3147;kenhTG334;1013.0;KBINHTAM:US:0
-3148;kenhkn8;5737.0;k.N8_gc:US:0
-3149;klonguong1;2409.0;R.Gia:US:0
-3150;ngaichanh_n1;2213.0;hieuthanh:US:0
-3151;ngaichanh_n3;1548.0;Caitongphi_Cr:DS:0|hieuthanh:DS:0
-3152;rach_rum;2150.0;Tongton_Rumsoc:DS:0
-3153;rachhuu;5882.0;KenhN7:US:0
-3154;s. Dam Chim;2279.0;ZZZ_KenhMieuThiet:DS:0
-3155;s. Dam Chim;3930.0;ZZZ_KenhSauDong1:DS:0
-3156;s. Dam Chim;14338.0;ZZZ_KenhAoBong:US:0
-3157;s. Dam Chim;32979.0;GO14_15:US:0|GO168_169:DS:0
-3158;tamphuong;3604.0;Thanhnguyenriver:US:0
-3159;tamphuong;7902.0;K.BacPhen:US:0
-3160;tapsonriver;7801.0;Tramen1:US:0
-3161;tranvdong;2652.0;K.RachLa:DS:0
-3162;tranvdong;4225.0;K.PVChop:DS:0|xomgiong:US:0
-3163;tranvdong;5453.0;K.HaiVe:US:0
-3164;tranvdong;5846.0;CanLoc:US:0
-3165;tranvdong;6999.0;K.Lienxa:US:0
-3166;tutrinh;602.0;KenhT1:US:0|K.TuTrinh1:US:0
-3167;tutrinh;2112.0;kenhN2:US:0
-3168;tutrinh;2800.0;KenhT3:US:0
-3169;tutrinh;3853.0;KenhN4:US:0
-3170;tutrinh;5102.0;kenht4:US:0
-3171;tutrinh;5906.0;KenhN5:US:0
+2036;Mk_E2;12573.0;East Vaico:US:0
+2037;Mk_E2;53458.0;Cam49:US:0
+2038;Mo Cay;1000.0;C17:US:0|C16:US:0
+2039;Mo Cay;6564.0;C15:DS:0
+2040;Mo Cay;9367.0;MCC01_19:DS:0
+2041;Mo Cay;13000.0;C14:DS:0
+2042;MocKeo;163.0;MocKeoLon:US:0
+2043;Moi;7186.0;Kenh T6:US:0|Kenh T6 moi:DS:0
+2044;MoiQLPH;1112.0;Lang:DS:1
+2045;Mot Ngan;2000.0;Ranh:US:0
+2046;MotNgan_1;2268.0;BoDoi:US:0
+2047;MotNgan_2;2121.0;OngHao:DS:0
+2048;MotNgan_2;3084.0;KenhDay:US:0
+2049;Muoi Chau Phu;5900.0;K7 AG:US:2|K7 AG:DS:3
+2050;Muoi Chau Phu;9100.0;K9 AG:US:1|K9 AG:DS:2
+2051;MuoiThuoc;795.0;BaVoi_2:US:0|BaVoi_1:DS:0
+2052;Muong Dieu;2000.0;STDNgai:US:0
+2053;Muong Khai;1500.0;Can Tho HH:US:0
+2054;Muong Lo2;5673.0;CDXDong:US:0|CDXDong:DS:1
+2055;Muong Lo2;15137.0;Cai Cau:DS:0|Cai Cau:US:1
+2056;MuongDaoR;2187.0;Branch1163:US:0|Branch1159:US:0
+2057;MuongDaoR;9952.0;Branch1160:US:0
+2058;MuongDaoR;10843.0;Branch1165:US:0
+2059;My Hung;5474.0;Cay Cong:DS:0
+2060;My Hung;5617.0;Ba Xa:US:0
+2061;My Long BK;1800.0;Cau Sao:US:0
+2062;My Long BK;16664.0;TT86_87_88:DS:0
+2063;My Thai;6100.0;K10 AG:US:2|K10 AG:DS:3
+2064;My Thai;12445.0;Ba The Moi:US:0|Ba The Moi:DS:1
+2065;My Thai;18600.0;Tan Hiep:US:4|Tan Hiep:DS:5
+2066;My Thai;25400.0;Ba Ke:US:4|Ba Ke:DS:5
+2067;My Thanh;3352.0;K.SuonVinhHai:DS:0
+2068;My Thanh;5964.0;K. Ba Xam _Goi_5:DS:0
+2069;My Thanh;12835.0;K. Tong Cang_2:DS:0
+2070;My Thanh;14413.0;Vien Binh:DS:0
+2071;My Thanh;16411.0;K.GiayLang-BungTum:US:0
+2072;My Thanh;17547.0;K. An No:DS:0
+2073;My Thuan;8644.0;Lang Sen:DS:0|Tam Thai:US:0
+2074;NDThongLuu;2201.0;Xeo Ro:DS:0|Xeo Ro:US:1
+2075;NDThongLuu;3726.0;Rach Ca:DS:0
+2076;NGAHAU;9893.0;MIT13_14:DS:0|ngaichanh_n3:DS:0
+2077;NGAHAU;12500.0;MAYTUC:US:0
+2078;NGAHAU;18000.0;ngaichanh_n1:DS:0
+2079;NGBXau;0.0;CMP_Moi2:DS:0
+2080;NGBXau;3052.0;Bung Coc:US:1|Bung Coc:DS:2
+2081;NGBXau;8119.0;Sa Lon:US:1|Sa Lon:DS:2
+2082;NTL 8000;821.0;Muoi Thuoc:US:1
+2083;NTL 9000;920.0;Muoi Thuoc:US:0|Muoi Thuoc:DS:1
+2084;NamThon;713.0;Ba Rai:DS:0
+2085;NamThon;10151.0;Thanh Nien:DS:0
+2086;Nang Mau;391.0;Nga Bat:US:0
+2087;Nang Mau;3579.0;Gia Hoang:DS:0
+2088;Nang Mau;4654.0;Mai Dam:US:0|Kenh_Thay_Cai:US:0
+2089;Nang Mau;9564.0;Dong Binh:DS:0|Dong Binh:US:1
+2090;Nang Mau;12412.0;Cai Nhum:US:0|Ba Ngan:DS:0
+2091;Nang Mau;14678.0;Kenh_Xeo_Vuong:US:0|Xang Lo:DS:0
+2092;Nang Mau;21819.0;Xeo Mon:DS:1|Xeo Mon:US:3
+2093;Nang Mau;24636.0;Saintenoy:US:0|Saintenoy:DS:1
+2094;Nang Mau;30052.0;Nha Nuoc:US:0|Nha Nuoc:DS:1
+2095;Nang Mau;31608.0;K8000:US:0|K8000:DS:1
+2096;Nang Mau;32909.0;CMP_Nang Mau 2:US:0|CMP_Nang Mau 2:DS:1
+2097;Nang Mau;38949.0;Long Dieu:DS:1
+2098;Nang Mau;42231.0;9 Thuoc2:US:0
+2099;Nang Mau;46185.0;Hau:US:0|Rach_Nuoc_Duc:DS:0
+2100;Nang Mau;48272.0;CMP_Ngang:US:0|Cai Dia:DS:0
+2101;Nang Mau 2;7342.0;Song_Cai_Rang:DS:0
+2102;Nang Mau 2;9414.0;CMP_Cai Tac:DS:0|Xang Lo:US:0
+2103;Nang Mau 2;11687.0;Trau Hoi:US:0|RachSung_RachSoDiaBo:DS:0
+2104;Nang Mau 2;17481.0;Saintenoy:US:1|Saintenoy:DS:2
+2105;Nang Mau 2;18047.0;Nha Nuoc:US:1|Mot Ngan:DS:0
+2106;Nang Muoi;2088.0;T Nhat QLPH:US:0
+2107;Nang Muoi;2771.0;Thay Pho1:US:0
+2108;Nang Muoi;4000.0;Thay Pho:DS:0|Thay Pho:US:2
+2109;Nang Muoi;5679.0;Bao Thui:US:0
+2110;NangChang_1;0.0;BaVoi_1:US:0
+2111;NangGu;2645.0;Kien Hao CNG:DS:0
+2112;Nchang Re;4659.0;Cho Cu:DS:0
+2113;Ngang;13500.0;Bay thuoc:US:1|Bay Thuoc:DS:2
+2114;Nguyen Van Tiep1;3006.0;Binh Thanh4:DS:0
+2115;Nguyen Van Tiep1;7140.0;Ca Duc:US:0|Ca Duc:DS:1
+2116;Nguyen Van Tiep1;10419.0;Thay Cay:DS:0|Can Lo:US:0
+2117;Nguyen Van Tiep1;13519.0;Rach Sao:US:0|Rach Sao:DS:1
+2118;Nguyen Van Tiep1;19366.0;Duong Thet:US:0|Duong Thet:US:2
+2119;Nguyen Van Tiep1;23424.0;Cai Beo:US:1
+2120;Nguyen Van Tiep1;30445.0;K307:US:1
+2121;Nguyen Van Tiep2;6985.0;K5:DS:0|Bui Moi:US:1
+2122;Nguyen Van Tiep2;10940.0;K6:US:2|Bang Lang:US:1
+2123;Nguyen Van Tiep2;12439.0;Rach Ruong:US:0
+2124;Nguyen Van Tiep2;13656.0;Phung Thot:DS:0|K7:DS:0
+2125;Nguyen Van Tiep2;17221.0;Ca Nhip:DS:0|K9:US:0
+2126;Nguyen Van Tiep2;18954.0;K10:DS:0
+2127;Nguyen Van Tiep2;24771.0;Bang Day:US:0
+2128;Nguyen Van Tiep2;27944.0;K12:DS:0|Ba Rai:US:0
+2129;Nguyen Van Tiep2;37258.0;Thanh Nien:US:0
+2130;Nguyen Van Tiep2;38008.0;My Long BK:US:0
+2131;Nguyen Van Tiep2;39075.0;Lo Moi:DS:0|Nguyen Tan Thanh:US:0
+2132;Nguyen Van Tiep2;44486.0;Sau Au:US:0
+2133;Nguyen Van Tiep2;50376.0;Cho Bung:US:0
+2134;Nguyen Van Tiep2;53562.0;KQUANTHOTG:DS:0
+2135;Nguyen Van Tiep2;58322.0;Cu Chi:US:0
+2136;Nha Man TT;5300.0;Rau Cau:US:0
+2137;Nha Tho;13500.0;Bay thuoc:US:0|Bay Thuoc:DS:1
+2138;Nhat Tao;4518.0;Long My 1:US:0|LongMy2:US:0
+2139;Nhi Tho;1000.0;Rung:DS:0
+2140;Nhi Tho;2218.0;Cay Gua1:DS:0
+2141;Nhi Tho;4681.0;Xeo Song:DS:0
+2142;Nhu_Gia;1880.0;Binh Hung:US:0|Tra Cu Can:US:0
+2143;Nhu_Gia;3877.0;XCutQLPH:DS:0
+2144;Nhu_Gia;5841.0;Duong Lang:DS:0
+2145;Nhu_Gia;7224.0;Giai Phong:US:0
+2146;Nhu_Gia;8527.0;Tam Thuoc1:DS:0|Co Thien:US:0
+2147;Nhu_Gia;10599.0;Cay Bang:US:0|Xom Tiem:DS:0
+2148;Nhu_Gia;16624.0;U-QLPH60:DS:0|Saintenoy5:DS:0
+2149;Nhu_Gia;17456.0;Bo Thao:US:0
+2150;Nhu_Gia;17782.0;Cai Trau NG:DS:0
+2151;Nhu_Gia;19827.0;K. 14-9:US:6
+2152;Nhu_Gia;22828.0;Re:DS:0
+2153;Nhu_Gia;23772.0;ST59_ST61:US:0
+2154;Nhu_Gia;24416.0;K.19/5:US:0
+2155;Nhu_Gia;25899.0;Sa Di:US:6
+2156;Nhu_Gia;27655.0;NGBXau:DS:0
+2157;Nhu_Gia;29066.0;Thuy Loi:US:1|PTTTran:DS:0
+2158;Nhu_Gia;30686.0;Cai Trau:DS:0
+2159;Nhu_Gia;33096.0;Rach Sen:DS:0
+2160;Nhu_Gia;35912.0;Dinh:US:0
+2161;Nhu_Gia;36892.0;Sa Lon:US:3
+2162;Nhu_Gia;41364.0;Rach Sen3:DS:0
+2163;Nhu_Gia;42574.0;Tra The:US:0
+2164;Nhu_Gia;45466.0;U-QLPH43:US:0
+2165;Nhu_Gia;46905.0;Dai Ngai:DS:0
+2166;Nhu_Gia;47438.0;Xa Mach:DS:0
+2167;Nhu_Gia;53998.0;U-QLPH41:US:0
+2168;Nhu_Gia;55470.0;U-QLPH42:US:0
+2169;Nhu_Gia;56498.0;Thach My:DS:0
+2170;Nhu_Gia;57425.0;K.VinhChau-CoCo:US:0|Bac Lieu:US:0|My Thanh:DS:0
+2171;Ninh Phuoc;4200.0;H7:US:0
+2172;Ninh Phuoc;12300.0;H9:US:0
+2173;No 1;6323.0;Ba Rinh CMP_Moi:US:0|Song_Tap_Ren:DS:0|Hau BoiTN:DS:0|Cai Con Be:DS:0
+2174;No 1;9590.0;TCMNeo:DS:0|TCMNeo:US:1
+2175;No 1;12470.0;Ba Dot:DS:0
+2176;No 1;16672.0;Bung Tuc:DS:0|Bung Tuc:US:1
+2177;No 1;18885.0;Muong Lo2:US:2|Phu No:DS:0
+2178;No 1;22572.0;PL12_13:DS:0
+2179;No 1;23929.0;Muong Dieu:DS:0
+2180;No 1;24394.0;My Hoi:DS:0
+2181;Noc Nang;1568.0;PS-CS 1:US:0|PS-CS 1:DS:1
+2182;Noc Nang;3806.0;U-QLPH9:US:0|U-QLPH9:DS:1
+2183;Noc Nang;5397.0;U-QLPH10:US:0|U-QLPH10:DS:1
+2184;Noi Tra Liem;6035.0;U-QLPH60:US:0
+2185;Nong Truong;12660.0;Ba Ke:US:13|Ba Ke:DS:14
+2186;Nuoc Man;813.0;Rach_Thi_Doi:DS:0
+2187;NuocTrong;9304.0;Giong Cam:US:0
+2188;NuocTrong;19441.0;Hau Giang 3:DS:1
+2189;O Mon;4685.0;Can_Tho:US:0|Rach_Ba_Kich:US:0
+2190;O Mon;6268.0;Kenh_Lo:US:0
+2191;O Mon;8167.0;RachTra_2:US:0
+2192;O Mon;10000.0;VAMNHONTRAAN:US:0
+2193;O Mon;11000.0;TSH110:DS:0
+2194;O Mon;13000.0;BaCon:US:0
+2195;O Mon;14000.0;TSH108:DS:0|XeoSao:US:0
+2196;O Mon;14500.0;Thi Doi:US:2|Dung:DS:1
+2197;O Mon;16752.0;TacOngDinh:US:0
+2198;O Mon;18564.0;DuongThet:US:0
+2199;O Mon;20000.0;TSH126:DS:0
+2200;O Mon;21000.0;TSH127:DS:0|BungLon:US:0
+2201;O Mon;22000.0;OMonCanal:US:0
+2202;O Mon;23000.0;TSH128:DS:0
+2203;O Mon;24000.0;ToMa:US:0
+2204;O Mon;25000.0;4000:US:0
+2205;O Mon;26000.0;TSH129:DS:0
+2206;O Mon;28000.0;7000_1:US:0
+2207;O Mon;29000.0;Ranh Hat:US:4|Ranh Hat:DS:6
+2208;O Mon;34000.0;TSH140:DS:0
+2209;O Mon;35551.0;KenhMuoiHai_1:US:0
+2210;O Mon;38228.0;KenhGiua_1:US:0
+2211;O Mon;39000.0;KH8:DS:1
+2212;O Mon;41000.0;L611:US:0|TSH136:DS:0
+2213;O Mon;46000.0;KenhMuoiThuoc:US:0
+2214;Ong Chuong;14424.0;Cha Va:DS:0
+2215;Ong Chuong;18000.0;Ca Mau:DS:0
+2216;Ong Doc;1693.0;CM11:US:0
+2217;Ong Doc;3074.0;LTTRAN2:US:0
+2218;Ong Doc;3832.0;UMH29:DS:0
+2219;Ong Doc;15412.0;UMH28:US:0|ZZZ_CM64:US:0
+2220;Ong Doc;16516.0;ZZZ_CM74:US:0
+2221;Ong Doc;17728.0;CM16_17:US:0
+2222;Ong Doc;20805.0;UMH26:US:0|ZZZ_CM76:US:0
+2223;Ong Doc;22829.0;Rach Ban:DS:0
+2224;Ong Doc;24018.0;RachRauDua:US:0
+2225;Ong Doc;25051.0;RACHRUONG1:DS:0|ZZZ_CM79:US:0
+2226;Ong Doc;27504.0;CM03_04:US:0
+2227;Ong Doc;29335.0;KENHNOITVT4:DS:0|R. Ba Keo:DS:0
+2228;Ong Doc;33027.0;ZZZ_CM81:US:0
+2229;Ong Doc;35884.0;ZZZ_CM82:US:0
+2230;Ong Doc;37587.0;ZZZ_CM83:US:0
+2231;Ong Hoach;0.0;Cai Nhum:DS:0|Cai Tat:US:0
+2232;Ong Huong;1623.0;TP-Bnhan:DS:1
+2233;Ong Phu;4448.0;Song_LaiVung_Rach_HoaLong:US:0
+2234;Ong Phu;10253.0;Rach_Ho_Dia_Sanh:US:0
+2235;Ong Ro;2810.0;Nang Muoi:DS:0|Tap Doan III:US:0
+2236;Ong Tuong;2467.0;U-QLPH8:US:0|U-QLPH8:DS:4
+2237;PTN 7000;7975.0;K.OngTa2:DS:0
+2238;PTTTran;1005.0;CMP_Moi2:US:0
+2239;PTTTran;3349.0;Cho Cu1:US:0
+2240;PTTTran;6000.0;Bung Coc:US:2|Bung Coc:DS:3
+2241;PTTTran;10000.0;Rach Sen3:US:0
+2242;PTTTran;12000.0;Sa Lon:US:2|Sa Lon:DS:3
+2243;PTTTran;15315.0;Rach Sen:US:0
+2244;Phu No;6000.0;CSNTung:DS:0
+2245;Phuoc Xuyen;59250.0;K6:US:0|K6:DS:1
+2246;Phuoc Xuyen;68400.0;K7-2:DS:0|K7:US:0
+2247;Phuoc Xuyen;70400.0;K8:US:0
+2248;Phuoc Xuyen;74100.0;K10:US:0
+2249;Phuoc Xuyen2;7769.0;Hoa Binh:US:0|An Binh:DS:0|Cai Sach:DS:0
+2250;Phuoc Xuyen2;22394.0;Bay Thuoc:US:2
+2251;Phuoc Xuyen2;27486.0;Dong Tien3:DS:0|Dong Tien:US:1|Ngang:DS:0
+2252;Phuoc Xuyen2;35266.0;An Phong MH:US:0|An Phong MH1:DS:0
+2253;Phuoc Xuyen2;43971.0;Nguyen Van Tiep2:US:0|Nguyen Van Tiep1:DS:0
+2254;PrekTrabaek;14828.0;Cam30:DS:0
+2255;Quan Lo PH;1085.0;Duong Lang:US:1
+2256;Quan Lo PH;3936.0;Nhu_Gia:US:0
+2257;Quan Lo PH;9438.0;Tra Cu:DS:0
+2258;Quan Lo PH;11001.0;Lam Tra:DS:0
+2259;Quan Lo PH;12562.0;Ben Long:US:0
+2260;Quan Lo PH;13563.0;Bon Thuoc1:DS:0
+2261;Quan Lo PH;14427.0;Xeo ChitN:US:0|Tra Ban:DS:0|Cai Trau:US:0
+2262;Quan Lo PH;15793.0;Cong Da:DS:0
+2263;Quan Lo PH;18772.0;MoiQLPH:US:0
+2264;Quan Lo PH;19993.0;Chien Luy:US:0|K. Nang Ren:US:0
+2265;Quan Lo PH;21012.0;Lang:US:0
+2266;Quan Lo PH;21224.0;U-QLPH45:US:0
+2267;Quan Lo PH;22029.0;R.CSauHy:DS:0
+2268;Quan Lo PH;23440.0;Duong Mon:DS:0
+2269;Quan Lo PH;24381.0;XeoChit_QuanLo:DS:0
+2270;Quan Lo PH;25680.0;Lai Viet:US:0|Cai Tau:US:0
+2271;Quan Lo PH;26982.0;K. Ngan Dua - BL1:DS:0|K. Ngan Dua - BL2:US:0
+2272;Quan Lo PH;27584.0;3 Cui:US:1
+2273;Quan Lo PH;29133.0;U-QLPH19:US:0
+2274;Quan Lo PH;31323.0;K. Vinh Loc 1:DS:0|K. Vinh Loc 2:US:0
+2275;Quan Lo PH;35094.0;KVINHMYPHUOCLONG1:DS:0|KVINHMYPHUOCLONG:US:0
+2276;Quan Lo PH;40170.0;K. Vinh Loi 1:DS:0|K. Vinh Loi 2:US:0
+2277;Quan Lo PH;45867.0;KCANHDENPHOSINH:DS:0|KCANHDENPHOSINH:US:1
+2278;Quan Lo PH;50969.0;K. Phong Thanh Tay:DS:1
+2279;Quan Lo PH;56620.0;KCHOHOIHUYENSU2:US:0|KCHOHOIHUYENSU:DS:1
+2280;Quan Lo PH;62589.0;CC4:US:0
+2281;Quan Lo PH;62993.0;K. Tan Phong:US:1|K. Tan Phong:DS:2
+2282;Quan Lo PH;66552.0;K. Lang Tram:US:1|K. Lang Tram:DS:2
+2283;Quan Lo PH;68102.0;Ba Tha:DS:0
+2284;Quan Lo PH;69142.0;K. TanThanh_TacVan:DS:0
+2285;Quan Lo PH;69539.0;K.1-6:DS:0
+2286;Quan Lo PH;72782.0;R.CaiNhum:US:0
+2287;Quan Lo PH;72958.0;Ong Ro:DS:0
+2288;Quan Lo PH;75583.0;Lung Quoc:DS:0
+2289;Quan Lo PH;76193.0;Nang Huy:DS:0
+2290;Quan Lo PH;77504.0;Song Cu:DS:0
+2291;Quan Lo PH;77743.0;K.BaBeo:US:0
+2292;Quan Lo PH;79234.0;LungBaoChua:DS:0
+2293;Quang Dai;1200.0;Ca Gua:DS:0
+2294;Quang Dai;9100.0;Bay thuoc:DS:0|Bay Thuoc:US:0
+2295;QuocPhong10;878.0;K. 30Thu8Thu9:US:0
+2296;QuocPhong11_1;844.0;K. 30Thu9Thu10:US:0
+2297;QuocPhong11_2;636.0;K. 30XeoNgatThu10:US:0
+2298;QuocPhong11_2;1292.0;AMAB1:US:0
+2299;QuocPhong11_2;2369.0;K. 30XeoNgat:US:0
+2300;QuocPhong12_2;1552.0;R. Thuong Luong1:US:0|R. Thuong Luong:US:0
+2301;QuocPhong13;1818.0;R.XeoDoi1:US:0|R.XeoDoi2:DS:0
+2302;QuocPhong15;1079.0;K. Muong Dao1:US:0
+2303;QuocPhong16;2494.0;R.CayGo:US:0
+2304;QuocPhong4_1;1508.0;KENHTHUTU1:US:0
+2305;QuocPhong5;486.0;K. XeoBa5 Nhu:US:0
+2306;QuocPhong6;1532.0;K. Xeo Vet1:DS:0|K. Xeo Vet:US:0
+2307;QuocPhong7;1096.0;K. Xeo Doi:US:0|K. Xeo Doi1:DS:0
+2308;QuocPhong7;1959.0;K. DuongRung1:US:0|K. DuongRung:DS:0
+2309;QuocPhong8;488.0;K.GIUAXEOQUAN_XEOQUAO:DS:0|K. 30XeoBanXeoQuao:US:0
+2310;QuocPhong9;1112.0;K. 30Thu8XeoBan:US:0
+2311;R. BEN NGHE;3565.0;K. SO 2:DS:0
+2312;R. BEN NGHE;4692.0;K. SO 1:DS:0
+2313;R. BEN NGHE;6931.0;KenhDoi:DS:0
+2314;R. BEN NGHE1;367.0;CAY KHO:US:0
+2315;R. BEN NGHE1;1648.0;STanRCaCam:DS:0
+2316;R. Ba Keo;2530.0;ZZZ_CM80:US:0
+2317;R. DIA;3944.0;ThuyTieu:US:0
+2318;R. DIA;4228.0;STanRCaCam:US:0
+2319;R. DIA;6673.0;R.BaQuan:US:0
+2320;R. GIONG;2025.0;MuongLon:DS:0
+2321;R. GIONG;2487.0;SongKinh1:US:0
+2322;R. Ky Hon;1356.0;binhphan:US:0
+2323;R. Ky Hon;2000.0;K.LienHong:US:0
+2324;R. Ky Hon;2592.0;K.nguyenLong:US:0
+2325;R. Thu Nhat;1872.0;R. Nga Bat:DS:0
+2326;R. Thu Nhat;3874.0;AMAB10:US:0
+2327;R. Thu Nhat;3944.0;Kenh 20:DS:0
+2328;R. Thu Nhat;4638.0;AMAB9:US:0
+2329;R. Thu Nhat;6188.0;K. Hai Sen:DS:0|AMAB8:US:0
+2330;R. Thu Nhat;7817.0;AMAB7:DS:0|KENGCHONGMY:DS:0|KENHCHONGMY:US:1
+2331;R. Thu Nhat;10900.0;QuocPhong2:US:0|QuocPhong1:DS:0
+2332;R.BaGoc;0.0;R.Ngua:US:0
+2333;R.BaGoc;3843.0;R.HungNhon:DS:0
+2334;R.CaiSu;6884.0;R.TamTrieu_2:US:0
+2335;R.CaiSu;8850.0;K.TThon:US:0
+2336;R.CayT;585.0;K.TThon:DS:0
+2337;R.LungNgang_1;6217.0;K.RanhKh-Kt:DS:0
+2338;R.NhanhCanGiuoc5;3956.0;R.NhanhCanGiuoc5_3:US:0
+2339;R.NhanhCanGiuoc5;4472.0;R.NhanhCanGiuoc5_3:DS:0
+2340;R.NhanhCanGiuoc5;4649.0;R.NhanhCanGiuoc5_2:US:0
+2341;R.NhanhCanGiuoc5;5185.0;R.NhanhCanGiuoc5_2:DS:0
+2342;R.NhanhCanGiuoc5;5706.0;R.NhanhCanGiuoc5_1:US:0
+2343;R.NhanhCanGiuoc5;6134.0;R.NhanhCanGiuoc5_1:DS:0
+2344;R.NhanhCanGiuoc5;12342.0;R.NhanhCanGiuoc2:US:0
+2345;R.PHUOC KIENG;5691.0;R. TOM 2:DS:0
+2346;R.PHUOC KIENG;6309.0;R.BaQuan:DS:0
+2347;R.TamTrieu_1;1119.0;K.XaDat_1:DS:0
+2348;R.TamTrieu_1;3416.0;R.CayT:DS:0
+2349;R.TamTrieu_1;4047.0;K.XaDat_2:DS:0
+2350;R.TamTrieu_1;4338.0;K.HoaThanh:DS:0
+2351;R.TamTrieu_2;3940.0;K.BongKien:DS:0
+2352;R.Thu10_1;540.0;QuocPhong11_2:US:0|QuocPhong11_1:DS:0
+2353;RACHMONGHOA;1030.0;RACHTRAQUAN:US:0
+2354;RACHTHUCHIN1;895.0;QuocPhong10:DS:0|QuocPhong11_1:US:0
+2355;RACHTHUCHIN2;4942.0;R.Thu10_2:DS:0
+2356;RACHTHUTAM1;1410.0;QuocPhong9:DS:0|QuocPhong10:US:0
+2357;RACHTHUTAM1;6618.0;K. 30Thu8Thu9:DS:0
+2358;RACHXEODUOC;2815.0;XeoDuoc2:US:0|XeoDuoc1:DS:0
+2359;RACHXEODUOC;3807.0;KENHBONMUOI:US:0
+2360;RACHXEOVET;1600.0;QuocPhong6:DS:0|QuocPhong7:US:0
+2361;RXEOQUAO;2392.0;QuocPhong7:DS:0|QuocPhong8:US:0
+2362;Rach Cai Nhap;3300.0;Branch1201:DS:0
+2363;Rach Choc;2216.0;K. 14-9:DS:3|K. 14-9:US:7
+2364;Rach Gia HT;2090.0;R. Ta Nien1:US:0|R. Ta Nien:DS:0
+2365;Rach Gia HT;4971.0;Cai San:DS:0|Cai San:US:1
+2366;Rach Gia HT;8768.0;Tron:DS:0
+2367;Rach Gia HT;13137.0;Rach Gia LX:DS:0
+2368;Rach Gia HT;17228.0;Cau So 2:US:0
+2369;Rach Gia HT;20000.0;Thay Xep:US:0
+2370;Rach Gia HT;22396.0;Cau So 3:US:0|Kien Hao CNG:US:0
+2371;Rach Gia HT;25000.0;Ta Manh:US:0
+2372;Rach Gia HT;27000.0;Ta Hem:US:0
+2373;Rach Gia HT;27637.0;Ba The:DS:0|Ta Lua:US:0
+2374;Rach Gia HT;30722.0;Vam Rang:US:0
+2375;Rach Gia HT;33675.0;Kien Binh:US:0|My Thai:DS:0
+2376;Rach Gia HT;36424.0;Cau So 9:US:0
+2377;Rach Gia HT;40072.0;Tri Ton:DS:0|Hon Soc:US:0
+2378;Rach Gia HT;43477.0;Luynh Huynh:US:0
+2379;Rach Gia HT;43983.0;H9:DS:0
+2380;Rach Gia HT;46607.0;K286:US:0
+2381;Rach Gia HT;49648.0;K285:US:0
+2382;Rach Gia HT;51567.0;H7:DS:0
+2383;Rach Gia HT;54487.0;Vam Ray:US:0
+2384;Rach Gia HT;55651.0;Tam Ngan:US:0
+2385;Rach Gia HT;59530.0;Kenh T6:DS:0|Kenh T6 ND:US:0
+2386;Rach Gia HT;63338.0;Kenh T5:DS:0|Tuan Thong:US:0
+2387;Rach Gia HT;67707.0;Kenh T4:DS:0|Lung Lon:US:0
+2388;Rach Gia HT;73186.0;Cau Tre:US:0
+2389;Rach Gia HT;74020.0;Ba Hon:US:0|Kenh T3:DS:0
+2390;Rach Gia HT;85096.0;Nong Truong:DS:0
+2391;Rach Gia HT;90101.0;Ha Giang:DS:0
+2392;Rach Gia LX;19094.0;Bon Tong:US:1
+2393;Rach Gia LX;19751.0;Chac Ca Dao:DS:0|Bon Tong:DS:2
+2394;Rach Gia LX;20297.0;K10 AG:DS:0
+2395;Rach Gia LX;26665.0;KH:US:1
+2396;Rach Gia LX;32511.0;Ba The Moi:US:3|KF:US:1
+2397;Rach Gia LX;39506.0;KA:US:1
+2398;Rach Gia LX;43918.0;Tan Hiep:US:1|Tan Hiep:DS:2
+2399;Rach Gia LX;49299.0;Ba Ke:US:1|Ba Ke:DS:2
+2400;Rach Ruong;2500.0;K6:US:1|K6:DS:2
+2401;Rach Ruong;8746.0;K5:US:0|K5:DS:1|Phuoc Xuyen:US:0|Phuoc Xuyen2:DS:0
+2402;Rach Ruong;15400.0;So 1_2:US:0|So 1:DS:0
+2403;Rach Tram MB;8000.0;Cam38:US:0
+2404;Rach Tram MB;11000.0;Ba Vom:DS:0|Cam37:US:0
+2405;Rach Tram MB;16000.0;Rach Coc:US:0|Rach Coc:DS:1
+2406;Rach Tram MB;21300.0;Rach Goc:US:0|Rach Goc:DS:1
+2407;Rach Tram MB;26050.0;Mareng:US:1|Mareng:DS:2
+2408;RachDon;151.0;R_Tram:DS:0
+2409;RachDon;5450.0;SongCui1:DS:0
+2410;RachDon;6732.0;R_Soi:US:0
+2411;RachLa;7459.0;TayDen:DS:0
+2412;RachLa;9455.0;TacOngNghia:US:0
+2413;RachNhum;2081.0;RachNhop:DS:0
+2414;RachOngDua_2;2701.0;BaCon:DS:0
+2415;RachRauDua;899.0;ZZZ_CM78:DS:0
+2416;RachRauDua;2208.0;ZZZ_CM77:DS:0
+2417;Rach_Bang_Tang;4501.0;Rach_Ba_Kich:DS:0
+2418;Rach_Cai_Dau;0.0;Kenh_Nga_Cay:US:0
+2419;Rach_Cai_Dau;921.0;Co Ba:DS:0
+2420;Rach_Cai_Dau;2576.0;Gia Hoang:US:0|Cai Cui:DS:0
+2421;Rach_Duong_Keo2;15737.0;Rach_Ba_Thanh:US:0
+2422;Rach_Duong_Keo2;25397.0;GO29_30:DS:0
+2423;Rachchiem;3960.0;Tandinhriver:US:0
+2424;Rachchiem;5271.0;LaGhi:DS:0|trangoa_n1:US:0
+2425;Ranh Hat;1270.0;TSH71:US:0
+2426;Ranh Hat;15000.0;TSH125:US:0
+2427;RanhHat2;3676.0;K.MieuOngTa_3:US:0
+2428;RanhTinh;1098.0;16000:DS:0
+2429;RanhTinh;2548.0;SauKim:US:0
+2430;RanhTinh;4079.0;KenhGiua_2:DS:0|OngHai:US:0
+2431;Rau Cau;652.0;Kenh_Rao_Can:US:0
+2432;RauDuaR;871.0;ZZZ_CM98:DS:0
+2433;Ray;4968.0;ST Thoa:DS:0
+2434;Ray;6000.0;Sa Di:US:0|Sa Di:DS:2
+2435;Re;3530.0;Sa Lon:DS:4|Sa Lon:US:5
+2436;Re;9631.0;Sa Lon1:US:0
+2437;S. BL K DOI;2351.0;kenhLA579:US:0
+2438;S. BL K DOI;4403.0;S.NhanhBenLuc1:DS:0
+2439;S. BL K DOI;7028.0;S.NhanhChoDem:DS:0
+2440;S. BL K DOI;7800.0;K.NamDong:DS:0
+2441;S. BL K DOI;10008.0;K.Baty:DS:0
+2442;S. BL K DOI;11905.0;kenhLA579:DS:0
+2443;S. BL K DOI;14529.0;K.XangBinhChanh:DS:0
+2444;S. BL K DOI;18128.0;K.ThamLuong:US:0
+2445;S. BL K DOI;19315.0;Can Giuoc:US:0
+2446;S. BL K DOI;20001.0;R. BEN NGHE:US:0
+2447;S. BL K DOI;23451.0;K. SO 2:US:0
+2448;S. BL K DOI;24571.0;K. SO 1:US:0
+2449;S. BL K DOI;25518.0;KenhDoi:US:0
+2450;S. BL K DOI;28490.0;R. BEN NGHE1:US:0|R. BEN NGHE:DS:0
+2451;S. Cua Lon-Bo De;3047.0;GO14_15:DS:0
+2452;S. Cua Lon-Bo De;4221.0;Rach_Duong_Keo2:US:0
+2453;S. Cua Lon-Bo De;7773.0;GO_01_02:DS:0|GO134_140:DS:0
+2454;S. Cua Lon-Bo De;8507.0;Branch1169:DS:0
+2455;S. Cua Lon-Bo De;18492.0;Branch1167:DS:0
+2456;S. Cua Lon-Bo De;21655.0;Branch1166:DS:0
+2457;S. Cua Lon-Bo De;23513.0;Rach Cai Nhap:DS:0
+2458;S. Cua Lon-Bo De;27445.0;Rach_Ba_Thanh:DS:0
+2459;S. Cua Lon-Bo De;32405.0;GO29_30:US:0
+2460;S. Cua Lon-Bo De;33791.0;GO_04_05:DS:0
+2461;S. Cua Lon-Bo De;38951.0;GO12_170:US:0
+2462;S. Cua Lon-Bo De;43438.0;GO69_70:US:0|GO27_28:US:0
+2463;S. Cua Lon-Bo De;44948.0;GO13_33:US:0
+2464;S. Cua Lon-Bo De;49829.0;GO162_163:US:0
+2465;S. DM BKY;20004.0;SONGTHI VAI:DS:0
+2466;S. Dam Doi;8186.0;ZZZ_RachDamDoi:US:0
+2467;S. Dam Doi;10837.0;ZZZ_RachGiongNhum:US:0
+2468;S. Dam Doi;11830.0;CaiBongR:DS:0|Branch1157:US:0
+2469;S. Dam Doi;18600.0;LauQuocGia:DS:0
+2470;S. Dam Doi;22758.0;Branch1159:DS:0
+2471;S. Dam Doi;23699.0;Branch1162:DS:0
+2472;S. Dam Doi;24430.0;GO_08:US:0
+2473;S. Dam Doi;28160.0;MuongDaoR:DS:0
+2474;S. Dam Doi;29247.0;ZZZ_KenhOngDienCM:US:0
+2475;S. Dam Doi;33563.0;GO134_140:US:0
+2476;S.NGA BAY;0.0;K. LONG TAU:DS:0
+2477;S.NGA BAY;501.0;R. DONG TRANH 1:US:0
+2478;S.NGA BAY;9839.0;S.Dua 2:US:0
+2479;S.NGA BAY;21755.0;SONGTHI VAI:US:0
+2480;S.NhanhCanGiuoc1;10886.0;kenhLA580:DS:0
+2481;S.NhanhCanGiuoc1;18519.0;R.CauGia:DS:0
+2482;SHU_22_23;1664.0;Muong Lo2:US:0|Muong Lo2:DS:1
+2483;SHU_22_23;6799.0;Cai Cau:DS:1
+2484;SONGTHI VAI;5431.0;R. DONG TRANH 1:DS:0
+2485;ST Thoa;3228.0;Sa Mop:US:0
+2486;ST Thoa;3731.0;Sa Di:US:2|Sa Di:DS:5
+2487;ST29_ST56;2407.0;U-QLPH51:DS:0
+2488;ST29_ST56;3721.0;K. Ba Xam _Goi_3:US:0
+2489;ST29_ST56;4850.0;K. Ba Xam _Goi_2:DS:0
+2490;ST29_ST56;11821.0;CXNRo1:US:0
+2491;ST59_ST61;8507.0;HTTNghia:US:0|HTTNghia:DS:1
+2492;ST59_ST61;10055.0;Tan Hoa:US:0
+2493;ST59_ST61;10789.0;Sa Mop1:DS:0
+2494;ST59_ST61;11875.0;K. 14-91:DS:0
+2495;ST59_ST61;12460.0;Rach Choc:DS:0
+2496;ST59_ST61;13325.0;ST Thoa:US:0
+2497;ST59_ST61;14841.0;U-QLPH49:DS:0
+2498;ST59_ST61;16042.0;Ray:DS:0|Ta Lon:DS:0
+2499;STDNgai;2931.0;Thep:DS:0
+2500;STDNgai;12401.0;Sau ThuocTN:US:0|Chong Chac:US:0
+2501;Sa Lon1;7000.0;Sa Lon:US:0|Sa Lon:DS:5
+2502;Sa Mop;420.0;Sa Di:DS:3|Sa Di:US:5
+2503;Sa Mop;988.0;Sa Mop1:US:0
+2504;Sa Mop1;2088.0;Sa Di:US:3|Sa Di:DS:4
+2505;Sa Rai cau;500.0;Sa Rai:US:0
+2506;Sai Gon;72850.0;LangThe:US:0
+2507;Sai Gon;94398.0;ThayCaiRachTra:DS:0
+2508;Sai Gon;111103.0;S.BenCat:DS:0
+2509;Sai Gon;113399.0;KTHDA:US:0
+2510;Sai Gon;124968.0;KTHDA:DS:0
+2511;Sai Gon;130495.0;S. BL K DOI:DS:0
+2512;Sai Gon;132626.0;R. BEN NGHE1:DS:0
+2513;Saintenoy;9425.0;CMP_Cai Tac:US:0
+2514;Saintenoy;13895.0;My Thuan:US:0|Xeo Mon:US:1|Xeo Mon:DS:2
+2515;Saintenoy;22506.0;Hau Giang 3:US:0|Hau Giang 3:DS:2
+2516;Saintenoy5;9254.0;Tra Coi:US:0|Tra Cu Can:DS:0
+2517;Saintenoy5;12921.0;Cay Cong:US:0|Xeo Gua:DS:0
+2518;Saintenoy5;16224.0;My Hung:US:0
+2519;Sarai_Creck;8373.0;kenhngan:US:0
+2520;Sarai_Creck;9521.0;tuongtho:DS:0
+2521;So 1;7900.0;Cai Beo:US:0|Cai Beo:DS:1
+2522;So 1;8530.0;Kenh_Pham_Hung:US:0|Hoi Dong Tuong:US:1
+2523;So 1;15500.0;K307:US:0|K307:DS:1
+2524;So 1_2;16176.0;K5:US:1
+2525;Soc Don;1377.0;Thong Luu:DS:0
+2526;Soc Trang;5202.0;Ba Rinh CMP_Moi:DS:0|Ba Rinh Moi:US:0
+2527;Soc Trang;13922.0;TH Giong Cat:US:0|THGCat:DS:0
+2528;Soc Trang;26281.0;An Tap:DS:0
+2529;Soc Trang;27344.0;Bo Thao:DS:0
+2530;Soc Trang;28382.0;NNLon:DS:0
+2531;Soc Trang;29117.0;STDNgai:DS:1
+2532;Soc Trang;31723.0;K.2-9:US:0
+2533;SocTro;6000.0;binhphu_bapho:US:0
+2534;Song Cu;2609.0;Thay Pho:DS:1
+2535;Song Kinh;6589.0;SongKinh1:DS:0
+2536;Song Trang;19000.0;Bau Nau1:US:1
+2537;Song Trang cau;500.0;Song Trang:US:0
+2538;SongBinhDi;7087.0;Bung_Binh_Thien_Lon:DS:0
+2539;Song_Cai_Rang;1270.0;APMYXEOLAXEOGIUA:US:0
+2540;Song_Cai_Rang;8200.0;Kenh_Nga_Cay:DS:0
+2541;Song_Cai_Rang;9422.0;Ong Hoach:DS:0
+2542;Song_Cai_Rang;10033.0;Cai Tat:DS:0
+2543;Song_Cui;1705.0;SongCui1:US:0
+2544;Song_Giuc_Thuong;2116.0;TSH7:DS:0
+2545;Song_Giuc_Thuong;5160.0;TSH8:DS:0
+2546;Song_Tap_Ren;2874.0;Muong Lo2:US:1|Muong Lo2:DS:2
+2547;Song_Tap_Ren;4582.0;Bung Tuc:DS:1
+2548;Song_Tap_Ren;7880.0;TCMNeo:DS:1
+2549;StungSlout;40549.0;Cam42:DS:0
+2550;StungSlout;48248.0;Tra Du:US:1
+2551;T4;5900.0;Ba Kieng:US:0|Ba Kieng:DS:1
+2552;T6;6600.0;Ba Kieng:US:1|Ba Kieng:DS:2
+2553;T8;6800.0;Ba Kieng:US:2|Ba Kieng:DS:3
+2554;TC Nhan;8068.0;Lung Sen:DS:0
+2555;TCMNeo;5646.0;CDXDong:DS:2
+2556;TH Giong Cat;4514.0;An Tap:US:0|An Tap:DS:1|BRTaLiem:DS:0|BRTaLiem:US:1
+2557;TH Giong Cat;6000.0;Ba Rinh CMP_Moi:DS:1|Ba Rinh CMP_Moi:US:2
+2558;THAURAU-TANLAP;6000.0;SARAICANAL:DS:0
+2559;THAURAU-TANLAP;8122.0;VINHBINH:US:0
+2560;THAURAU-TANLAP;8834.0;VINHKIMCANAL:DS:0
+2561;THGCat;1492.0;30-4:US:0|30-4:DS:1
+2562;THONGNHAT_CANAL;932.0;Ongxayriver:DS:0
+2563;THONGNHAT_CANAL;4699.0;tapsonriver:US:0
+2564;THONGNHAT_CANAL;6144.0;Tapngairiver:DS:0
+2565;THONGNHAT_CANAL;10349.0;KENH3-2:US:0
+2566;THONGNHAT_CANAL;11406.0;BASI_CR:DS:0
+2567;THONGNHAT_CANAL;12508.0;K.BacPhen:DS:0
+2568;THONGNHAT_CANAL;16507.0;Thanhnguyenriver:DS:0
+2569;THONGNHAT_CANAL;18441.0;TRAVINH:DS:0
+2570;THONGNHAT_CANAL;24457.0;LONG_HIEPCR:US:0
+2571;TRAVINH;9599.0;tamphuong:US:0
+2572;TRAVINH;10736.0;ngaihiep:DS:0
+2573;TRAVINH;13524.0;nhatho_vannhat:DS:0
+2574;TRAVINH;15431.0;K.TraCuong:DS:0
+2575;TRA_NGOA;722.0;Rachchiem:US:0
+2576;TRA_NGOA;5145.0;trangoa_n1:DS:0
+2577;TRA_NGOA;7573.0;tuongtho:US:0
+2578;TRA_NGOA;8705.0;BONGLOT_CR:US:0
+2579;TRA_NGOA;11752.0;MTT04:DS:0
+2580;TRA_NGOA;12837.0;BUNGTRUONG:DS:0
+2581;TRA_NGOA;14602.0;Banghe_Ngaichanh:US:0
+2582;TRA_NGOA;18325.0;NGAHAU:DS:0
+2583;TRA_NGOA;21875.0;Tongton_Rumsoc:US:0
+2584;TRA_NGOA;23174.0;CAIHOP:DS:0
+2585;TRA_NGOA;23797.0;Tra_ech:US:0
+2586;TRA_NGOA;28472.0;15_9 canal:DS:0|MYVAN:US:0
+2587;TRA_NGOA;33479.0;2-9_DOWN:US:0
+2588;TRA_NGOA;39725.0;THONGNHAT_CANAL:US:0|CANCHONG:DS:0
+2589;TSH;2300.0;TSH58:DS:0
+2590;TSH1;3651.0;TSH2:DS:0|K.ThoiThuy1:DS:0
+2591;TSH1;4840.0;DuongXuong2:DS:0|TSH3:DS:0
+2592;TSH1;11617.0;DuongXuong2:US:0
+2593;TSH1;12059.0;DuongXuong1:DS:0
+2594;TSH108;3736.0;TSH109:US:0
+2595;TSH109;5029.0;TSH110:US:0
+2596;TSH111;1684.0;TSH112:US:0
+2597;TSH111;4046.0;TSH114:US:0
+2598;TSH119;543.0;TSH120:US:0
+2599;TSH119;4689.0;LoXeMoi:DS:0
+2600;TSH119;5860.0;TSH121:US:0
+2601;TSH119;10974.0;TSH122:US:0
+2602;TSH124;3158.0;TSH132:DS:0
+2603;TSH139;2471.0;NhaSi3:US:0|TSH138:DS:0
+2604;TSH2;4385.0;K.MieuOngTa4:DS:0|K.MieuOngTa5:US:0
+2605;TSH2;7326.0;K.MieuOngTa2:DS:0|K.MieuOngTa3:DS:0
+2606;TSH2;8521.0;K.ThoiThuy2:US:0
+2607;TSH3;3229.0;BanBe1:US:0
+2608;TSH3;3961.0;K.ThoiThuy1:US:0
+2609;TSH47;2148.0;TSH44:DS:0
+2610;TSH48;1769.0;TSH55:US:0
+2611;TSH48;3650.0;TSH51:DS:0
+2612;TSH48;4323.0;TSH53:US:0
+2613;TSH49;3567.0;TSH48:DS:0
+2614;TSH5;4038.0;R. Ta Nien1:DS:0
+2615;TSH6;2657.0;KaDam1:US:0|TSH8:US:0
+2616;TSH6;4804.0;TSH7:US:0
+2617;TSH7;2375.0;KhoenAXay:US:0
+2618;TSH71;877.0;TSH69:DS:0
+2619;TSH82;1297.0;TSH85:US:0|TSH86:US:0
+2620;TSH84;2515.0;TSH83:DS:0
+2621;TSH84;4836.0;TSH85:DS:0
+2622;TSH84;6324.0;TSH86:DS:0
+2623;TSH98;3050.0;TSH108:US:0|TSH107:DS:0
+2624;TSH98;4219.0;TSH106:DS:0
+2625;TSH98;6317.0;TSH104:DS:0
+2626;TSH98;7265.0;TSH103:DS:0
+2627;TSH98;9245.0;TSH101:DS:0
+2628;TSH98;11292.0;TSH99:DS:0
+2629;TT103;2082.0;tranvdong:US:0|kenh142:US:0
+2630;TT103;5593.0;R.Gia:DS:0|K.PVChop:US:0
+2631;TT103;6617.0;champeaix:DS:0
+2632;TT107;519.0;kenh141:US:0
+2633;TT107;3094.0;K.Kchien5:DS:0
+2634;TV08_54;9763.0;TV09_TV33:US:0
+2635;TV08_54;15054.0;TV13_14:DS:0
+2636;TV08_54;18251.0;TV09_TV33:DS:0|TV_28_32_2006:DS:0
+2637;TV_10_15_2006;2549.0;TV_16_30_2006:US:0
+2638;TV_10_15_2006;9683.0;TV_16_30_2006:DS:0
+2639;Ta Lon;2718.0;K. 14-9:US:0|K. 14-9:DS:4
+2640;Tac Thu;1726.0;Ban:DS:0
+2641;Tac Thu;3754.0;Bach nguu:DS:0
+2642;Tac Thu;6486.0;T Nhat QLPH:DS:0
+2643;Tac Thu;8719.0;Song Cu:US:0
+2644;Tac Thu;9170.0;Quan Lo PH:DS:0
+2645;Tac Thu;9800.0;Ca Mau BL:DS:0|Ganh Hao:US:0|K. Lo Xe 1:US:0
+2646;Takaev-Channel;11195.0;Vinh Te:US:0
+2647;Tam Ngam;0.0;CMP_Tam Ngan:US:0
+2648;Tam Ngan;9850.0;Ba Ke:US:8|Ba Ke:DS:9
+2649;Tam Ngan;14865.0;Ninh Phuoc:US:0
+2650;Tam Ngan;19452.0;Moi:DS:0
+2651;Tam Thuoc1;5314.0;My Hung:DS:1
+2652;Tan Cong Chi cau;500.0;Tan Cong Chi:US:3
+2653;Tan Hoa;1627.0;K. 14-9:US:2|K. 14-9:DS:5
+2654;Tan Thanh LG;1900.0;Hong Ngu R:US:0|Cai Co LK:US:0
+2655;Tan Thanh LG;3000.0;Khang Chien cau:US:0
+2656;Tan Thanh LG;4714.0;Binh Thanh cau:US:0
+2657;Tan Thanh LG;6894.0;Thong Nhat cau:US:0|Thong Nhat:DS:1
+2658;Tan Thanh LG;9968.0;Tan Cong Chi:DS:4|Tan Cong Chi cau:US:0
+2659;Tan Thanh LG;13975.0;Sa Rai cau:US:0|Sa Rai:DS:1
+2660;Tan Thanh LG;19543.0;Tan Thanh cau:US:0|Tan Thanh:DS:1
+2661;Tan Thanh LG;21386.0;Cai Cai:DS:1|Cai Cai cau:US:0
+2662;Tan Thanh LG;28964.0;Cai Bat:DS:1|Cai Bat cau:US:0
+2663;Tan Thanh LG;37388.0;Song Trang cau:US:0|Song Trang:DS:1
+2664;Tan Thanh LG;42225.0;K28 cau:US:0|K28:DS:1
+2665;Tan Thanh LG;46600.0;Hung Dien:DS:1|Hung Dien cau:US:0
+2666;Tan Thanh cau;500.0;Tan Thanh:US:0
+2667;Tap Doan III;2830.0;Ba Tha:US:0
+2668;TayDen;2401.0;MocKeo:US:0
+2669;Thach My;4562.0;Bau Mon:DS:0
+2670;Thach My;6496.0;Lo Ca Lam A:US:1|Lo Ca Lam A:DS:2
+2671;Thach My;9000.0;Thach Mynho:US:0|Thach Mynho:DS:1
+2672;Thach My;10167.0;Giai Phong2:US:0|Giai Phong2:DS:1
+2673;Thach My;11634.0;Vinh B:US:0|Vinh B:DS:1
+2674;Thach My;14430.0;K. Xang:DS:0
+2675;Thach My;16210.0;Cay Gua1:US:0
+2676;Thach My;18253.0;Dinh:DS:0
+2677;Thach My;23354.0;Hphu Giua:US:0|U-QLPH41:DS:0
+2678;Than Nong;5277.0;Muong_So_5:DS:0
+2679;Thanh Binh;0.0;Sa Mop:DS:0
+2680;Thay Lam;6700.0;Rach_Nuoc_Xoay:DS:0
+2681;Thay Pho1;2000.0;Thay Pho:US:1|Thay Pho:DS:2
+2682;Thay Pho1;2440.0;Nang Huy:US:0
+2683;ThayCaiRachTra;30078.0;KenhNgang:DS:0
+2684;ThayCaiRachTra;36498.0;Cau An Ha:US:0
+2685;ThayCaiRachTra;39272.0;LangThe:DS:0
+2686;ThayCaiRachTra;46750.0;VamThuat:DS:0
+2687;Thep;731.0;MTMHac:US:0
+2688;Thi Doi;1500.0;TSH84:DS:0
+2689;Thi Doi;5508.0;KH7:US:0
+2690;Thi Doi;10005.0;TSH82:DS:0
+2691;Thi Doi;11073.0;TSH80:DS:0
+2692;Thom Rom;4000.0;Rach_Bang_Tang:US:0
+2693;Thom Rom;5435.0;Kenh_Lo:DS:0
+2694;Thom Rom;8000.0;TSH87:US:0|KH6:US:0
+2695;Thom Rom;10000.0;TSH89:US:0
+2696;Thom Rom;11000.0;TSH90:US:0
+2697;Thom Rom;13000.0;TSH92:US:0
+2698;Thom Rom;14000.0;KB:DS:1|TSH93:US:0
+2699;Thom Rom;17000.0;TSH95:US:0
+2700;Thom Rom;20000.0;TSH97:US:0
+2701;Thong Luu;7214.0;Nuoc Nan:US:0
+2702;Thong Luu;9774.0;Ca Vinh:US:0|Ca Vinh:DS:1
+2703;Thong Nhat cau;500.0;Thong Nhat:US:0
+2704;Thot Not;17210.0;KB:US:1|KB:DS:2
+2705;Thot Not;20829.0;TSH117:DS:0
+2706;Thot Not;23427.0;TSH115:DS:0
+2707;Thot Not;26000.0;Thom Rom:DS:0|KH3:US:0|Dung:US:0|KH51:US:0|Bon Tong:DS:3
+2708;Thot Not;27000.0;TSH76:US:0
+2709;Thot Not;29000.0;TSH74:US:0
+2710;Thot Not;30000.0;TSH72:DS:0
+2711;Thot Not;31000.0;TSH73:DS:0
+2712;Thot Not;32542.0;Ranh Hat:US:1|Ranh Hat:DS:7
+2713;Thot Not;40000.0;Ba ke:DS:0
+2714;Thot Not;41000.0;TSH29:DS:0
+2715;Thot Not;46260.0;Thi Doi:DS:1
+2716;Thot Not;49575.0;TSH130:US:0|TSH133:US:0
+2717;Thot Not;50329.0;Nuoc Man:US:0
+2718;Thu Thua;3320.0;kenhLA287:US:0
+2719;Thu Thua;5000.0;Bo Bo:US:0
+2720;Thu Thua;6543.0;kenhLA509:US:0
+2721;ThungThap;3423.0;rachrum_ext:DS:0
+2722;Tien;365.0;Cam42:US:0
+2723;Tien;1478.0;Tien_1:US:0
+2724;Tien;5262.0;Tu Thuong:US:0
+2725;Tien;10061.0;Tien_1:DS:0
+2726;Tien;12704.0;ChauDoc-Channel:US:0
+2727;Tien;14576.0;Vinh An:US:0
+2728;Tien;16880.0;Tien_3:US:0|Tien_2:US:0
+2729;Tien;26016.0;Tien_3:DS:0
+2730;Tien;30368.0;An Binh:US:0
+2731;Tien;32675.0;VamNao:US:0
+2732;Tien;35770.0;Dong Tien3:US:0
+2733;Tien;45673.0;An Phong MH1:US:0
+2734;Tien;54502.0;VamNao2:DS:0
+2735;Tien;58729.0;K2-9:DS:0|Tien_4:US:0
+2736;Tien;63975.0;Tan Cong Chi4:DS:0
+2737;Tien;67541.0;Nguyen Van Tiep1:US:0
+2738;Tien;71991.0;Cao Lanh:US:0
+2739;Tien;75315.0;Tien_5:US:0
+2740;Tien;77168.0;Tien_6:US:0
+2741;Tien;80617.0;Tien_5:DS:0
+2742;Tien;82881.0;Thay Lam:US:0
+2743;Tien;83801.0;Tien_6:DS:0
+2744;Tien;90354.0;Cao Lanh:DS:0
+2745;Tien;92485.0;Rach_Sanh_Nhien:US:0
+2746;Tien;93864.0;Song_Tien106_107:US:0
+2747;Tien;99036.0;Song_Tien106_107:DS:0|CaiNho:US:0
+2748;Tien;105422.0;Muong Khai:US:1
+2749;Tien;114903.0;CaiNho:DS:0
+2750;Tien;121127.0;Lap Vo:US:0
+2751;Tien;124961.0;CoChien:US:0
+2752;Tien;132207.0;So 1_2:DS:0
+2753;Tien;135143.0;K7-2:US:0
+2754;Tien;137113.0;CaiBe_TG:US:0
+2755;Tien;139487.0;C01:US:0
+2756;Tien;147966.0;C05:US:0
+2757;Tien;149417.0;CaiBe_TG:DS:0
+2758;Tien;151392.0;C04:US:0
+2759;Tien;152856.0;Ham Luong:US:0
+2760;Tien;153989.0;B01:US:0
+2761;Tien;158079.0;GO28_38:US:0
+2762;Tien;160793.0;My Long BK:DS:0|NamThon:DS:0
+2763;Tien;165158.0;Cau Sao:DS:0
+2764;Tien;170109.0;Tien_9:US:0|Nguyen Tan Thanh:DS:0
+2765;Tien;172538.0;Sau Au:DS:0
+2766;Tien;177828.0;Tien_7:US:0
+2767;Tien;179903.0;Tien_9:DS:0|Tien_8:DS:0
+2768;Tien;181868.0;Tien_7:DS:0
+2769;Tien;182885.0;GO_06_12:DS:0|Cho Gao:DS:0
+2770;Tien;186742.0;A03:US:0
+2771;Tien;189512.0;CuaTieu:US:0|Giao Hoa:DS:0|CuaDai:US:0
+2772;Tien_2;4482.0;Muong_So_5:US:0
+2773;Tien_3;3246.0;Nam Hang:DS:0
+2774;Tien_3;5640.0;Tra Du:DS:0
+2775;Tien_3;8834.0;Hong Ngu Cr:DS:0|Hong Ngu:US:0
+2776;Tien_4;2500.0;Cha Va:US:0
+2777;Tien_4;13755.0;Cai Tau Thuong:US:0
+2778;Tien_5;2101.0;Tien_4:DS:0
+2779;Tien_7;1646.0;Bao Dinh:US:0
+2780;Tien_9;1994.0;A01:US:0
+2781;Tien_9;4735.0;A02:US:0
+2782;Tien_9;6191.0;Tien_8:US:0
+2783;Tiep Nhat;912.0;CXNRo1:DS:1
+2784;Tiep Nhat;7935.0;K 96LHung:DS:0|K 96-Long Hung:US:0
+2785;Tiep Nhat;15405.0;K. Tong Cang_2:US:0|K. Tong Cang_1:DS:0
+2786;Tiep Nhat;20000.0;K. Ba Xam _Goi_5:US:0|K. Ba Xam _Goi_4:DS:0
+2787;Tieu Dua;419.0;QuocPhong16:DS:0
+2788;Tieu Dua;2080.0;KENHCHONGMY1:DS:0|K.ThongNhat:US:0
+2789;Tieu Dua;3000.0;K.PhanKhoanh:US:0
+2790;Tieu Dua;6147.0;Kinh 5:US:0
+2791;Tieu Dua;13000.0;K.PhanKhoanh:DS:0
+2792;Tieu Dua;15253.0;HANGMAI:DS:0
+2793;Tieu Dua;18434.0;K.1-5:DS:0
+2794;Tieu Dua;20000.0;K. Bien Nhi:US:0|ChemZ_310:US:0
+2795;Tieu Dua;21781.0;KENHBOBAO:US:0
+2796;Tieu Dua;28635.0;KENHSOKHONG:DS:0
+2797;Tieu Dua;32118.0;K. So Khong:DS:0|KENHSOKHONG2:DS:0
+2798;Tieu Dua;42300.0;Can Gao:DS:0
+2799;Tieu Dua;47000.0;Tac Thu:US:0|Ong Doc:US:0|MINHHA:US:0
+2800;Tong Hung LH;3303.0;CaiNhum:US:0
+2801;Tong Hung LH;8382.0;SAOPHONG:US:0|LongHo:DS:0
+2802;Tong Hung LH;20647.0;Caisao_cr:US:0
+2803;Tong Hung LH;25744.0;rachcaingang:DS:0
+2804;Tong Hung LH;29654.0;kenhxang:DS:0|kenhxang:US:1
+2805;Tong Hung LH;30637.0;binhphu_bapho:DS:0
+2806;Tongton_Rumsoc;1845.0;ThungThap:US:0
+2807;Tongton_Rumsoc;7000.0;ChuSuc:US:0
+2808;Tongton_Rumsoc;10000.0;Cau_Ke:DS:0
+2809;Tra Ban;2499.0;LongMy2:DS:0
+2810;Tra Ban;3246.0;Hau Giang 3:US:1|Hau Giang 3:DS:3
+2811;Tra Ban;5293.0;Long My 2:US:0|Xeo Tram:DS:0
+2812;Tra Ban;6980.0;De Nman:US:0|De Nman:DS:1
+2813;Tra Coi;761.0;TH Giong Cat:DS:0
+2814;Tra Cu Can;3074.0;Duong Lang:US:0|Duong Lang:DS:1
+2815;Tra Cu Can;5035.0;Giai Phong:DS:0|Giai Phong:US:1
+2816;Tra Cu Can;7460.0;Tam Thuoc1:US:0|Tam Thuoc1:DS:1
+2817;Tra Cu Can;8745.0;BBCBang:US:0|Cay Bang:DS:0
+2818;Tra Cu Can;11305.0;Ba Xa:DS:0|Hau Boi:US:0
+2819;Tra Cu Can;12592.0;Chom Tre:US:0|Dap Da:US:0
+2820;Tra Cu Can;14000.0;Tam Ngam:DS:0
+2821;Tra Cu Thuong;4000.0;Ba Kieng:US:3|Ba Kieng:DS:4
+2822;Tra Cu Thuong;11500.0;Rach Tram MB:DS:0|K61:DS:0|Bo Bo:DS:0
+2823;Tra Cu Thuong;15876.0;Kenh6:US:0
+2824;Tra Cuong;6601.0;Thuy Loi:US:0|Thuy Loi:DS:1
+2825;Tra Cuong;8000.0;Lo Ca Lam A:US:0
+2826;Tra Cuong;13039.0;Sa Di:US:1|Sa Di:DS:6
+2827;Tra Cuong;17214.0;K. 14-9:US:1|K. 14-9:DS:6
+2828;Tra Kha;315.0;Tra Khue:US:0
+2829;Tra Su;6649.0;Dao:DS:0
+2830;Tra Su;16500.0;Can Thao:DS:0
+2831;TraCu;9502.0;Tramen2:DS:0
+2832;Tra_ech;34198.0;15_9 canal:US:0
+2833;Trau Hoi;1774.0;So Dua Lon:DS:0
+2834;Tri Ton;7000.0;K7 AG:US:3|K7 AG:DS:4
+2835;Tri Ton;9988.0;K9 AG:US:2|K9 AG:DS:3
+2836;Tri Ton;19000.0;Tha La:US:0|Tha La:DS:1
+2837;Tri Ton;26400.0;Tam Ngan:DS:0|Mac Can Dung:DS:0|Tra Su:DS:0
+2838;Tri Ton;32000.0;K10 AG:US:3
+2839;Tri Ton;36000.0;Ba The Moi:DS:0
+2840;Tri Ton;38477.0;Ninh Phuoc:DS:0
+2841;Tri Ton;41500.0;Tan Hiep:US:5
+2842;Tri Ton;47950.0;Ba Ke:US:5|Ba Ke:DS:6
+2843;Tron;15800.0;Bon Tong:US:0|Bon Tong:DS:1
+2844;Tron;22104.0;KH:US:0|KH:DS:1
+2845;Tron;25100.0;KF:US:0|KF:DS:1
+2846;Tron;30019.0;KA:US:0|KA:DS:1
+2847;Tron;34267.0;Tan Hiep:US:0|Tan Hiep:DS:1
+2848;Tron;40000.0;Ba Ke:US:0|Ba Ke:DS:1
+2849;Tu;2400.0;U-QLPH8:US:4|U-QLPH8:DS:5
+2850;Tu Thuong;6000.0;Nam Hang:US:0|Nam Hang:DS:1
+2851;Tu Thuong;13200.0;Tra Du:US:0|Tra Du:DS:1
+2852;U-QLPH1;2000.0;VP18:US:0
+2853;U-QLPH1;4500.0;VP16:DS:0
+2854;U-QLPH11;2211.0;Noc Nang:DS:0
+2855;U-QLPH12;0.0;U-QLPH14:DS:0
+2856;U-QLPH3;2025.0;NDThongLuu:DS:0
+2857;U-QLPH4;0.0;U-QLPH5:US:0
+2858;U-QLPH41;1190.0;U-QLPH43:DS:0
+2859;U-QLPH41;1546.0;U-QLPH42:DS:0
+2860;U-QLPH41;2200.0;Tra The:DS:0
+2861;U-QLPH46;1000.0;Tra Kha:DS:0
+2862;U-QLPH46;3000.0;Tra Khue:DS:0
+2863;U-QLPH46;10101.0;Vam Dinh:DS:0
+2864;U-QLPH46;12000.0;Co Tay:DS:0
+2865;U-QLPH47;1164.0;Lo Chat Dot:DS:1
+2866;U-QLPH48;2654.0;HTTNghia:US:1
+2867;U-QLPH49;2074.0;K. 14-9:US:4|K. 14-9:DS:7
+2868;U-QLPH5;1439.0;NDThongLuu:US:0|NDThongLuu:DS:1
+2869;U-QLPH6;3491.0;Tu:US:0
+2870;U-QLPH6;4576.0;Ong Tuong:US:0
+2871;U-QLPH6;4785.0;HL-Cdao:DS:0
+2872;U-QLPH6;5758.0;Cong Doi:US:0|Cong Dien Tren:DS:0
+2873;U-QLPH60;400.0;Ta An:DS:0
+2874;UMH1;3000.0;UMH10:DS:0
+2875;UMH1;3150.0;UMH11:US:0
+2876;UMH1;9000.0;UMH6:DS:0
+2877;UMH1;12000.0;UMH12:DS:0|UMH8:DS:0
+2878;UMH1;15942.0;UMH13:DS:0
+2879;UMH14;3000.0;UMH1:DS:0
+2880;UMH14;6918.0;UMH3:DS:0
+2881;UMH15;1964.0;UMH5:DS:0
+2882;UMH16;2454.0;UMH4:DS:0
+2883;UMH2;2930.0;UMH10:US:0|UMH9:US:0
+2884;UMH21;1676.0;UMH5:US:0
+2885;UMH28;5335.0;UMH27:DS:0
+2886;UMH29;0.0;UMH28:DS:0
+2887;UMH3;3000.0;UMH7:DS:0|UMH8:US:0
+2888;UMH4;3000.0;UMH18:US:0|UMH17:DS:0
+2889;UMH4;6000.0;UMH25:US:0|UMH24:DS:0
+2890;UMH5;3000.0;UMH20:US:0|UMH19:DS:0
+2891;UMH5;6000.0;UMH23:US:0|UMH22:DS:0
+2892;UMH6;3000.0;UMH2:DS:0|UMH3:US:0
+2893;VAMBUON;4787.0;Tramen2:US:0|Tramen1:DS:0
+2894;VINHKIMCANAL;1839.0;nhatho_vannhat:US:0
+2895;VINHKIMCANAL;3508.0;K.TraCuong:US:0
+2896;VINHKIMCANAL;9198.0;THONGNHAT_CANAL:DS:0
+2897;VL ThanhTan;340.0;Lung Sen:US:0
+2898;VP7;1565.0;Xa Ta:US:0
+2899;VP9;866.0;Xa Ta:DS:0
+2900;VUNGLIEM_CRECK;2599.0;K.DaiTruong:US:0
+2901;VUNGLIEM_CRECK;4291.0;NGAHAU:US:0
+2902;VUNGLIEM_CRECK;10000.0;Caitongphi_Cr:US:0|Giong_trom1:DS:0
+2903;VUNGLIEM_CRECK;10785.0;BUNGTRUONG:US:0
+2904;Vam Co;8166.0;Cho Gao:US:0
+2905;Vam Co;14259.0;rachbang:DS:0
+2906;Vam Co;18000.0;Nuoc Mang:DS:0
+2907;Vam Co;25994.0;CG11_16:US:0
+2908;Vam Co;27767.0;K.BChau:DS:0
+2909;Vam Co;29595.0;xomgiong:DS:0
+2910;Vam Co;43474.0;CanLoc:DS:0
+2911;Vam Co;46111.0;tranvdong:DS:0|K. Dong Tranh:DS:0|champeaix:US:0
+2912;Vam Co Dong;0.0;East Vaico:DS:0
+2913;Vam Co Dong;17000.0;Cam33:US:0
+2914;Vam Co Dong;64333.0;Cam31:US:0
+2915;Vam Co Dong;94306.0;ThayCaiRachTra:US:0
+2916;Vam Co Dong;103124.0;Ba Vom:US:0|Rach Tram MB:US:0
+2917;Vam Co Dong;110838.0;Rach Coc:US:1
+2918;Vam Co Dong;114325.0;Mareng:US:2
+2919;Vam Co Dong;124700.0;Tra Cu Thuong:US:0
+2920;Vam Co Dong;134100.0;T8:DS:0
+2921;Vam Co Dong;139635.0;K.AnHa:US:0
+2922;Vam Co Dong;142600.0;T6:DS:0
+2923;Vam Co Dong;146995.0;KenhNgang1:US:0|T4:DS:0
+2924;Vam Co Dong;149167.0;Cau An Ha:DS:0
+2925;Vam Co Dong;151639.0;Ba Kieng:DS:0
+2926;Vam Co Dong;154516.0;T2:DS:0
+2927;Vam Co Dong;162638.0;Thu Thua:DS:0
+2928;Vam Co Dong;166558.0;S. BL K DOI:US:0
+2929;Vam Co Dong;167295.0;kenhLA289:DS:0
+2930;Vam Co Dong;168590.0;kenhLA285:US:0
+2931;Vam Co Dong;170597.0;S.NhanhCanGiuoc1:US:0
+2932;Vam Co Dong;176623.0;R.NhanhCanGiuoc2:DS:0
+2933;Vam Co Dong;178616.0;kenhLA285:DS:0
+2934;Vam Co Dong;184640.0;R.NhanhCanGiuoc5:DS:0
+2935;Vam Co Dong;188790.0;Vam Co:US:0|Vam Co Tay:DS:0
+2936;Vam Co Tay;0.0;Cai Rung:DS:0|K28:DS:0|Cai co LK cau:DS:0
+2937;Vam Co Tay;12371.0;Bac Chan:US:1
+2938;Vam Co Tay;15322.0;Ca Ro:DS:0|Nha Tho:US:2
+2939;Vam Co Tay;17843.0;Cay Kho Nho:DS:0
+2940;Vam Co Tay;20251.0;Cay Kho Lon:DS:0
+2941;Vam Co Tay;23378.0;Binh Trung:DS:0|Quang Dai:US:1
+2942;Vam Co Tay;26830.0;K12:US:1
+2943;Vam Co Tay;29774.0;Ca Dua:DS:0
+2944;Vam Co Tay;34662.0;Ba Hong Minh:DS:0
+2945;Vam Co Tay;38500.0;Truc Chinh:DS:0
+2946;Vam Co Tay;42908.0;K79:DS:0
+2947;Vam Co Tay;47993.0;Mareng:DS:0
+2948;Vam Co Tay;52000.0;K30-4:DS:0
+2949;Vam Co Tay;58176.0;Dong Tien:DS:0|Tra Cu Thuong:DS:0
+2950;Vam Co Tay;60116.0;Lo Moi:US:1
+2951;Vam Co Tay;60757.0;Thuy Tan:US:0
+2952;Vam Co Tay;65834.0;Kenh6:DS:0
+2953;Vam Co Tay;68318.0;T7:US:0
+2954;Vam Co Tay;70000.0;Kenh5:DS:0
+2955;Vam Co Tay;73157.0;T5:US:0
+2956;Vam Co Tay;78518.0;T3:US:0
+2957;Vam Co Tay;80474.0;Thuy Tan:DS:0
+2958;Vam Co Tay;88000.0;T1:US:0
+2959;Vam Co Tay;93244.0;Bac Dong:DS:0
+2960;Vam Co Tay;97050.0;Thu Thua:US:0
+2961;Vam Co Tay;98631.0;R.ThonThanhLA:US:0
+2962;Vam Co Tay;101293.0;Nguyen Van Tiep2:DS:0
+2963;Vam Co Tay;103231.0;KENHTG1:DS:0
+2964;Vam Co Tay;108340.0;Bao Dinh:DS:0
+2965;Vam Co Tay;109943.0;K_Vanhdai:US:0|kenhLA288:US:0
+2966;Vam Co Tay;113178.0;KBINHTAM:DS:0
+2967;Vam Co Tay;114678.0;kenhLA479:DS:0
+2968;Vam Co Tay;116267.0;kenhTG450:DS:0|kenhLA508:US:0
+2969;Vam Co Tay;118072.0;KKYSON:DS:0
+2970;Vam Co Tay;123201.0;KTAMVU:DS:0
+2971;Vam Co Tay;126427.0;R-BPhuoc:US:0|kenhLA286:DS:0
+2972;Vam Co Tay;128454.0;KCHOGIUA:DS:0
+2973;Vam Co Tay;129508.0;Rach_Lon:US:0
+2974;Vam Co Tay;131694.0;Kenh_30-4:US:0
+2975;Vam Co Tay;136898.0;Song_Cui:US:0
+2976;Vam Rang;3808.0;Ta Lua:DS:0
+2977;VamNao;1335.0;Tien_2:DS:0
+2978;VamNao;14671.0;Cai Tac:DS:0
+2979;VamNao;18377.0;VamNao2:US:0
+2980;VamNao;20186.0;Ca Mau:US:0
+2981;VamNao2;5343.0;Ong Chuong:US:0
+2982;Vinh An;5769.0;Than Nong:US:0
+2983;Vinh B;540.0;Nhi Tho:DS:0
+2984;Vinh Te;6882.0;K7 AG:US:6
+2985;Vinh Te;9475.0;K9 AG:US:5
+2986;Vinh Te;11251.0;Dap Tha La:US:0
+2987;Vinh Te;13286.0;Dap Tra Su:US:0
+2988;Vinh Te;32067.0;Kenh T6 moi:US:0
+2989;Vinh Te;36095.0;Moi:US:0|Kenh T5:US:0
+2990;Vinh Te;42983.0;Kenh T4:US:0
+2991;Vinh Te;48753.0;Kenh T3:US:0
+2992;Vinh Te;56673.0;Nong Truong:US:0
+2993;Vinh Te;61124.0;Ha Giang:US:0
+2994;Vinh Te;64487.0;Giang Thanh:US:0
+2995;XEONHAO3;800.0;QuocPhong12_1:US:0|QuocPhong11_2:DS:0
+2996;XM Kut;2808.0;Bon Thuoc:US:1|Bon Thuoc:DS:2
+2997;Xa No;2000.0;So Dua Lon:US:0
+2998;Xa No;5000.0;Trau Hoi:DS:0
+2999;Xa No;8000.0;Saintenoy:US:2
+3000;Xa No;9000.0;MotNgan_2:DS:0|Mot Ngan:US:0
+3001;Xa No;13000.0;KenhRanh(4000)_1:US:0
+3002;Xa No;16000.0;7000_3:DS:0|6500_3:DS:0|Nang Mau 2:DS:0
+3003;Xa No;17000.0;K8000:US:1|K8000:DS:2
+3004;Xa No;19000.0;9500:US:0
+3005;Xa No;20000.0;10500:DS:0
+3006;Xa No;21000.0;XaNo2:DS:0
+3007;Xa No;22000.0;13000:DS:0
+3008;Xa No;23000.0;XaNo1:DS:0
+3009;Xa No;24000.0;14000Nho:DS:0
+3010;Xa No;25000.0;16000:US:0
+3011;Xa No;26000.0;SauKim:DS:0
+3012;Xa No;28000.0;OngHai:DS:0
+3013;Xa No;29000.0;9 Thuoc2:DS:1
+3014;Xa No;31000.0;NhaTho:DS:0
+3015;Xa No;33000.0;L612:DS:0|Hau:DS:0|NangChang_2:DS:0
+3016;Xa No;34538.0;KenhTac:DS:0
+3017;Xa No;36659.0;MuoiThuoc:DS:0
+3018;Xa No;38000.0;OngQuang:DS:0|Cau Lam:DS:0
+3019;Xa No;39743.0;BaVoi_2:DS:0
+3020;Xa No;40170.0;CMP_Moi1:DS:0
+3021;Xang;3000.0;Mac Day:US:0|Mac Day:DS:1
+3022;Xang;6530.0;Cong Dien:DS:0
+3023;Xang Lo;3785.0;Xeo Mon:DS:3
+3024;Xeo Chit;11736.0;Saintenoy5:US:0|An Tap:US:1|Saintenoy:DS:3
+3025;Xeo Chit;12889.0;CMP_Tam Ngan:DS:0
+3026;Xeo Chit;14597.0;K8000:DS:3|Dap Da:DS:0
+3027;Xeo Chit;15598.0;Hau Boi:DS:0
+3028;Xeo Chit;17235.0;BBCBang:DS:0
+3029;Xeo Chit;18607.0;Tam Thuoc1:US:1
+3030;Xeo Chit;22627.0;Giai Phong:DS:1|Quan Lo PH:US:0
+3031;Xeo Chit;23547.0;Xeo Xu:US:1
+3032;Xeo Chit;31313.0;Tra Cu:US:0
+3033;Xeo Chit;36837.0;Tra Ban:DS:1
+3034;Xeo Chit;37616.0;Tra Ban:US:0
+3035;Xeo Chit;44720.0;Xeo ChitN:DS:0
+3036;Xeo Chit;47003.0;Chien Luy:DS:0
+3037;Xeo Chit;47576.0;XeoChit_QuanLo:US:0
+3038;Xeo Chit;50189.0;PL16_Pl30:DS:0
+3039;Xeo Chit;53191.0;Lai Viet:DS:0
+3040;Xeo Chit;54741.0;Cay Me:DS:4
+3041;Xeo Chit;56708.0;Xeo Ro:DS:1
+3042;Xeo Chit;62387.0;U-QLPH4:DS:0
+3043;Xeo Chit;62686.0;NuocTrong:DS:0
+3044;Xeo Chit;63742.0;U-QLPH3:US:0
+3045;Xeo Chit;69098.0;K. Ngan Dua - BL2:DS:0
+3046;Xeo Chit;71061.0;Ba Quy:DS:1
+3047;Xeo Chit;75989.0;K. Vinh Loc 1:US:0
+3048;Xeo Chit;77594.0;De Nman:DS:0
+3049;Xeo Chit;78897.0;Tay Ki:DS:0
+3050;Xeo Chit;80437.0;Lo Xe:DS:0|LoXe3:DS:0
+3051;Xeo Chit;82093.0;Vinh Cuu:DS:0
+3052;Xeo Chit;87677.0;Khong ten1:US:0
+3053;Xeo Chit;93683.0;Bach nguu:US:0
+3054;Xeo Chit;93857.0;K. Truong Toa:US:0
+3055;Xeo Chit;94838.0;Xang Cut:DS:0
+3056;Xeo Chit;105392.0;K. Sau Sanh:US:0
+3057;Xeo ChitN;4874.0;MoiQLPH:DS:0
+3058;Xeo Choi;0.0;Mai Dam:DS:0|Cai Muon:US:0|Dong Binh:DS:1
+3059;Xeo Gua;0.0;Ba Rinh CMP_Moi:DS:2|BRTaLiem:DS:1
+3060;Xeo Gua;2027.0;Ta An:US:0
+3061;Xeo Mat CV;1729.0;Song_Hoa_Thanh:DS:0
+3062;Xeo Mat CV;3400.0;Ba Cang:US:0
+3063;Xeo Mat CV;22100.0;Ba Cang:DS:0
+3064;Xeo Mon;3849.0;Nha Nuoc:DS:2
+3065;Xeo Ro;1401.0;Le Le:US:0|Le Le:DS:1
+3066;Xeo Ro;3752.0;BDSauHy:US:0|BDSauHy:DS:1
+3067;Xeo Ro;5797.0;Tu Tam:DS:0
+3068;Xeo Tram;5081.0;Thay Nam:US:1|Thay Nam:DS:2
+3069;Xeo Xu;612.0;De Nman:US:1
+3070;Xeo Xu;4705.0;Xeo Tram:US:0
+3071;XeoChit_QuanLo;4990.0;Soc So:US:0
+3072;XeoChit_QuanLo;7144.0;R.CSauHy:US:0|BDSauHy:DS:2
+3073;XeoChit_QuanLo;9185.0;Le Le:DS:2
+3074;Xom La;1233.0;Tuan Bay:DS:0
+3075;Xom La;1522.0;Tram Tre:US:0
+3076;Xom La;2000.0;U-QLPH45:DS:0
+3077;ZZZ_CM100;3000.0;ZZZ_CM102:US:0
+3078;ZZZ_CM103;2640.0;ZZZ_CM90:US:0
+3079;ZZZ_CM59;2056.0;ZZZ_CM60:DS:0
+3080;ZZZ_CM59;3000.0;ZZZ_CM61:US:0|ZZZ_CM62:US:0
+3081;ZZZ_CM61;1629.0;ZZZ_CM63:US:0
+3082;ZZZ_CM64;644.0;ZZZ_CM73:US:0
+3083;ZZZ_CM64;4883.0;ZZZ_CM59:DS:0
+3084;ZZZ_CM65;890.0;ZZZ_CM66:US:0
+3085;ZZZ_CM65;3000.0;ZZZ_CM67:US:0
+3086;ZZZ_CM65;5953.0;ZZZ_CM68:US:0
+3087;ZZZ_CM65;8772.0;ZZZ_CM71:DS:0
+3088;ZZZ_CM67;4324.0;ZZZ_CM66:DS:0
+3089;ZZZ_CM71;3761.0;ZZZ_CM70:DS:0
+3090;ZZZ_CM79;2230.0;ZZZ_CM80:DS:0|ZZZ_CM78:US:0
+3091;ZZZ_CM81;4097.0;ZZZ_CM84:US:0
+3092;ZZZ_CM82;4179.0;ZZZ_CM81:DS:0
+3093;ZZZ_CM91;1981.0;ZZZ_CM92:US:0
+3094;ZZZ_CM91;4229.0;ZZZ_CM94:US:0
+3095;ZZZ_CM92;2452.0;ZZZ_CM93:DS:0
+3096;ZZZ_CM94;3404.0;ZZZ_CM95:US:0
+3097;ZZZ_CM95;2191.0;ZZZ_CM93:US:0
+3098;ZZZ_KenhNoiDamChim;1492.0;ZZZ_KenhNoiSauDong:DS:0
+3099;ZZZ_KenhSauDong1;0.0;ZZZ_KenhMieuThiet:US:0|ZZZ_KenhSauDong2:DS:0
+3100;ZZZ_KenhSauDong1;1820.0;ZZZ_KenhAoBong:DS:0
+3101;ZZZ_KenhSauDong2;1741.0;ZZZ_KenhNoiSauDong:US:0
+3102;ZZZ_KenhSauDong3;3880.0;ZZZ_KenhSauDong2:US:0
+3103;ZZZ_RachGiongNhum;3000.0;ZZZ_KenhSauDong4:US:0
+3104;ZZZ_RachGiongNhum;6065.0;ZZZ_KenhNoiCayNhum:US:0
+3105;ZZZ_RachGiongNhum;7135.0;ZZZ_RachDamDoi:DS:0
+3106;binhphan;560.0;CG17_18:US:0
+3107;bosau_baisay;811.0;K.Hoai-Belan:US:0
+3108;cachuoi;2500.0;kenh141:DS:0|kenh142:DS:0
+3109;cachuoi;6154.0;K.BS-Thnhat12:DS:0
+3110;cachuoi;6772.0;K.AnThuy3:DS:0
+3111;champeaix;1259.0;K.Hoai-Belan:DS:0
+3112;champeaix;2746.0;bosau_baisay:DS:0
+3113;champeaix;4681.0;champeaus:DS:0|K.Lienxa:DS:0
+3114;champeaix;6775.0;K.NamTinh:US:0
+3115;champeaix;7651.0;K.HaiVe:DS:0
+3116;hieuthanh;3174.0;ngaichanh_n2:DS:0
+3117;kenh141;2500.0;LoCayBuoi:DS:0
+3118;kenh142;1462.0;K.TuMinh:DS:0
+3119;kenh142;4202.0;K.So3:DS:0
+3120;kenh142;6307.0;K.Cung:DS:0|klonguong1:DS:0
+3121;kenh142;7082.0;K.So2:DS:0|K.LHai:US:0
+3122;kenh142;8375.0;K.TienAp:DS:0
+3123;kenh142;10078.0;K.BoDay:US:0
+3124;kenh142;11694.0;K.Rachlon-2:DS:0|K.Vach:US:0
+3125;kenh142;12255.0;K.NamSon:DS:0
+3126;kenhLA285;3477.0;kenhLA678:DS:0
+3127;kenhLA285;7763.0;kenhLA287:DS:0
+3128;kenhLA285;13145.0;kenhLA286:US:0
+3129;kenhLA286;215.0;kenhLA508:DS:0
+3130;kenhLA287;544.0;R.ThonThanhLA:DS:0
+3131;kenhLA287;4556.0;kenhLA289:US:0
+3132;kenhLA287;5475.0;kenhLA288:DS:0
+3133;kenhLA287;6213.0;kenhLA479:US:0
+3134;kenhLA289;3906.0;kenhLA678:US:0|kenhLA509:DS:0
+3135;kenhLA579;5228.0;kenhLA580:US:0
+3136;kenhTG243;1606.0;O_LH_TTB:DS:0
+3137;kenhTG316;3195.0;kenhTG334:US:0
+3138;kenhTG320;0.0;kenhTG316:DS:0
+3139;kenhTG320;751.0;kenhTG450:US:0
+3140;kenhTG320;2285.0;KKYSON:US:0
+3141;kenhTG320;4402.0;K_LoDa1:US:0
+3142;kenhTG334;1013.0;KBINHTAM:US:0
+3143;kenhkn8;5737.0;k.N8_gc:US:0
+3144;klonguong1;2409.0;R.Gia:US:0
+3145;ngaichanh_n1;2213.0;hieuthanh:US:0
+3146;ngaichanh_n3;1548.0;Caitongphi_Cr:DS:0|hieuthanh:DS:0
+3147;rach_rum;2150.0;Tongton_Rumsoc:DS:0
+3148;rachhuu;5882.0;KenhN7:US:0
+3149;s. Dam Chim;2279.0;ZZZ_KenhMieuThiet:DS:0
+3150;s. Dam Chim;3930.0;ZZZ_KenhSauDong1:DS:0
+3151;s. Dam Chim;14338.0;ZZZ_KenhAoBong:US:0
+3152;s. Dam Chim;32979.0;GO14_15:US:0|GO168_169:DS:0
+3153;tamphuong;3604.0;Thanhnguyenriver:US:0
+3154;tamphuong;7902.0;K.BacPhen:US:0
+3155;tapsonriver;7801.0;Tramen1:US:0
+3156;tranvdong;2652.0;K.RachLa:DS:0
+3157;tranvdong;4225.0;xomgiong:US:0|K.PVChop:DS:0
+3158;tranvdong;5453.0;K.HaiVe:US:0
+3159;tranvdong;5846.0;CanLoc:US:0
+3160;tranvdong;6999.0;K.Lienxa:US:0
+3161;tutrinh;602.0;K.TuTrinh1:US:0|KenhT1:US:0
+3162;tutrinh;2112.0;kenhN2:US:0
+3163;tutrinh;2800.0;KenhT3:US:0
+3164;tutrinh;3853.0;KenhN4:US:0
+3165;tutrinh;5102.0;kenht4:US:0
+3166;tutrinh;5906.0;KenhN5:US:0

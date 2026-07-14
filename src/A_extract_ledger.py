@@ -452,7 +452,34 @@ def main():
     print("5. Phân loại GIỮ / BỎ...")
     keepmap = classify(branches, comp, widths, bnd_branches, tier, survey_branches)
     kept = {nm for nm, (k, _) in keepmap.items() if k}
-    print(f"   GIỮ {len(kept)} / {len(branches)} nhánh")
+    print(f"   GIỮ {len(kept)} / {len(branches)} nhánh (trước lọc liên thông cuối)")
+
+    # 5b. LỌC LIÊN THÔNG CUỐI: BFS trên tập GIỮ từ Tien/BASSAC.
+    #     Nhánh giữ nào không nối tới trục chính (cô lập) -> loại.
+    adj_kept = defaultdict(set)
+    for nm in kept:
+        for seg in branches[nm]:
+            for conn in (seg["us"], seg["ds"]):
+                if conn and conn[0] in kept:
+                    adj_kept[nm].add(conn[0])
+                    adj_kept[conn[0]].add(nm)
+    seeds = [n for n in kept if norm(n) in (norm("Tien"), norm("BASSAC"))]
+    seen = set(seeds)
+    dq = deque(seeds)
+    while dq:
+        u = dq.popleft()
+        for v in adj_kept[u]:
+            if v not in seen:
+                seen.add(v)
+                dq.append(v)
+    isolated = kept - seen
+    for nm in isolated:
+        keepmap[nm] = (False, "co_lap_khong_noi_truc")
+    kept = seen
+    if isolated:
+        print(f"   5b. Loại {len(isolated)} nhánh cô lập: {sorted(isolated)[:10]}")
+    print(f"   => GIỮ CUỐI: {len(kept)} nhánh")
+
     reasons = defaultdict(int)
     for nm, (k, r) in keepmap.items():
         if not k:

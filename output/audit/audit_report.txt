@@ -1,11 +1,12 @@
 RÀ SOÁT MẠNG
-Tên nhánh: 3009 | GIỮ: 1902
+Tên nhánh: 3009 | GIỮ: 1899
 Chia mảnh: 162
-Liên thông: 1899/1902 | cô lập: 3
+Liên thông: 1899/1899 | cô lập: 0
 
 Lý do loại:
   linkchannel_otru: 1043
   ngoai_lien_thong: 53
+  co_lap_khong_noi_truc: 3
   o_tru_w=11842: 1
   o_tru_w=9299: 1
   o_tru_w=19278: 1
@@ -17,8 +18,3 @@ Lý do loại:
   o_tru_w=9434: 1
   o_tru_w=4087: 1
   o_tru_w=5925: 1
-
-Nhánh cô lập:
-  BaBaongChannel
-  PrekBanam
-  TonleTouch
