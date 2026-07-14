@@ -1,0 +1,35 @@
+# ---- File kết quả MASCARET nặng (không commit, tái tạo từ script) ----
+*.opt
+*.lis
+listing.lis
+ResultatsOpthyca.opt
+net_ecr.rep
+net.tmp
+
+# ---- Output lớn / trung gian ----
+output/run/**/*.opt
+output/**/*.png.bak
+
+# ---- Data nguồn MIKE (đọc-chỉ, nằm ngoài repo — không bao giờ copy vào) ----
+data_ref/*.nwk11
+data_ref/*.xns11
+data_ref/*.bnd11
+data_ref/*.dfs0
+
+# ---- Python ----
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+.ipynb_checkpoints/
+
+# ---- VSCode / hệ điều hành ----
+.vscode/
+.DS_Store
+*.swp
+
+# ---- Sao lưu tạm ----
+*.bak
+geometrie.bak
+phien_hom_nay.txt

@@ -1,0 +1,5 @@
+KHO DỮ LIỆU — build 2026-07-14 13:03:36.789099
+Mặt cắt survey 2020: 176
+Vị trí (shp): 211
+Bề rộng TB: 1019m
+Đáy sâu nhất: -38.2m
