@@ -1,6 +1,6 @@
 #!/bin/bash
 # Chay lai goi nay: baseline_2020_15bief
-# Dong goi: 2026-07-16 17:52:14 | git f96c2d6
+# Dong goi: 2026-07-16 17:54:45 | git 33f823f
 set -e
 D=$(cd "$(dirname "$0")" && pwd)
 W=${1:-$D/work}

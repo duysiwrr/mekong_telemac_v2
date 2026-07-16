@@ -1,8 +1,8 @@
 # RUN_baseline_2020_15bief
 
-v2 chay thong lan dau voi mat cat THUC DO (khong ha day nhu V1). 15 bief, 176 PROFIL, topo 2021_SIWRP_QHPCTT. Toa do 5 tram da chot va kiem chung bang chieu len mang MIKE. ChauDoc Q_KGE -2.44(V1) -> 0.74; TanChau 0.53 -> 0.71; VamNao -1.41 -> 0.30.
+v2 chay thong lan dau voi mat cat THUC DO. Toa do 5 tram da chot.
 
-Đóng gói: 2026-07-16 17:52:14 | git `f96c2d6`
+Đóng gói: 2026-07-16 17:54:45 | git `33f823f`
 
 ## Lưới
 15 bief, 7 nút, 176 PROFIL
