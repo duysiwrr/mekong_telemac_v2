@@ -34,3 +34,5 @@ venv/
 geometrie.bak
 phien_hom_nay.txt
 *:Zone.Identifier
+output/grid/*/ResultatsOpthyca.opt
+output/grid/*/*.opt
