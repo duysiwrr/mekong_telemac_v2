@@ -1,5 +1,15 @@
 # SỔ TAY LỖI (ERROR PLAYBOOK) — TELEMAC-1D Mekong
 
+> ⚠️ **ĐÂY LÀ PLAYBOOK CỦA V1 — ĐỌC ĐỂ THAM KHẢO, KHÔNG ÁP DỤNG MÙ CHO V2.**
+> V2 dùng mặt cắt THỰC ĐO 2020, không được biến dạng hình học.
+> **HAI MỤC SAU KHÔNG ÁP DỤNG CHO V2:**
+> - **LỖI 6** (làm mượt bằng dịch đứng mặt cắt) — chính là `24f_smooth_geometry.py`,
+>   nó hạ đáy lòng sông >10m để V1 chạy thông. SAI VẬT LÝ. V2 cấm.
+> - **LỖI 9** (dùng `norm()` xóa mọi ký tự đặc biệt) — chính là BẪY #2 của V2:
+>   `norm()` gộp `CO CHIEN`(topo 2006) + `COCHIEN`(topo 2021) thành một
+>   → bề rộng răng cưa 164↔3481m → lỗi 701. V2 phải khớp tên CHÍNH XÁC.
+> Xem `BAT_DAU_PHIEN_MOI_V2.md` §3 và §7.
+
 > Tra cứu nhanh khi gặp lỗi. Mỗi mục: **triệu chứng → nguyên nhân gốc → giải pháp đã chứng minh → script liên quan**. Đọc kèm phần E của `00_README_PROJECT_HANDBOOK.md`.
 
 ---
@@ -29,7 +39,7 @@
 - **Giải pháp:** Cộng **OFFSET = (bief−1) × 1.000.000** vào abscissa mỗi bief → mỗi bief có dải tọa độ 1D riêng biệt. Khi đọc kết quả để map trạm, đảo lại: `chainage_gốc = absc − (bief−1)×OFFSET + chmin`.
 - **Script:** 23, 24, 26 (học từ example Test23).
 
-## LỖI 6 — "is dry" / "supercritical flow" (mô hình văng, khô đáy cục bộ)
+## LỖI 6 — "is dry" / "supercritical flow" ⚠️ GIẢI PHÁP NÀY V2 CẤM DÙNG
 - **Nguyên nhân:** Mặt cắt bị **co thắt cục bộ** (phình/thắt đột ngột → tăng tốc dòng, Froude>1) hoặc **đáy nhảy bậc** giữa 2 mặt cắt kề.
 - **Giải pháp (2 lớp):**
   - Loại/thay mặt cắt có `width > 3× width lân cận` (24f phát hiện, 26/31 loại co thắt).
@@ -48,7 +58,7 @@
 - **Giải pháp:** Dựng mạng **2 sông + Vàm Nào** (cắt Tien@32675 ↔ BASSAC@71252), buộc **chênh cột nước đúng** giữa 2 sông → chia tải tự nhiên.
 - **Script:** 24_build_tien_vamnao_hau.py → 24b (backbone).
 
-## LỖI 9 — Không tìm thấy nhánh trong `.xns11` khi map mặt cắt
+## LỖI 9 — Không tìm thấy nhánh trong `.xns11` ⚠️ norm() LÀ BẪY, V2 DÙNG vn_norm()
 - **Nguyên nhân:** `location_id` (.xns11) và `topo_id` (.nwk11) lệch nhau (khoảng trắng, hoa/thường, gạch dưới).
 - **Giải pháp:** Dùng `norm(s) = re.sub(r"[^A-Za-z0-9]", "", s).upper()` để chuẩn hóa trước khi so khớp.
 - **Script:** 24b, 24b2, 27, 24e.

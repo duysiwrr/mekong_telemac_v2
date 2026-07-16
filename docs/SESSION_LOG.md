@@ -106,3 +106,82 @@ Chạy bằng python của venv có mikeio1d:
 - Có thể có script lạ (Qwen...) đè lên ledger. Nếu số nhánh sai, chạy lại đúng
   thứ tự: A (lần 1) -> sync_sections -> A (lần 2) -> import_data -> audit.
 - Luôn chạy bằng venv, không python hệ thống (thiếu mikeio1d).
+
+---
+
+# NHẬT KÝ PHIÊN 2 — 16/07/2026
+
+Trọng tâm: **giải mã cách đặt tên MIKE 11** + tìm gốc rễ lỗi 701.
+
+## THÀNH TỰU
+
+### 1. Gỡ 2 lỗi format MASCARET (đối chiếu file mẫu baseline)
+- `variablesStockees` = **42** (không phải 41 như tài liệu cũ ghi)
+  → thiếu 1 logical → crash `lec_sorties_`
+- `planim/maillage`: `nbZones` phải = **nb_bief**, không phải 1
+  → cấp mảng 1 phần tử nhưng lặp nb_bief → segfault `chainage_rezo_`
+
+### 2. GIẢI MÃ CÁCH ĐẶT TÊN (quan trọng nhất)
+Mô hình MIKE làm thủ công qua nhiều năm, nhiều người → tên rối. Nhưng
+**MIKE đã chạy thông → nó KHÔNG thiếu gì**, chỉ là ta chưa hiểu cách khai báo.
+
+Phương pháp: **logic → tọa độ → hợp lý mặt cắt → vị trí thực tế**
+
+Quy luật: `<tiền tố><số><hậu tố>`, **cùng số = cùng vị trí dọc sông, khác nhánh**
+- ST=Tiền, SH=Hậu, VN=Vàm Nao, CC=Cổ Chiên, HL=Hàm Luông
+- Số = thứ tự từ thượng lưu ra biển
+- Hậu tố: rỗng=chính, P/P1/P2=cù lao, CT=Cửa Tiểu, CĐ=Cửa Đại
+
+### 3. HAI BẪY CHÍ TỬ
+- **Chữ `Đ` tiếng Việt**: Excel `ST37CĐ` vs shapefile `ST37CD`. Regex
+  `[A-Za-z]+` không bắt `Đ` → mất 11 mặt cắt cửa Đại → kết luận sai
+  "cửa Đại chưa khảo sát". Sửa bằng `vn_norm()` → khớp 188→201.
+- **`norm()` xóa dấu cách**: gộp `CO CHIEN`(2006, rộng TB 1359m) +
+  `COCHIEN`(2021, rộng TB 829m) → **bề rộng răng cưa 164↔3481m** →
+  MASCARET nội suy phi vật lý → lỗi 701. Đây là GỐC RỄ.
+  ⚠️ Lời khuyên dùng `norm()` nằm trong ERROR_PLAYBOOK_ref LỖI 9 — đã đánh dấu.
+
+### 4. Sửa SESSION_LOG phiên 1
+Phiên 1 ghi: *"Hậu tố P/P1/P2/CT/CD = nhánh trái/phải khi sông chia ôm cù lao"*
+→ **SAI**. `CT` = Cửa Tiểu, `CĐ` = Cửa Đại — hai cửa riêng biệt của sông Tiền,
+không phải nhánh trái/phải. `CĐP/CĐP1/CĐP2` mới là cù lao trong cửa Đại.
+Xác minh bằng tuyến ADCP: CĐP rộng 446–473m vs CT 726–879m, CĐ 1021–1620m.
+
+### 5. Phát hiện Tuyen_do.shp
+245 LineString = tuyến đo ADCP thật. `geometry.length` = **bề rộng sông THẬT**
+→ dùng kiểm chứng mặt cắt Excel.
+
+### 6. Rà soát GĐ A → ĐÚNG
+Catalog xác nhận: `NHANH CO SURVEY 2020 nhung ledger BO: (khong co)`.
+GĐ A đọc nwk11 (topology), không đụng mặt cắt → không dính lỗi tên.
+Chỉ cần sửa `read_xns_widths`: `norm()` → `vn_norm()`.
+
+### 7. Chốt nguyên tắc mặt cắt
+- **Survey 2020 (ADCP) là chuẩn cao nhất** — áp toàn mô hình nơi có
+- **Bù bằng topo `2021_SIWRP_QHPCTT`** nơi hở
+- **BỎ HẲN topo 2006** — lòng sông xói lở bồi lắng qua 15 năm, không trộn
+- Kết nối nhánh: theo MIKE, kiểm bằng survey. Mặt cắt: survey trước, MIKE sau.
+
+### 8. Xác định 44 nhánh cho backbone mở rộng
+11 chính + 33 cù lao, 1077 km, 197 mặt cắt survey 2020.
+Phân tầng: tien(~17) → hau(~12) → truc(~24) → full(44).
+
+## CÔNG CỤ MỚI
+- `build_catalog.py` — bảng tra cứu (dùng ĐẦU TIÊN khi cần tra tên/tọa độ)
+- `B_plot_grid.py` — vẽ lưới đang tính (trắc dọc/nút/mặt cắt/bảng)
+- `B_plot_network.py` — bản đồ không gian lưới đang tính
+- `B_plot_proposed.py` — bản đồ 44 nhánh đề xuất + phân tầng
+- `C_assign_boundaries.py` — gán biên thực đo
+- `C_init_smart.py` — Z init theo BFS topology (không theo số bief)
+
+## PHÁT HIỆN NGƯỢC VỚI GIẢ THIẾT
+- **Chênh Z tại nút KHÔNG gây lỗi** — baseline V1 chênh 5.6m ở 15/44 nút vẫn
+  FIN CORRECTE. Cái gây lỗi là h quá nhỏ + hình học răng cưa.
+- **Z init `bief/bmax` (V1) SAI với v2** — v2 đánh số bief theo `sorted(mike)`
+  = ALPHABET (BASSAC→Bief_1, VamNao→Bief_15). Phải BFS topology tới cửa.
+
+## VIỆC TIẾP THEO
+1. Sửa `get_cross_sections`: khớp tên chính xác + lọc topo + survey 2020 trước
+2. Sửa vn_norm ở import_data / sync_sections / A_extract_ledger
+3. Mở rộng BACKBONE → 44 nhánh + subset tien/hau/truc
+4. In hình kiểm mắt TRƯỚC khi chạy

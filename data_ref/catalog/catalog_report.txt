@@ -1,0 +1,111 @@
+BANG TRA CUU MAT CAT — survey 2020 + MIKE
+======================================================================
+
+Shapefile : 229 diem
+Excel z   : 212 mat cat
+Khop      : 201
+Thieu z   : 28
+Tuyen ADCP: 245
+MIKE      : 3009 nhanh, 11098 mat cat
+
+--- SURVEY THEO SONG ---
+  BASSAC      69 diem, co_z= 68
+  CoChien     34 diem, co_z= 30
+  HamLuong    25 diem, co_z= 25
+  Tien        72 diem, co_z= 71
+  VamNao       7 diem, co_z=  7
+
+--- HAU TO (suf) THEO SONG: cung num = cung vi tri, khac nhanh ---
+suf           A  AP  AP1  B  CD  CDP  CDP1  CDP2  CT   P  P1  P2  P3
+song                                                                
+          22  0   0    0  0   0    0     0     0   0   0   0   0   0
+BASSAC    43  2   1    0  1   0    0     0     0   0  17   1   2   2
+CoChien   19  0   0    0  0   0    0     0     0   0  11   2   2   0
+HamLuong  16  0   0    0  0   0    0     0     0   0   3   3   3   0
+Tien      36  1   0    1  0   7    2     1     1   7  11   2   3   0
+VamNao     7  0   0    0  0   0    0     0     0   0   0   0   0   0
+
+--- VI TRI CO NHIEU NHANH (cu lao) ---
+  BASSAC #1 [3 nhanh]: SH1->BASSAC(d=10.7m) | SH1a->BASSAC(d=12.7m) | SH1b->BASSAC(d=3.1m)
+  BASSAC #5 [2 nhanh]: SH5->BASSAC(d=6.3m) | SH5p->Hau_1(d=10.6m)
+  BASSAC #15 [2 nhanh]: SH15->BASSAC(d=62.3m) | SH15P->Hau_2(d=5.3m)
+  BASSAC #17 [2 nhanh]: SH17->BASSAC(d=26.6m) | SH17P->Hau_3(d=38.9m)
+  BASSAC #21 [2 nhanh]: SH21->BASSAC(d=45.1m) | SH21p->Hau_4(d=36.6m)
+  BASSAC #22 [2 nhanh]: SH22->BASSAC(d=19.6m) | SH22P->Hau_4(d=12.9m)
+  BASSAC #23 [2 nhanh]: SH23->BASSAC(d=4.5m) | SH23p->Hau_4(d=16.1m)
+  BASSAC #27 [2 nhanh]: SH27->BASSAC(d=60.5m) | SH27P->Hau_5(d=9.8m)
+  BASSAC #29 [2 nhanh]: SH29->BASSAC(d=55.3m) | SH29p->Hau_6(d=25.8m)
+  BASSAC #31 [2 nhanh]: SH31->BASSAC(d=28.1m) | SH31P->Hau_7(d=20.4m)
+  BASSAC #32 [2 nhanh]: SH32->BASSAC(d=12.3m) | SH32P->Hau_7(d=70.0m)
+  BASSAC #33 [4 nhanh]: SH33->BASSAC(d=50.9m) | SH33P1->Hau_9(d=53.7m) | SH33P2->Hau_7(d=30.7m) | SH33P3->Hau_8(d=7.0m)
+  BASSAC #34 [3 nhanh]: SH34->BASSAC(d=134.0m) | SH34P2->Hau_7(d=29.0m) | SH34P3->Hau_8(d=6.0m)
+  BASSAC #36 [3 nhanh]: SH36->BASSAC(d=107.4m) | SH36A->BASSAC(d=82.8m) | SH36AP->Hau_11(d=123.5m)
+  BASSAC #37 [2 nhanh]: SH37->CuaDinhAn(d=97.0m) | SH37P->CuaTranDe(d=158.7m)
+  BASSAC #38 [2 nhanh]: SH38->CuaDinhAn(d=54.5m) | SH38P->CuaTranDe(d=46.9m)
+  BASSAC #39 [2 nhanh]: SH39->CuaDinhAn(d=99.7m) | SH39P->CuaTranDe(d=54.5m)
+  BASSAC #40 [2 nhanh]: SH40->CuaDinhAn(d=36.8m) | SH40P->CuaTranDe(d=4.1m)
+  BASSAC #41 [2 nhanh]: SH41->CuaDinhAn(d=51.5m) | SH41P->CuaTranDe(d=121.6m)
+  BASSAC #42 [2 nhanh]: SH42->CuaDinhAn(d=190.6m) | SH42P->CuaTranDe(d=126.1m)
+  BASSAC #43 [2 nhanh]: SH43->CuaDinhAn(d=110.2m) | SH43P->CuaTranDe(d=51.4m)
+  CoChien #4 [2 nhanh]: CC4->CoChien(d=5.9m) | CC4p->CoChien_1(d=28.1m)
+  CoChien #6 [2 nhanh]: CC6->CoChien(d=13.5m) | CC6P->CoChien_2(d=61.1m)
+  CoChien #7 [2 nhanh]: CC7->CoChien(d=50.7m) | CC7P->CoChien_3(d=26.7m)
+  CoChien #8 [2 nhanh]: CC8->CoChien(d=7.2m) | CC8P->CoChien_3(d=50.9m)
+  CoChien #9 [2 nhanh]: CC9->CoChien(d=57.2m) | CC9P->CoChien_3(d=36.3m)
+  CoChien #10 [3 nhanh]: CC10->CoChien(d=30.8m) | CC10P1->CoChien(d=900.8m) | CC10P2->CoChien_3(d=14.9m)
+  CoChien #12 [2 nhanh]: CC12->CoChien(d=20.6m) | CC12P->CoChien_4(d=29.0m)
+  CoChien #14 [2 nhanh]: CC14->CuaCoChien(d=67.4m) | CC14p->CuaCungHau(d=41.1m)
+  CoChien #15 [2 nhanh]: CC15->CuaCoChien(d=50.5m) | CC15P->CuaCungHau(d=45.9m)
+  CoChien #16 [2 nhanh]: CC16->CuaCoChien(d=38.5m) | CC16P->CuaCungHau(d=3.3m)
+  CoChien #17 [3 nhanh]: CC17->CuaCoChien(d=113.9m) | CC17P1->CuaCungHau(d=146.7m) | CC17P2->CuaCungHau(d=1095.3m)
+  CoChien #18 [2 nhanh]: CC18->CuaCoChien(d=137.7m) | CC18P->CuaCungHau(d=34.0m)
+  CoChien #19 [2 nhanh]: CC19->CuaCoChien(d=55.0m) | CC19P->CuaCungHau(d=268.7m)
+  HamLuong #2 [3 nhanh]: HL2->Ham Luong(d=26.2m) | HL2P1->HamLuong_1(d=7.6m) | HL2P2->HamLuong_2(d=35.9m)
+  HamLuong #7 [3 nhanh]: HL7->Ham Luong(d=21.2m) | HL7P1->HamLuong_3(d=10.6m) | HL7P2->HamLuong_4(d=36.1m)
+  HamLuong #8 [2 nhanh]: HL8->Ham Luong(d=2.5m) | HL8P->HamLuong_4(d=34.0m)
+  HamLuong #9 [3 nhanh]: HL9->Ham Luong(d=19.5m) | HL9P1->HamLuong_4(d=48.1m) | HL9P2->HamLuong_5(d=17.3m)
+  HamLuong #10 [2 nhanh]: HL10->Ham Luong(d=14.9m) | HL10P->HamLuong_5(d=19.7m)
+  HamLuong #13 [2 nhanh]: HL13->Ham Luong(d=117.9m) | HL13P->HamLuong_6(d=120.2m)
+  Tien #2 [2 nhanh]: ST2->Tien(d=9.9m) | ST2P->Tien_1(d=44.9m)
+  Tien #5 [2 nhanh]: ST5->Tien(d=47.9m) | ST5P->Tien_3(d=29.9m)
+  Tien #12 [3 nhanh]: ST12->Tien(d=5.5m) | st12P->Tien(d=65.8m) | ST12P->Tien_4(d=140.9m)
+  Tien #14 [2 nhanh]: ST14->Tien(d=25.3m) | ST14P->Tien_4(d=3.7m)
+  Tien #15 [3 nhanh]: ST15->Tien_5(d=11.2m) | ST15p1->Tien(d=26.4m) | ST15p2->Tien_6(d=46.7m)
+  Tien #16 [2 nhanh]: ST16->Tien(d=39.4m) | ST16P->Tien(d=81.8m)
+  Tien #23 [2 nhanh]: ST23->Tien(d=50.4m) | ST23P->Lap Vo(d=83.0m)
+  Tien #27 [2 nhanh]: ST27->Tien(d=278.3m) | ST27p->CaiBe_TG(d=7.4m)
+  Tien #28 [3 nhanh]: ST28->Tien(d=12.9m) | ST28p1->CaiBe_TG(d=19.4m) | ST28P2->Tien(d=11.7m)
+  Tien #31 [2 nhanh]: ST31->Tien(d=16.5m) | ST31P->NamThon(d=4.7m)
+  Tien #33 [5 nhanh]: ST33->Tien(d=46.0m) | ST33A->Tien(d=5.2m) | ST33AP1->Tien_9(d=6.4m) | ST33P->Tien_9(d=10.5m) | ST33P2->Tien_8(d=20.9m)
+  Tien #34 [2 nhanh]: ST34->Tien_8(d=37.0m) | ST34p->Tien_7(d=16.9m)
+  Tien #37 [3 nhanh]: ST37CD->CuaDai(d=143.7m) | ST37CDP->CuaDai_1(d=1.2m) | ST37CT->CuaTieu(d=27.6m)
+  Tien #38 [3 nhanh]: ST38CD->CuaDai(d=0.3m) | ST38CDP->CuaDai_2(d=14.8m) | ST38CT->CuaTieu(d=15.2m)
+  Tien #39 [2 nhanh]: ST39CD->CuaDai(d=66.0m) | ST39CT->CuaTieu(d=106.0m)
+  Tien #40 [2 nhanh]: ST40CD->CuaDai(d=176.3m) | ST40CT->CuaTieu(d=88.0m)
+  Tien #41 [4 nhanh]: ST41CD->CuaDai(d=167.4m) | ST41CDP1->CuaDai_3(d=89.5m) | ST41CDP2->CuaDai_2(d=1.9m) | ST41CT->CuaTieu(d=104.2m)
+  Tien #42 [2 nhanh]: ST42CD->CuaDai(d=185.9m) | ST42CT->CuaTieu(d=29.6m)
+  Tien #43 [2 nhanh]: ST43CD->CuaDai(d=73.5m) | ST43CT->CuaTieu(d=25.5m)
+  VamNao #1 [2 nhanh]: VN1->Tien_2(d=67.5m) | VN1->Tien_2(d=67.5m)
+
+--- NHANH MIKE CO >1 topo_id (KHONG duoc tron) ---
+  AMAB12           DH2020, TOPO?  n_xsec=5
+  AMAB13           DH2020, TOPO?  n_xsec=6
+  BASSAC           2006, 2021_SIWRP_QHPCTT  n_xsec=163
+  CAY KHO          2000, 2020_KHCN  n_xsec=14
+  DN1              2000, 2011_KHCN  n_xsec=4
+  DN2              2000, 2011_KHCN  n_xsec=3
+  DN3              2000, 2011_KHCN  n_xsec=5
+  DN5              2000, 2011_KHCN  n_xsec=5
+  H7               2000, TGLX2010  n_xsec=8
+  H9               2000, TGLX2010  n_xsec=9
+  K5               2000, 2006  n_xsec=13
+  K61              2000, 2001  n_xsec=20
+  KCANHDENPHOSINH  2000, TLCNGOC  n_xsec=37
+  KH1              2000, SIWRR2020  n_xsec=21
+  KH3              2000, DH2020  n_xsec=34
+  KH7              2000, 2018  n_xsec=42
+  TSH119           DH2020, TOPO?  n_xsec=5
+  TSH121           DH2020, TOPO?  n_xsec=5
+
+--- NHANH CO SURVEY 2020 nhung ledger BO ---
+  (khong co — ledger GD A giu du)

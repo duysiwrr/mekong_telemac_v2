@@ -1,0 +1,74 @@
+NHANH DE XUAT DUA VAO LUOI
+======================================================================
+
+Nguong chieu survey : 200 m
+Tong nhanh          : 44 (11 chinh + 33 cu lao)
+Tong dai            : 1077 km
+Mat cat survey 2020 : 197
+Mat cat MIKE        : 166
+
+--- THEO SONG ME ---
+  BASSAC       10 nhanh,  296.1 km, survey= 54, mike= 163
+  CoChien       5 nhanh,   99.9 km, survey= 17, mike=   0
+  CuaCoChien    1 nhanh,   30.7 km, survey=  6, mike=   0
+  CuaCungHau    1 nhanh,   28.4 km, survey=  4, mike=   0
+  CuaDai        4 nhanh,   70.7 km, survey= 11, mike=   0
+  CuaDinhAn     1 nhanh,   33.8 km, survey=  7, mike=   0
+  CuaTieu       1 nhanh,   37.7 km, survey=  7, mike=   0
+  CuaTranDe     1 nhanh,   34.4 km, survey=  7, mike=   0
+  Ham Luong     7 nhanh,  115.0 km, survey= 25, mike=   1
+  Tien         12 nhanh,  306.7 km, survey= 54, mike=   2
+  VamNao        1 nhanh,   23.4 km, survey=  5, mike=   0
+
+--- PHAN TANG DE XUAT ---
+  tien   12 nhanh,  306.7 km, survey= 54
+  hau    10 nhanh,  296.1 km, survey= 54
+  truc   23 nhanh,  626.2 km, survey=113
+  all    44 nhanh, 1076.8 km, survey=197
+
+--- CHI TIET ---
+ten            me          loai        km   sv  mike  US -> DS
+Hau_1          BASSAC      cu_lao     8.7    1     0  BASSAC@25223 -> BASSAC@34098
+Hau_2          BASSAC      cu_lao     7.4    1     0  BASSAC@77394 -> BASSAC@83308
+Hau_3          BASSAC      cu_lao    10.1    1     0  BASSAC@86177 -> BASSAC@94179
+Hau_4          BASSAC      cu_lao    18.3    3     0  BASSAC@104208 -> BASSAC@125064
+Hau_5          BASSAC      cu_lao     4.1    1     0  BASSAC@139820 -> BASSAC@143982
+Hau_6          BASSAC      cu_lao     4.6    1     0  BASSAC@149107 -> BASSAC@153404
+Hau_7          BASSAC      cu_lao    30.2    5     0  BASSAC@155039 -> BASSAC@185244
+Hau_8          BASSAC      cu_lao    11.1    2     0  Hau_7@13779 -> Hau_7@24543
+Hau_9          BASSAC      cu_lao     9.0    1     0  BASSAC@167031 -> Hau_7@21401
+BASSAC         BASSAC      chinh    192.6   38   163  TU_DO -> CuaDinhAn@0
+CoChien_1      CoChien     cu_lao     6.7    1     0  CoChien@13051 -> CoChien@19833
+CoChien_2      CoChien     cu_lao     3.5    1     0  CoChien@26275 -> CoChien@29680
+CoChien_3      CoChien     cu_lao    21.0    3     0  CoChien@28053 -> CoChien@50559
+CoChien_4      CoChien     cu_lao     7.6    1     0  CoChien@51502 -> CoChien@60027
+CoChien        CoChien     chinh     61.1   11     0  Tien@124961 -> CuaCoChien@0
+CuaCoChien     CuaCoChien  chinh     30.7    6     0  TU_DO -> TU_DO
+CuaCungHau     CuaCungHau  chinh     28.4    4     0  CuaCoChien@0 -> TU_DO
+CuaDai_1       CuaDai      cu_lao     6.8    1     0  CuaTieu@2975 -> CuaDai@9733
+CuaDai_2       CuaDai      cu_lao    17.4    2     0  CuaDai_1@5228 -> CuaDai_3@2796
+CuaDai_3       CuaDai      cu_lao     7.0    1     0  CuaDai@23072 -> CuaDai@30163
+CuaDai         CuaDai      chinh     39.5    7     0  Tien@189512 -> TU_DO
+CuaDinhAn      CuaDinhAn   chinh     33.8    7     0  TU_DO -> TU_DO
+CuaTieu        CuaTieu     chinh     37.7    7     0  Tien@189512 -> TU_DO
+CuaTranDe      CuaTranDe   chinh     34.4    7     0  CuaDinhAn@0 -> TU_DO
+HamLuong_1     Ham Luong   cu_lao     4.2    1     0  Ham Luong@6255 -> Ham Luong@10696
+HamLuong_2     Ham Luong   cu_lao     3.4    1     0  Ham Luong@4950 -> HamLuong_1@2055
+HamLuong_3     Ham Luong   cu_lao     4.6    1     0  Ham Luong@29647 -> Ham Luong@34333
+HamLuong_4     Ham Luong   cu_lao    13.0    3     0  Ham Luong@28908 -> Ham Luong@42173
+HamLuong_5     Ham Luong   cu_lao     8.4    2     0  HamLuong_4@10191 -> Ham Luong@47856
+HamLuong_6     Ham Luong   cu_lao     6.1    1     0  Ham Luong@54670 -> Ham Luong@61760
+Ham Luong      Ham Luong   chinh     75.3   16     1  Tien@152856 -> TU_DO
+CaiBe_TG       Tien        cu_lao    11.6    2     0  Tien@137113 -> Tien@149417
+NamThon        Tien        cu_lao    16.6    1     0  CaiBe_TG@5360 -> Tien@160793
+Tien_1         Tien        cu_lao     9.2    1     0  Tien@1478 -> Tien@10061
+Tien_2         Tien        cu_lao    23.1    2     0  Tien@16880 -> VamNao@1335
+Tien_3         Tien        cu_lao    11.8    1     0  Tien@16880 -> Tien@26016
+Tien_4         Tien        cu_lao    15.8    2     0  Tien@58729 -> Tien_5@2101
+Tien_5         Tien        cu_lao     6.2    1     0  Tien@75315 -> Tien@80617
+Tien_6         Tien        cu_lao     5.7    1     0  Tien@77168 -> Tien@83801
+Tien_7         Tien        cu_lao     3.8    1     0  Tien@177828 -> Tien@181868
+Tien_8         Tien        cu_lao     3.9    2     0  Tien_9@6191 -> Tien@179903
+Tien_9         Tien        cu_lao     9.6    2     0  Tien@170109 -> Tien@179903
+Tien           Tien        chinh    189.4   38     2  TU_DO -> TU_DO
+VamNao         VamNao      chinh     23.4    5     0  Tien@32675 -> BASSAC@71252

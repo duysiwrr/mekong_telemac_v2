@@ -39,7 +39,7 @@ CTOL = 60.0
 VAR_STOCK = ("true false false false false true true true false false false false "
              "false false false false false false false true false false true false "
              "false false false false false false false false false false false false "
-             "false false false false false")
+             "false false false false false false")
 
 # Tên ĐÃ XÁC NHẬN từ ledger. "Ham Luong" có dấu cách.
 # Ba Lai bỏ: cắm vào "Giao Hoa" (ngoài backbone) -> sẽ cô lập.
@@ -311,6 +311,21 @@ def write_xcas(outdir, biefs, info, nodes, extrem, free_ext, bnd_map, nprof):
     K = CFG.MASC.STRICKLER
     fr_k = " ".join(f"{K:.1f}" for _ in biefs)
 
+    # PLANIM/MAILLAGE: 1 zone + 1 plage cho MOI bief (dung mau 24b2 FIN CORRECTE).
+    # nbZones=1 cho ca mang -> MASCARET cap mang 1 phan tu nhung lap theo nb_bief
+    # -> segfault trong chainage_rezo_.
+    prof_first, prof_last, _c = [], [], 0
+    for b in biefs:
+        n = info[b["num"]]["nprof"]
+        prof_first.append(_c + 1)
+        _c += n
+        prof_last.append(_c)
+    assert _c == nprof, f"tong PROFIL lech: {_c} != {nprof}"
+    prof_first_str = " ".join(str(x) for x in prof_first)
+    prof_last_str = " ".join(str(x) for x in prof_last)
+    pas_planim_str = " ".join("2.0" for _ in biefs)
+    pas_maillage_str = " ".join("500.0" for _ in biefs)
+
     xml = f"""<?xml version="1.0" encoding="UTF-8"?>
 <fichierCas>
   <parametresCas>
@@ -403,20 +418,20 @@ def write_xcas(outdir, biefs, info, nodes, extrem, free_ext, bnd_map, nprof):
       <methodeMaillage>5</methodeMaillage>
       <planim>
         <nbPas>50</nbPas>
-        <nbZones>1</nbZones>
-        <valeursPas>2.0</valeursPas>
-        <num1erProf>1</num1erProf>
-        <numDerProf>{nprof}</numDerProf>
+        <nbZones>{nb}</nbZones>
+        <valeursPas>{pas_planim_str}</valeursPas>
+        <num1erProf>{prof_first_str}</num1erProf>
+        <numDerProf>{prof_last_str}</numDerProf>
       </planim>
       <maillage>
         <modeSaisie>2</modeSaisie>
         <sauvMaillage>false</sauvMaillage>
         <maillageClavier>
           <nbSections>0</nbSections>
-          <nbPlages>1</nbPlages>
-          <num1erProfPlage>1</num1erProfPlage>
-          <numDerProfPlage>{nprof}</numDerProfPlage>
-          <pasEspacePlage>500.0</pasEspacePlage>
+          <nbPlages>{nb}</nbPlages>
+          <num1erProfPlage>{prof_first_str}</num1erProfPlage>
+          <numDerProfPlage>{prof_last_str}</numDerProfPlage>
+          <pasEspacePlage>{pas_maillage_str}</pasEspacePlage>
           <nbZones>0</nbZones>
         </maillageClavier>
       </maillage>
