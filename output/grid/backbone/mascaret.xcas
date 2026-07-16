@@ -1,0 +1,367 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fichierCas>
+  <parametresCas>
+    <parametresGeneraux>
+      <versionCode>3</versionCode>
+      <code>2</code>
+      <fichMotsCles>mascaret.xcas</fichMotsCles>
+      <dictionaire>dico.txt</dictionaire>
+      <progPrincipal>princi.f</progPrincipal>
+      <sauveModele>false</sauveModele>
+      <fichSauvModele>net.tmp</fichSauvModele>
+      <validationCode>false</validationCode>
+      <typeValidation>1</typeValidation>
+      <presenceCasiers>false</presenceCasiers>
+      <bibliotheques>
+        <bibliotheque>mascaretV5P1.a damoV3P0.a</bibliotheque>
+      </bibliotheques>
+    </parametresGeneraux>
+    <parametresModelePhysique>
+      <perteChargeConf>false</perteChargeConf>
+      <compositionLits>1</compositionLits>
+      <conservFrotVertical>false</conservFrotVertical>
+      <elevCoteArrivFront>0.05</elevCoteArrivFront>
+      <interpolLinStrickler>false</interpolLinStrickler>
+      <debordement>
+        <litMajeur>false</litMajeur>
+        <zoneStock>false</zoneStock>
+      </debordement>
+    </parametresModelePhysique>
+    <parametresNumeriques>
+      <calcOndeSubmersion>false</calcOndeSubmersion>
+      <decentrement>false</decentrement>
+      <froudeLimCondLim>1000.0</froudeLimCondLim>
+      <traitImplicitFrot>false</traitImplicitFrot>
+      <hauteurEauMini>0.005</hauteurEauMini>
+      <implicitNoyauTrans>false</implicitNoyauTrans>
+      <optimisNoyauTrans>false</optimisNoyauTrans>
+      <perteChargeAutoElargissement>true</perteChargeAutoElargissement>
+      <termesNonHydrostatiques>false</termesNonHydrostatiques>
+      <apportDebit>0</apportDebit>
+      <attenuationConvection>false</attenuationConvection>
+    </parametresNumeriques>
+    <parametresTemporels>
+      <pasTemps>300.0</pasTemps>
+      <tempsInit>0.0</tempsInit>
+      <critereArret>1</critereArret>
+      <nbPasTemps>1</nbPasTemps>
+      <tempsMax>86400.0</tempsMax>
+      <pasTempsVar>false</pasTempsVar>
+      <nbCourant>0.8</nbCourant>
+      <coteMax>0.0</coteMax>
+      <abscisseControle>0.0</abscisseControle>
+      <biefControle>1</biefControle>
+    </parametresTemporels>
+    <parametresGeometrieReseau>
+      <geometrie>
+        <fichier>geometrie</fichier>
+        <format>2</format>
+        <profilsAbscAbsolu>true</profilsAbscAbsolu>
+      </geometrie>
+      <listeBranches>
+        <nb>15</nb>
+        <numeros>1 2 3 4 5 6 7 8 9 10 11 12 13 14 15</numeros>
+        <abscDebut>299.0 1000726.0 2000626.0 3002692.0 4003038.0 5000500.0 6003599.0 7004142.0 8000000.0 9000500.0 10000365.0 11004137.0 12003328.0 13001133.0 14001335.0</abscDebut>
+        <abscFin>70557.0 1120699.0 2060589.0 3027310.0 4026681.0 5037485.0 6031944.0 7034575.0 8034192.0 9073000.0 10029085.0 11090627.0 12026431.0 13035143.0 14023090.0</abscFin>
+        <numExtremDebut>1 3 5 7 9 11 13 15 17 19 21 23 25 27 29</numExtremDebut>
+        <numExtremFin>2 4 6 8 10 12 14 16 18 20 22 24 26 28 30</numExtremFin>
+      </listeBranches>
+      <listeNoeuds>
+        <nb>7</nb>
+        <noeuds>
+          <noeud>
+            <num>2 3 30 0 0</num>
+          </noeud>
+          <noeud>
+            <num>6 7 9 0 0</num>
+          </noeud>
+          <noeud>
+            <num>4 13 17 0 0</num>
+          </noeud>
+          <noeud>
+            <num>22 23 29 0 0</num>
+          </noeud>
+          <noeud>
+            <num>5 24 25 0 0</num>
+          </noeud>
+          <noeud>
+            <num>19 26 27 0 0</num>
+          </noeud>
+          <noeud>
+            <num>11 15 28 0 0</num>
+          </noeud>
+        </noeuds>
+      </listeNoeuds>
+      <extrLibres>
+        <nb>9</nb>
+        <num>1 2 3 4 5 6 7 8 9</num>
+        <numExtrem>1 8 10 12 14 16 18 20 21</numExtrem>
+        <noms>
+          <string>Q_ChauDoc</string>
+          <string>Z_CuaCoChien_8</string>
+          <string>Z_CuaCungHau_10</string>
+          <string>Z_CuaDai_12</string>
+          <string>Z_CuaDinhAn_14</string>
+          <string>Z_CuaTieu_16</string>
+          <string>Z_CuaTranDe_18</string>
+          <string>Z_Ham_Luong_20</string>
+          <string>Q_TanChau</string>
+        </noms>
+        <typeCond>1 2 2 2 2 2 2 2 1</typeCond>
+        <numLoi>1 2 3 4 5 6 7 8 9</numLoi>
+      </extrLibres>
+    </parametresGeometrieReseau>
+    <parametresConfluents>
+      <nbConfluents>7</nbConfluents>
+      <confluents>
+        <structureParametresConfluent>
+          <nbAffluent>3</nbAffluent>
+          <nom>Conf_1</nom>
+          <abscisses>0.0 0.0 0.0</abscisses>
+          <ordonnees>0.0 0.0 0.0</ordonnees>
+          <angles>0.0 0.0 0.0</angles>
+        </structureParametresConfluent>
+        <structureParametresConfluent>
+          <nbAffluent>3</nbAffluent>
+          <nom>Conf_2</nom>
+          <abscisses>0.0 0.0 0.0</abscisses>
+          <ordonnees>0.0 0.0 0.0</ordonnees>
+          <angles>0.0 0.0 0.0</angles>
+        </structureParametresConfluent>
+        <structureParametresConfluent>
+          <nbAffluent>3</nbAffluent>
+          <nom>Conf_3</nom>
+          <abscisses>0.0 0.0 0.0</abscisses>
+          <ordonnees>0.0 0.0 0.0</ordonnees>
+          <angles>0.0 0.0 0.0</angles>
+        </structureParametresConfluent>
+        <structureParametresConfluent>
+          <nbAffluent>3</nbAffluent>
+          <nom>Conf_4</nom>
+          <abscisses>0.0 0.0 0.0</abscisses>
+          <ordonnees>0.0 0.0 0.0</ordonnees>
+          <angles>0.0 0.0 0.0</angles>
+        </structureParametresConfluent>
+        <structureParametresConfluent>
+          <nbAffluent>3</nbAffluent>
+          <nom>Conf_5</nom>
+          <abscisses>0.0 0.0 0.0</abscisses>
+          <ordonnees>0.0 0.0 0.0</ordonnees>
+          <angles>0.0 0.0 0.0</angles>
+        </structureParametresConfluent>
+        <structureParametresConfluent>
+          <nbAffluent>3</nbAffluent>
+          <nom>Conf_6</nom>
+          <abscisses>0.0 0.0 0.0</abscisses>
+          <ordonnees>0.0 0.0 0.0</ordonnees>
+          <angles>0.0 0.0 0.0</angles>
+        </structureParametresConfluent>
+        <structureParametresConfluent>
+          <nbAffluent>3</nbAffluent>
+          <nom>Conf_7</nom>
+          <abscisses>0.0 0.0 0.0</abscisses>
+          <ordonnees>0.0 0.0 0.0</ordonnees>
+          <angles>0.0 0.0 0.0</angles>
+        </structureParametresConfluent>
+      </confluents>
+    </parametresConfluents>
+    <parametresPlanimetrageMaillage>
+      <methodeMaillage>5</methodeMaillage>
+      <planim>
+        <nbPas>50</nbPas>
+        <nbZones>1</nbZones>
+        <valeursPas>2.0</valeursPas>
+        <num1erProf>1</num1erProf>
+        <numDerProf>426</numDerProf>
+      </planim>
+      <maillage>
+        <modeSaisie>2</modeSaisie>
+        <sauvMaillage>false</sauvMaillage>
+        <maillageClavier>
+          <nbSections>0</nbSections>
+          <nbPlages>1</nbPlages>
+          <num1erProfPlage>1</num1erProfPlage>
+          <numDerProfPlage>426</numDerProfPlage>
+          <pasEspacePlage>500.0</pasEspacePlage>
+          <nbZones>0</nbZones>
+        </maillageClavier>
+      </maillage>
+    </parametresPlanimetrageMaillage>
+    <parametresSingularite>
+      <nbSeuils>0</nbSeuils>
+    </parametresSingularite>
+    <parametresApportDeversoirs/>
+    <parametresCalage>
+      <frottement>
+        <loi>1</loi>
+        <nbZone>15</nbZone>
+        <numBranche>1 2 3 4 5 6 7 8 9 10 11 12 13 14 15</numBranche>
+        <absDebZone>299.0 1000726.0 2000626.0 3002692.0 4003038.0 5000500.0 6003599.0 7004142.0 8000000.0 9000500.0 10000365.0 11004137.0 12003328.0 13001133.0 14001335.0</absDebZone>
+        <absFinZone>70557.0 1120699.0 2060589.0 3027310.0 4026681.0 5037485.0 6031944.0 7034575.0 8034192.0 9073000.0 10029085.0 11090627.0 12026431.0 13035143.0 14023090.0</absFinZone>
+        <coefLitMin>40.0 40.0 40.0 40.0 40.0 40.0 40.0 40.0 40.0 40.0 40.0 40.0 40.0 40.0 40.0</coefLitMin>
+        <coefLitMaj>40.0 40.0 40.0 40.0 40.0 40.0 40.0 40.0 40.0 40.0 40.0 40.0 40.0 40.0 40.0</coefLitMaj>
+      </frottement>
+      <zoneStockage>
+        <nbProfils>0</nbProfils>
+        <numProfil>-0</numProfil>
+        <limGauchLitMaj>-0</limGauchLitMaj>
+        <limDroitLitMaj>-0</limDroitLitMaj>
+      </zoneStockage>
+    </parametresCalage>
+    <parametresLoisHydrauliques>
+      <nb>9</nb>
+      <lois>
+        <structureParametresLoi>
+          <nom>Q_ChauDoc</nom>
+          <type>1</type>
+          <donnees>
+            <modeEntree>1</modeEntree>
+            <fichier>Q_ChauDoc.loi</fichier>
+            <uniteTps>-0</uniteTps>
+            <nbPoints>-0</nbPoints>
+            <nbDebitsDifferents>-0</nbDebitsDifferents>
+          </donnees>
+        </structureParametresLoi>
+        <structureParametresLoi>
+          <nom>Z_CuaCoChien_8</nom>
+          <type>2</type>
+          <donnees>
+            <modeEntree>1</modeEntree>
+            <fichier>Z_CuaCoChien_8.loi</fichier>
+            <uniteTps>-0</uniteTps>
+            <nbPoints>-0</nbPoints>
+            <nbDebitsDifferents>-0</nbDebitsDifferents>
+          </donnees>
+        </structureParametresLoi>
+        <structureParametresLoi>
+          <nom>Z_CuaCungHau_10</nom>
+          <type>2</type>
+          <donnees>
+            <modeEntree>1</modeEntree>
+            <fichier>Z_CuaCungHau_10.loi</fichier>
+            <uniteTps>-0</uniteTps>
+            <nbPoints>-0</nbPoints>
+            <nbDebitsDifferents>-0</nbDebitsDifferents>
+          </donnees>
+        </structureParametresLoi>
+        <structureParametresLoi>
+          <nom>Z_CuaDai_12</nom>
+          <type>2</type>
+          <donnees>
+            <modeEntree>1</modeEntree>
+            <fichier>Z_CuaDai_12.loi</fichier>
+            <uniteTps>-0</uniteTps>
+            <nbPoints>-0</nbPoints>
+            <nbDebitsDifferents>-0</nbDebitsDifferents>
+          </donnees>
+        </structureParametresLoi>
+        <structureParametresLoi>
+          <nom>Z_CuaDinhAn_14</nom>
+          <type>2</type>
+          <donnees>
+            <modeEntree>1</modeEntree>
+            <fichier>Z_CuaDinhAn_14.loi</fichier>
+            <uniteTps>-0</uniteTps>
+            <nbPoints>-0</nbPoints>
+            <nbDebitsDifferents>-0</nbDebitsDifferents>
+          </donnees>
+        </structureParametresLoi>
+        <structureParametresLoi>
+          <nom>Z_CuaTieu_16</nom>
+          <type>2</type>
+          <donnees>
+            <modeEntree>1</modeEntree>
+            <fichier>Z_CuaTieu_16.loi</fichier>
+            <uniteTps>-0</uniteTps>
+            <nbPoints>-0</nbPoints>
+            <nbDebitsDifferents>-0</nbDebitsDifferents>
+          </donnees>
+        </structureParametresLoi>
+        <structureParametresLoi>
+          <nom>Z_CuaTranDe_18</nom>
+          <type>2</type>
+          <donnees>
+            <modeEntree>1</modeEntree>
+            <fichier>Z_CuaTranDe_18.loi</fichier>
+            <uniteTps>-0</uniteTps>
+            <nbPoints>-0</nbPoints>
+            <nbDebitsDifferents>-0</nbDebitsDifferents>
+          </donnees>
+        </structureParametresLoi>
+        <structureParametresLoi>
+          <nom>Z_Ham_Luong_20</nom>
+          <type>2</type>
+          <donnees>
+            <modeEntree>1</modeEntree>
+            <fichier>Z_Ham_Luong_20.loi</fichier>
+            <uniteTps>-0</uniteTps>
+            <nbPoints>-0</nbPoints>
+            <nbDebitsDifferents>-0</nbDebitsDifferents>
+          </donnees>
+        </structureParametresLoi>
+        <structureParametresLoi>
+          <nom>Q_TanChau</nom>
+          <type>1</type>
+          <donnees>
+            <modeEntree>1</modeEntree>
+            <fichier>Q_TanChau.loi</fichier>
+            <uniteTps>-0</uniteTps>
+            <nbPoints>-0</nbPoints>
+            <nbDebitsDifferents>-0</nbDebitsDifferents>
+          </donnees>
+        </structureParametresLoi>
+      </lois>
+    </parametresLoisHydrauliques>
+    <parametresConditionsInitiales>
+      <repriseEtude>
+        <repriseCalcul>false</repriseCalcul>
+      </repriseEtude>
+      <ligneEau>
+        <LigEauInit>true</LigEauInit>
+        <modeEntree>1</modeEntree>
+        <fichLigEau>init.lig</fichLigEau>
+        <formatFichLig>2</formatFichLig>
+        <nbPts>-0</nbPts>
+      </ligneEau>
+    </parametresConditionsInitiales>
+    <parametresImpressionResultats>
+      <titreCalcul>Mekong DBSCL 15 bief</titreCalcul>
+      <impression>
+        <impressionGeometrie>false</impressionGeometrie>
+        <impressionPlanimetrage>false</impressionPlanimetrage>
+        <impressionReseau>false</impressionReseau>
+        <impressionLoiHydraulique>false</impressionLoiHydraulique>
+        <impressionligneEauInitiale>false</impressionligneEauInitiale>
+        <impressionCalcul>false</impressionCalcul>
+      </impression>
+      <pasStockage>
+        <premPasTpsStock>1</premPasTpsStock>
+        <pasStock>12</pasStock>
+        <pasImpression>100</pasImpression>
+      </pasStockage>
+      <resultats>
+        <fichResultat>ResultatsOpthyca.opt</fichResultat>
+        <postProcesseur>2</postProcesseur>
+      </resultats>
+      <listing>
+        <fichListing>listing.lis</fichListing>
+      </listing>
+      <fichReprise>
+        <fichRepriseEcr>net_ecr.rep</fichRepriseEcr>
+      </fichReprise>
+      <rubens>
+        <ecartInterBranch>1.0</ecartInterBranch>
+      </rubens>
+      <stockage>
+        <option>1</option>
+        <nbSite>0</nbSite>
+      </stockage>
+    </parametresImpressionResultats>
+    <parametresVariablesCalculees>
+      <variablesCalculees>false false false false false false false false false false false false false false false</variablesCalculees>
+    </parametresVariablesCalculees>
+    <parametresVariablesStockees>
+      <variablesStockees>true false false false false true true true false false false false false false false false false false false true false false true false false false false false false false false false false false false false false false false false false</variablesStockees>
+    </parametresVariablesStockees>
+  </parametresCas>
+</fichierCas>
