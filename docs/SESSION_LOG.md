@@ -109,7 +109,7 @@ Chạy bằng python của venv có mikeio1d:
 
 ---
 
-# NHẬT KÝ PHIÊN 2 — 16/07/2026
+# NHẬT KÝ PHIÊN 2A — 16/07/2026 (giải mã cách đặt tên MIKE)
 
 Trọng tâm: **giải mã cách đặt tên MIKE 11** + tìm gốc rễ lỗi 701.
 
@@ -180,15 +180,8 @@ Phân tầng: tien(~17) → hau(~12) → truc(~24) → full(44).
 - **Z init `bief/bmax` (V1) SAI với v2** — v2 đánh số bief theo `sorted(mike)`
   = ALPHABET (BASSAC→Bief_1, VamNao→Bief_15). Phải BFS topology tới cửa.
 
-## VIỆC TIẾP THEO
-1. Sửa `get_cross_sections`: khớp tên chính xác + lọc topo + survey 2020 trước
-2. Sửa vn_norm ở import_data / sync_sections / A_extract_ledger
-3. Mở rộng BACKBONE → 44 nhánh + subset tien/hau/truc
-4. In hình kiểm mắt TRƯỚC khi chạy
 
----
-
-# NHẬT KÝ PHIÊN 2 — 16/07/2026 (máy OFFICE)
+# NHẬT KÝ PHIÊN 2B — 16/07/2026 (v2 CHẠY THÔNG, máy OFFICE)
 
 **MỐC: v2 CHẠY THÔNG LẦN ĐẦU với mặt cắt thực đo — 34.9s/30 ngày, Froude max 0.525**
 
