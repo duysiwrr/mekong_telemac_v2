@@ -1,6 +1,6 @@
 # TÀI LIỆU BÀN GIAO V2 — DỰ ÁN TELEMAC-1D ĐBSCL (mekong_telemac_v2)
 
-> Đọc file này TRƯỚC khi làm bất cứ gì. Cập nhật: **16/07/2026** (phiên 2).
+> Đọc file này TRƯỚC khi làm bất cứ gì. Cập nhật: **16/07/2026** (phiên 2 — v2 ĐÃ CHẠY THÔNG).
 > Repo: https://github.com/duysiwrr/mekong_telemac_v2 (**PRIVATE** — AI không tự
 > đọc được, phải dán/upload nội dung vào chat).
 
@@ -223,7 +223,24 @@ commit `5b1886a`. **1899 nhánh giữ, liên thông 1899/1899 (0 cô lập), 316
 - **Sửa duy nhất cần làm:** `read_xns_widths` dùng `norm()` → đổi `vn_norm()`
   để `co_survey2020` nhận đủ 11 mặt cắt cửa Đại. Không ảnh hưởng kết quả 1899.
 
-### GĐ B — ĐANG DỞ 🔄
+### GĐ B — ✅ CHẠY THÔNG (16/07/2026)
+**34.9s / 30 ngày | Froude max 0.525 | 15 bief, 176 PROFIL**
+
+| Trạm | WL_KGE | Q_KGE | V1 (hạ đáy 10m) |
+|---|---|---|---|
+| TanChau | −0.647 | **0.706** | 0.531 |
+| ChauDoc | −1.499 | **0.737** | −2.435 |
+| VamNao | — | 0.301 | −1.409 |
+| MyThuan | 0.580 | 0.432 | 0.837* |
+| CanTho | 0.433 | 0.607 | — |
+
+\* V1 map MyThuan sai chỗ (cách cầu thật 26km) → không so được.
+
+**TỌA ĐỘ 5 TRẠM đã chốt — xem SESSION_LOG.md phiên 2 §2.**
+MIKE KHÔNG lưu tọa độ trạm (đã dò cạn). Bẫy: `'ChauDoc-Channel'` là KÊNH,
+không phải trạm. `6-TVtrieu.xls` ô Tân Châu SAI 66km.
+
+### GĐ B — lịch sử gỡ lỗi 🔄
 `B_build_grid.py --subset backbone` → 15 bief, 426 PROFIL, 7 nút, 9 biên.
 
 **Chuỗi lỗi MASCARET đã gỡ (phiên 2):**
@@ -236,9 +253,16 @@ commit `5b1886a`. **1899 nhánh giữ, liên thông 1899/1899 (0 cô lập), 316
 | 5 | segfault | `chainage_rezo_` | `nbZones=1` thay vì `=nb_bief` | ✅ phiên 2 |
 | 6 | `Erreur 701` supercritical | biên `Z_CuaCungHau` | biên `.loi` triều sin giả + Z init mâu thuẫn | ✅ gán biên thực đo |
 | 7 | `Erreur 1` Cross Section dry | section #26 | Z init sai (`bief/bmax`) | ✅ `C_init_smart.py` |
-| 8 | `Erreur 701` supercritical | biên `Q_ChauDoc` | **BỀ RỘNG RĂNG CƯA 164↔3481m** do trộn topo 2006+2021 | 🔴 **ĐANG Ở ĐÂY** |
+| 8 | `Erreur 701` supercritical | biên `Q_ChauDoc` | **BỀ RỘNG RĂNG CƯA 164↔3481m** do trộn topo 2006+2021 | ✅ lọc topo |
 
-**Lỗi 8 là gốc rễ — phải sửa `get_cross_sections` trước khi làm gì khác.**
+**HẾT LỖI — v2 chạy thông 16/07/2026.** MASCARET v8p4r0 in
+`FIN CORRECTE DU CALCUL` trong listing.lis + `My work is done` ra stdout.
+
+**Tồn tại (ưu tiên phiên sau):**
+1. Vàm Nao thiếu 45% lưu lượng (6000 vs 11000 m³/s, Q_NSE=−170) — phân lưu quá ít
+2. WL thấp hệ thống ~1.7m — nghi datum hoặc Strickler=40
+3. Bief_1 trắc dọc dốc 7m/30km
+4. Mở rộng BACKBONE 11 → 44 nhánh
 
 ---
 

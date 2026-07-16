@@ -185,3 +185,133 @@ Phân tầng: tien(~17) → hau(~12) → truc(~24) → full(44).
 2. Sửa vn_norm ở import_data / sync_sections / A_extract_ledger
 3. Mở rộng BACKBONE → 44 nhánh + subset tien/hau/truc
 4. In hình kiểm mắt TRƯỚC khi chạy
+
+---
+
+# NHẬT KÝ PHIÊN 2 — 16/07/2026 (máy OFFICE)
+
+**MỐC: v2 CHẠY THÔNG LẦN ĐẦU với mặt cắt thực đo — 34.9s/30 ngày, Froude max 0.525**
+
+## 1. KẾT QUẢ CUỐI PHIÊN
+
+| Trạm | WL_NSE | WL_KGE | Q_NSE | Q_KGE | V1 (hạ đáy 10m) |
+|---|---|---|---|---|---|
+| TanChau | −103.6 | −0.647 | **+0.564** | **0.706** | Q_KGE 0.531 |
+| ChauDoc | −34.0 | −1.499 | **+0.566** | **0.737** | Q_KGE −2.435 |
+| VamNao | — | — | −169.8 | 0.301 | Q_KGE −1.409 |
+| MyThuan | **+0.630** | 0.580 | −0.825 | 0.432 | Q_KGE 0.837* |
+| CanTho | −2.287 | 0.433 | −0.136 | 0.607 | WL_KGE 0.530 |
+
+\* V1 map MyThuan vào ch=95347 (cách cầu Mỹ Thuận thật 26km) → 0.837 là **con số sai chỗ**, không so được.
+
+**v2 vượt V1:** ChauDoc Q_KGE −2.44 → **+0.74**; VamNao −1.41 → **+0.30**; TanChau 0.53 → **0.71**.
+
+## 2. TỌA ĐỘ 5 TRẠM — ĐÃ CHỐT
+
+**MIKE KHÔNG lưu tọa độ trạm.** Đã dò cạn (đừng tìm lại):
+
+| Nguồn | Kết quả |
+|---|---|
+| `Boundary_2011.bnd11` | 10 khóa: ADRR, AutoCalQh, BndTS, Comment, Component, Dam, DescType, Inflow, OpenDesc, QhADM12 — **không x/y/coord/UTM** |
+| `H-2011.dfs0` (1.4MB) | 34 tên trạm (H_TanChau, H_ChauDoc...), **không tọa độ** |
+| `H_boudary_2011.dfs0` (16.9MB) | 10 trạm triều biển, **không tọa độ** |
+| `H-2020.dfs0`, `H_2016.dfs0` | tên trạm, **không tọa độ** |
+| `Net_2024.nwk11` | không section `[gauge]`/`[station]` |
+| OBS `.txt` | header chỉ tên cột + `Unit 100001 1800 0` |
+| Toàn OneDrive | 2 shapefile: `Vi tri MCN` (mặt cắt), `Tuyen do` (tuyến ADCP) |
+
+Kiến trúc MIKE: gán theo `branch@chainage`, trạm nằm **ngoài** mô hình.
+
+### BẪY TÊN (nguy hiểm — đừng hiểu nhầm lần nữa)
+- **`'ChauDoc-Channel'` = KÊNH** nối `Tien@12704 → BASSAC@31537`, **KHÔNG phải trạm Châu Đốc**
+- **`'Can Tho HH'` = KÊNH** ch=12090, **KHÔNG phải trạm Cần Thơ**
+- 23 BndItem `INFLOW(Q)` trên backbone = **nhập lưu nội đồng**, không phải biên trạm
+
+### `6-TVtrieu.xls` — DS trạm thủy văn vùng triều toàn quốc
+Sheet `DSTV (T) (X)`, cột `KinhDo`/`ViDo` dạng **DDMMSS**.
+
+⚠️ **Ô Tân Châu SAI:** `KinhDo=1055100` (105°51') trong khi hàng xóm An Giang:
+Chợ Mới 105°24', Long Xuyên 105°27', Vàm Nao 105°21'. Tân Châu ở thượng nguồn
+phải **nhỏ hơn** (~105°14'). Lỗi nhập liệu → chiếu lệch **66km**.
+
+### TỌA ĐỘ CHỐT (đã chiếu lên mạng MIKE kiểm chứng)
+
+| Trạm | X_UTM48N | Y_UTM48N | Nhánh | ch | d | Nguồn |
+|---|---|---|---|---|---|---|
+| TanChau | 526543 | 1194295 | Tien | 14050 | **59m** | bảng Duy cấp |
+| ChauDoc | 514545 | 1183537 | BASSAC | 38988 | **19m** | bảng Duy cấp |
+| VamNao | 539045 | 1168470 | VamNao | 18662 | 590m | bảng Duy cấp |
+| MyThuan | 598558 | 1135034 | Tien | 121672 | 848m | 6-TVtrieu.xls |
+| CanTho | 586757 | 1109202 | BASSAC | **149753 (ÉP)** | 1767m | 6-TVtrieu.xls |
+
+**CanTho ép chainage:** Excel ghi sông = "Hậu (K. Xáng)". Cả 3 tọa độ đều chiếu vào
+nhánh `Can_Tho` (d=90–161m) chứ không phải `BASSAC` (d=1767–5226m). Nhưng
+Q_CanTho=14400 m³/s là Q **sông Hậu**, không thể là kênh nhỏ → nhà trạm ở bờ
+Kênh Xáng (P. Cái Khế), tuyến đo Q vắt ngang sông Hậu. Ép map vào BASSAC.
+
+**Bỏ hết ước lượng V1/AI** — MyThuan cũ (580000,1148000) cho d=2m nhưng cách cầu
+Mỹ Thuận thật 26km. Trùng hợp, không phải cơ sở.
+
+**Phân biệt 3 loại điểm trên `station_map.png`:**
+- Sao đỏ/xanh = **BIÊN** (MIKE tính từ đầu/cuối nhánh nwk11)
+- Kim cương = **NÚT** (MIKE tính từ connections)
+- Dấu cộng = **TRẠM** (ghi tay trong `STATIONS` của `D_run_eval.py`)
+
+Q_TanChau (biên, 520477/1206257) cách trạm TanChau **13km** — biên gán ở biên giới
+Campuchia, trạm đo ở thị xã. Đúng, MIKE làm vậy.
+
+## 3. SỬA GÌ TRONG PHIÊN
+
+| Lỗi | Crash tại | Nguyên nhân | Sửa |
+|---|---|---|---|
+| 4 | `lec_sorties_` | `variablesStockees` 41 ≠ **42** | B_build_grid VAR_STOCK |
+| 5 | `chainage_rezo_` | `nbZones=1` ≠ nb_bief | planim/maillage theo từng bief |
+| 6 | Erreur 701 | biên `.loi` triều sin giả | C_assign_boundaries gán thực đo |
+| 7 | Erreur 1 dry | Z init `bief/bmax` (V1) sai | C_init_smart BFS topology |
+| 8 | Erreur 701 | **trộn topo 2006+2021** → răng cưa 164↔3481m | get_cross_sections lọc topo |
+
+**Lỗi 8 là gốc rễ.** Sau khi lọc: răng cưa hàng chục chỗ → còn 2 chỗ x3.3/x3.4.
+
+## 4. KIỂM CHỨNG NGƯỢC VỚI GIẢ THIẾT
+
+- **MIKE topo `2021_SIWRP_QHPCTT` = survey 2020 ADCP** (giống từng số) → sông Hậu
+  Châu Đốc **thật sự rộng 120–270m**, không phải 1500m như tôi đoán
+- **Chênh Z tại nút KHÔNG gây lỗi** — baseline V1 chênh 5.6m ở 15/44 nút vẫn chạy
+- **GĐ A đúng** — catalog xác nhận ledger giữ đủ mọi nhánh có survey
+
+## 5. TỒN TẠI (ưu tiên phiên sau)
+
+1. **Vàm Nao thiếu 45% lưu lượng** — Q mô phỏng ~6000 vs thực đo ~11000 m³/s,
+   Q_NSE=−170. Phân lưu Tiền→Hậu quá ít. Chỉ 6 mặt cắt/23km (KC 3.9km).
+   → Thêm mặt cắt survey 2020 (có 5), hoặc kiểm hình học Vàm Nao
+2. **WL thấp hệ thống ~1.7m** tại TanChau/ChauDoc — WL_NSE −104/−34 nhưng
+   WL_KGE −0.65/−1.50 → **dạng đúng, lệch mức**. Nghi datum hoặc Strickler=40
+3. **Bief_1 (BASSAC) trắc dọc dốc 7m/30km** — quá lớn, liên quan mặt cắt hẹp
+   164–560m đoạn đầu
+4. Mở rộng BACKBONE 11 → 44 nhánh (33 cù lao có survey 2020)
+
+## 6. ĐÓNG GÓI — `runs/RUN_<ten>/`
+
+`.opt` 158MB không commit được. Nhưng **đầu vào chỉ 1MB, tái tạo 35s**.
+
+```
+runs/RUN_baseline_2020_15bief/   (4.6 MB)
+├── input/      geometrie, xcas, init.lig, *.loi, dico.txt — chạy lại NGAY
+├── summary/    eval_report.txt + 11 PNG
+├── extract/    timeseries_stations.csv (Z,Q tại 5 trạm — giảm 446 lần)
+├── META.json   tham số + KGE/NSE + thời gian chạy + git commit
+├── README.md   bảng kết quả
+└── RUN.sh      bash RUN.sh → FIN CORRECTE trong 35s  ✅ đã kiểm chứng
+```
+
+Kịch bản mới: copy gói → sửa tham số → chạy → `E_package_run.py --name <mới>`.
+So sánh nhiều gói qua `META.json`.
+
+## 7. GHI CHÚ KỸ THUẬT
+
+- MASCARET v8p4r0 in **`FIN CORRECTE DU CALCUL`** trong `listing.lis` (không phải
+  `FIN CORRECTE`) + `My work is done` ra stdout
+- `.opt` format: `temps; bief; section; absc; ZREF; Z; QMIN; QMAJ; KMIN; KMAJ; FR; VMIN; Y; Q`
+- Warm-up: `--eval-start 2011-10-08` bỏ 7 ngày đầu → eval 553 điểm
+- Repo **private** → AI không đọc được, phải upload/dán vào chat
+- Tải file AI gửi **thẳng vào `src/`**, không qua Downloads

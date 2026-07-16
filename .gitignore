@@ -1,38 +1,18 @@
-# ---- File kết quả MASCARET nặng (không commit, tái tạo từ script) ----
+# File nang / sinh ra
 *.opt
-*.lis
-listing.lis
-ResultatsOpthyca.opt
-net_ecr.rep
-net.tmp
-
-# ---- Output lớn / trung gian ----
-output/run/**/*.opt
-output/**/*.png.bak
-
-# ---- Data nguồn MIKE (đọc-chỉ, nằm ngoài repo — không bao giờ copy vào) ----
-data_ref/*.nwk11
-data_ref/*.xns11
-data_ref/*.bnd11
-data_ref/*.dfs0
-
-# ---- Python ----
+*.rep
+*.bak
+*.bak2
+*:Zone.Identifier
 __pycache__/
 *.pyc
-*.pyo
-.venv/
-venv/
-.ipynb_checkpoints/
 
-# ---- VSCode / hệ điều hành ----
-.vscode/
-.DS_Store
-*.swp
+# Thu muc lam viec — tai tao bang B_build_grid.py + C_* + mascaret
+output/grid/
+output/run_all_log.txt
 
-# ---- Sao lưu tạm ----
-*.bak
-geometrie.bak
-phien_hom_nay.txt
-*:Zone.Identifier
-output/grid/*/ResultatsOpthyca.opt
-output/grid/*/*.opt
+# Thu muc chay lai cua goi — tai tao bang RUN.sh
+runs/*/work/
+
+# Ket qua da dong goi trong runs/ roi
+listing.lis

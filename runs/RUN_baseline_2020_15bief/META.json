@@ -1,0 +1,66 @@
+{
+  "ten": "baseline_2020_15bief",
+  "ngay_dong_goi": "2026-07-16 17:52:14",
+  "ghi_chu": "v2 chay thong lan dau voi mat cat THUC DO (khong ha day nhu V1). 15 bief, 176 PROFIL, topo 2021_SIWRP_QHPCTT. Toa do 5 tram da chot va kiem chung bang chieu len mang MIKE. ChauDoc Q_KGE -2.44(V1) -> 0.74; TanChau 0.53 -> 0.71; VamNao -1.41 -> 0.30.",
+  "git": {
+    "commit": "f96c2d6",
+    "clean": false
+  },
+  "luoi": {
+    "n_bief": 15,
+    "n_nut": 7,
+    "n_profil": 176
+  },
+  "tham_so": {
+    "tempsMax": "2592000.0",
+    "pasTemps": "300.0",
+    "pasStock": "12",
+    "hauteurEauMini": "0.005",
+    "coefLitMin": "40.0 40.0 40.0 40.0 40.0 40.0 40.0 40.0 40.0 40.0 40.0 40.0 40.0 40.0 40.0",
+    "coefLitMaj": "40.0 40.0 40.0 40.0 40.0 40.0 40.0 40.0 40.0 40.0 40.0 40.0 40.0 40.0 40.0",
+    "code": "2",
+    "versionCode": "3",
+    "nb_bief": 15,
+    "nb_nut": 7
+  },
+  "nguon_mat_cat": "survey 2020 / MIKE topo 2021_SIWRP_QHPCTT (BO 2006)",
+  "thoi_gian_chay_s": 36.7,
+  "froude_max": 0.525,
+  "ket_qua": {
+    "TanChau": {
+      "WL_NSE": -103.61,
+      "WL_KGE": -0.647,
+      "Q_NSE": 0.564,
+      "Q_KGE": 0.706,
+      "n": 553.0
+    },
+    "ChauDoc": {
+      "WL_NSE": -34.014,
+      "WL_KGE": -1.499,
+      "Q_NSE": 0.566,
+      "Q_KGE": 0.737,
+      "n": 553.0
+    },
+    "VamNao": {
+      "WL_NSE": null,
+      "WL_KGE": null,
+      "Q_NSE": -169.784,
+      "Q_KGE": 0.301,
+      "n": 553.0
+    },
+    "MyThuan": {
+      "WL_NSE": 0.63,
+      "WL_KGE": 0.58,
+      "Q_NSE": -0.825,
+      "Q_KGE": 0.432,
+      "n": 553.0
+    },
+    "CanTho": {
+      "WL_NSE": -2.287,
+      "WL_KGE": 0.433,
+      "Q_NSE": -0.136,
+      "Q_KGE": 0.607,
+      "n": 553.0
+    }
+  }
+}
