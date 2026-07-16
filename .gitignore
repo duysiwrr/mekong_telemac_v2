@@ -33,3 +33,4 @@ venv/
 *.bak
 geometrie.bak
 phien_hom_nay.txt
+*:Zone.Identifier
