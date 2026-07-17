@@ -87,9 +87,30 @@ class _NetFilter:
     # Cắt bỏ toàn bộ phía thượng lưu (Kratie/Campuchia) vì gán biên Q tại đây.
     UPSTREAM_BRANCHES = ["Tien", "BASSAC"]
     UPSTREAM_BRANCH = "Tien"        # tương thích ngược (dùng phần tử đầu)
-    # nhánh Campuchia / thượng lưu Tân Châu-Châu Đốc: loại thẳng
-    DROP_UPSTREAM = ["MekongCam", "BassacCam", "BASSACCam", "Tonle_Sap",
-                     "GREATLAKE", "Mkampoul_s", "Stung-Takaev", "Dong Nai"]
+    # Nhánh NGOÀI VÙNG NGHIÊN CỨU — loại thẳng.
+    # 17/07: đối chiếu 124 biên của `--subset full` với Boundary_2011.bnd11
+    # (1709 BndItem) → 24 biên không có số liệu. Rà ra: 15 nhánh Cam*
+    # (Campuchia — bản cũ chỉ bắt MekongCam/BassacCam, SÓT Cam6..Cam49)
+    # + 11 nhánh Sài Gòn/Đồng Nai/Vàm Cỏ (ngoài ĐBSCL).
+    #
+    # ⚠ VÀM CỎ: `Vam Co`, `Vam Co Dong`, `Vam Co Tay` NHẬN NƯỚC TỪ ĐỒNG THÁP
+    #   MƯỜI. Bỏ hẳn → mất đường thoát của ĐTM. Nhưng WL_OBS CÓ `H_TanAn`,
+    #   `H_BenLuc` (trên Vàm Cỏ) → vẫn gán biên được nếu muốn giữ.
+    #   → Tạm bỏ để tập trung vùng nghiên cứu. KHI LÀM ĐTM PHẢI CÂN NHẮC LẠI.
+    DROP_UPSTREAM = [
+        # --- Campuchia / thượng lưu Tân Châu–Châu Đốc ---
+        "MekongCam", "BassacCam", "BASSACCam", "Tonle_Sap",
+        "GREATLAKE", "Mkampoul_s", "Stung-Takaev",
+        "Cam6", "Cam7", "Cam8", "Cam30", "Cam31", "Cam32", "Cam33", "Cam34",
+        "Cam35", "Cam36", "Cam37", "Cam38", "Cam39", "Cam42", "Cam49",
+        # --- Sài Gòn – Đồng Nai (ngoài ĐBSCL) ---
+        "Dong Nai", "Sai Gon", "Vinh Cuu", "K. LONG TAU", "R.PHUOC KIENG",
+        "Can Giuoc", "Song Kinh",
+        # --- Vàm Cỏ (xem cảnh báo ở trên) ---
+        "Vam Co", "Vam Co Dong", "Vam Co Tay", "East Vaico",
+        # --- khác ---
+        "SongBinhDi",
+    ]
     WIDTH_MIN       = 50.0          # m — kênh hẹp hơn bị loại (trừ nhánh có biên)
     MAX_WIDTH       = 3000.0        # m — rộng hơn = ô trữ (Biển Hồ) -> loại
     SPLIT_TOL       = 500.0         # m — dung sai cắt nhánh cha tại junction
