@@ -846,3 +846,295 @@ python3 src/D_run_eval.py --outdir output/grid/truc_du --eval-start 2011-10-08
 ```
 
 ⚠️ **BẮT BUỘC `--eval-start 2011-10-08`** (bỏ 7 ngày warm-up) → n=553.
+
+---
+---
+
+# NHẬT KÝ PHIÊN 3B — 17/07/2026 chiều (mở khóa biên toàn ĐBSCL)
+
+**MỐC: giải được bài toán "biên cho kênh nội đồng" — thứ chặn đường mở rộng
+từ đầu dự án. Nhưng lưới `paA` CHƯA chạy thông.**
+
+---
+
+## 1. 🔑 CHÌA KHÓA: `Boundary_2011.bnd11` có sẵn biên cho MỌI kênh cụt
+
+**Vấn đề tưởng là bế tắc:** `--subset full` sinh 4584 bief / **126 biên tự do**.
+`MAP_SONG` gõ tay chỉ biết 10 → 116 biên không có số liệu → tưởng phải bịa Q=0.
+
+**Sự thật:** `.bnd11` có **1709 BndItem**. MIKE đã gán sẵn biên cho mọi nhánh:
+
+```
+DescType = <type>, <sub>, '<nhanh>', <CHAINAGE>, 0, '', '<nhan/tram>'
+Inflow   = 2,0,0, |<file.dfs0>|, 0, <idx>, '<ten item>', 0, 1
+```
+
+| type | nghĩa | ví dụ |
+|---|---|---|
+| **0** | **biên mở (cửa biển)** — 102 cái | `0,5,'CuaCoChien',30881,..,'Ben Trai'` |
+| 1 | nhu cầu nước (`Waterdemand2.dfs0`, 1595 cái) | `1,0,'BASSAC',74310,..,'W16'` |
+| 5 | biên vùng | `5,0,'AMAB7',0,..,'Rach Gia'` |
+
+**Kiểm chứng ngược:** type=0 khớp **3/3** với `MAP_SONG` gõ tay
+(`CuaCoChien→Ben Trai`, `CuaTieu→Vam Kenh`, `Ham Luong→An Thuan`)
+→ cách map biên→trạm của ta ĐÚNG, chỉ thiếu độ phủ.
+
+**Script mới `G_doc_bnd11.py`** → `data_ref/catalog/bnd_map.csv`:
+nhánh | chainage | type | nhãn | file_dfs0 | item | **cot_obs** | co_so_lieu
+
+**Kết quả:** 93/102 biên mở tra được cột OBS. 9 cái không tra được đều có lý do:
+`My Thanh` ×3 (không có trạm trong WL_OBS — dùng `H_TranDe` thay),
+Campuchia ×2, `Tri An`/`Dau Tieng`/`Kratie`/`GREATLAKE` (ngoài vùng).
+
+**`C_assign_boundaries` giờ 3 tầng:**
+1. `MAP_SONG` gõ tay → `TanChau`, `ChauDoc` (biên Q ta tự gán tại điểm cắt
+   thượng lưu — MIKE lấy từ Kratie nên KHÔNG có entry, ĐÚNG thiết kế) + 6 cửa
+2. `bnd_map.csv` → biên MIKE gán sẵn
+3. Còn lại → **Q=0** (kênh cụt/công trình `*_cau`, `Dap_Tha_La`)
+
+**paA:** 9 gõ tay + **132 từ bnd_map** + 32 Q=0 = 173 biên.
+Trước: 9. Giờ: **141 biên có số liệu thật.**
+
+---
+
+## 2. ⛔ GIỚI HẠN CỨNG CỦA MASCARET — không sửa được bằng lưới
+
+```
+lec_reseau.f90:107   character(len=8192) :: line
+```
+
+`.xcas` với 4513 bief → thẻ `<abscDebut>` = **57555 ký tự** → bị cắt ở 8192
+→ `Fortran runtime error: Bad integer for item 1 in list input`
+
+**16 thẻ vượt 8192** khi lưới 4513 bief. Dài nhất 57555.
+
+**NGÂN SÁCH: ~700 bief.** (8192 ÷ ~11 ký tự/bief cho `abscDebut`)
+
+| Lưới | bief | Thẻ dài nhất | |
+|---|---|---|---|
+| `du_k30` (baseline) | 47 | 135 | ✓ |
+| `truc` | 82 | ~250 | ✓ |
+| **`paA`** | **423** | **4963** | ✓ còn dư 40% |
+| `full` | 4513 | 57555 | ✗ |
+
+**QUYẾT ĐỊNH: KHÔNG sửa source TELEMAC.** Nó đã chạy thông 4 lần —
+vấn đề nằm ở lưới ta sinh quá rối, không phải công cụ.
+Đơn giản hóa LƯỚI, không sửa CÔNG CỤ.
+(Đã suýt đi sai hướng: định `sed len=8192 → 262144` rồi build lại.)
+
+---
+
+## 3. LƯỚI `paA` — thuật toán lọc chốt
+
+**GIỮ CỨNG:**
+- 11 nhánh TRỤC: `Tien, BASSAC, VamNao, CoChien, Ham Luong` + 6 cửa
+- **95 nhánh CÓ BIÊN** trong `bnd_map.csv` — cửa ra biển. **Bỏ là mạng không thoát.**
+  (Duy: *"có biên từ số liệu thực đo là phải giữ"*)
+
+**LỌC phần còn lại:** `cấp ≤ 2` (BFS từ TRỤC) **và** `rộng ≥ 100m`
+
+→ **208 nhánh → 423 bief / 221 nút / 173 biên / 11232→? PROFIL**
+
+**Bảng 6 phương án đã đo** (luôn giữ TRỤC + 95 biên):
+
+| K | W | nhánh | ~bief | |
+|---|---|---|---|---|
+| 1 | 100m | 173 | 415 | |
+| 1 | 80m | 196 | 470 | |
+| 2 | 100m | **208** | **423 (thật)** | ← **PA A** |
+| 2 | 80m | 288 | 691 | sát trần |
+| 3 | 100m | 234 | 562 | |
+| 2 | 60m | 374 | 898 | ✗ vượt |
+| 3 | 80m | 354 | 850 | ✗ vượt |
+
+Tỉ lệ thật: **2.03 bief/nhánh** (không phải 2.4 như cù lao).
+
+**File danh sách:** `/tmp/pa_A.txt` (sinh lại bằng đoạn script trong §6)
+**Dùng:** `python3 src/B_build_grid.py --subset-file /tmp/pa_A.txt --outdir output/grid/paA`
+
+---
+
+## 4. PHÂN CẤP MẠNG (BFS từ TRỤC) — ledger 1847 nhánh
+
+| cấp | n | ≥60m | ≥80m | ≥100m |
+|---|---|---|---|---|
+| 0 (TRỤC) | 11 | 11 | 11 | 11 |
+| 1 (nối trực tiếp) | 177 | 136 | 98 | 75 |
+| 2 | 339 | 148 | 99 | 41 |
+| 3 | 332 | 118 | 73 | 31 |
+| 4 | 378 | | | |
+| 5–9 | 610 | | | |
+
+**Cô lập: 0.** Mạng sâu tới **cấp 9** (BFS 5 vòng của tôi lúc đầu SAI → 40 nhánh
+báo nhầm là "chơi vơi").
+
+**Lọc theo chiều dài/độ thẳng VÔ DỤNG:**
+- P50 chiều dài = 5.95 km, P75 = 11.6 km → không có "ngắn ngủn" rõ rệt
+- Độ thẳng P75 = 1.15, P90 = 1.44 → gần như mọi kênh đều thẳng (kênh đào)
+
+---
+
+## 5. ❌ LỖI CÒN LẠI — `paA` CHƯA CHẠY THÔNG
+
+```
+=> ERROR <=
+Open boundary 1 : Z_BASI_CR_10  is with a supercritical flow
+```
+
+`BASI_CR` = kênh nội đồng, được gán Q=0. **Chưa xem mặt cắt nó.**
+→ Đúng LỖI 6 playbook V1: *"mặt cắt co thắt cục bộ → Froude>1"*
+→ Duy: *"mặt cắt các kênh đóng vai trò quan trọng tạo ra lỗi nếu chúng vô lý"*
+
+**Việc kế tiếp:** xem mặt cắt `BASI_CR` (tra `numExtrem` → bief nào), nếu vô lý
+(rộng vài m + sâu) → bỏ khỏi subset hoặc lọc `WIDTH_MIN`.
+
+Cũng nên kiểm: 41/11712 mặt cắt có **đáy > 0m** (`Cam8` +2.00m),
+`kenhkn8` đáy **−80.59m** (phi lý — sông Tiền sâu nhất mới −38m),
+1414/11712 mặt cắt rộng **<20m** (`NETF.WIDTH_MIN=50` có trong config nhưng
+KHÔNG thấy áp dụng).
+
+---
+
+## 6. LỖI MỚI CHO PLAYBOOK (14–18)
+
+### LỖI 14 — `.xcas` thẻ >8192 ký tự → "Bad integer"
+`lec_reseau.f90:107 character(len=8192)`. Lưới >~700 bief là vỡ.
+**Không sửa source.** Giảm số bief.
+
+### LỖI 15 — Q=0 phải sửa **CẢ HAI** chỗ trong xcas
+Gán Q=0 cho kênh cụt nhưng `write_xcas` khai `typeCond=2` (Z) →
+MASCARET đọc `0.0` như **cao độ 0m** → supercritical → STOP 1.
+**Phải sửa:**
+1. `<typeCond>` trong `<extrLibres>`: 2 → 1
+2. `<type>` trong `<structureParametresLoi>`: 2 → 1
+   (KHÔNG phải `<typeLoi>` — thẻ đó không tồn tại!)
+
+Sai một chỗ → `"The graph #N of type #2 is incompatible with the boundary
+condition #N of type 1"`.
+
+Cấu trúc đúng (đối chiếu `du_k30` đã FIN CORRECTE):
+```xml
+<structureParametresLoi>
+  <nom>Q_ChauDoc</nom>
+  <type>1</type>            <!-- Q -> 1 | Z -> 2, PHẢI KHỚP typeCond -->
+  <donnees><fichier>Q_ChauDoc.loi</fichier>...
+```
+
+### LỖI 16 — `| head` GIẾT script đang ghi file ⚠️
+```bash
+python3 src/C_assign_boundaries.py ... | head -8     # SAI!
+```
+SIGPIPE giết script sau 8 dòng → chỉ ghi vài `.loi`, **171/173 còn triều sin giả**
+→ MASCARET đọc sin giả → supercritical. Mất 1 lượt chẩn đoán.
+**Dùng `| tail` hoặc `> log 2>&1`.**
+
+### LỖI 17 — OFFSET tràn định dạng `.opt`
+`OFFSET = 1e6` × 423 bief = **422 triệu** → `.opt` ghi `"**"` và `***********`.
+**Sửa `config.py`: OFFSET 1e6 → 2e5** → absc max 84.4 triệu, vừa.
+Ràng buộc: `OFFSET > bief dài nhất` (paA 96.7km, du_k30 86.5km → 200km an toàn)
+và `OFFSET × nb_bief < 1e8`.
+`D_run_eval` KHÔNG dùng OFFSET (map trạm bằng `bief_map.txt`) → baseline an toàn.
+
+### LỖI 18 — bỏ Vàm Cỏ làm biên TĂNG
+Thử lọc `Vam Co/Dong/Tay` → biên **124 → 155**. Vì 30+ kênh ĐTM
+(`Thu_Thua`, `kenhLA285..508`, `T3..T8`, `KENHTG1`) thoát vào Vàm Cỏ → thành cụt.
+→ **KHÔNG lọc nhánh mà kênh nội đồng đang thoát vào.**
+`WL_OBS` có `H_TanAn`, `H_BenLuc` trên Vàm Cỏ → gán biên được.
+
+---
+
+## 7. `DROP_UPSTREAM` mở rộng 8 → 30 nhánh
+
+| Nhóm | Nhánh |
+|---|---|
+| Campuchia | `MekongCam, BassacCam, Tonle_Sap, GREATLAKE, Mkampoul_s, Stung-Takaev, Cam6/7/8/30..49` (15 nhánh Cam*) |
+| Sài Gòn–Đồng Nai | `Dong Nai, Sai Gon, Vinh Cuu, K. LONG TAU, R.PHUOC KIENG, Can Giuoc, Song Kinh, East Vaico, R. BEN NGHE*, S.BenCat, R.NhanhCanGiuoc*, RachTra_*, RACHTRAQUAN, ThayCaiRachTra, KENHTHAYCAI*` |
+| **KHÔNG lọc** | **`Vam Co`, `Vam Co Dong`, `Vam Co Tay`** — xem LỖI 18 |
+
+**Ledger: 1899 → 1847 nhánh. Baseline `truc_du` VẪN 22/47/224** (đã kiểm 3 lần).
+
+---
+
+## 8. LÀM TIẾP Ở NHÀ
+
+```bash
+export MEKONG_MACHINE=home
+cd ~/mekong_telemac_v2
+git pull origin v3-kenh-truc
+python3 -m config.config              # phai ra 5 file [OK]
+```
+⚠ `config.py` máy home trỏ `/mnt/c/Users/win/...` — máy cơ quan là `Hello`.
+Nếu sai path, sửa `_BASE_BY_MACHINE`.
+
+**Sinh lại `/tmp/pa_A.txt`:**
+```bash
+python3 - <<'PYEOF'
+import csv, pandas as pd
+from collections import defaultdict, deque
+noi = defaultdict(set)
+for row in csv.reader(open("output/ledger/nodes.csv", encoding="utf-8"), delimiter=";"):
+    if len(row)<4: continue
+    for it in row[3].split("|"):
+        p = it.split(":")
+        if p[0]: noi[p[0]].add(row[1]); noi[row[1]].add(p[0])
+giu = {r["ten_mike"]: float(r["width_m"] or 0) for r in csv.DictReader(
+       open("output/ledger/branches.csv", encoding="utf-8"), delimiter=";") if r["giu"]=="GIU"}
+TRUC = {"Tien","BASSAC","VamNao","CoChien","Ham Luong","CuaTieu","CuaDai",
+        "CuaCoChien","CuaCungHau","CuaDinhAn","CuaTranDe"}
+cap = {n: None for n in giu}; dq = deque()
+for n in TRUC & set(giu): cap[n]=0; dq.append(n)
+while dq:
+    u = dq.popleft()
+    for v in noi[u]:
+        if v in giu and cap[v] is None: cap[v]=cap[u]+1; dq.append(v)
+bien = set(pd.read_csv("data_ref/catalog/bnd_map.csv", sep=";").query("type==0")["nhanh"]) & set(giu)
+S = {n for n in giu if (cap[n] is not None and cap[n]<=2) or n in bien or n in TRUC}
+S = {n for n in S if giu[n]>=100 or n in bien or n in TRUC}
+open("/tmp/pa_A.txt","w").write("\n".join(sorted(S)))
+print(f"PA A: {len(S)} nhanh -> /tmp/pa_A.txt")
+PYEOF
+```
+
+**Chạy `paA` (KHÔNG dùng `| head`!):**
+```bash
+python3 src/B_build_grid.py --subset-file /tmp/pa_A.txt --outdir output/grid/paA > /tmp/g.log 2>&1
+python3 src/C_assign_boundaries.py --outdir output/grid/paA \
+    --start 2011-10-01 --end 2011-10-31 > /tmp/bnd.log 2>&1
+python3 src/C_init_smart.py --outdir output/grid/paA \
+    --z-sea 3.0 --slope 0.25 --h-min 8.0 > /tmp/init.log 2>&1
+cp output/grid/du_k30/{Abaques.txt,Controle.txt,dico_Courlis.txt} output/grid/paA/
+cd output/grid/paA && mascaret.py mascaret.xcas > /tmp/run.log 2>&1
+grep -i -A4 "=> ERROR" /tmp/run.log
+```
+
+**VIỆC ĐẦU TIÊN: sửa `Z_BASI_CR_10 supercritical`**
+```bash
+# tra numExtrem -> bief nao
+python3 -c "
+import re
+from pathlib import Path
+x = Path('output/grid/paA/mascaret.xcas').read_text(encoding='latin-1', errors='replace')
+m = re.search(r'<extrLibres>(.*?)</extrLibres>', x, re.S)
+noms = re.findall(r'<string>([^<]*)</string>', m.group(1))
+ext = re.search(r'<numExtrem>([^<]*)</numExtrem>', m.group(1)).group(1).split()
+i = noms.index('Z_BASI_CR_10')
+e = int(ext[i]); print(f'numExtrem={e} -> Bief_{(e+1)//2}')
+"
+# roi xem mat cat bief do trong geometrie
+```
+
+---
+
+## 9. BASELINE VẪN LÀ `truc_du` K=30 (47 bief)
+
+`paA` chưa chạy thông → **KHÔNG thay baseline**.
+Gói: `runs/RUN_baseline_truc_du_K30/` → `bash RUN.sh` (41s)
+⚠ `input/geometrie` trong gói ghi bằng **OFFSET=1e6**. Config giờ là 2e5.
+Sinh lại từ `B_build_grid` sẽ ra geometrie khác — nhưng gói vẫn chạy được
+độc lập (có sẵn geometrie).
+
+**Kiểm baseline sau mọi thay đổi:**
+```bash
+python3 src/B_build_grid.py --subset truc_du --outdir /tmp/kt > /tmp/kt.log 2>&1
+grep -E "Tập con|SPLIT|Geometrie" /tmp/kt.log     # PHAI ra 22 / 47 / 224
+```
