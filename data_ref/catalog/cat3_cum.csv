@@ -1,0 +1,128 @@
+pre;num;n_mat_cat;hau_to;n_suf_nhanh;nhanh_mike;n_nhanh_mike;khop;d_max
+CC;1;1;;1;CoChien;1;OK;48.2
+CC;2;1;;1;CoChien;1;OK;17.0
+CC;3;1;;1;CoChien;1;OK;12.5
+CC;4;2;,P;2;CoChien,CoChien_1;2;OK;28.1
+CC;5;1;;1;CoChien;1;OK;136.5
+CC;6;2;,P;2;CoChien,CoChien_2;2;OK;61.1
+CC;7;2;,P;2;CoChien,CoChien_3;2;OK;50.7
+CC;8;2;,P;2;CoChien,CoChien_3;2;OK;50.9
+CC;9;2;,P;2;CoChien,CoChien_3;2;OK;57.2
+CC;10;1;;1;CoChien;1;OK;30.8
+CC;11;1;;1;CoChien;1;OK;307.9
+CC;12;2;,P;2;CoChien,CoChien_4;2;OK;29.0
+CC;13;1;;1;CoChien;1;OK;203.9
+CC;14;2;,P;2;CuaCoChien,CuaCungHau;2;OK;67.4
+CC;15;2;,P;2;CuaCoChien,CuaCungHau;2;OK;50.5
+CC;16;2;,P;2;CuaCoChien,CuaCungHau;2;OK;38.5
+CC;17;1;;1;CuaCoChien;1;OK;113.9
+CC;18;2;,P;2;CuaCoChien,CuaCungHau;2;OK;137.7
+CC;19;2;,P;2;CuaCoChien,CuaCungHau;2;OK;268.7
+HL;1;1;;1;Ham Luong;1;OK;13.8
+HL;2;3;,P1,P2;3;Ham Luong,HamLuong_1,HamLuong_2;3;OK;35.9
+HL;3;1;;1;Ham Luong;1;OK;70.7
+HL;4;1;;1;Ham Luong;1;OK;80.9
+HL;5;1;;1;Ham Luong;1;OK;22.0
+HL;6;1;;1;Ham Luong;1;OK;8.1
+HL;7;3;,P1,P2;3;Ham Luong,HamLuong_3,HamLuong_4;3;OK;36.1
+HL;8;2;,P;2;Ham Luong,HamLuong_4;2;OK;34.0
+HL;9;3;,P1,P2;3;Ham Luong,HamLuong_4,HamLuong_5;3;OK;48.1
+HL;10;2;,P;2;Ham Luong,HamLuong_5;2;OK;19.7
+HL;11;1;;1;Ham Luong;1;OK;7.3
+HL;12;1;;1;Ham Luong;1;OK;105.2
+HL;13;2;,P;2;Ham Luong,HamLuong_6;2;OK;120.2
+HL;14;1;;1;Ham Luong;1;OK;93.4
+HL;15;1;;1;Ham Luong;1;OK;13.2
+HL;16;1;;1;Ham Luong;1;OK;131.0
+SH;1;3;,A,B;1;BASSAC;1;OK;12.7
+SH;2;1;;1;BASSAC;1;OK;1.8
+SH;3;1;;1;BASSAC;1;OK;12.0
+SH;4;1;;1;BASSAC;1;OK;13.2
+SH;5;2;,P;2;BASSAC,Hau_1;2;OK;10.6
+SH;6;1;;1;BASSAC;1;OK;22.2
+SH;7;1;;1;BASSAC;1;OK;3.7
+SH;8;1;;1;BASSAC;1;OK;8.0
+SH;9;1;;1;BASSAC;1;OK;48.6
+SH;10;1;;1;BASSAC;1;OK;5.0
+SH;11;1;;1;BASSAC;1;OK;4.7
+SH;12;1;;1;BASSAC;1;OK;38.7
+SH;13;1;;1;BASSAC;1;OK;117.2
+SH;14;1;;1;BASSAC;1;OK;17.2
+SH;15;2;,P;2;BASSAC,Hau_2;2;OK;62.3
+SH;16;1;;1;BASSAC;1;OK;4.9
+SH;17;2;,P;2;BASSAC,Hau_3;2;OK;38.9
+SH;18;1;;1;BASSAC;1;OK;14.4
+SH;19;1;;1;BASSAC;1;OK;24.4
+SH;20;1;;1;BASSAC;1;OK;54.0
+SH;21;2;,P;2;BASSAC,Hau_4;2;OK;45.1
+SH;22;2;,P;2;BASSAC,Hau_4;2;OK;19.6
+SH;23;2;,P;2;BASSAC,Hau_4;2;OK;16.1
+SH;24;1;;1;BASSAC;1;OK;39.7
+SH;25;1;;1;BASSAC;1;OK;55.3
+SH;26;1;;1;BASSAC;1;OK;39.0
+SH;27;2;,P;2;BASSAC,Hau_5;2;OK;60.5
+SH;28;1;;1;BASSAC;1;OK;40.0
+SH;29;2;,P;2;BASSAC,Hau_6;2;OK;55.3
+SH;30;1;;1;BASSAC;1;OK;148.9
+SH;31;2;,P;2;BASSAC,Hau_7;2;OK;28.1
+SH;32;2;,P;2;BASSAC,Hau_7;2;OK;70.0
+SH;33;4;,P1,P2,P3;4;BASSAC,Hau_7,Hau_8,Hau_9;4;OK;53.7
+SH;34;3;,P2,P3;3;BASSAC,Hau_7,Hau_8;3;OK;134.0
+SH;35;1;;1;Hau_7;1;OK;20.0
+SH;36;2;,A;1;BASSAC;1;OK;107.4
+SH;37;2;,P;2;CuaDinhAn,CuaTranDe;2;OK;158.7
+SH;38;2;,P;2;CuaDinhAn,CuaTranDe;2;OK;54.5
+SH;39;2;,P;2;CuaDinhAn,CuaTranDe;2;OK;99.7
+SH;40;2;,P;2;CuaDinhAn,CuaTranDe;2;OK;36.8
+SH;41;2;,P;2;CuaDinhAn,CuaTranDe;2;OK;121.6
+SH;42;2;,P;2;CuaDinhAn,CuaTranDe;2;OK;190.6
+SH;43;2;,P;2;CuaDinhAn,CuaTranDe;2;OK;110.2
+ST;1;1;;1;Tien;1;OK;136.8
+ST;2;2;,P;2;Tien,Tien_1;2;OK;44.9
+ST;3;1;;1;Tien;1;OK;153.5
+ST;4;1;;1;Tien;1;OK;21.1
+ST;5;2;,P;2;Tien,Tien_3;2;OK;47.9
+ST;6;1;;1;Tien;1;OK;97.6
+ST;7;1;;1;Tien;1;OK;27.2
+ST;8;1;;1;Tien;1;OK;37.2
+ST;9;1;;1;Tien;1;OK;21.5
+ST;10;1;;1;Tien;1;OK;20.1
+ST;11;1;;1;Tien;1;OK;87.2
+ST;12;3;,P,P;3;Tien,Tien_4;2;LECH;140.9
+ST;13;1;;1;Tien;1;OK;56.4
+ST;14;2;,P;2;Tien,Tien_4;2;OK;25.3
+ST;15;3;,P1,P2;3;Tien,Tien_5,Tien_6;3;OK;46.7
+ST;16;2;,P;2;Tien;1;LECH;81.8
+ST;17;1;;1;Tien;1;OK;138.1
+ST;18;1;;1;Tien;1;OK;116.5
+ST;19;1;;1;Tien;1;OK;124.9
+ST;20;1;;1;Tien;1;OK;18.2
+ST;21;1;;1;Tien;1;OK;54.7
+ST;22;1;;1;Tien;1;OK;34.6
+ST;23;1;;1;Tien;1;OK;50.4
+ST;24;1;;1;Tien;1;OK;28.3
+ST;25;1;;1;Tien;1;OK;129.6
+ST;26;1;;1;Tien;1;OK;11.2
+ST;27;2;,P;2;CaiBe_TG,Tien;2;OK;278.3
+ST;28;3;,P1,P2;3;CaiBe_TG,Tien;2;LECH;19.4
+ST;29;1;;1;Tien;1;OK;77.2
+ST;30;1;;1;Tien;1;OK;17.6
+ST;31;2;,P;2;NamThon,Tien;2;OK;16.5
+ST;32;1;;1;Tien;1;OK;30.9
+ST;33;5;,A,AP1,P,P2;4;Tien,Tien_8,Tien_9;3;LECH;46.0
+ST;34;2;,P;2;Tien_7,Tien_8;2;OK;37.0
+ST;35;1;;1;Tien;1;OK;45.6
+ST;36;1;;1;Tien;1;OK;37.4
+ST;37;3;CD,CDP,CT;3;CuaDai,CuaDai_1,CuaTieu;3;OK;143.7
+ST;38;3;CD,CDP,CT;3;CuaDai,CuaDai_2,CuaTieu;3;OK;15.2
+ST;39;2;CD,CT;2;CuaDai,CuaTieu;2;OK;106.0
+ST;40;2;CD,CT;2;CuaDai,CuaTieu;2;OK;176.3
+ST;41;4;CD,CDP1,CDP2,CT;4;CuaDai,CuaDai_2,CuaDai_3,CuaTieu;4;OK;167.4
+ST;42;2;CD,CT;2;CuaDai,CuaTieu;2;OK;185.9
+ST;43;2;CD,CT;2;CuaDai,CuaTieu;2;OK;73.5
+VN;1;2;,;2;Tien_2;1;LECH;67.5
+VN;2;1;;1;VamNao;1;OK;54.6
+VN;3;1;;1;VamNao;1;OK;108.8
+VN;4;1;;1;VamNao;1;OK;5.4
+VN;5;1;;1;VamNao;1;OK;21.0
+VN;6;1;;1;VamNao;1;OK;23.1

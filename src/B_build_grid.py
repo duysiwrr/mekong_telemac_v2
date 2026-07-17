@@ -48,6 +48,27 @@ BACKBONE = ["Tien", "BASSAC", "VamNao", "CoChien", "Ham Luong",
             "CuaTieu", "CuaDai", "CuaCoChien", "CuaCungHau", "CuaDinhAn",
             "CuaTranDe"]
 
+# ---- CU LAO co survey 2020 (44 nhanh, xem cat3_nhanh.csv) ----
+# DONG BAO PHU THUOC da kiem: moi nhanh trong subset deu co nhanh no cam vao.
+# Cam nhau (KHONG duoc tach): Tien_8<-Tien_9 | Hau_8,Hau_9<-Hau_7
+#                             Tien_2->VamNao | BASSAC->CuaDinhAn
+#                             NamThon<-CaiBe_TG | CuaDai_2<-CuaDai_1,CuaDai_3
+CL_TIEN = ["Tien_1", "Tien_2", "Tien_3", "Tien_4", "Tien_5", "Tien_6",
+           "Tien_7", "Tien_8", "Tien_9", "CaiBe_TG", "NamThon"]
+CL_HAU = ["Hau_1", "Hau_2", "Hau_3", "Hau_4", "Hau_5", "Hau_6", "Hau_7",
+          "Hau_8", "Hau_9"]
+CL_CUADAI = ["CuaDai_1", "CuaDai_2", "CuaDai_3"]
+CL_COCHIEN = ["CoChien_1", "CoChien_2", "CoChien_3", "CoChien_4"]
+CL_HAMLUONG = ["HamLuong_1", "HamLuong_2", "HamLuong_3", "HamLuong_4",
+               "HamLuong_5", "HamLuong_6"]
+
+SUBSETS = {
+    "backbone": BACKBONE,
+    "truc":     BACKBONE + CL_TIEN + CL_HAU + CL_CUADAI,
+    "full44":   BACKBONE + CL_TIEN + CL_HAU + CL_CUADAI + CL_COCHIEN
+                + CL_HAMLUONG,
+}
+
 
 def norm(s):
     """CHI dung cho ten nhanh nwk11. KHONG dung cho location_id xns11 —
@@ -72,9 +93,13 @@ TOPO_UU_TIEN = ["2021_SIWRP_QHPCTT", "SIWRR2020", "DH2020", "2020_KHCN",
                 "2018", "2014", "2011_KHCN"]
 TOPO_CAM = ["2006", "2000", "2001", "TOPO?", "TGLX2010"]
 
-# location_id xns11 tuong ung moi nhanh nwk11 (KHOP CHINH XAC, khong norm).
-# Tra tu data_ref/catalog/catalog_mike.csv. Nhieu ten = nhieu dot khao sat.
-XNS_ALIAS = {
+# location_id xns11 <-> ten nhanh nwk11.
+# BAN CU go tay 11 dong -> khong co cu lao -> get_cross_sections tra [] -> bief rong.
+# BAN NAY tu sinh bang vn_norm(): 'Tien_1'->'TIEN1' khop location_id 'TIEN_1';
+# 'NamThon'->'NAMTHON' khop CA 'NAM THON' va 'NAMTHON' (2 dot khao sat, 12 mat cat).
+# An toan voi bay §3.3 (norm() gop 'CO CHIEN'+'COCHIEN') vi sau khi gom van
+# CHON 1 topo duy nhat theo TOPO_UU_TIEN — khong bao gio tron 2 dot.
+XNS_ALIAS_TAY = {
     "Tien":       ["TIEN", "Tien"],
     "BASSAC":     ["BASSAC"],
     "VamNao":     ["VAMNAO"],
@@ -87,6 +112,17 @@ XNS_ALIAS = {
     "CuaDinhAn":  ["CUADINHAN"],
     "CuaTranDe":  ["CUATRANDE"],
 }
+
+
+def sinh_alias(ten_nhanh, locs_xns):
+    """Tra location_id khop voi ten nhanh nwk11 qua vn_norm.
+
+    Uu tien bang go tay (da kiem chung); neu khong co thi do vn_norm.
+    """
+    if ten_nhanh in XNS_ALIAS_TAY:
+        return XNS_ALIAS_TAY[ten_nhanh]
+    k = vn_norm(ten_nhanh)
+    return [l for l in locs_xns if vn_norm(l) == k]
 
 
 def ascii_safe(s):
@@ -137,7 +173,7 @@ def _rong(raw):
         return 0.0
 
 
-def get_cross_sections(path, verbose=True):
+def get_cross_sections(path, ten_nhanh=None, verbose=True):
     """Doc xns11 -> {ten_nhanh_nwk11: [(chainage, raw, topo)]}.
 
     KHAC BAN CU (nguon goc loi 701):
@@ -164,10 +200,14 @@ def get_cross_sections(path, verbose=True):
         except Exception:
             continue
 
+    locs_xns = sorted({loc for (loc, _t) in raw_by})
+    ds_nhanh = ten_nhanh if ten_nhanh else list(XNS_ALIAS_TAY)
+    alias_map = {t: sinh_alias(t, locs_xns) for t in ds_nhanh}
+
     res = {}
     if verbose:
         print("Mat cat MIKE (chon 1 topo/nhanh, KHONG tron):")
-    for ten, alias in XNS_ALIAS.items():
+    for ten, alias in alias_map.items():
         # moi (alias, topo) la 1 ung vien
         cand = {}
         for (loc, topo), lst in raw_by.items():
@@ -730,7 +770,7 @@ def write_init_lig(outdir, biefs, info, xsecs):
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--subset", default="backbone",
-                    choices=["backbone", "culao", "full"])
+                    choices=["backbone", "truc", "full44", "culao", "full"])
     ap.add_argument("--outdir", default=None)
     args = ap.parse_args()
     outdir = Path(args.outdir) if args.outdir else (CFG.OUT.GRID / args.subset)
@@ -744,17 +784,36 @@ def main():
                 kept.add(r["ten_mike"])
     if args.subset == "full":
         sel = kept
-    else:
+    elif args.subset in SUBSETS:
+        want = SUBSETS[args.subset]
+        sel = {n for n in kept if any(vn_norm(n) == vn_norm(b) for b in want)}
+        thieu = [b for b in want
+                 if not any(vn_norm(n) == vn_norm(b) for n in sel)]
+        if thieu:
+            print(f"   [!] {len(thieu)} nhanh trong SUBSETS['{args.subset}'] "
+                  f"KHONG co trong ledger: {thieu}")
+    else:  # culao
         sel = {n for n in kept if any(norm(n) == norm(b) for b in BACKBONE)}
-        if args.subset == "culao":
-            with open(CFG.OUT.LEDGER / "branches.csv", encoding="utf-8") as f:
-                for r in csv.DictReader(f, delimiter=";"):
-                    if r["giu"] == "GIU" and r.get("co_survey2020") == "yes":
-                        sel.add(r["ten_mike"])
+        with open(CFG.OUT.LEDGER / "branches.csv", encoding="utf-8") as f:
+            for r in csv.DictReader(f, delimiter=";"):
+                if r["giu"] == "GIU" and r.get("co_survey2020") == "yes":
+                    sel.add(r["ten_mike"])
     print(f"Tập con: {len(sel)} nhánh")
 
     mike = load_mike(sel)
     print(f"Connection: {len(mike)} nhánh")
+
+    # --- KIEM DONG BAO: nhanh cam vao nhanh NGOAI subset -> nut treo ---
+    ngoai = []
+    for nm, b in mike.items():
+        for lbl, conn in (("US", b["us"]), ("DS", b["ds"])):
+            if conn and conn[0] and conn[0] not in mike:
+                ngoai.append(f"{nm} {lbl}-> {conn[0]}@{conn[1]:.0f}")
+    if ngoai:
+        print(f"   [!] {len(ngoai)} lien ket ra NGOAI subset "
+              f"(se thanh extremite tu do -> can bien):")
+        for x in ngoai[:8]:
+            print(f"       {x}")
 
     biefs, bief_of = build_biefs(mike)
     print(f"SPLIT: {len(mike)} nhánh -> {len(biefs)} bief")
@@ -765,7 +824,18 @@ def main():
     nodes, extrem, free_ext = build_nodes(mike, bief_of)
     print(f"Nút: {len(nodes)} | extremité tự do: {len(free_ext)}")
 
-    xsecs = get_cross_sections(CFG.DATA.XNS11)
+    xsecs = get_cross_sections(CFG.DATA.XNS11, ten_nhanh=sorted(mike))
+
+    # --- CANH BAO nhanh chi 1 mat cat -> build_geometrie nhan doi -> LANG TRU ---
+    lt = sorted(n for n, v in xsecs.items() if len(v) == 1)
+    kh = sorted(n for n, v in xsecs.items() if len(v) == 0)
+    if kh:
+        print(f"\n   [!] {len(kh)} nhanh KHONG co mat cat MIKE: {kh}")
+    if lt:
+        print(f"   [!] {len(lt)} nhanh chi 1 mat cat -> bief LANG TRU "
+              f"(tiet dien khong doi):")
+        print(f"       {lt}")
+
     kiem_be_rong(xsecs)
     info, nprof = build_geometrie(outdir, biefs, xsecs)
     empty = [n for n, v in info.items() if v["nprof"] < 2]

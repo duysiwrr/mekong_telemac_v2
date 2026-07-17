@@ -1,0 +1,58 @@
+BANG DOI CHIEU 3 NGUON: survey 2020 / MIKE / TELEMAC
+========================================================================
+
+survey 2020 : 229 diem (201 co z)
+MIKE xns11  : 2362 location_id
+TELEMAC     : 11 nhanh trong luoi
+
+--- HAU TO ---
+  chinh     143
+  nhanh      80
+  bosung      4
+  to_hop      2
+
+--- CUM (cung so = cung vi tri doc song) ---
+  Tong cum        : 127
+  Cum chia nhanh  : 53
+  Cum LECH        : 5  (so hau to != so nhanh MIKE)
+
+--- GHEP survey <-> MIKE (185 cap) ---
+  |lech| be rong TB : 19.0 m
+  |lech| day TB     : 0.04 m
+  Cap giong nhau    : 181/185
+
+--- NHANH CANH BAO ---
+  BASSAC         sv=38 mike=40  BO_TOPO={'2006': 123}
+  Ham Luong      sv=16 mike=33  BO_TOPO={'2006': 46}
+  CoChien        sv=13 mike=13  BO_TOPO={'2006': 57}
+  CuaDai         sv= 7 mike= 7  THUA_KC=5.1km | BO_TOPO={'2006': 28}
+  CuaTieu        sv= 7 mike= 7  THUA_KC=5.1km
+  CuaTranDe      sv= 7 mike= 9  BO_TOPO={'2006': 26}
+  Hau_7          sv= 5 mike= 5  THUA_KC=5.7km
+  HamLuong_4     sv= 3 mike= 3  BO_TOPO={'2006': 2}
+  CaiBe_TG       sv= 2 mike= 2  THUA_KC=10.1km
+  CuaDai_2       sv= 2 mike= 2  THUA_KC=14.9km
+  HamLuong_5     sv= 2 mike= 2  THUA_KC=5.6km
+  Tien_2         sv= 2 mike= 2  THUA_KC=21.0km
+  Tien_4         sv= 2 mike= 2  THUA_KC=14.5km
+  Tien_8         sv= 2 mike= 1  CHI_1_MAT_CAT->lang_tru
+  CoChien_1      sv= 1 mike= 1  CHI_1_MAT_CAT->lang_tru | BO_TOPO={'2006': 10}
+  CoChien_2      sv= 1 mike= 1  CHI_1_MAT_CAT->lang_tru | BO_TOPO={'2006': 19}
+  CoChien_4      sv= 1 mike= 1  CHI_1_MAT_CAT->lang_tru
+  CuaDai_1       sv= 1 mike= 2  THUA_KC=6.0km
+  CuaDai_3       sv= 1 mike= 1  CHI_1_MAT_CAT->lang_tru
+  HamLuong_1     sv= 1 mike= 2  BO_TOPO={'2006': 4}
+  HamLuong_2     sv= 1 mike= 1  CHI_1_MAT_CAT->lang_tru | BO_TOPO={'2006': 11}
+  HamLuong_3     sv= 1 mike= 1  CHI_1_MAT_CAT->lang_tru | BO_TOPO={'2006': 2}
+  Hau_1          sv= 1 mike= 2  THUA_KC=8.1km
+  Hau_2          sv= 1 mike= 1  CHI_1_MAT_CAT->lang_tru
+  Hau_3          sv= 1 mike= 1  CHI_1_MAT_CAT->lang_tru
+  Hau_5          sv= 1 mike= 1  CHI_1_MAT_CAT->lang_tru
+  Hau_6          sv= 1 mike= 1  CHI_1_MAT_CAT->lang_tru
+  Hau_9          sv= 1 mike= 1  CHI_1_MAT_CAT->lang_tru
+  NamThon        sv= 1 mike= 3  THUA_KC=7.7km | BO_TOPO={'2006': 9}
+  Tien_1         sv= 1 mike= 1  CHI_1_MAT_CAT->lang_tru
+  Tien_5         sv= 1 mike= 1  CHI_1_MAT_CAT->lang_tru
+  Tien_6         sv= 1 mike= 1  CHI_1_MAT_CAT->lang_tru
+  Hau_10         sv= 0 mike= 1  CHI_1_MAT_CAT->lang_tru
+  Hau_11         sv= 0 mike= 2  THUA_KC=5.3km

@@ -39,18 +39,55 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 from config.config import CFG
 
-# (ten bien v2, nguon 'Q'|'H', ten cot OBS, typeLoi) — theo BND cua 24d2
-BND = [
-    ("Q_TanChau",         "Q", "Q_TanChau", 1),
-    ("Q_ChauDoc",         "Q", "Q_ChauDoc", 1),
-    ("Z_CuaTieu_16",      "H", "H_VamKenh", 2),
-    ("Z_CuaDai_12",       "H", "H_VamKenh", 2),
-    ("Z_Ham_Luong_20",    "H", "H_AnThuan", 2),
-    ("Z_CuaCoChien_8",    "H", "H_BenTrai", 2),
-    ("Z_CuaCungHau_10",   "H", "H_BenTrai", 2),
-    ("Z_CuaDinhAn_14",    "H", "H_TranDe",  2),
-    ("Z_CuaTranDe_18",    "H", "H_TranDe",  2),
-]
+# BAN CU hardcode so extremite ('Z_CuaTieu_16') -> CHET khi doi subset:
+#   luoi 11 nhanh -> ext 16 | luoi 34 nhanh -> ext 68 -> ghi sai ten .loi
+#   -> bien Z ma xcas dung van la TRIEU SIN GIA -> Erreur 701 (loi 6 playbook).
+# BAN NAY doc ten bien THAT tu <string> trong mascaret.xcas, boc so duoi,
+# roi tra theo TEN SONG. Quy luat anh xa bien->tram khong doi theo subset.
+MAP_SONG = {
+    "CuaTieu":    ("H", "H_VamKenh", 2),
+    "CuaDai":     ("H", "H_VamKenh", 2),
+    "Ham_Luong":  ("H", "H_AnThuan", 2),
+    "HamLuong":   ("H", "H_AnThuan", 2),
+    "CuaCoChien": ("H", "H_BenTrai", 2),
+    "CuaCungHau": ("H", "H_BenTrai", 2),
+    "CuaDinhAn":  ("H", "H_TranDe",  2),
+    "CuaTranDe":  ("H", "H_TranDe",  2),
+    # bien Q — ten khong co so duoi
+    "TanChau":    ("Q", "Q_TanChau", 1),
+    "ChauDoc":    ("Q", "Q_ChauDoc", 1),
+}
+
+
+def doc_bien_tu_xcas(outdir):
+    """mascaret.xcas -> [(ten_bien, nguon, cot_obs, typeLoi)] theo dung thu tu.
+
+    'Z_CuaTieu_68' -> boc 'Z_' + '_68' -> 'CuaTieu' -> tra MAP_SONG.
+    'Q_TanChau'    -> boc 'Q_'         -> 'TanChau' -> tra MAP_SONG.
+    """
+    x = (Path(outdir) / "mascaret.xcas").read_text(encoding="latin-1",
+                                                   errors="replace")
+    m = re.search(r"<extrLibres>(.*?)</extrLibres>", x, re.S)
+    if not m:
+        raise SystemExit("[LOI] xcas khong co khoi <extrLibres>")
+    noms = re.findall(r"<string>([^<]*)</string>", m.group(1))
+    out, thieu = [], []
+    for nom in noms:
+        # boc tien to Z_/Q_ va hau to _<so>
+        s = re.sub(r"^[ZQ]_", "", nom)
+        s = re.sub(r"_\d+$", "", s)
+        if s in MAP_SONG:
+            src, col, typ = MAP_SONG[s]
+            out.append((nom, src, col, typ))
+        else:
+            thieu.append(f"{nom} (-> '{s}')")
+    if thieu:
+        print(f"  [LOI] {len(thieu)} bien khong tra duoc trong MAP_SONG:")
+        for t in thieu:
+            print(f"        {t}")
+        print(f"        MAP_SONG co: {sorted(MAP_SONG)}")
+        raise SystemExit(1)
+    return out
 
 
 def norm(s):
@@ -129,7 +166,19 @@ def main():
     wcols, wdata = read_txt(args.wl_txt)
     print(f"  Q: {len(qcols)} cot | WL: {len(wcols)} cot\n")
 
-    print("Gan 9 bien:")
+    BND = doc_bien_tu_xcas(out)
+    print(f"Bien doc tu xcas: {len(BND)}")
+
+    # --- DON .loi CU: file khong con trong xcas (doi subset -> doi so ext) ---
+    can = {f"{n}.loi" for n, *_r in BND}
+    du = [p for p in out.glob("*.loi") if p.name not in can]
+    if du:
+        print(f"  [!] xoa {len(du)} file .loi thua (khong con trong xcas):")
+        print(f"      {sorted(p.name for p in du)}")
+        for p in du:
+            p.unlink()
+
+    print(f"\nGan {len(BND)} bien:")
     for name, src, srccol, typ in BND:
         cols, data = (qcols, qdata) if src == "Q" else (wcols, wdata)
         real = find_col(cols, srccol)
@@ -160,9 +209,32 @@ def main():
     xp.write_text(x, encoding="latin-1")
     print(f"\nxcas: tempsMax={dur:.0f}s ({dur/86400:.0f} ngay), pasTemps=300, pasStock=12")
 
+    # --- KIEM: moi bien xcas phai co .loi THUC DO (khong con sin gia) ---
+    print("\nKiem file .loi:")
+    loi = sorted(p.name for p in out.glob("*.loi"))
+    thieu = [n for n, *_r in BND if f"{n}.loi" not in loi]
+    sin = []
+    for n, *_r in BND:
+        p = out / f"{n}.loi"
+        if p.exists():
+            h = p.read_text(encoding="ascii", errors="replace").splitlines()[0]
+            if "trieu sin" in h or "tam -" in h:
+                sin.append(n)
+    print(f"  {len(loi)} file .loi | xcas can {len(BND)} bien")
+    if thieu:
+        print(f"  [LOI] {len(thieu)} bien THIEU file .loi: {thieu}")
+        raise SystemExit(1)
+    if sin:
+        print(f"  [LOI] {len(sin)} bien van la TRIEU SIN GIA: {sin}")
+        raise SystemExit(1)
+    print("  OK — moi bien deu co .loi thuc do, khong con sin gia")
+
+    # slope goi y theo do sau mang (d_cua max) — luoi cang nhieu bief cang nho
     print(f"\nXONG. Tiep theo:")
     print(f"   python3 src/C_init_smart.py --outdir {out} "
-          f"--z-sea 3.0 --slope 2.0 --h-min 8.0")
+          f"--z-sea 3.0 --slope <slope> --h-min 8.0")
+    print(f"   (slope: chon sao cho z_sea + slope*d_cua_max ~ 9m."
+          f" luoi 15 bief -> 2.0 | luoi 82 bief -> 0.55)")
 
 
 if __name__ == "__main__":
