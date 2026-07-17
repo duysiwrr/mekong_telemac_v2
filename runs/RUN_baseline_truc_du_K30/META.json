@@ -1,0 +1,66 @@
+{
+  "ten": "baseline_truc_du_K30",
+  "ngay_dong_goi": "2026-07-17 13:50:59",
+  "ghi_chu": "VO DICH 17/07: truc_du 22 nhanh / 47 bief / K=30 dong nhat.\nQ_KGE 0.48-0.92 ca 5 tram | MyThuan WL 0.653 | TanChau WL +0.319 (lan dau duong)\nFroude 0.983 (o Hau_1 197m — HINH HOC, khong doi theo K: da thu K20/25/30/38/40)\nThay the baseline cu backbone K40 (VamNao 0.301)",
+  "git": {
+    "commit": "dc8697c",
+    "clean": false
+  },
+  "luoi": {
+    "n_bief": 47,
+    "n_nut": 28,
+    "n_profil": 224
+  },
+  "tham_so": {
+    "tempsMax": "2592000.0",
+    "pasTemps": "300.0",
+    "pasStock": "12",
+    "hauteurEauMini": "0.005",
+    "coefLitMin": "30.0 30.0 30.0 30.0 30.0 30.0 30.0 30.0 30.0 30.0 30.0 30.0 30.0 30.0 30.0 30.0 30.0 30.0 30.0 30.0 30.0 30.0 30.0 30.0 30.0 30.0 30.0 30.0 30.0 30.0 30.0 30.0 30.0 30.0 30.0 30.0 30.0 30.0 30.0 30.0 30.0 30.0 30.0 30.0 30.0 30.0 30.0",
+    "coefLitMaj": "30.0 30.0 30.0 30.0 30.0 30.0 30.0 30.0 30.0 30.0 30.0 30.0 30.0 30.0 30.0 30.0 30.0 30.0 30.0 30.0 30.0 30.0 30.0 30.0 30.0 30.0 30.0 30.0 30.0 30.0 30.0 30.0 30.0 30.0 30.0 30.0 30.0 30.0 30.0 30.0 30.0 30.0 30.0 30.0 30.0 30.0 30.0",
+    "code": "2",
+    "versionCode": "3",
+    "nb_bief": 47,
+    "nb_nut": 28
+  },
+  "nguon_mat_cat": "survey 2020 / MIKE topo 2021_SIWRP_QHPCTT (BO 2006)",
+  "thoi_gian_chay_s": null,
+  "froude_max": 0.983,
+  "ket_qua": {
+    "TanChau": {
+      "WL_NSE": -11.981,
+      "WL_KGE": 0.319,
+      "Q_NSE": 0.893,
+      "Q_KGE": 0.917,
+      "n": 553.0
+    },
+    "ChauDoc": {
+      "WL_NSE": -170.666,
+      "WL_KGE": -0.326,
+      "Q_NSE": 0.851,
+      "Q_KGE": 0.92,
+      "n": 553.0
+    },
+    "VamNao": {
+      "WL_NSE": null,
+      "WL_KGE": null,
+      "Q_NSE": -114.491,
+      "Q_KGE": 0.481,
+      "n": 553.0
+    },
+    "MyThuan": {
+      "WL_NSE": 0.141,
+      "WL_KGE": 0.653,
+      "Q_NSE": -0.667,
+      "Q_KGE": 0.671,
+      "n": 553.0
+    },
+    "CanTho": {
+      "WL_NSE": -4.008,
+      "WL_KGE": 0.291,
+      "Q_NSE": 0.125,
+      "Q_KGE": 0.488,
+      "n": 553.0
+    }
+  }
+}

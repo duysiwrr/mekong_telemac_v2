@@ -1,0 +1,577 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fichierCas>
+  <parametresCas>
+    <parametresGeneraux>
+      <versionCode>3</versionCode>
+      <code>2</code>
+      <fichMotsCles>mascaret.xcas</fichMotsCles>
+      <dictionaire>dico.txt</dictionaire>
+      <progPrincipal>princi.f</progPrincipal>
+      <sauveModele>false</sauveModele>
+      <fichSauvModele>net.tmp</fichSauvModele>
+      <validationCode>false</validationCode>
+      <typeValidation>1</typeValidation>
+      <presenceCasiers>false</presenceCasiers>
+      <bibliotheques>
+        <bibliotheque>mascaretV5P1.a damoV3P0.a</bibliotheque>
+      </bibliotheques>
+    </parametresGeneraux>
+    <parametresModelePhysique>
+      <perteChargeConf>false</perteChargeConf>
+      <compositionLits>1</compositionLits>
+      <conservFrotVertical>false</conservFrotVertical>
+      <elevCoteArrivFront>0.05</elevCoteArrivFront>
+      <interpolLinStrickler>false</interpolLinStrickler>
+      <debordement>
+        <litMajeur>false</litMajeur>
+        <zoneStock>false</zoneStock>
+      </debordement>
+    </parametresModelePhysique>
+    <parametresNumeriques>
+      <calcOndeSubmersion>false</calcOndeSubmersion>
+      <decentrement>false</decentrement>
+      <froudeLimCondLim>1000.0</froudeLimCondLim>
+      <traitImplicitFrot>false</traitImplicitFrot>
+      <hauteurEauMini>0.005</hauteurEauMini>
+      <implicitNoyauTrans>false</implicitNoyauTrans>
+      <optimisNoyauTrans>false</optimisNoyauTrans>
+      <perteChargeAutoElargissement>true</perteChargeAutoElargissement>
+      <termesNonHydrostatiques>false</termesNonHydrostatiques>
+      <apportDebit>0</apportDebit>
+      <attenuationConvection>false</attenuationConvection>
+    </parametresNumeriques>
+    <parametresTemporels>
+      <pasTemps>300.0</pasTemps>
+      <tempsInit>0.0</tempsInit>
+      <critereArret>1</critereArret>
+      <nbPasTemps>1</nbPasTemps>
+      <tempsMax>2592000.0</tempsMax>
+      <pasTempsVar>false</pasTempsVar>
+      <nbCourant>0.8</nbCourant>
+      <coteMax>0.0</coteMax>
+      <abscisseControle>0.0</abscisseControle>
+      <biefControle>1</biefControle>
+    </parametresTemporels>
+    <parametresGeometrieReseau>
+      <geometrie>
+        <fichier>geometrie</fichier>
+        <format>2</format>
+        <profilsAbscAbsolu>true</profilsAbscAbsolu>
+      </geometrie>
+      <listeBranches>
+        <nb>47</nb>
+        <numeros>1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47</numeros>
+        <abscDebut>299.0 1004060.0 2001452.0 3001908.0 4000000.0 5000000.0 6000000.0 7001553.0 8000786.0 9000000.0 10000915.0 11002692.0 12003038.0 13004225.0 14000000.0 15001159.0 16003599.0 17000000.0 18001167.0 19000000.0 20001578.0 21000213.0 22004030.0 23003758.0 24001608.0 25001960.0 26001646.0 27000000.0 28000365.0 29005307.0 30000000.0 31004137.0 32003328.0 33000574.0 34000000.0 35001133.0 36000000.0 37001304.0 38000000.0 39000000.0 40002118.0 41001200.0 42004710.0 43001594.0 44002568.0 45000000.0 46000000.0</abscDebut>
+        <abscFin>23782.0 1008875.0 2035513.0 3032956.0 4020856.0 5029975.0 6026116.0 7006557.0 8005360.0 9005536.0 10060027.0 11027310.0 12026681.0 13009733.0 14025188.0 15007155.0 16031944.0 17002975.0 18031600.0 19034192.0 20071945.0 21008346.0 22018255.0 23008830.0 24007622.0 25005892.0 26010127.0 27015452.0 28014576.0 29009136.0 30003069.0 31090627.0 32010182.0 33012304.0 34001975.0 35006803.0 36005694.0 37006192.0 38002070.0 39001965.0 40006131.0 41022198.0 42011965.0 43004048.0 44007331.0 45001335.0 46021755.0</abscFin>
+        <numExtremDebut>1 3 5 7 9 11 13 15 17 19 21 23 25 27 29 31 33 35 37 39 41 43 45 47 49 51 53 55 57 59 61 63 65 67 69 71 73 75 77 79 81 83 85 87 89 91 93</numExtremDebut>
+        <numExtremFin>2 4 6 8 10 12 14 16 18 20 22 24 26 28 30 32 34 36 38 40 42 44 46 48 50 52 54 56 58 60 62 64 66 68 70 72 74 76 78 80 82 84 86 88 90 92 94</numExtremFin>
+      </listeBranches>
+      <listeNoeuds>
+        <nb>28</nb>
+        <noeuds>
+          <noeud>
+            <num>2 3 43 0 0</num>
+          </noeud>
+          <noeud>
+            <num>4 5 44 0 0</num>
+          </noeud>
+          <noeud>
+            <num>6 7 94 0 0</num>
+          </noeud>
+          <noeud>
+            <num>8 9 45 0 0</num>
+          </noeud>
+          <noeud>
+            <num>10 11 46 0 0</num>
+          </noeud>
+          <noeud>
+            <num>12 13 47 0 0</num>
+          </noeud>
+          <noeud>
+            <num>14 15 52 0 0</num>
+          </noeud>
+          <noeud>
+            <num>18 19 55 0 0</num>
+          </noeud>
+          <noeud>
+            <num>22 23 25 0 0</num>
+          </noeud>
+          <noeud>
+            <num>28 29 32 0 0</num>
+          </noeud>
+          <noeud>
+            <num>16 33 39 0 0</num>
+          </noeud>
+          <noeud>
+            <num>31 36 37 0 0</num>
+          </noeud>
+          <noeud>
+            <num>48 49 53 0 0</num>
+          </noeud>
+          <noeud>
+            <num>50 51 54 0 0</num>
+          </noeud>
+          <noeud>
+            <num>58 59 83 85 0</num>
+          </noeud>
+          <noeud>
+            <num>60 61 86 0 0</num>
+          </noeud>
+          <noeud>
+            <num>62 63 91 0 0</num>
+          </noeud>
+          <noeud>
+            <num>21 64 65 0 0</num>
+          </noeud>
+          <noeud>
+            <num>17 66 67 0 0</num>
+          </noeud>
+          <noeud>
+            <num>20 68 69 0 0</num>
+          </noeud>
+          <noeud>
+            <num>41 70 71 0 0</num>
+          </noeud>
+          <noeud>
+            <num>56 72 73 0 0</num>
+          </noeud>
+          <noeud>
+            <num>74 75 89 0 0</num>
+          </noeud>
+          <noeud>
+            <num>76 77 87 0 0</num>
+          </noeud>
+          <noeud>
+            <num>78 79 90 0 0</num>
+          </noeud>
+          <noeud>
+            <num>80 81 88 0 0</num>
+          </noeud>
+          <noeud>
+            <num>27 35 82 0 0</num>
+          </noeud>
+          <noeud>
+            <num>84 92 93 0 0</num>
+          </noeud>
+        </noeuds>
+      </listeNoeuds>
+      <extrLibres>
+        <nb>9</nb>
+        <num>1 2 3 4 5 6 7 8 9</num>
+        <numExtrem>1 24 26 30 34 38 40 42 57</numExtrem>
+        <noms>
+          <string>Q_ChauDoc</string>
+          <string>Z_CuaCoChien_24</string>
+          <string>Z_CuaCungHau_26</string>
+          <string>Z_CuaDai_30</string>
+          <string>Z_CuaDinhAn_34</string>
+          <string>Z_CuaTieu_38</string>
+          <string>Z_CuaTranDe_40</string>
+          <string>Z_Ham_Luong_42</string>
+          <string>Q_TanChau</string>
+        </noms>
+        <typeCond>1 2 2 2 2 2 2 2 1</typeCond>
+        <numLoi>1 2 3 4 5 6 7 8 9</numLoi>
+      </extrLibres>
+    </parametresGeometrieReseau>
+    <parametresConfluents>
+      <nbConfluents>28</nbConfluents>
+      <confluents>
+        <structureParametresConfluent>
+          <nbAffluent>3</nbAffluent>
+          <nom>Conf_1</nom>
+          <abscisses>0.0 0.0 0.0</abscisses>
+          <ordonnees>0.0 0.0 0.0</ordonnees>
+          <angles>0.0 0.0 0.0</angles>
+        </structureParametresConfluent>
+        <structureParametresConfluent>
+          <nbAffluent>3</nbAffluent>
+          <nom>Conf_2</nom>
+          <abscisses>0.0 0.0 0.0</abscisses>
+          <ordonnees>0.0 0.0 0.0</ordonnees>
+          <angles>0.0 0.0 0.0</angles>
+        </structureParametresConfluent>
+        <structureParametresConfluent>
+          <nbAffluent>3</nbAffluent>
+          <nom>Conf_3</nom>
+          <abscisses>0.0 0.0 0.0</abscisses>
+          <ordonnees>0.0 0.0 0.0</ordonnees>
+          <angles>0.0 0.0 0.0</angles>
+        </structureParametresConfluent>
+        <structureParametresConfluent>
+          <nbAffluent>3</nbAffluent>
+          <nom>Conf_4</nom>
+          <abscisses>0.0 0.0 0.0</abscisses>
+          <ordonnees>0.0 0.0 0.0</ordonnees>
+          <angles>0.0 0.0 0.0</angles>
+        </structureParametresConfluent>
+        <structureParametresConfluent>
+          <nbAffluent>3</nbAffluent>
+          <nom>Conf_5</nom>
+          <abscisses>0.0 0.0 0.0</abscisses>
+          <ordonnees>0.0 0.0 0.0</ordonnees>
+          <angles>0.0 0.0 0.0</angles>
+        </structureParametresConfluent>
+        <structureParametresConfluent>
+          <nbAffluent>3</nbAffluent>
+          <nom>Conf_6</nom>
+          <abscisses>0.0 0.0 0.0</abscisses>
+          <ordonnees>0.0 0.0 0.0</ordonnees>
+          <angles>0.0 0.0 0.0</angles>
+        </structureParametresConfluent>
+        <structureParametresConfluent>
+          <nbAffluent>3</nbAffluent>
+          <nom>Conf_7</nom>
+          <abscisses>0.0 0.0 0.0</abscisses>
+          <ordonnees>0.0 0.0 0.0</ordonnees>
+          <angles>0.0 0.0 0.0</angles>
+        </structureParametresConfluent>
+        <structureParametresConfluent>
+          <nbAffluent>3</nbAffluent>
+          <nom>Conf_8</nom>
+          <abscisses>0.0 0.0 0.0</abscisses>
+          <ordonnees>0.0 0.0 0.0</ordonnees>
+          <angles>0.0 0.0 0.0</angles>
+        </structureParametresConfluent>
+        <structureParametresConfluent>
+          <nbAffluent>3</nbAffluent>
+          <nom>Conf_9</nom>
+          <abscisses>0.0 0.0 0.0</abscisses>
+          <ordonnees>0.0 0.0 0.0</ordonnees>
+          <angles>0.0 0.0 0.0</angles>
+        </structureParametresConfluent>
+        <structureParametresConfluent>
+          <nbAffluent>3</nbAffluent>
+          <nom>Conf_10</nom>
+          <abscisses>0.0 0.0 0.0</abscisses>
+          <ordonnees>0.0 0.0 0.0</ordonnees>
+          <angles>0.0 0.0 0.0</angles>
+        </structureParametresConfluent>
+        <structureParametresConfluent>
+          <nbAffluent>3</nbAffluent>
+          <nom>Conf_11</nom>
+          <abscisses>0.0 0.0 0.0</abscisses>
+          <ordonnees>0.0 0.0 0.0</ordonnees>
+          <angles>0.0 0.0 0.0</angles>
+        </structureParametresConfluent>
+        <structureParametresConfluent>
+          <nbAffluent>3</nbAffluent>
+          <nom>Conf_12</nom>
+          <abscisses>0.0 0.0 0.0</abscisses>
+          <ordonnees>0.0 0.0 0.0</ordonnees>
+          <angles>0.0 0.0 0.0</angles>
+        </structureParametresConfluent>
+        <structureParametresConfluent>
+          <nbAffluent>3</nbAffluent>
+          <nom>Conf_13</nom>
+          <abscisses>0.0 0.0 0.0</abscisses>
+          <ordonnees>0.0 0.0 0.0</ordonnees>
+          <angles>0.0 0.0 0.0</angles>
+        </structureParametresConfluent>
+        <structureParametresConfluent>
+          <nbAffluent>3</nbAffluent>
+          <nom>Conf_14</nom>
+          <abscisses>0.0 0.0 0.0</abscisses>
+          <ordonnees>0.0 0.0 0.0</ordonnees>
+          <angles>0.0 0.0 0.0</angles>
+        </structureParametresConfluent>
+        <structureParametresConfluent>
+          <nbAffluent>4</nbAffluent>
+          <nom>Conf_15</nom>
+          <abscisses>0.0 0.0 0.0 0.0</abscisses>
+          <ordonnees>0.0 0.0 0.0 0.0</ordonnees>
+          <angles>0.0 0.0 0.0 0.0</angles>
+        </structureParametresConfluent>
+        <structureParametresConfluent>
+          <nbAffluent>3</nbAffluent>
+          <nom>Conf_16</nom>
+          <abscisses>0.0 0.0 0.0</abscisses>
+          <ordonnees>0.0 0.0 0.0</ordonnees>
+          <angles>0.0 0.0 0.0</angles>
+        </structureParametresConfluent>
+        <structureParametresConfluent>
+          <nbAffluent>3</nbAffluent>
+          <nom>Conf_17</nom>
+          <abscisses>0.0 0.0 0.0</abscisses>
+          <ordonnees>0.0 0.0 0.0</ordonnees>
+          <angles>0.0 0.0 0.0</angles>
+        </structureParametresConfluent>
+        <structureParametresConfluent>
+          <nbAffluent>3</nbAffluent>
+          <nom>Conf_18</nom>
+          <abscisses>0.0 0.0 0.0</abscisses>
+          <ordonnees>0.0 0.0 0.0</ordonnees>
+          <angles>0.0 0.0 0.0</angles>
+        </structureParametresConfluent>
+        <structureParametresConfluent>
+          <nbAffluent>3</nbAffluent>
+          <nom>Conf_19</nom>
+          <abscisses>0.0 0.0 0.0</abscisses>
+          <ordonnees>0.0 0.0 0.0</ordonnees>
+          <angles>0.0 0.0 0.0</angles>
+        </structureParametresConfluent>
+        <structureParametresConfluent>
+          <nbAffluent>3</nbAffluent>
+          <nom>Conf_20</nom>
+          <abscisses>0.0 0.0 0.0</abscisses>
+          <ordonnees>0.0 0.0 0.0</ordonnees>
+          <angles>0.0 0.0 0.0</angles>
+        </structureParametresConfluent>
+        <structureParametresConfluent>
+          <nbAffluent>3</nbAffluent>
+          <nom>Conf_21</nom>
+          <abscisses>0.0 0.0 0.0</abscisses>
+          <ordonnees>0.0 0.0 0.0</ordonnees>
+          <angles>0.0 0.0 0.0</angles>
+        </structureParametresConfluent>
+        <structureParametresConfluent>
+          <nbAffluent>3</nbAffluent>
+          <nom>Conf_22</nom>
+          <abscisses>0.0 0.0 0.0</abscisses>
+          <ordonnees>0.0 0.0 0.0</ordonnees>
+          <angles>0.0 0.0 0.0</angles>
+        </structureParametresConfluent>
+        <structureParametresConfluent>
+          <nbAffluent>3</nbAffluent>
+          <nom>Conf_23</nom>
+          <abscisses>0.0 0.0 0.0</abscisses>
+          <ordonnees>0.0 0.0 0.0</ordonnees>
+          <angles>0.0 0.0 0.0</angles>
+        </structureParametresConfluent>
+        <structureParametresConfluent>
+          <nbAffluent>3</nbAffluent>
+          <nom>Conf_24</nom>
+          <abscisses>0.0 0.0 0.0</abscisses>
+          <ordonnees>0.0 0.0 0.0</ordonnees>
+          <angles>0.0 0.0 0.0</angles>
+        </structureParametresConfluent>
+        <structureParametresConfluent>
+          <nbAffluent>3</nbAffluent>
+          <nom>Conf_25</nom>
+          <abscisses>0.0 0.0 0.0</abscisses>
+          <ordonnees>0.0 0.0 0.0</ordonnees>
+          <angles>0.0 0.0 0.0</angles>
+        </structureParametresConfluent>
+        <structureParametresConfluent>
+          <nbAffluent>3</nbAffluent>
+          <nom>Conf_26</nom>
+          <abscisses>0.0 0.0 0.0</abscisses>
+          <ordonnees>0.0 0.0 0.0</ordonnees>
+          <angles>0.0 0.0 0.0</angles>
+        </structureParametresConfluent>
+        <structureParametresConfluent>
+          <nbAffluent>3</nbAffluent>
+          <nom>Conf_27</nom>
+          <abscisses>0.0 0.0 0.0</abscisses>
+          <ordonnees>0.0 0.0 0.0</ordonnees>
+          <angles>0.0 0.0 0.0</angles>
+        </structureParametresConfluent>
+        <structureParametresConfluent>
+          <nbAffluent>3</nbAffluent>
+          <nom>Conf_28</nom>
+          <abscisses>0.0 0.0 0.0</abscisses>
+          <ordonnees>0.0 0.0 0.0</ordonnees>
+          <angles>0.0 0.0 0.0</angles>
+        </structureParametresConfluent>
+      </confluents>
+    </parametresConfluents>
+    <parametresPlanimetrageMaillage>
+      <methodeMaillage>5</methodeMaillage>
+      <planim>
+        <nbPas>50</nbPas>
+        <nbZones>47</nbZones>
+        <valeursPas>2.0 2.0 2.0 2.0 2.0 2.0 2.0 2.0 2.0 2.0 2.0 2.0 2.0 2.0 2.0 2.0 2.0 2.0 2.0 2.0 2.0 2.0 2.0 2.0 2.0 2.0 2.0 2.0 2.0 2.0 2.0 2.0 2.0 2.0 2.0 2.0 2.0 2.0 2.0 2.0 2.0 2.0 2.0 2.0 2.0 2.0 2.0</valeursPas>
+        <num1erProf>1 7 9 17 24 29 37 43 45 47 49 62 68 74 76 82 84 91 93 100 109 142 144 148 150 152 154 157 160 164 166 168 188 190 194 196 198 200 202 204 206 208 210 213 215 217 219</num1erProf>
+        <numDerProf>6 8 16 23 28 36 42 44 46 48 61 67 73 75 81 83 90 92 99 108 141 143 147 149 151 153 156 159 163 165 167 187 189 193 195 197 199 201 203 205 207 209 212 214 216 218 224</numDerProf>
+      </planim>
+      <maillage>
+        <modeSaisie>2</modeSaisie>
+        <sauvMaillage>false</sauvMaillage>
+        <maillageClavier>
+          <nbSections>0</nbSections>
+          <nbPlages>47</nbPlages>
+          <num1erProfPlage>1 7 9 17 24 29 37 43 45 47 49 62 68 74 76 82 84 91 93 100 109 142 144 148 150 152 154 157 160 164 166 168 188 190 194 196 198 200 202 204 206 208 210 213 215 217 219</num1erProfPlage>
+          <numDerProfPlage>6 8 16 23 28 36 42 44 46 48 61 67 73 75 81 83 90 92 99 108 141 143 147 149 151 153 156 159 163 165 167 187 189 193 195 197 199 201 203 205 207 209 212 214 216 218 224</numDerProfPlage>
+          <pasEspacePlage>500.0 500.0 500.0 500.0 500.0 500.0 500.0 500.0 500.0 500.0 500.0 500.0 500.0 500.0 500.0 500.0 500.0 500.0 500.0 500.0 500.0 500.0 500.0 500.0 500.0 500.0 500.0 500.0 500.0 500.0 500.0 500.0 500.0 500.0 500.0 500.0 500.0 500.0 500.0 500.0 500.0 500.0 500.0 500.0 500.0 500.0 500.0</pasEspacePlage>
+          <nbZones>0</nbZones>
+        </maillageClavier>
+      </maillage>
+    </parametresPlanimetrageMaillage>
+    <parametresSingularite>
+      <nbSeuils>0</nbSeuils>
+    </parametresSingularite>
+    <parametresApportDeversoirs/>
+    <parametresCalage>
+      <frottement>
+        <loi>1</loi>
+        <nbZone>47</nbZone>
+        <numBranche>1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47</numBranche>
+        <absDebZone>299.0 1004060.0 2001452.0 3001908.0 4000000.0 5000000.0 6000000.0 7001553.0 8000786.0 9000000.0 10000915.0 11002692.0 12003038.0 13004225.0 14000000.0 15001159.0 16003599.0 17000000.0 18001167.0 19000000.0 20001578.0 21000213.0 22004030.0 23003758.0 24001608.0 25001960.0 26001646.0 27000000.0 28000365.0 29005307.0 30000000.0 31004137.0 32003328.0 33000574.0 34000000.0 35001133.0 36000000.0 37001304.0 38000000.0 39000000.0 40002118.0 41001200.0 42004710.0 43001594.0 44002568.0 45000000.0 46000000.0</absDebZone>
+        <absFinZone>23782.0 1008875.0 2035513.0 3032956.0 4020856.0 5029975.0 6026116.0 7006557.0 8005360.0 9005536.0 10060027.0 11027310.0 12026681.0 13009733.0 14025188.0 15007155.0 16031944.0 17002975.0 18031600.0 19034192.0 20071945.0 21008346.0 22018255.0 23008830.0 24007622.0 25005892.0 26010127.0 27015452.0 28014576.0 29009136.0 30003069.0 31090627.0 32010182.0 33012304.0 34001975.0 35006803.0 36005694.0 37006192.0 38002070.0 39001965.0 40006131.0 41022198.0 42011965.0 43004048.0 44007331.0 45001335.0 46021755.0</absFinZone>
+        <coefLitMin>30.0 30.0 30.0 30.0 30.0 30.0 30.0 30.0 30.0 30.0 30.0 30.0 30.0 30.0 30.0 30.0 30.0 30.0 30.0 30.0 30.0 30.0 30.0 30.0 30.0 30.0 30.0 30.0 30.0 30.0 30.0 30.0 30.0 30.0 30.0 30.0 30.0 30.0 30.0 30.0 30.0 30.0 30.0 30.0 30.0 30.0 30.0</coefLitMin>
+        <coefLitMaj>30.0 30.0 30.0 30.0 30.0 30.0 30.0 30.0 30.0 30.0 30.0 30.0 30.0 30.0 30.0 30.0 30.0 30.0 30.0 30.0 30.0 30.0 30.0 30.0 30.0 30.0 30.0 30.0 30.0 30.0 30.0 30.0 30.0 30.0 30.0 30.0 30.0 30.0 30.0 30.0 30.0 30.0 30.0 30.0 30.0 30.0 30.0</coefLitMaj>
+      </frottement>
+      <zoneStockage>
+        <nbProfils>0</nbProfils>
+        <numProfil>-0</numProfil>
+        <limGauchLitMaj>-0</limGauchLitMaj>
+        <limDroitLitMaj>-0</limDroitLitMaj>
+      </zoneStockage>
+    </parametresCalage>
+    <parametresLoisHydrauliques>
+      <nb>9</nb>
+      <lois>
+        <structureParametresLoi>
+          <nom>Q_ChauDoc</nom>
+          <type>1</type>
+          <donnees>
+            <modeEntree>1</modeEntree>
+            <fichier>Q_ChauDoc.loi</fichier>
+            <uniteTps>-0</uniteTps>
+            <nbPoints>-0</nbPoints>
+            <nbDebitsDifferents>-0</nbDebitsDifferents>
+          </donnees>
+        </structureParametresLoi>
+        <structureParametresLoi>
+          <nom>Z_CuaCoChien_24</nom>
+          <type>2</type>
+          <donnees>
+            <modeEntree>1</modeEntree>
+            <fichier>Z_CuaCoChien_24.loi</fichier>
+            <uniteTps>-0</uniteTps>
+            <nbPoints>-0</nbPoints>
+            <nbDebitsDifferents>-0</nbDebitsDifferents>
+          </donnees>
+        </structureParametresLoi>
+        <structureParametresLoi>
+          <nom>Z_CuaCungHau_26</nom>
+          <type>2</type>
+          <donnees>
+            <modeEntree>1</modeEntree>
+            <fichier>Z_CuaCungHau_26.loi</fichier>
+            <uniteTps>-0</uniteTps>
+            <nbPoints>-0</nbPoints>
+            <nbDebitsDifferents>-0</nbDebitsDifferents>
+          </donnees>
+        </structureParametresLoi>
+        <structureParametresLoi>
+          <nom>Z_CuaDai_30</nom>
+          <type>2</type>
+          <donnees>
+            <modeEntree>1</modeEntree>
+            <fichier>Z_CuaDai_30.loi</fichier>
+            <uniteTps>-0</uniteTps>
+            <nbPoints>-0</nbPoints>
+            <nbDebitsDifferents>-0</nbDebitsDifferents>
+          </donnees>
+        </structureParametresLoi>
+        <structureParametresLoi>
+          <nom>Z_CuaDinhAn_34</nom>
+          <type>2</type>
+          <donnees>
+            <modeEntree>1</modeEntree>
+            <fichier>Z_CuaDinhAn_34.loi</fichier>
+            <uniteTps>-0</uniteTps>
+            <nbPoints>-0</nbPoints>
+            <nbDebitsDifferents>-0</nbDebitsDifferents>
+          </donnees>
+        </structureParametresLoi>
+        <structureParametresLoi>
+          <nom>Z_CuaTieu_38</nom>
+          <type>2</type>
+          <donnees>
+            <modeEntree>1</modeEntree>
+            <fichier>Z_CuaTieu_38.loi</fichier>
+            <uniteTps>-0</uniteTps>
+            <nbPoints>-0</nbPoints>
+            <nbDebitsDifferents>-0</nbDebitsDifferents>
+          </donnees>
+        </structureParametresLoi>
+        <structureParametresLoi>
+          <nom>Z_CuaTranDe_40</nom>
+          <type>2</type>
+          <donnees>
+            <modeEntree>1</modeEntree>
+            <fichier>Z_CuaTranDe_40.loi</fichier>
+            <uniteTps>-0</uniteTps>
+            <nbPoints>-0</nbPoints>
+            <nbDebitsDifferents>-0</nbDebitsDifferents>
+          </donnees>
+        </structureParametresLoi>
+        <structureParametresLoi>
+          <nom>Z_Ham_Luong_42</nom>
+          <type>2</type>
+          <donnees>
+            <modeEntree>1</modeEntree>
+            <fichier>Z_Ham_Luong_42.loi</fichier>
+            <uniteTps>-0</uniteTps>
+            <nbPoints>-0</nbPoints>
+            <nbDebitsDifferents>-0</nbDebitsDifferents>
+          </donnees>
+        </structureParametresLoi>
+        <structureParametresLoi>
+          <nom>Q_TanChau</nom>
+          <type>1</type>
+          <donnees>
+            <modeEntree>1</modeEntree>
+            <fichier>Q_TanChau.loi</fichier>
+            <uniteTps>-0</uniteTps>
+            <nbPoints>-0</nbPoints>
+            <nbDebitsDifferents>-0</nbDebitsDifferents>
+          </donnees>
+        </structureParametresLoi>
+      </lois>
+    </parametresLoisHydrauliques>
+    <parametresConditionsInitiales>
+      <repriseEtude>
+        <repriseCalcul>false</repriseCalcul>
+      </repriseEtude>
+      <ligneEau>
+        <LigEauInit>true</LigEauInit>
+        <modeEntree>1</modeEntree>
+        <fichLigEau>init.lig</fichLigEau>
+        <formatFichLig>2</formatFichLig>
+        <nbPts>-0</nbPts>
+      </ligneEau>
+    </parametresConditionsInitiales>
+    <parametresImpressionResultats>
+      <titreCalcul>Mekong DBSCL 47 bief</titreCalcul>
+      <impression>
+        <impressionGeometrie>false</impressionGeometrie>
+        <impressionPlanimetrage>false</impressionPlanimetrage>
+        <impressionReseau>false</impressionReseau>
+        <impressionLoiHydraulique>false</impressionLoiHydraulique>
+        <impressionligneEauInitiale>false</impressionligneEauInitiale>
+        <impressionCalcul>false</impressionCalcul>
+      </impression>
+      <pasStockage>
+        <premPasTpsStock>1</premPasTpsStock>
+        <pasStock>12</pasStock>
+        <pasImpression>100</pasImpression>
+      </pasStockage>
+      <resultats>
+        <fichResultat>ResultatsOpthyca.opt</fichResultat>
+        <postProcesseur>2</postProcesseur>
+      </resultats>
+      <listing>
+        <fichListing>listing.lis</fichListing>
+      </listing>
+      <fichReprise>
+        <fichRepriseEcr>net_ecr.rep</fichRepriseEcr>
+      </fichReprise>
+      <rubens>
+        <ecartInterBranch>1.0</ecartInterBranch>
+      </rubens>
+      <stockage>
+        <option>1</option>
+        <nbSite>0</nbSite>
+      </stockage>
+    </parametresImpressionResultats>
+    <parametresVariablesCalculees>
+      <variablesCalculees>false false false false false false false false false false false false false false false</variablesCalculees>
+    </parametresVariablesCalculees>
+    <parametresVariablesStockees>
+      <variablesStockees>true false false false false true true true false false false false false false false false false false false true false false true false false false false false false false false false false false false false false false false false false false</variablesStockees>
+    </parametresVariablesStockees>
+  </parametresCas>
+</fichierCas>

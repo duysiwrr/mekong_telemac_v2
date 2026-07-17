@@ -60,7 +60,7 @@ class _Mascaret:
     # thời gian mặc định (giây) — pas 300s như baseline chạy được
     PAS_TEMPS     = 300.0
     PAS_STOCK     = 12
-    STRICKLER     = 40.0          # hệ số nhám khởi điểm
+    STRICKLER     = 30.0          # 17/07: K=40 SAI, thi nghiem 7 cau hinh -> 30 tot nhat
 
 MASC = _Mascaret()
 

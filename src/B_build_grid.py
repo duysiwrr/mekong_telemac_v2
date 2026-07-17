@@ -138,6 +138,28 @@ def sinh_alias(ten_nhanh, locs_xns):
     return [l for l in locs_xns if vn_norm(l) == k]
 
 
+# ---- K STRICKLER PHAN BO THEO BE RONG (thay K=40 dong nhat) ----
+# Thi nghiem 17/07: K=40 SAI o moi luoi (VamNao 0.301 -> 0.615 khi K=25).
+# Nhung K thap lam ha luu xau (CanTho WL 0.566 -> -0.129).
+# Va Froude 0.983 CHI o cu lao hep (Hau_1 197m) -> K=30 qua tron cho kenh hep.
+# Co so: kenh hep -> chu vi uot/dien tich lon -> ma sat lon -> K thap.
+# Khop MIKE: HD Coeff_2011.hd11 co `ResisZone = 0, 30, 25, 20`.
+K_THEO_RONG = [
+    (400.0,  20.0),   # cu lao rat hep: Hau_1(197) Tien_2(243) CuaDai_1(253)
+    (800.0,  25.0),   # cu lao/kenh vua: NamThon(421) VamNao(783) CuaTieu(791)
+    (1300.0, 30.0),   # song chinh: BASSAC(849) Tien(1024) CoChien(1293)
+    (1e9,    38.0),   # cua bien rong: Ham_Luong(1330) .. CuaDinhAn(2130)
+]
+
+
+def k_theo_rong(w):
+    """Be rong TB (m) -> Strickler K."""
+    for nguong, k in K_THEO_RONG:
+        if w < nguong:
+            return k
+    return K_THEO_RONG[-1][1]
+
+
 def ascii_safe(s):
     return re.sub(r"[^A-Za-z0-9_]", "_", str(s))
 
@@ -452,7 +474,8 @@ def write_loi_files(outdir, bnd_map, hours=24):
                     f.write(f" {h*3600:.3f} {z:.3f}\n")
 
 
-def write_xcas(outdir, biefs, info, nodes, extrem, free_ext, bnd_map, nprof):
+def write_xcas(outdir, biefs, info, nodes, extrem, free_ext, bnd_map, nprof,
+               xsecs=None, k_dong_nhat=None):
     nb = len(biefs)
     nums = " ".join(str(b["num"]) for b in biefs)
     a_deb = " ".join(f"{info[b['num']]['a0']:.1f}" for b in biefs)
@@ -490,8 +513,29 @@ def write_xcas(outdir, biefs, info, nodes, extrem, free_ext, bnd_map, nprof):
           <angles>{" ".join("0.0" for _ in g)}</angles>
         </structureParametresConfluent>
 """ for i, g in enumerate(nodes))
-    K = CFG.MASC.STRICKLER
-    fr_k = " ".join(f"{K:.1f}" for _ in biefs)
+    # ---- K: phan bo theo be rong, hoac dong nhat neu --k-dong-nhat ----
+    if k_dong_nhat is not None:
+        ks = [float(k_dong_nhat)] * len(biefs)
+        print(f"\nStrickler: DONG NHAT K={k_dong_nhat} cho ca {len(biefs)} bief")
+    elif xsecs:
+        ks, w_song = [], {}
+        for ten, lst in xsecs.items():
+            w = [_rong(r) for _ch, r, _tp in lst]
+            if w:
+                w_song[ten] = sum(w) / len(w)
+        for b in biefs:
+            ks.append(k_theo_rong(w_song.get(b["ten"], 1000.0)))
+        print(f"\nStrickler PHAN BO theo be rong ({len(biefs)} bief):")
+        seen = {}
+        for b, k in zip(biefs, ks):
+            seen.setdefault(b["ten"], (w_song.get(b["ten"], 0), k))
+        for ten in sorted(seen, key=lambda t: -seen[t][0]):
+            w, k = seen[ten]
+            print(f"   {ten:14s} rong TB {w:6.0f}m -> K={k:.0f}")
+    else:
+        ks = [CFG.MASC.STRICKLER] * len(biefs)
+        print(f"\nStrickler: mac dinh K={CFG.MASC.STRICKLER} (khong co xsecs)")
+    fr_k = " ".join(f"{k:.1f}" for k in ks)
 
     # PLANIM/MAILLAGE: 1 zone + 1 plage cho MOI bief (dung mau 24b2 FIN CORRECTE).
     # nbZones=1 cho ca mang -> MASCARET cap mang 1 phan tu nhung lap theo nb_bief
@@ -786,6 +830,9 @@ def main():
                     choices=["backbone", "truc", "truc_du", "full44",
                              "culao", "full"])
     ap.add_argument("--outdir", default=None)
+    ap.add_argument("--k-dong-nhat", type=float, default=None,
+                    help="dung 1 gia tri K cho moi bief (de so sanh). "
+                         "Mac dinh: K PHAN BO theo be rong.")
     args = ap.parse_args()
     outdir = Path(args.outdir) if args.outdir else (CFG.OUT.GRID / args.subset)
     outdir.mkdir(parents=True, exist_ok=True)
@@ -862,7 +909,8 @@ def main():
     for x in free_ext:
         print(f"   ext {x}: {bnd_map[x]['nom']} (type {bnd_map[x]['type']})")
 
-    write_xcas(outdir, biefs, info, nodes, extrem, free_ext, bnd_map, nprof)
+    write_xcas(outdir, biefs, info, nodes, extrem, free_ext, bnd_map, nprof,
+               xsecs=xsecs, k_dong_nhat=args.k_dong_nhat)
     write_loi_files(outdir, bnd_map)
     write_init_lig(outdir, biefs, info, xsecs)
     (outdir / "FichierCas.txt").write_text("'mascaret.xcas'\n",

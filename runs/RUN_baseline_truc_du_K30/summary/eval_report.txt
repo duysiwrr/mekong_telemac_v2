@@ -1,0 +1,27 @@
+=== CHAY + DANH GIA MASCARET ===
+
+
+.opt: 181.7 MB
+
+Map tram -> bief/section (bang TOA DO):
+   doc .opt (t=0) de lay vi tri section...
+   TanChau   -> Bief_29 sec 1126 (ch=  14050, lech toa do    59m, lech ch    25m)
+   ChauDoc   -> Bief_3  sec 62   (ch=  38988, lech toa do    19m, lech ch   234m)
+   VamNao    -> Bief_47 sec 1510 (ch=  18662, lech toa do   590m, lech ch   238m)
+   MyThuan   -> Bief_32 sec 1305 (ch= 121672, lech toa do   848m, lech ch     9m)
+   CanTho    -> Bief_6  sec 269  (ch= 149753, lech toa do  1767m, lech ch    52m)
+
+Doc .opt tai 5 section...
+
+=== NSE / KGE (eval tu 2011-10-08) ===
+Tram          WL_NSE   WL_KGE     Q_NSE    Q_KGE     n
+TanChau      -11.981    0.319     0.893    0.917   553
+ChauDoc     -170.666   -0.326     0.851    0.920   553
+VamNao             -        -  -114.491    0.481   553
+MyThuan        0.141    0.653    -0.667    0.671   553
+CanTho        -4.008    0.291     0.125    0.488   553
+
+--- Baseline V1 de so (LUU Y: V1 ha day >10m, SAI VAT LY) ---
+  MyThuan Q_KGE=0.84 | CanTho WL_KGE=0.53 | TanChau Q_KGE=0.53
+
+Froude max toan mang: 0.983 (OK)
