@@ -31,8 +31,10 @@ DUNG:
       --start 2011-10-01 --end 2011-10-31
 """
 import argparse
+import csv
 import re
 import sys
+import unicodedata
 from datetime import datetime
 from pathlib import Path
 
@@ -59,6 +61,37 @@ MAP_SONG = {
 }
 
 
+def doc_bnd_map():
+    """data_ref/catalog/bnd_map.csv -> {vn_norm(nhanh): (cot_obs, nguon)}.
+
+    Sinh boi G_doc_bnd11.py tu Boundary_2011.bnd11 (1709 BndItem).
+    MIKE da gan san bien cho moi nhanh cut:
+      Ba Hon -> 'Rach Gia' -> H_RachGia | Bay Hap -> 'Song Doc' -> H_SongDoc
+      Branch1016 -> 'Ganh hao' -> H_GanhHao | Cai Lon -> 'Xeo ro' -> H_XeoRo
+    Chi lay type=0 (bien mo). type=1 la nhu cau nuoc (Waterdemand2.dfs0),
+    khong phai bien thuy van.
+    """
+    p = CFG.OUT.ROOT / "data_ref" / "catalog" / "bnd_map.csv"
+    if not p.exists():
+        print(f"  [!] chua co {p} — chay: python3 src/G_doc_bnd11.py")
+        return {}
+    out = {}
+    with open(p, encoding="utf-8") as f:
+        for r in csv.DictReader(f, delimiter=";"):
+            if r.get("type") != "0" or r.get("co_so_lieu") != "yes":
+                continue
+            out[vn_norm(r["nhanh"])] = (r["cot_obs"], r["nguon"])
+    return out
+
+
+def vn_norm(s):
+    """Bo dau tieng Viet + ky tu dac biet. 'Ham Luong' -> 'HAMLUONG'."""
+    s = str(s).replace("\u0110", "D").replace("\u0111", "d")
+    s = unicodedata.normalize("NFD", s)
+    s = "".join(c for c in s if unicodedata.category(c) != "Mn")
+    return re.sub(r"[^A-Za-z0-9]", "", s).upper()
+
+
 def doc_bien_tu_xcas(outdir):
     """mascaret.xcas -> [(ten_bien, nguon, cot_obs, typeLoi)] theo dung thu tu.
 
@@ -71,22 +104,28 @@ def doc_bien_tu_xcas(outdir):
     if not m:
         raise SystemExit("[LOI] xcas khong co khoi <extrLibres>")
     noms = re.findall(r"<string>([^<]*)</string>", m.group(1))
-    out, thieu = [], []
+    bnd = doc_bnd_map()
+    out, n_tay, n_bnd, q0 = [], 0, 0, []
     for nom in noms:
         # boc tien to Z_/Q_ va hau to _<so>
         s = re.sub(r"^[ZQ]_", "", nom)
         s = re.sub(r"_\d+$", "", s)
-        if s in MAP_SONG:
+        if s in MAP_SONG:                       # 1. bang go tay (bien Q + 6 cua)
             src, col, typ = MAP_SONG[s]
             out.append((nom, src, col, typ))
-        else:
-            thieu.append(f"{nom} (-> '{s}')")
-    if thieu:
-        print(f"  [LOI] {len(thieu)} bien khong tra duoc trong MAP_SONG:")
-        for t in thieu:
-            print(f"        {t}")
-        print(f"        MAP_SONG co: {sorted(MAP_SONG)}")
-        raise SystemExit(1)
+            n_tay += 1
+        elif vn_norm(s) in bnd:                 # 2. bnd_map.csv (MIKE gan san)
+            col, src = bnd[vn_norm(s)]
+            out.append((nom, src, col, 2 if src == "H" else 1))
+            n_bnd += 1
+        else:                                   # 3. kenh cut / cong trinh -> Q=0
+            out.append((nom, "Q0", None, 1))
+            q0.append(s)
+    print(f"  {n_tay} bien tu MAP_SONG (go tay) | {n_bnd} tu bnd_map.csv "
+          f"| {len(q0)} gan Q=0")
+    if q0:
+        print(f"  Q=0 (kenh cut/cong trinh — MIKE cung coi la tuong kin):")
+        print(f"     {sorted(set(q0))[:20]}")
     return out
 
 
@@ -180,6 +219,11 @@ def main():
 
     print(f"\nGan {len(BND)} bien:")
     for name, src, srccol, typ in BND:
+        if src == "Q0":            # kenh cut -> Q=0 hang so
+            ser = [(0.0, 0.0), (dur, 0.0)]
+            write_loi(out / f"{name}.loi", f"{name} (kenh cut - Q=0)",
+                      "Temps(S) Debit", ser)
+            continue
         cols, data = (qcols, qdata) if src == "Q" else (wcols, wdata)
         real = find_col(cols, srccol)
         if real is None:
@@ -199,6 +243,46 @@ def main():
         print(f"  {name:18s} <- {real:12s} : {len(ser):5d} diem, "
               f"dau={v0:8.2f}, min={vmin:8.2f}, max={vmax:8.2f}")
 
+    # --- SUA typeCond 2->1 cho bien Q=0 ---
+    # write_xcas gan typeCond=2 (Z) cho MOI extremite khong phai Tien/BASSAC.
+    # Nhung kenh cut duoc gan Q=0 -> file ghi `Temps(S) Debit`.
+    # xcas khai Z + file chua Q -> MASCARET doc 0.0 nhu CAO DO 0m
+    # -> "is with a supercritical flow" -> STOP 1.
+    q0_names = {n for n, src, *_r in BND if src == "Q0"}
+    if q0_names:
+        xp = out / "mascaret.xcas"
+        x = xp.read_text(encoding="latin-1", errors="replace")
+        m = re.search(r"<extrLibres>(.*?)</extrLibres>", x, re.S)
+        blk = m.group(1)
+        noms = re.findall(r"<string>([^<]*)</string>", blk)
+        mt = re.search(r"<typeCond>([^<]*)</typeCond>", blk)
+        tc = mt.group(1).split()
+        n_sua = 0
+        for i, nom in enumerate(noms):
+            if nom in q0_names and i < len(tc) and tc[i] != "1":
+                tc[i] = "1"
+                n_sua += 1
+        if n_sua:
+            blk2 = blk.replace(mt.group(0),
+                               f"<typeCond>{' '.join(tc)}</typeCond>")
+            x = x.replace(m.group(0), f"<extrLibres>{blk2}</extrLibres>")
+            # PHAI sua CA <type> trong <structureParametresLoi> — neu khong:
+            #   "The graph #N of type #2 is incompatible with the boundary
+            #    condition #N of type 1"
+            # Cau truc (doi chieu du_k30 da FIN CORRECTE):
+            #   <structureParametresLoi><nom>X</nom><type>1|2</type>...
+            #   Q -> type 1 | Z -> type 2. Phai KHOP voi typeCond.
+            n_loi = 0
+            for nom in q0_names:
+                x, k = re.subn(
+                    rf"(<nom>{re.escape(nom)}</nom>\s*<type>)\d+(</type>)",
+                    r"\g<1>1\g<2>", x)
+                n_loi += k
+            print(f"xcas: sua <type> 2->1 cho {n_loi} structureParametresLoi")
+            xp.write_text(x, encoding="latin-1")
+            print(f"\nxcas: sua typeCond 2->1 cho {n_sua} bien Q=0 "
+                  f"(kenh cut — xcas phai khai Q, khong phai Z)")
+
     # --- cap nhat xcas: tempsMax + pasTemps + pasStock (tham so 24d2) ---
     xp = out / "mascaret.xcas"
     x = xp.read_text(encoding="latin-1", errors="replace")
@@ -214,7 +298,9 @@ def main():
     loi = sorted(p.name for p in out.glob("*.loi"))
     thieu = [n for n, *_r in BND if f"{n}.loi" not in loi]
     sin = []
-    for n, *_r in BND:
+    for n, src, *_r in BND:
+        if src == "Q0":
+            continue
         p = out / f"{n}.loi"
         if p.exists():
             h = p.read_text(encoding="ascii", errors="replace").splitlines()[0]

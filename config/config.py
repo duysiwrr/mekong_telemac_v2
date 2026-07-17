@@ -49,7 +49,7 @@ DATA = _Data()
 # 3. THAM SỐ MASCARET "SỐNG CÒN"  (đã kiểm chứng từ repo cũ — KHÔNG đổi tùy tiện)
 # ============================================================================
 class _Mascaret:
-    OFFSET        = 1_000_000.0   # (bief-1)*OFFSET vào abscissa -> tách dải mỗi bief
+    OFFSET        = 200_000.0    # 17/07: 1e6 -> 2e5. 423 bief x 1e6 = 422 trieu -> TRAN dinh dang .opt ("**" va "***"). Bief dai nhat 96.7km (paA) / 86.5km (du_k30) < 200km nen KHONG chong lan dai absc (LOI 5 playbook).
     VERSION_CODE  = 3
     CODE          = 2             # REZO (unsteady)
     ABSC_ABSOLU   = True          # profilsAbscAbsolu
@@ -104,10 +104,19 @@ class _NetFilter:
         "Cam6", "Cam7", "Cam8", "Cam30", "Cam31", "Cam32", "Cam33", "Cam34",
         "Cam35", "Cam36", "Cam37", "Cam38", "Cam39", "Cam42", "Cam49",
         # --- Sài Gòn – Đồng Nai (ngoài ĐBSCL) ---
+        # 17/07: hình 5b_network_clean cho thấy East Vaico chạy lên Y=1.30M
+        # (bắc Tây Ninh) — ngoài ĐBSCL. Rà thêm 12 nhánh Sài Gòn.
         "Dong Nai", "Sai Gon", "Vinh Cuu", "K. LONG TAU", "R.PHUOC KIENG",
         "Can Giuoc", "Song Kinh",
-        # --- Vàm Cỏ (xem cảnh báo ở trên) ---
-        "Vam Co", "Vam Co Dong", "Vam Co Tay", "East Vaico",
+        "East Vaico", "R. BEN NGHE", "R. BEN NGHE1", "S.BenCat",
+        "R.NhanhCanGiuoc2", "R.NhanhCanGiuoc5", "R.NhanhCanGiuoc5_1",
+        "R.NhanhCanGiuoc5_2", "R.NhanhCanGiuoc5_3", "S.NhanhCanGiuoc1",
+        "RachTra_1", "RachTra_2", "RACHTRAQUAN", "ThayCaiRachTra",
+        "KENHTHAYCAI", "KENHTHAYCAI1",
+        # --- Vàm Cỏ: GIỮ LẠI (thử bỏ 17/07 → biên 124→155 vì 30+ kênh ĐTM
+        #     (Thu_Thua, kenhLA285..508, T3..T8, KENHTG1) thành cụt).
+        #     WL_OBS có H_TanAn, H_BenLuc trên Vàm Cỏ → gán biên được. ---
+        # "Vam Co", "Vam Co Dong", "Vam Co Tay", "East Vaico",
         # --- khác ---
         "SongBinhDi",
     ]

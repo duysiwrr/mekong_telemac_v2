@@ -829,6 +829,10 @@ def main():
     ap.add_argument("--subset", default="backbone",
                     choices=["backbone", "truc", "truc_du", "full44",
                              "culao", "full"])
+    ap.add_argument("--subset-file", default=None,
+                    help="file .txt moi dong 1 ten nhanh (uu tien hon --subset). "
+                         "Sinh boi thuat toan loc: TRUC + nhanh co bien + "
+                         "cap<=K + rong>=W")
     ap.add_argument("--outdir", default=None)
     ap.add_argument("--k-dong-nhat", type=float, default=None,
                     help="dung 1 gia tri K cho moi bief (de so sanh). "
@@ -843,7 +847,17 @@ def main():
         for r in csv.DictReader(f, delimiter=";"):
             if r["giu"] == "GIU":
                 kept.add(r["ten_mike"])
-    if args.subset == "full":
+    if args.subset_file:
+        want = [l.strip() for l in
+                Path(args.subset_file).read_text(encoding="utf-8").splitlines()
+                if l.strip()]
+        sel = {n for n in kept if any(vn_norm(n) == vn_norm(b) for b in want)}
+        thieu = [b for b in want
+                 if not any(vn_norm(n) == vn_norm(b) for n in sel)]
+        print(f"Doc {args.subset_file}: {len(want)} ten -> {len(sel)} nhanh khop")
+        if thieu:
+            print(f"   [!] {len(thieu)} ten KHONG co trong ledger: {thieu[:8]}")
+    elif args.subset == "full":
         sel = kept
     elif args.subset in SUBSETS:
         want = SUBSETS[args.subset]
