@@ -308,3 +308,541 @@ So sánh nhiều gói qua `META.json`.
 - Warm-up: `--eval-start 2011-10-08` bỏ 7 ngày đầu → eval 553 điểm
 - Repo **private** → AI không đọc được, phải upload/dán vào chat
 - Tải file AI gửi **thẳng vào `src/`**, không qua Downloads
+# NHẬT KÝ PHIÊN 3 — 17/07/2026 (mở rộng lưới + phát hiện K=40 SAI)
+
+**MỐC: xác định được 2 nguyên nhân gốc bằng thí nghiệm có kiểm chứng —
+K=40 quá trơn, và 10 nhánh lăng trụ phá phân lưu.**
+
+---
+
+## 1. BA CẤU HÌNH TỐT NHẤT (30 ngày, `--eval-start 2011-10-08`, n=553)
+
+### 🥇 HẠNG 1 — `truc_du` + K=30 (47 bief, 22 nhánh)
+**Cân bằng nhất. Dùng làm baseline mới.**
+
+| Trạm | WL_NSE | WL_KGE | Q_NSE | Q_KGE |
+|---|---|---|---|---|
+| TanChau | −11.981 | **+0.319** | 0.893 | **0.917** |
+| ChauDoc | −170.666 | −0.326 | 0.851 | **0.920** |
+| VamNao | — | — | −114.491 | **0.481** |
+| MyThuan | 0.141 | **0.653** | −0.667 | **0.671** |
+| CanTho | −4.008 | 0.291 | 0.125 | 0.488 |
+
+Q đạt 0.48–0.92 ở **cả 5 trạm**. TanChau WL lần đầu dương.
+
+### 🥈 HẠNG 2 — `truc_du` + K=25
+**VamNao cao nhất từng đạt (0.615).** Đổi lại hạ lưu xấu.
+
+| Trạm | WL_KGE | Q_KGE |
+|---|---|---|
+| TanChau | **+0.393** | **0.980** |
+| ChauDoc | −0.556 | **0.957** |
+| VamNao | — | **0.615** ← kỷ lục |
+| MyThuan | 0.342 | 0.533 |
+| CanTho | −0.129 | 0.324 |
+
+### 🥉 HẠNG 3 — `backbone` + K=30 (15 bief, 11 nhánh)
+**Lưới đơn giản nhất mà vẫn tốt.** Dùng khi cần thử nhanh.
+
+| Trạm | WL_KGE | Q_KGE |
+|---|---|---|
+| TanChau | +0.281 | 0.944 |
+| ChauDoc | −0.384 | 0.938 |
+| VamNao | — | 0.523 |
+| MyThuan | 0.522 | 0.675 |
+| CanTho | −0.200 | 0.334 |
+
+**Tái tạo:** `cp -r output/grid/truc_du output/grid/thu` → sửa `coefLitMin`/`coefLitMaj`
+trong `mascaret.xcas` (chuỗi **n giá trị**, không phải 1!) → `mascaret.py mascaret.xcas`
+
+---
+
+## 2. BẢNG THÍ NGHIỆM ĐẦY ĐỦ — VamNao Q_KGE
+
+| Lưới | K=40 | K=30 | K=25 |
+|---|---|---|---|
+| `backbone` 15 bief | 0.301 | 0.523 | 0.533 |
+| `truc_du` 47 bief | **−0.618** | **+0.481** | **+0.615** |
+| `truc` 82 bief | −2.503 | −0.218 | — |
+
+**Đọc bảng:**
+- **Hàng** = ảnh hưởng của lăng trụ (cùng K, chỉ khác 12 nhánh)
+- **Cột** = ảnh hưởng của K (cùng lưới)
+
+---
+
+## 3. HAI PHÁT HIỆN GỐC
+
+### 3.1. K=40 QUÁ TRƠN — sai ở MỌI lưới
+
+K=40 → nước thoát quá dễ → WL thượng lưu thấp 2m → không đủ cột nước
+đẩy qua Vàm Nao → phân lưu Tiền→Hậu thiếu 45%.
+
+**Một gốc, nhiều triệu chứng.** "Tồn tại 1" (VamNao thiếu 45%) và "tồn tại 2"
+(WL thấp ~1.7m) trong phiên 2 là **cùng một nguyên nhân**.
+
+Bằng chứng: K=40→25 làm TanChau Q_KGE 0.706→**0.984**, VamNao 0.301→0.533
+(15 bief); 47 bief thì −0.618→**+0.615**.
+
+**MIKE dùng `G_resistance = 49`** (`Parameters/HD Coeff_2011.hd11`) — trơn hơn
+cả ta. Nhưng MIKE có `ResisZone = 0, 30, 25, 20` (nhám phân vùng) và **bật lòng
+tràn** (`G_flood_plan_res = -99`), còn xcas ta đặt `<litMajeur>false`.
+→ Nghi: ta thiếu lòng tràn nên phải bù bằng K thấp.
+
+### 3.2. 10 NHÁNH LĂNG TRỤ phá phân lưu — ĐỘC LẬP với K
+
+Nhánh chỉ có **1 mặt cắt MIKE** → `build_geometrie` (dòng 342–343) nhân đôi
+ra 2 đầu bief → tiết diện không đổi suốt 4–10 km.
+
+**Danh sách:** `Tien_1, Tien_5, Tien_6, Tien_8, Hau_2, Hau_3, Hau_5, Hau_6,
+Hau_9, CuaDai_3`
+
+Bằng chứng độc lập với K — **cùng K=30**:
+- 47 bief (bỏ lăng trụ): VamNao **+0.481**
+- 82 bief (có lăng trụ): VamNao **−0.218**
+
+K không che được lỗi hình học.
+
+**Nhưng lăng trụ lại giúp HẠ LƯU** (thêm đường thoát dù dẫn sai):
+CanTho WL 0.291→**0.534**, MyThuan Q 0.671→**0.727**.
+
+---
+
+## 4. XU THẾ: thêm nhánh → WL tốt, Q xấu
+
+| | 15 bief | 47 bief | 82 bief |
+|---|---|---|---|
+| CanTho WL_KGE (K40) | 0.433 | **0.566** | 0.385 |
+| CanTho Q_KGE (K40) | 0.607 | **0.684** | 0.544 |
+| MyThuan WL_KGE (K40) | 0.580 | 0.535 | **0.672** |
+| VamNao Q_KGE (K40) | **0.301** | −0.618 | −2.503 |
+| Froude max (K40) | 0.525 | ? | 0.810 |
+
+Cù lao mở thêm đường thoát → dung tích trữ tăng → **dạng triều hạ lưu đúng hơn**.
+Nhưng cũng **chia bớt nước khỏi Vàm Nao** → phân lưu giảm.
+
+---
+
+## 5. BẪY ĐÃ GẶP (đừng lặp)
+
+### 5.1. `sed` không sửa được Strickler
+`<coefLitMin>` là **chuỗi n giá trị** (1/bief). `sed 's|40.0|30.0|'` chỉ đổi
+số đầu → 14/15 bief vẫn K=40 → thí nghiệm vô hiệu. **Phải thay cả chuỗi bằng Python.**
+
+### 5.2. Biên `.loi` hardcode số extremité
+`BND` cũ ghi cứng `Z_CuaTieu_16`. Lưới 34 nhánh đánh số lại → xcas cần `_68`
+→ file `.loi` thực đo ghi sai tên → **7 biên Z vẫn là TRIỀU SIN GIẢ** → lỗi 701.
+**Đã sửa:** `doc_bien_tu_xcas()` đọc `<string>` từ xcas, bóc số, tra theo tên sông.
+Có chặn cứng `SystemExit(1)` nếu còn `"trieu sin"`.
+
+### 5.3. `--slope` của C_init_smart phụ thuộc số bief
+`Z = z_sea + slope × d_cua`. Lưới 15 bief `d_cua_max=3` → slope 2.0 → Z≤9m.
+Lưới 82 bief `d_cua_max=11` → slope 2.0 → **Z=25m (vô lý!)**.
+**Quy tắc:** chọn slope sao cho `z_sea + slope×d_cua_max ≈ 9m`.
+15 bief→2.0 | 47 bief→0.55 | 82 bief→0.55
+
+### 5.4. KHÔNG rút ngắn được chuỗi mô phỏng
+Thử 5 ngày (10.2s) và 12 ngày (21.4s) để chạy nhanh → **KGE méo hoàn toàn**:
+
+| | 5d (n=97) | 12d (n=121) | 30d (n=553) |
+|---|---|---|---|
+| VamNao Q_KGE | −7.98 | **−15.50** | −2.50 |
+| TanChau WL_NSE | −2985 | **−5912** | −385 |
+
+Không đơn điệu → không phải warm-up. Vùng thượng lưu cần rất lâu để ổn định.
+**Mọi thí nghiệm phải chạy đủ 30 ngày.**
+
+### 5.5. `listing.lis` chứa cả nội dung init.lig
+`tail listing.lis` ra khối số + ` FIN` → **tưởng nhầm là init.lig**.
+Cách kiểm chạy xong đúng: `tail -2 ResultatsOpthyca.opt | cut -c1-70`
+→ cột đầu `temps` phải đạt **2592000.0** (30 ngày).
+
+### 5.6. KHÔNG cần `dico.txt` trong thư mục chạy
+Playbook LỖI 12 và `E_package_run.py:INPUT_FILES` ghi cần — **SAI**.
+`backbone` chạy thông mà không có file này. MASCARET tự tìm ở `~/telemac`.
+
+### 5.7. `catalog_survey.csv` báo `mike=0` cho cù lao — SAI
+`build_catalog` tra tên nwk11 (`Tien_1`) thẳng vào `location_id` (`TIEN_1`)
+không qua alias → đếm 0. Thực tế `Tien_1` có 1, `NamThon` có 12 mặt cắt.
+**Đã sửa** bằng `sinh_alias()` (vn_norm) trong B_build_grid + `F_catalog_3nguon.py`.
+
+---
+
+## 6. KIỂM CHỨNG NGƯỢC VỚI GIẢ THIẾT
+
+- **Số liệu thực đo WL KHÔNG sai.** Nghi ngờ `H_TanChau` phẳng 4.7m là lỗi đọc
+  → **SAI**. Tháng 10/2011 đỉnh lũ, Tân Châu 4.7m, lũ lấn át triều hoàn toàn.
+  Tháng 7 cùng trạm có triều biên độ 1.77m. `read_obs` đọc đúng.
+  → **Mô hình thiếu 2m WL mới là lỗi thật.**
+- **Tọa độ 5 trạm ĐÚNG.** Kiểm lại bằng pyproj (VN2000→WGS84) + chiếu lên
+  polyline: TanChau d=116m tới nhánh `Tien`. Bảng phiên 2B chốt là chuẩn.
+  **Đừng dò lại lần nữa.**
+- **topo 2021 = survey 2020 ADCP.** So từng mặt cắt trên BASSAC: **36/36 đáy
+  lệch 0.00m**, 34/36 bề rộng lệch 0.0m. Toàn mạng: 181/185 cặp giống nhau,
+  lệch đáy TB **0.04m**. → `get_cross_sections` đọc topo 2021 = đọc survey 2020.
+  Nguyên tắc §4.4 KHÔNG bị vi phạm.
+- **3 mặt cắt lệch >900m** (SH36, SH36A ở BASSAC; SH35 ở Hau_7): Excel 3300–3450m
+  vs MIKE 2100–2400m. Đều ở cửa sông — MIKE cắt bãi bồi, giữ lòng dẫn. **Hợp lý.**
+- **5 cụm survey "LỆCH"** (ST12/16/28/33, VN1): kiểm `mike2/mike3` → **topology
+  MIKE đúng cả 5**. Nguyên nhân: VN1 trùng bản ghi; ST12 có hai `P` (đáng lẽ P/P1);
+  ST16P, ST28P2 trỏ vào sông mẹ. Lỗi đặt tên survey, không phải MIKE thiếu nhánh.
+
+---
+
+## 7. HƯỚNG TIẾP THEO
+
+### 7.1. [NGAY] K PHÂN BỐ theo vùng
+Đánh đổi đã đo rõ: **K thấp → thượng lưu tốt, hạ lưu xấu**.
+Không K đồng nhất nào thắng cả mạng.
+
+| Vùng | K đề xuất | Căn cứ |
+|---|---|---|
+| Tien/BASSAC thượng lưu, VamNao | 25 | VamNao 0.615, TanChau Q 0.980 |
+| Tien/BASSAC hạ lưu, CoChien, HamLuong | 30 | cân bằng |
+| 6 cửa biển | 40 | CanTho WL 0.566 ở K40 |
+
+`write_xcas` đã sẵn sàng: `fr_k` là chuỗi n giá trị. Chỉ cần đổi cách sinh —
+gán K theo `bief → tên sông → vùng`.
+
+### 7.2. Xử lý 10 nhánh lăng trụ
+Không nội suy từ sông mẹ được (cù lao 190–600m vs sông mẹ 1000–2400m — co giãn
+là **bịa hình học**). Ba lựa chọn:
+1. **Bỏ hẳn** (dùng `truc_du` 22 nhánh) — mất 10 nhánh thật
+2. **Bổ sung mặt cắt** từ survey 2020 nếu có (`Tien_8` có sv=2 nhưng mike=1!)
+3. **Chấp nhận** — MIKE cũng chỉ có 1 mặt cắt và nó chạy được
+
+→ Ưu tiên (2) cho `Tien_8`: survey có 2 mặt cắt mà MIKE chỉ 1.
+
+### 7.3. Lòng tràn (`litMajeur`)
+MIKE bật (`G_flood_plan_res = -99`), ta tắt (`<litMajeur>false`).
+Tháng 10/2011 đỉnh lũ, nước tràn bờ mạnh. **Nghi đây là gốc của WL thấp 2m** —
+và lý do ta phải hạ K để bù. Thử bật.
+
+### 7.4. Thêm kênh nội đồng theo vùng
+**Chỉ làm sau khi K phân bố + lăng trụ xong.** Thêm kênh vào lưới đang sai
+= nhân thêm lỗi.
+
+Thứ tự đề xuất (theo mức ảnh hưởng tới phân lưu Tiền↔Hậu):
+1. **Tứ giác Long Xuyên (TGLX)** — nối Hậu→biển Tây, ảnh hưởng trực tiếp
+   phân lưu tại Châu Đốc. Kênh Vĩnh Tế, Tri Tôn, Ba Thê, Rạch Giá–Long Xuyên.
+   Trạm kiểm: H_XuanTo, H_TriTon, H_TanHiep, H_RachGia (đã có trong WL_OBS)
+2. **Đồng Tháp Mười (ĐTM)** — nối Tiền→Vàm Cỏ. Kênh Hồng Ngự, Đồng Tiến,
+   Nguyễn Văn Tiếp. Trạm: H_MocHoa, H_TuyenNhon, H_KienBinh, H_TruongXuan
+3. **Tây Nam Sông Hậu (TNSH)** — Hậu→biển Tây. Kênh Ô Môn, Xà No, Quản Lộ.
+   Trạm: H_ViThanh, H_PhungHiep, H_XeoRo
+4. **Nam Măng Thít** — Cổ Chiên↔Hậu. Trạm: H_TraVinh
+5. **Bán đảo Cà Mau (BĐCM)** — Trạm: H_CaMau, H_PhuocLong, H_GanhHao, H_SongDoc
+
+**Lợi ích:** 34 cột WL_OBS hiện chỉ dùng 7 → thêm kênh trục sẽ dùng được
+**~20 trạm kiểm định** nữa, đánh giá mô hình chặt hơn nhiều.
+
+**Rủi ro:** ledger có 1899 nhánh. `--subset full` = quá lớn. Cần subset theo
+vùng, mỗi vùng FIN CORRECTE mới thêm vùng sau (đúng nguyên tắc phân tầng).
+
+**Tốc độ:** hiện 46s/82 bief. Thêm 5 vùng → có thể 300–500 bief, `.opt` cỡ GB.
+Nút cổ chai KHÔNG phải MASCARET mà là `D_run_eval` (đọc 1.17M dòng lấy 3605).
+Khi đó mới cần tối ưu: `grep` lọc trước, hoặc giảm `variablesStockees`
+(cẩn thận: `D_run_eval` đọc theo chỉ số cột cố định `C_Z=5`, `C_Q=13`).
+
+---
+
+## 8. LỆNH TÁI TẠO 3 CẤU HÌNH TỐT NHẤT
+
+```bash
+cd ~/mekong_telemac_v2
+
+# ---- HANG 1: truc_du K=30 (baseline moi) ----
+python3 src/B_build_grid.py --subset truc_du --outdir output/grid/truc_du
+python3 src/C_assign_boundaries.py --outdir output/grid/truc_du \
+    --start 2011-10-01 --end 2011-10-31
+python3 src/C_init_smart.py --outdir output/grid/truc_du \
+    --z-sea 3.0 --slope 0.55 --h-min 8.0
+python3 - <<'PYEOF'
+import re; from pathlib import Path
+p = Path("output/grid/truc_du/mascaret.xcas")
+x = p.read_text(encoding="latin-1")
+for tag in ("coefLitMin","coefLitMaj"):
+    m = re.search(rf"<{tag}>([^<]*)</{tag}>", x)
+    n = len(m.group(1).split())          # CHUOI n gia tri — khong sed 1 so!
+    x = x.replace(m.group(0), f"<{tag}>{' '.join(['30.0']*n)}</{tag}>")
+p.write_text(x, encoding="latin-1")
+PYEOF
+cp output/grid/truc/{Abaques.txt,Controle.txt,dico_Courlis.txt} output/grid/truc_du/
+cd output/grid/truc_du && mascaret.py mascaret.xcas   # ~41s
+cd ~/mekong_telemac_v2
+python3 src/D_run_eval.py --outdir output/grid/truc_du --eval-start 2011-10-08
+
+# ---- HANG 2: doi 30.0 -> 25.0 o tren ----
+# ---- HANG 3: --subset backbone, --slope 2.0, K=30 ----
+```
+
+⚠️ **BẮT BUỘC `--eval-start 2011-10-08`** (bỏ 7 ngày warm-up) → n=553.
+# NHẬT KÝ PHIÊN 3 — 17/07/2026 (mở rộng lưới + phát hiện K=40 SAI)
+
+**MỐC: xác định được 2 nguyên nhân gốc bằng thí nghiệm có kiểm chứng —
+K=40 quá trơn, và 10 nhánh lăng trụ phá phân lưu.**
+
+---
+
+## 1. BA CẤU HÌNH TỐT NHẤT (30 ngày, `--eval-start 2011-10-08`, n=553)
+
+### 🥇 HẠNG 1 — `truc_du` + K=30 (47 bief, 22 nhánh)
+**Cân bằng nhất. Dùng làm baseline mới.**
+
+| Trạm | WL_NSE | WL_KGE | Q_NSE | Q_KGE |
+|---|---|---|---|---|
+| TanChau | −11.981 | **+0.319** | 0.893 | **0.917** |
+| ChauDoc | −170.666 | −0.326 | 0.851 | **0.920** |
+| VamNao | — | — | −114.491 | **0.481** |
+| MyThuan | 0.141 | **0.653** | −0.667 | **0.671** |
+| CanTho | −4.008 | 0.291 | 0.125 | 0.488 |
+
+Q đạt 0.48–0.92 ở **cả 5 trạm**. TanChau WL lần đầu dương.
+
+### 🥈 HẠNG 2 — `truc_du` + K=25
+**VamNao cao nhất từng đạt (0.615).** Đổi lại hạ lưu xấu.
+
+| Trạm | WL_KGE | Q_KGE |
+|---|---|---|
+| TanChau | **+0.393** | **0.980** |
+| ChauDoc | −0.556 | **0.957** |
+| VamNao | — | **0.615** ← kỷ lục |
+| MyThuan | 0.342 | 0.533 |
+| CanTho | −0.129 | 0.324 |
+
+### 🥉 HẠNG 3 — `backbone` + K=30 (15 bief, 11 nhánh)
+**Lưới đơn giản nhất mà vẫn tốt.** Dùng khi cần thử nhanh.
+
+| Trạm | WL_KGE | Q_KGE |
+|---|---|---|
+| TanChau | +0.281 | 0.944 |
+| ChauDoc | −0.384 | 0.938 |
+| VamNao | — | 0.523 |
+| MyThuan | 0.522 | 0.675 |
+| CanTho | −0.200 | 0.334 |
+
+**Tái tạo:** `cp -r output/grid/truc_du output/grid/thu` → sửa `coefLitMin`/`coefLitMaj`
+trong `mascaret.xcas` (chuỗi **n giá trị**, không phải 1!) → `mascaret.py mascaret.xcas`
+
+---
+
+## 2. BẢNG THÍ NGHIỆM ĐẦY ĐỦ — VamNao Q_KGE
+
+| Lưới | K=40 | K=30 | K=25 |
+|---|---|---|---|
+| `backbone` 15 bief | 0.301 | 0.523 | 0.533 |
+| `truc_du` 47 bief | **−0.618** | **+0.481** | **+0.615** |
+| `truc` 82 bief | −2.503 | −0.218 | — |
+
+**Đọc bảng:**
+- **Hàng** = ảnh hưởng của lăng trụ (cùng K, chỉ khác 12 nhánh)
+- **Cột** = ảnh hưởng của K (cùng lưới)
+
+---
+
+## 3. HAI PHÁT HIỆN GỐC
+
+### 3.1. K=40 QUÁ TRƠN — sai ở MỌI lưới
+
+K=40 → nước thoát quá dễ → WL thượng lưu thấp 2m → không đủ cột nước
+đẩy qua Vàm Nao → phân lưu Tiền→Hậu thiếu 45%.
+
+**Một gốc, nhiều triệu chứng.** "Tồn tại 1" (VamNao thiếu 45%) và "tồn tại 2"
+(WL thấp ~1.7m) trong phiên 2 là **cùng một nguyên nhân**.
+
+Bằng chứng: K=40→25 làm TanChau Q_KGE 0.706→**0.984**, VamNao 0.301→0.533
+(15 bief); 47 bief thì −0.618→**+0.615**.
+
+**MIKE dùng `G_resistance = 49`** (`Parameters/HD Coeff_2011.hd11`) — trơn hơn
+cả ta. Nhưng MIKE có `ResisZone = 0, 30, 25, 20` (nhám phân vùng) và **bật lòng
+tràn** (`G_flood_plan_res = -99`), còn xcas ta đặt `<litMajeur>false`.
+→ Nghi: ta thiếu lòng tràn nên phải bù bằng K thấp.
+
+### 3.2. 10 NHÁNH LĂNG TRỤ phá phân lưu — ĐỘC LẬP với K
+
+Nhánh chỉ có **1 mặt cắt MIKE** → `build_geometrie` (dòng 342–343) nhân đôi
+ra 2 đầu bief → tiết diện không đổi suốt 4–10 km.
+
+**Danh sách:** `Tien_1, Tien_5, Tien_6, Tien_8, Hau_2, Hau_3, Hau_5, Hau_6,
+Hau_9, CuaDai_3`
+
+Bằng chứng độc lập với K — **cùng K=30**:
+- 47 bief (bỏ lăng trụ): VamNao **+0.481**
+- 82 bief (có lăng trụ): VamNao **−0.218**
+
+K không che được lỗi hình học.
+
+**Nhưng lăng trụ lại giúp HẠ LƯU** (thêm đường thoát dù dẫn sai):
+CanTho WL 0.291→**0.534**, MyThuan Q 0.671→**0.727**.
+
+---
+
+## 4. XU THẾ: thêm nhánh → WL tốt, Q xấu
+
+| | 15 bief | 47 bief | 82 bief |
+|---|---|---|---|
+| CanTho WL_KGE (K40) | 0.433 | **0.566** | 0.385 |
+| CanTho Q_KGE (K40) | 0.607 | **0.684** | 0.544 |
+| MyThuan WL_KGE (K40) | 0.580 | 0.535 | **0.672** |
+| VamNao Q_KGE (K40) | **0.301** | −0.618 | −2.503 |
+| Froude max (K40) | 0.525 | ? | 0.810 |
+
+Cù lao mở thêm đường thoát → dung tích trữ tăng → **dạng triều hạ lưu đúng hơn**.
+Nhưng cũng **chia bớt nước khỏi Vàm Nao** → phân lưu giảm.
+
+---
+
+## 5. BẪY ĐÃ GẶP (đừng lặp)
+
+### 5.1. `sed` không sửa được Strickler
+`<coefLitMin>` là **chuỗi n giá trị** (1/bief). `sed 's|40.0|30.0|'` chỉ đổi
+số đầu → 14/15 bief vẫn K=40 → thí nghiệm vô hiệu. **Phải thay cả chuỗi bằng Python.**
+
+### 5.2. Biên `.loi` hardcode số extremité
+`BND` cũ ghi cứng `Z_CuaTieu_16`. Lưới 34 nhánh đánh số lại → xcas cần `_68`
+→ file `.loi` thực đo ghi sai tên → **7 biên Z vẫn là TRIỀU SIN GIẢ** → lỗi 701.
+**Đã sửa:** `doc_bien_tu_xcas()` đọc `<string>` từ xcas, bóc số, tra theo tên sông.
+Có chặn cứng `SystemExit(1)` nếu còn `"trieu sin"`.
+
+### 5.3. `--slope` của C_init_smart phụ thuộc số bief
+`Z = z_sea + slope × d_cua`. Lưới 15 bief `d_cua_max=3` → slope 2.0 → Z≤9m.
+Lưới 82 bief `d_cua_max=11` → slope 2.0 → **Z=25m (vô lý!)**.
+**Quy tắc:** chọn slope sao cho `z_sea + slope×d_cua_max ≈ 9m`.
+15 bief→2.0 | 47 bief→0.55 | 82 bief→0.55
+
+### 5.4. KHÔNG rút ngắn được chuỗi mô phỏng
+Thử 5 ngày (10.2s) và 12 ngày (21.4s) để chạy nhanh → **KGE méo hoàn toàn**:
+
+| | 5d (n=97) | 12d (n=121) | 30d (n=553) |
+|---|---|---|---|
+| VamNao Q_KGE | −7.98 | **−15.50** | −2.50 |
+| TanChau WL_NSE | −2985 | **−5912** | −385 |
+
+Không đơn điệu → không phải warm-up. Vùng thượng lưu cần rất lâu để ổn định.
+**Mọi thí nghiệm phải chạy đủ 30 ngày.**
+
+### 5.5. `listing.lis` chứa cả nội dung init.lig
+`tail listing.lis` ra khối số + ` FIN` → **tưởng nhầm là init.lig**.
+Cách kiểm chạy xong đúng: `tail -2 ResultatsOpthyca.opt | cut -c1-70`
+→ cột đầu `temps` phải đạt **2592000.0** (30 ngày).
+
+### 5.6. KHÔNG cần `dico.txt` trong thư mục chạy
+Playbook LỖI 12 và `E_package_run.py:INPUT_FILES` ghi cần — **SAI**.
+`backbone` chạy thông mà không có file này. MASCARET tự tìm ở `~/telemac`.
+
+### 5.7. `catalog_survey.csv` báo `mike=0` cho cù lao — SAI
+`build_catalog` tra tên nwk11 (`Tien_1`) thẳng vào `location_id` (`TIEN_1`)
+không qua alias → đếm 0. Thực tế `Tien_1` có 1, `NamThon` có 12 mặt cắt.
+**Đã sửa** bằng `sinh_alias()` (vn_norm) trong B_build_grid + `F_catalog_3nguon.py`.
+
+---
+
+## 6. KIỂM CHỨNG NGƯỢC VỚI GIẢ THIẾT
+
+- **Số liệu thực đo WL KHÔNG sai.** Nghi ngờ `H_TanChau` phẳng 4.7m là lỗi đọc
+  → **SAI**. Tháng 10/2011 đỉnh lũ, Tân Châu 4.7m, lũ lấn át triều hoàn toàn.
+  Tháng 7 cùng trạm có triều biên độ 1.77m. `read_obs` đọc đúng.
+  → **Mô hình thiếu 2m WL mới là lỗi thật.**
+- **Tọa độ 5 trạm ĐÚNG.** Kiểm lại bằng pyproj (VN2000→WGS84) + chiếu lên
+  polyline: TanChau d=116m tới nhánh `Tien`. Bảng phiên 2B chốt là chuẩn.
+  **Đừng dò lại lần nữa.**
+- **topo 2021 = survey 2020 ADCP.** So từng mặt cắt trên BASSAC: **36/36 đáy
+  lệch 0.00m**, 34/36 bề rộng lệch 0.0m. Toàn mạng: 181/185 cặp giống nhau,
+  lệch đáy TB **0.04m**. → `get_cross_sections` đọc topo 2021 = đọc survey 2020.
+  Nguyên tắc §4.4 KHÔNG bị vi phạm.
+- **3 mặt cắt lệch >900m** (SH36, SH36A ở BASSAC; SH35 ở Hau_7): Excel 3300–3450m
+  vs MIKE 2100–2400m. Đều ở cửa sông — MIKE cắt bãi bồi, giữ lòng dẫn. **Hợp lý.**
+- **5 cụm survey "LỆCH"** (ST12/16/28/33, VN1): kiểm `mike2/mike3` → **topology
+  MIKE đúng cả 5**. Nguyên nhân: VN1 trùng bản ghi; ST12 có hai `P` (đáng lẽ P/P1);
+  ST16P, ST28P2 trỏ vào sông mẹ. Lỗi đặt tên survey, không phải MIKE thiếu nhánh.
+
+---
+
+## 7. HƯỚNG TIẾP THEO
+
+### 7.1. [NGAY] K PHÂN BỐ theo vùng
+Đánh đổi đã đo rõ: **K thấp → thượng lưu tốt, hạ lưu xấu**.
+Không K đồng nhất nào thắng cả mạng.
+
+| Vùng | K đề xuất | Căn cứ |
+|---|---|---|
+| Tien/BASSAC thượng lưu, VamNao | 25 | VamNao 0.615, TanChau Q 0.980 |
+| Tien/BASSAC hạ lưu, CoChien, HamLuong | 30 | cân bằng |
+| 6 cửa biển | 40 | CanTho WL 0.566 ở K40 |
+
+`write_xcas` đã sẵn sàng: `fr_k` là chuỗi n giá trị. Chỉ cần đổi cách sinh —
+gán K theo `bief → tên sông → vùng`.
+
+### 7.2. Xử lý 10 nhánh lăng trụ
+Không nội suy từ sông mẹ được (cù lao 190–600m vs sông mẹ 1000–2400m — co giãn
+là **bịa hình học**). Ba lựa chọn:
+1. **Bỏ hẳn** (dùng `truc_du` 22 nhánh) — mất 10 nhánh thật
+2. **Bổ sung mặt cắt** từ survey 2020 nếu có (`Tien_8` có sv=2 nhưng mike=1!)
+3. **Chấp nhận** — MIKE cũng chỉ có 1 mặt cắt và nó chạy được
+
+→ Ưu tiên (2) cho `Tien_8`: survey có 2 mặt cắt mà MIKE chỉ 1.
+
+### 7.3. Lòng tràn (`litMajeur`)
+MIKE bật (`G_flood_plan_res = -99`), ta tắt (`<litMajeur>false`).
+Tháng 10/2011 đỉnh lũ, nước tràn bờ mạnh. **Nghi đây là gốc của WL thấp 2m** —
+và lý do ta phải hạ K để bù. Thử bật.
+
+### 7.4. Thêm kênh nội đồng theo vùng
+**Chỉ làm sau khi K phân bố + lăng trụ xong.** Thêm kênh vào lưới đang sai
+= nhân thêm lỗi.
+
+Thứ tự đề xuất (theo mức ảnh hưởng tới phân lưu Tiền↔Hậu):
+1. **Tứ giác Long Xuyên (TGLX)** — nối Hậu→biển Tây, ảnh hưởng trực tiếp
+   phân lưu tại Châu Đốc. Kênh Vĩnh Tế, Tri Tôn, Ba Thê, Rạch Giá–Long Xuyên.
+   Trạm kiểm: H_XuanTo, H_TriTon, H_TanHiep, H_RachGia (đã có trong WL_OBS)
+2. **Đồng Tháp Mười (ĐTM)** — nối Tiền→Vàm Cỏ. Kênh Hồng Ngự, Đồng Tiến,
+   Nguyễn Văn Tiếp. Trạm: H_MocHoa, H_TuyenNhon, H_KienBinh, H_TruongXuan
+3. **Tây Nam Sông Hậu (TNSH)** — Hậu→biển Tây. Kênh Ô Môn, Xà No, Quản Lộ.
+   Trạm: H_ViThanh, H_PhungHiep, H_XeoRo
+4. **Nam Măng Thít** — Cổ Chiên↔Hậu. Trạm: H_TraVinh
+5. **Bán đảo Cà Mau (BĐCM)** — Trạm: H_CaMau, H_PhuocLong, H_GanhHao, H_SongDoc
+
+**Lợi ích:** 34 cột WL_OBS hiện chỉ dùng 7 → thêm kênh trục sẽ dùng được
+**~20 trạm kiểm định** nữa, đánh giá mô hình chặt hơn nhiều.
+
+**Rủi ro:** ledger có 1899 nhánh. `--subset full` = quá lớn. Cần subset theo
+vùng, mỗi vùng FIN CORRECTE mới thêm vùng sau (đúng nguyên tắc phân tầng).
+
+**Tốc độ:** hiện 46s/82 bief. Thêm 5 vùng → có thể 300–500 bief, `.opt` cỡ GB.
+Nút cổ chai KHÔNG phải MASCARET mà là `D_run_eval` (đọc 1.17M dòng lấy 3605).
+Khi đó mới cần tối ưu: `grep` lọc trước, hoặc giảm `variablesStockees`
+(cẩn thận: `D_run_eval` đọc theo chỉ số cột cố định `C_Z=5`, `C_Q=13`).
+
+---
+
+## 8. LỆNH TÁI TẠO 3 CẤU HÌNH TỐT NHẤT
+
+```bash
+cd ~/mekong_telemac_v2
+
+# ---- HANG 1: truc_du K=30 (baseline moi) ----
+python3 src/B_build_grid.py --subset truc_du --outdir output/grid/truc_du
+python3 src/C_assign_boundaries.py --outdir output/grid/truc_du \
+    --start 2011-10-01 --end 2011-10-31
+python3 src/C_init_smart.py --outdir output/grid/truc_du \
+    --z-sea 3.0 --slope 0.55 --h-min 8.0
+python3 - <<'PYEOF'
+import re; from pathlib import Path
+p = Path("output/grid/truc_du/mascaret.xcas")
+x = p.read_text(encoding="latin-1")
+for tag in ("coefLitMin","coefLitMaj"):
+    m = re.search(rf"<{tag}>([^<]*)</{tag}>", x)
+    n = len(m.group(1).split())          # CHUOI n gia tri — khong sed 1 so!
+    x = x.replace(m.group(0), f"<{tag}>{' '.join(['30.0']*n)}</{tag}>")
+p.write_text(x, encoding="latin-1")
+PYEOF
+cp output/grid/truc/{Abaques.txt,Controle.txt,dico_Courlis.txt} output/grid/truc_du/
+cd output/grid/truc_du && mascaret.py mascaret.xcas   # ~41s
+cd ~/mekong_telemac_v2
+python3 src/D_run_eval.py --outdir output/grid/truc_du --eval-start 2011-10-08
+
+# ---- HANG 2: doi 30.0 -> 25.0 o tren ----
+# ---- HANG 3: --subset backbone, --slope 2.0, K=30 ----
+```
+
+⚠️ **BẮT BUỘC `--eval-start 2011-10-08`** (bỏ 7 ngày warm-up) → n=553.
