@@ -346,7 +346,7 @@ MIKE chia 162 nhánh thành nhiều đoạn cùng tên. `branches[name] = {...}`
 **Baseline V1 (`_archive_2026-07-14/mekong_telemac/baseline_culao_20260713/`)
 CHỈ dùng học FORMAT. KHÔNG lấy thông số.** Nó FIN CORRECTE được là do
 `24f_smooth_geometry.py` **hạ đáy lòng sông >10m — SAI VẬT LÝ**. v2 dùng mặt cắt
-thực đo, chính xác, nhưng CHƯA BAO GIỜ chạy thông.
+thực đo, chính xác, và **ĐÃ CHẠY THÔNG 16/07/2026** — xem §5.
 
 ---
 
@@ -357,7 +357,7 @@ mekong_telemac_v2/
 ├── config/config.py            # nguồn chân lý: path, tham số MASC, trạm
 ├── src/
 │   ├── A_extract_ledger.py     # GĐ A: sổ cái (XONG)
-│   ├── B_build_grid.py         # GĐ B: sinh lưới (ĐANG DỞ — cần sửa get_cross_sections)
+│   ├── B_build_grid.py         # GĐ B: sinh lưới (XONG — khớp tên chính xác + lọc topo)
 │   ├── B_plot_grid.py          # [MỚI] vẽ lưới đang tính: trắc dọc/nút/mặt cắt/bảng
 │   ├── B_plot_network.py       # [MỚI] bản đồ không gian lưới đang tính
 │   ├── B_plot_proposed.py      # [MỚI] bản đồ 44 nhánh đề xuất + phân tầng
@@ -425,19 +425,31 @@ Survey theo song: BASSAC 69(z=68) | Tien 72(z=71) | CoChien 34(z=30)
 
 ## 10. VIỆC TIẾP THEO (theo thứ tự)
 
-1. **[NGAY] Sửa `get_cross_sections` trong `B_build_grid.py`:**
-   - Khớp tên **CHÍNH XÁC** (không `norm()` xóa dấu cách)
-   - **Lọc topo**: survey 2020 → `2021_SIWRP_QHPCTT` → BỎ 2006
-   - Ưu tiên survey 2020 từ `catalog_survey.csv` (đã tra theo tọa độ)
-   - **Kiểm bề rộng liên tục** — báo lỗi nếu nhảy >3x giữa 2 mặt cắt liền kề
-   - So `rong_excel` với `rong_tuyen` (ADCP) để kiểm chứng
+> ✅ **ĐÃ XONG (16/07):** sửa `get_cross_sections` (khớp tên chính xác + lọc
+> topo, bỏ 2006) → hết lỗi 701; chạy MASCARET + NSE/KGE tại 5 trạm (GĐ D).
+
+1. **[NGAY] Gỡ 3 tồn tại của baseline** (xem §5 "Tồn tại"):
+   - **Vàm Nao thiếu 45% Q** — sim 6000 vs thực đo 11000 m³/s. Q_KGE=+0.30
+     nhưng Q_NSE=−170 → dạng đúng, mức sai. Chỉ 6 mặt cắt/23km.
+   - **WL thấp hệ thống ~1.7m** tại TanChau/ChauDoc. Nghi datum hoặc Strickler=40.
+   - **Bief_1 dốc 7m/30km** — mặt cắt hẹp 164–560m đoạn đầu BASSAC.
+     Có thể là gốc của tồn tại WL (Châu Đốc WL_KGE −1.50, tệ nhất).
 2. Sửa `vn_norm` trong `import_data.py`, `sync_sections.py`, `A_extract_ledger.py`
+   (KHÔNG chặn đường chạy — `B_build_grid` đọc thẳng `.xns11`, không qua chúng)
 3. Sửa `parse_name` trong `sync_sections.py`: `CT`/`CĐ` = cửa, không phải `nhanh_phu`
 4. Mở rộng `BACKBONE` → 44 nhánh, thêm `--subset tien/hau/truc`
 5. **In hình kiểm mắt TRƯỚC KHI CHẠY**: `B_plot_grid.py` + `B_plot_network.py`
 6. Chạy tầng `tien` → FIN CORRECTE → `hau` → `truc` → `full`
-7. GĐ D `D_run_eval.py`: NSE/KGE tại TanChau/ChauDoc/VamNao/MyThuan/CanTho
-8. Sau đó: mở rộng kênh trục toàn ĐBSCL
+7. Sau đó: mở rộng kênh trục toàn ĐBSCL → tích hợp ML dự báo SSC
+
+> ⚠️⚠️ **BẮT BUỘC `--eval-start 2011-10-08`** khi chạy `D_run_eval.py`.
+> Bỏ 7 ngày warm-up → n=553. QUÊN CỜ NÀY → n=721, mọi chỉ số tụt mạnh
+> (TanChau Q_KGE 0.706→0.527; WL_NSE −103.6→−115.8) và **trông y như mô hình
+> hỏng**. Không phải — đó là warm-up. Đã mất 1 phiên vì chuyện này.
+>
+> ```bash
+> python3 src/D_run_eval.py --outdir output/grid/backbone --eval-start 2011-10-08
+> ```
 
 **Baseline V1 để so (nhưng nhớ: nó hạ đáy 10m):**
 MyThuan Q_KGE=0.84, CanTho WL=0.53, TanChau Q=0.53
