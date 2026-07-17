@@ -62,12 +62,25 @@ CL_COCHIEN = ["CoChien_1", "CoChien_2", "CoChien_3", "CoChien_4"]
 CL_HAMLUONG = ["HamLuong_1", "HamLuong_2", "HamLuong_3", "HamLuong_4",
                "HamLuong_5", "HamLuong_6"]
 
+# 10 nhanh chi 1 mat cat MIKE -> build_geometrie nhan doi -> BIEF LANG TRU
+# (tiet dien khong doi suot 4-10km). Nghi pham lam VamNao sap 0.301 -> -2.503.
+LANG_TRU = ["Tien_1", "Tien_5", "Tien_6", "Tien_8", "Hau_2", "Hau_3",
+            "Hau_5", "Hau_6", "Hau_9", "CuaDai_3"]
+# BO THEO (dong bao): nhanh cam vao 1 trong 10 lang tru -> bo lang tru thi treo
+#   CuaDai_2 DS-> CuaDai_3@2796
+#   Tien_4   DS-> Tien_5@2101
+BO_THEO = ["CuaDai_2", "Tien_4"]
+
 SUBSETS = {
     "backbone": BACKBONE,
     "truc":     BACKBONE + CL_TIEN + CL_HAU + CL_CUADAI,
     "full44":   BACKBONE + CL_TIEN + CL_HAU + CL_CUADAI + CL_COCHIEN
                 + CL_HAMLUONG,
 }
+# truc_du = truc - lang tru: chi giu cu lao co >=2 mat cat THAT.
+# Dung de phan biet: lang tru gay loi hay ban than cu lao gay loi.
+SUBSETS["truc_du"] = [n for n in SUBSETS["truc"]
+                      if n not in LANG_TRU and n not in BO_THEO]
 
 
 def norm(s):
@@ -770,7 +783,8 @@ def write_init_lig(outdir, biefs, info, xsecs):
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--subset", default="backbone",
-                    choices=["backbone", "truc", "full44", "culao", "full"])
+                    choices=["backbone", "truc", "truc_du", "full44",
+                             "culao", "full"])
     ap.add_argument("--outdir", default=None)
     args = ap.parse_args()
     outdir = Path(args.outdir) if args.outdir else (CFG.OUT.GRID / args.subset)
