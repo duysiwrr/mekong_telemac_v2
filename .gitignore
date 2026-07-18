@@ -17,3 +17,5 @@ runs/*/work/
 # Ket qua da dong goi trong runs/ roi
 listing.lis
 output/audit/network_xsec_map.png
+_scratch/
+_scratch/
