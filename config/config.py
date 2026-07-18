@@ -119,6 +119,21 @@ class _NetFilter:
         # "Vam Co", "Vam Co Dong", "Vam Co Tay", "East Vaico",
         # --- khác ---
         "SongBinhDi",
+        # --- RANH DONG BAC: Vam Co Tay lam ranh (18/07) ---
+        # dong/bac Vam Co Tay = Long An/HCM/Campuchia/Soai Rap. Giu Vam Co
+        # Dong/Tay + Cho Gao (Tien) + champeaix (CuaTieu). 0 co lap.
+        "Ba Hong Minh", "Binh Trung", "Ca Dua", "Cau An Ha", "Cay Kho Lon",
+        "Cay Kho Nho", "K. Dong Tranh", "K. SO 1", "K. SO 2", "K.AnHa",
+        "K.Baty", "K.CongXang1", "K.CongXang2", "K.CongXang3",
+        "K.CongXang4", "K.DamLay2_2", "K.NamDong", "K.ThamLuong",
+        "K.XangBinhChanh", "K.XangLVM", "Kenh19T5", "Kenh3", "KenhA",
+        "KenhB", "KenhC", "KenhDoi", "KenhNgang", "KenhNgang1", "MocKeo",
+        "MocKeoLon", "Nam Hang", "R. DONG TRANH 1", "R.BaGoc",
+        "R.HungNhon", "R.Ngua", "Rach Coc", "Rach Goc", "RachLa",
+        "S. BL K DOI", "S. DM BKY", "S.Dua 2", "S.NGA BAY",
+        "S.NhanhBenLuc1", "S.NhanhChoDem", "SONGTHI VAI", "T2", "T4", "T6",
+        "T8", "TacOngNghia", "TayDen", "Truc Chinh", "VamThuat",
+        "kenhLA579", "kenhLA580",
     ]
     WIDTH_MIN       = 50.0          # m — kênh hẹp hơn bị loại (trừ nhánh có biên)
     MAX_WIDTH       = 3000.0        # m — rộng hơn = ô trữ (Biển Hồ) -> loại

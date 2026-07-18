@@ -19,3 +19,5 @@ listing.lis
 output/audit/network_xsec_map.png
 _scratch/
 _scratch/
+output/vung_thuyloi/*.png
+output/vung_thuyloi/*.txt
