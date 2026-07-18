@@ -1,11 +1,11 @@
 RÀ SOÁT MẠNG
-Tên nhánh: 3009 | GIỮ: 1899
+Tên nhánh: 3009 | GIỮ: 1847
 Chia mảnh: 162
-Liên thông: 1899/1899 | cô lập: 0
+Liên thông: 1847/1847 | cô lập: 0
 
 Lý do loại:
-  linkchannel_otru: 1043
-  ngoai_lien_thong: 53
+  linkchannel_otru: 1035
+  ngoai_lien_thong: 113
   co_lap_khong_noi_truc: 3
   o_tru_w=11842: 1
   o_tru_w=9299: 1

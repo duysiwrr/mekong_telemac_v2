@@ -18,7 +18,7 @@ import math
 import json
 from pathlib import Path
 
-sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent.parent))
 from config.config import CFG
 
 import pandas as pd

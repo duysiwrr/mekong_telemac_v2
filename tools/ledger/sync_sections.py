@@ -25,7 +25,7 @@ import math
 from pathlib import Path
 from collections import defaultdict
 
-sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent.parent))
 from config.config import CFG
 
 import numpy as np
